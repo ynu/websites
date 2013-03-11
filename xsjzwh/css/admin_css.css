@@ -1,0 +1,34 @@
+body {word-break:break-all;background-color:#F2F9E8;color:#333;font-size:13px;line-height:120%;margin:0 auto;width:95%;text-align:center;}
+body,td {font-size:12px;}
+a {color:#282828;margin:2px;text-decoration:none;}
+a:hover {color:red;text-decoration:none;}
+
+input, textarea,select {font-size: 12px; border:1px dashed #009900;}
+form {margin:0px;padding:0px;}
+
+.admintable {width:95%;border:1px solid #009933;margin-bottom:10px;}
+.admintable1 {width:100%;border:1px solid #009933;}
+
+.admintitle {background:url(admintitle.gif);font-weight:bold;color:#fff;font-size:14px;padding:5px;text-align:left;}
+.admintitle a:link,.admintitle a:visited {color:#FFFFFF;font-size:14px;}
+.admintitle a:hover {color:#FFFF00;}
+.admintitle span {float:right;}
+
+.tdleft{padding-left:10px;}
+
+.b1 {background:#ffffff;}
+.b1_1 {background:#F2F9E8;height:25px;padding-left:10px;text-align:left;}
+.noborder {border:0}
+.note {color:#999999}
+.ButtonList {
+	BORDER-RIGHT: #000000 2px solid; BORDER-TOP: #ffffff 2px solid; BORDER-LEFT: #ffffff 2px solid; CURSOR: default; BORDER-BOTTOM: #999999 2px solid; BACKGROUND-COLOR: #e6e6e6;font-weight:bold;text-align:center;
+}
+/*¡–±Ì∑÷“≥*/
+	#page {width:100%;padding:15px 0;}
+	#page ul{margin:0 auto; display:table;text-align:center;}
+	#page li{float:left !important; float:none;margin-right: 2px; height:17px;line-height:17px;display:inline; zoom:1;}
+	#page span{display: block; padding: 2px 5px; background: #F5FBFF; border: 1px solid #CCC; color: #999999; }
+	#page a{font-size:12px;display: block; text-decoration: none; margin:0px; color: #ffffff;padding: 2px 5px 2px 5px;background:#009933;}
+	#page a:link,#page a:visited {border: 1px solid #CCCCCC; }
+	#page a:hover {background:#F5FBFF;color:#135C86;}
+	#page #span1 {background:#FFFFFF;display: block;}

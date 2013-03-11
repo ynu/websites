@@ -67,7 +67,7 @@ window.onload=autoScroll;
 <div id="webhead" style="height:auto;">
 	<div id="toplogin" style="display:none;">
 		<span>
-		<script type="text/javascript" src="./js/date.js"></script><font color="" style="font-size:9pt;">2013年3月11日</font>&nbsp;星期一&nbsp; <font color="" style="font-size:9pt;">癸巳年 一月三十</font> <font color="" style="font-size:9pt;"></font> 【蛇】甲寅月 丙子日
+		<script type="text/javascript" src="./js/date.js"></script>
 		</span>
 		
 	</div>
@@ -151,7 +151,7 @@ window.onload=autoScroll;
 <li class="ldmc" id="ld9" style="zoom: 1; z-index: 1;">
 	| <a href="/cms/modules/onlineLeaveMessageList.jsp?typeID=71&siteID=83" target="_top">留言本</a></li>
 
-<!-- script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script -->
+<script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script>
 			
 		</ul>
 	</div>
@@ -180,15 +180,17 @@ window.onload=autoScroll;
 				var config='5|0xffffff|0x009900|80|0xffffff|0xff0000|0x009900';
 				//-- config 参数设置 -- 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字颜色|当前按键颜色|普通按键色彩 --
 				var files='',links='', texts='';
-				files+='|./images/1.JPG';links+='|List.asp?ID=365';texts+='|我校举行“广发银行希望奖学金”捐赠仪式'; 
-				files+='|http://www.news.ynu.edu.cn/xysd/images/201211/1353378358821.jpg';links+='|List.asp?ID=362';texts+='|我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式'; 
-				files+='|http://www.news.ynu.edu.cn/xysd/images/201211/1352362580550.JPG';links+='|List.asp?ID=359';texts+='|2012-2013学年雅居乐地产助学金颁发仪式举行'; 
-				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201207/2012070632092361.jpg';links+='|List.asp?ID=236';texts+='|火箭兵奖学金'; 
-				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201206/2012062838841989.jpg';links+='|List.asp?ID=230';texts+='|中美教育基金GSS奖学金'; 
-				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201206/2012062838053613.jpg';links+='|List.asp?ID=227';texts+='|伍达观教育基金助学金'; 
-				files=files.substring(1);links=links.substring(1);texts=texts.substring(1);
+				
+				#set($n = 0)
+				#foreach($article in $cms.getContents("新闻", 200))
+					#if ($cms.hasPicture($article) && $n <6)
+						files+='|$cms.getPictureUrl($article)';
+						links+='|$cms.getUrl($article)';
+						texts+='|$article.name';                       
+					#end                
+				#end 
 				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
-				document.write('<param name="movie" value="/images/swfnews.swf" />');
+				document.write('<param name="movie" value="./images/swfnews.swf" />');
 				document.write('<param name="quality" value="high" />');
 				document.write('<param name="menu" value="false" />');
 				document.write('<param name=wmode value="opaque" />');
@@ -202,77 +204,54 @@ window.onload=autoScroll;
 
 <!--公告-->
 <div id="ilist" style="margin-left:2px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=26">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=26">公告</a></h6>
+			<h6><span><a href="$cms.getUrl("公告")">more...</a></span><a href="$cms.getUrl("公告")">公告</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">01-14</span><font class="laoynoi1">01</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=368" target="_blank">关于对云南省普洱市景谷县籍生源地信用助学贷款学生的提示</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-24</span><font class="laoynoi1">02</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=367" target="_blank">2012年第一批生源地信用助学贷款发放名单（截止到2012年12月12日）</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-21</span><font class="laoynoi1">03</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=366" target="_blank">关于国家励志奖学金，省政府励志奖学金等助学金发放通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-20</span><font class="laoynoi2">04</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=365" target="_blank">我校举行“广发银行希望奖学金”捐赠仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-05</span><font class="laoynoi2">05</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=363" target="_blank">华民慈善扶助项目的通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-30</span><font class="laoynoi2">06</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=362" target="_blank">我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class="laoynoi2">07</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=361" target="_blank">2012年宋庆龄基金会丰田助学金获助同学名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class="laoynoi2">08</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=360" target="_blank">2012年二炮助学金公示名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class="laoynoi2">09</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=359" target="_blank">2012-2013学年雅居乐地产助学金颁发仪式举行</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class="laoynoi2">10</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=358" target="_blank">东陆奖学金公示名单</a></li>
-
+				#set($n = 0)
+				#foreach($article in $cms.getContents("公告",10))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						#if($article.isTip != 0) 
+							<font class="laoynoi1">
+						#else
+							<font class="laoynoi2">
+						#end
+						#if(n++ < 10)
+							0$n</font>
+						#else
+							$n</font>
+						#end
+						.<a href="$cms.getUrl($article)" target="_blank">#summary($article.name 34)</a>
+					</li>
+				#end
 			</ul>
 </div>
 <!--公告结束-->
 
 		<div id="clear"></div>
         
-<!--
-        <div id="toplist">
-			<ul>
-            
-            </ul>
-        </div>
--->
 	</div>
 	<div id="iright">
-    	
-	    <!--<div class="nTableft">
-      	<div class="TabTitleleft">
-      		<ul id="myTab1">
-					<li class="active" style="width:100%;text-align:left;" onMouseOver="nTabs(this,0);">&nbsp;&nbsp;站内公告</li>
-      		</ul>
-    	</div>
-		<div id="myTab1_Content0" style="clear:both;">
-			<ul id="Artlist10num">
-		<li><span style="float:right;font-style:italic;font-family:Arial; ">01-14</span><font class='laoynoi1'>01</font>.<a href="/List.asp?ID=368" target="_blank" >关于对云南省普洱市景谷县籍生源地信用助学贷款学生的提示</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-24</span><font class='laoynoi1'>02</font>.<a href="/List.asp?ID=367" target="_blank" >2012年第一批生源地信用助学贷款发放名单（截止到2012年12月12日）</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-21</span><font class='laoynoi1'>03</font>.<a href="/List.asp?ID=366" target="_blank" >关于国家励志奖学金，省政府励志奖学金等助学金发放通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-20</span><font class='laoynoi2'>04</font>.<a href="/List.asp?ID=365" target="_blank" >我校举行“广发银行希望奖学金”捐赠仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-05</span><font class='laoynoi2'>05</font>.<a href="/List.asp?ID=363" target="_blank" >华民慈善扶助项目的通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-30</span><font class='laoynoi2'>06</font>.<a href="/List.asp?ID=362" target="_blank" >我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class='laoynoi2'>07</font>.<a href="/List.asp?ID=361" target="_blank" >2012年宋庆龄基金会丰田助学金获助同学名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class='laoynoi2'>08</font>.<a href="/List.asp?ID=360" target="_blank" >2012年二炮助学金公示名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class='laoynoi2'>09</font>.<a href="/List.asp?ID=359" target="_blank" >2012-2013学年雅居乐地产助学金颁发仪式举行</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class='laoynoi2'>10</font>.<a href="/List.asp?ID=358" target="_blank" >东陆奖学金公示名单</a></li>
-
-            </ul>
-   		</div>
-  		<div id="myTab1_Content1" class="none" style="clear:both;">
-			<ul id="Artlist10num">
-            <li>没有</li>
-            </ul>
-		</div>
-  		</div>-->
-
 <div id="clear"></div>
 <div id="ilist212" style="margin:0 0 4px 0;">
     	
-	<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=25">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=25">资助政策</a></h6>
+	<h6><span><a href="$cms.getUrl("资助政策")">more...</a></span><a href="$cms.getUrl("资助政策")">资助政策</a></h6>
 		<ul>
-			<li><font class="laoynoi1">01</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=323" target="_blank">国家助学贷款（农行）毕业生贷款情况查询入口</a></li>
-<li><font class="laoynoi1">02</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=354" target="_blank">云大学〔2007〕22号]关于印发《云南大学国家励志奖学金管理暂行办法》的通知</a></li>
-<li><font class="laoynoi1">03</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=322" target="_blank">生源地助学贷款高校鉴定证明</a></li>
-<li><font class="laoynoi2">04</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=321" target="_blank">2012-2013学年生源地信用助学贷款问题解答</a></li>
-<li><font class="laoynoi2">05</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=319" target="_blank">国家开发银行助学贷款支付宝使用说明</a></li>
-<li><font class="laoynoi2">06</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=315" target="_blank">云南省生源地信用助学贷款申请材料及审查要点</a></li>
-<li><font class="laoynoi2">07</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=316" target="_blank">云南省生源地信用助学贷款工作安排及办理说明</a></li>
-<li><font class="laoynoi2">08</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=320" target="_blank">国家开发银行生源地信用助学贷款信贷政策</a></li>
-
+		#set($n = 0)
+				#foreach($article in $cms.getContents("资助政策",10))
+					<li>
+						#if($article.isTip != 0) 
+							<font class="laoynoi1">
+						#else
+							<font class="laoynoi2">
+						#end
+						#if(n++ < 10)
+							0$n</font>
+						#else
+							$n</font>
+						#end
+						.<a href="$cms.getUrl($article)" target="_blank">#summary($article.name 34)</a>
+					</li>
+				#end
 		</ul>
 </div>
 
@@ -285,62 +264,72 @@ window.onload=autoScroll;
 <div class="mw">
     <div style="float:left;width:730px;margin-top:4px;">
 		<div id="ilist">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=10">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=10">政府奖助学金</a></h6>
+			<h6><span><a href="$cms.getUrl("政府奖助学金")">more...</a></span><a href="$cms.getUrl("政府奖助学金")">政府奖助学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-05</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=301" target="_blank">省政府奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-05</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=300" target="_blank">国家奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-04</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=269" target="_blank">西部开发助学工程助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-04</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=267" target="_blank">省政府励志奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-04</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=266" target="_blank">国家励志奖学金</a></li>
+				#foreach($article in $cms.getContents("政府奖助学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 		<div id="ilist" style="margin-left:6px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=7">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=7">学校奖助学金</a></h6>
+			<h6><span><a href="$cms.getUrl("学校奖助学金")">more...</a></span><a href="$cms.getUrl("学校奖助学金")">学校奖助学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=353" target="_blank">富滇银行小企业信贷专营中心基金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=352" target="_blank">Google大学生励志助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=351" target="_blank">云南大学笹川优秀青年教育基金科研课题资助金、优秀科研成果奖励金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=350" target="_blank">经济学院“欣城”助学基金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=308" target="_blank">方国瑜奖学金</a></li>
+				#foreach($article in $cms.getContents("学校奖助学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
+			</ul>
 			</ul>
 		</div>
 <div id="clear"></div>		<div id="ilist">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=11">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=11">社会奖学金</a></h6>
+			<h6><span><a href="$cms.getUrl("社会奖学金")">more...</a></span><a href="$cms.getUrl("社会奖学金")">社会奖学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-10</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=349" target="_blank">岳虹研究生奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=317" target="_blank">张文勋奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=313" target="_blank">招商银行奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=311" target="_blank">香港思源奖助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=310" target="_blank">华藏奖学金</a></li>
+				#foreach($article in $cms.getContents("社会奖学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 		<div id="ilist" style="margin-left:6px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=22">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=22">社会助学金</a></h6>
+			<h6><span><a href="$cms.getUrl("社会助学金")">more...</a></span><a href="$cms.getUrl("社会助学金")">社会助学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=314" target="_blank">二炮助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=232" target="_blank">种子助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=231" target="_blank">中商财富助学项目</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=230" target="_blank">中美教育基金GSS奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=229" target="_blank">雅居乐地产助学金</a></li>
+				#foreach($article in $cms.getContents("社会助学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 <div id="clear"></div>		<div id="clear"></div>
 <div id="ilist" style="width:728px;margin:0 0 4px 0;"><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=27" target="_blank"><img src="./images/2012070536928097.gif"></a></div>		<div id="clear"></div>
 		<div id="ilist">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=23">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=23">获奖感言</a></h6>
+			<h6><span><a href="$cms.getUrl("获奖感言")">more...</a></span><a href="$cms.getUrl("获奖感言")">获奖感言</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=251" target="_blank">获奖学生感言5</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=250" target="_blank">获奖学生感言4</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=249" target="_blank">获奖学生感言3</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=248" target="_blank">获奖学生感言2</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=247" target="_blank">获奖学生感言1</a></li>
+				#foreach($article in $cms.getContents("获奖感言",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 		<div id="ilist" style="margin-left:6px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=24">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=24">励志故事</a></h6>
+			<h6><span><a href="$cms.getUrl("励志故事")">more...</a></span><a href="$cms.getUrl("励志故事")">励志故事</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-10</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=348" target="_blank">李强：走出一条自强之路</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-10</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=347" target="_blank">李超——大学生身边的楷模</a></li>
+				#foreach($article in $cms.getContents("励志故事",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 <div id="clear"></div>
@@ -348,39 +337,37 @@ window.onload=autoScroll;
 <!--人物栏-->
 <div style="float:left;width:728px;">
 <div id="ilist" style="width:728px;margin:0 0 4px 0;">
-	<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=17">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=17">人物栏</a></h6>
+	<h6><span><a href="$cms.getUrl("人物栏")">more...</a></span><a href="$cms.getUrl("人物栏")">人物栏</a></h6>
 	<div class="scrollPic">
 	<div class="scrollL"><img src="./images/arrow_L.png" width="35" height="68"></div>
 	<div class="scrollR"><img src="./images/arrow_R.png" width="33" height="68"></div>
 	<div class="scroll" id="demo">
 	<div id="indemo">
 <div id="demo1">
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=258" target="_blank"><div><img src="./images/2012070279723001.jpg" alt="赵国书"></div><div class="infor">赵国书</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=257" target="_blank"><div><img src="./images/2012070561815593.jpg" alt="熊庆来"></div><div class="infor">熊庆来</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=256" target="_blank"><div><img src="./images/2012070562101985.jpg" alt="方国瑜"></div><div class="infor">方国瑜</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=255" target="_blank"><div><img src="./images/2012070562197421.jpg" alt="吴远之"></div><div class="infor">吴远之</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=254" target="_blank"><div><img src="./images/2012070562129297.jpg" alt="净空法师"></div><div class="infor">净空法师</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=253" target="_blank"><div><img src="./images/2012070562298953.jpg" alt="伍达观"></div><div class="infor">伍达观</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=252" target="_blank"><div><img src="./images/2012070562688753.jpg" alt="何善衡"></div><div class="infor">何善衡</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=218" target="_blank"><div><img src="./images/2012070562714797.jpg" alt="朱日祥"></div><div class="infor">朱日祥</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=217" target="_blank"><div><img src="./images/2012070562803861.jpg" alt="稻盛和夫"></div><div class="infor">稻盛和夫</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=216" target="_blank"><div><img src="./images/2012070562387437.jpg" alt="张文勋"></div><div class="infor">张文勋</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=215" target="_blank"><div><img src="./images/2012070562991845.png" alt="赵展岳"></div><div class="infor">赵展岳</div></a></div>
+
+	#foreach($article in $cms.getContents("人物栏",20))
+		<div class="picBox">
+			<a href="$cms.getUrl($article)" target="_blank">
+				<div>
+					<img src="$cms.getPictureUrl($article)" alt="$article.name">
+				</div>
+				<div class="infor">$article.name</div>
+			</a>
+		</div>
+	#end
 
 </div>
 <div id="demo2">
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=258" target="_blank"><div><img src="./images/2012070279723001.jpg" alt="赵国书"></div><div class="infor">赵国书</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=257" target="_blank"><div><img src="./images/2012070561815593.jpg" alt="熊庆来"></div><div class="infor">熊庆来</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=256" target="_blank"><div><img src="./images/2012070562101985.jpg" alt="方国瑜"></div><div class="infor">方国瑜</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=255" target="_blank"><div><img src="./images/2012070562197421.jpg" alt="吴远之"></div><div class="infor">吴远之</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=254" target="_blank"><div><img src="./images/2012070562129297.jpg" alt="净空法师"></div><div class="infor">净空法师</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=253" target="_blank"><div><img src="./images/2012070562298953.jpg" alt="伍达观"></div><div class="infor">伍达观</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=252" target="_blank"><div><img src="./images/2012070562688753.jpg" alt="何善衡"></div><div class="infor">何善衡</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=218" target="_blank"><div><img src="./images/2012070562714797.jpg" alt="朱日祥"></div><div class="infor">朱日祥</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=217" target="_blank"><div><img src="./images/2012070562803861.jpg" alt="稻盛和夫"></div><div class="infor">稻盛和夫</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=216" target="_blank"><div><img src="./images/2012070562387437.jpg" alt="张文勋"></div><div class="infor">张文勋</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=215" target="_blank"><div><img src="./images/2012070562991845.png" alt="赵展岳"></div><div class="infor">赵展岳</div></a></div>
-
+	#foreach($article in $cms.getContents("人物栏",20))
+		<div class="picBox">
+			<a href="$cms.getUrl($article)" target="_blank">
+				<div>
+					<img src="$cms.getPictureUrl($article)" alt="$article.name">
+				</div>
+				<div class="infor">$article.name</div>
+			</a>
+		</div>
+	#end
 </div>
     	</div>
 	</div>
@@ -404,40 +391,32 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <!--资助单位-->
 <div id="ilist212" style="margin:4px 0 4px 0;">
-	<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=20">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=20">资助单位</a></h6>
+	<h6><span><a href="$cms.getUrl("资助单位")">more...</a></span><a href="$cms.getUrl("资助单位")">资助单位</a></h6>
 <div style="position: relative;height: 686px;">
 <div id="lt_top" style="overflow:hidden;height:686px;width:210px;position: absolute;top: 0px;left: 0px;"> 
 <div style="height: 800%;">
 <div id="lt_top1"> 
 		<ul id="indeximg" style="border-bottom:0;margin-bottom:0;height:656px;overflow:visible;">
-			<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"><img src="./images/2012070956110513.png" alt="五星电器" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"><img src="./images/2012070685423049.png" alt="华民慈善基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"><img src="./images/2012070241925657.gif" alt="思源基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"><img src="./images/2012070353312193.jpg" alt="宝钢教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"><img src="./images/2012070257986317.jpg" alt="轩辕教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"><img src="./images/2012070241323897.jpg" alt="宋庆龄基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"><img src="./images/2012062947935349.jpg" alt="大益爱心基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"><img src="./images/2012062771712129.jpg" alt="招商银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"><img src="./images/2012070241794725.png" alt="红云红河" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"><img src="./images/2012070170651985.gif" alt="恒生银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"><img src="./images/2012070256635925.jpg" alt="雅居乐地产" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"></a></li>
-
+			#foreach($article in $cms.getContents("资助单位",20))
+				<li style="height:auto;line-height:0;width:170px;">
+					<a href="$cms.getUrl($article)" target="_blank">
+						<img src="$cms.getPictureUrl($article)" alt="$article.name" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;">
+					</a>
+					<br><a href="$cms.getUrl($article)" target="_blank"></a>
+				</li>
+			#end
 		</ul>
 </div>
 <div id="lt_top2"> 
 		<ul id="indeximg" style="border-bottom:0;margin-bottom:0;height:656px;overflow:visible;">
-			<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"><img src="./images/2012070956110513.png" alt="五星电器" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"><img src="./images/2012070685423049.png" alt="华民慈善基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"><img src="./images/2012070241925657.gif" alt="思源基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"><img src="./images/2012070353312193.jpg" alt="宝钢教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"><img src="./images/2012070257986317.jpg" alt="轩辕教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"><img src="./images/2012070241323897.jpg" alt="宋庆龄基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"><img src="./images/2012062947935349.jpg" alt="大益爱心基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"><img src="./images/2012062771712129.jpg" alt="招商银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"><img src="./images/2012070241794725.png" alt="红云红河" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"><img src="./images/2012070170651985.gif" alt="恒生银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"><img src="./images/2012070256635925.jpg" alt="雅居乐地产" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"></a></li>
-
+			#foreach($article in $cms.getContents("资助单位",20))
+				<li style="height:auto;line-height:0;width:170px;">
+					<a href="$cms.getUrl($article)" target="_blank">
+						<img src="$cms.getPictureUrl($article)" alt="$article.name" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;">
+					</a>
+					<br><a href="$cms.getUrl($article)" target="_blank"></a>
+				</li>
+			#end
 		</ul>
 </div>
 </div>
@@ -453,13 +432,9 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <div class="mw">
 	<div class="link"><b>友情链接：</b><a href="http://www.ydxsc.ynu.edu.cn/" target="_blank">云南大学学生处</a>
-【<a href="http://www.xsjzwh.ynu.edu.cn/Link.asp">更多...</a>】【<a href="javascript:void(0)" onclick="document.getElementById(&#39;light&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.width = document.body.scrollWidth + &#39;px&#39;;document.getElementById(&#39;fade&#39;).style.height = document.body.scrollHeight + &#39;px&#39;;document.getElementById(&#39;light&#39;).style.left = (parseInt(document.body.scrollWidth) - 400) / 2 + &#39;px&#39;;">链接申请</a>】</div>
+【<a href="$cms.getUrl("友情链接")">更多...</a>】【<a href="javascript:void(0)" onclick="document.getElementById(&#39;light&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.width = document.body.scrollWidth + &#39;px&#39;;document.getElementById(&#39;fade&#39;).style.height = document.body.scrollHeight + &#39;px&#39;;document.getElementById(&#39;light&#39;).style.left = (parseInt(document.body.scrollWidth) - 400) / 2 + &#39;px&#39;;">链接申请</a>】</div>
 </div>
-<!--
-<div class="mw">
-	<div class="link"></div>
-</div>
--->
+
 <div id="light" class="white_content"> 
 	<h5><span><a href="javascript:void(1)" onclick="document.getElementById(&#39;light&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;fade&#39;).style.display=&#39;none&#39;"><img src="./images/close.gif" alt="关闭"></a></span>链接申请</h5>
 <iframe id="link" src="./js/Reglink.htm" width="100%" height="170" scrolling="NO" frameborder="0"></iframe>
@@ -468,8 +443,7 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <div id="webcopy">
 	<li class="copyDis">云南大学学生处 &#169; 2013 版权所有 All Rights Reserved.</li>
-	<li class="copyDis"> <a href="http://www.miibeian.gov.cn/" target="_blank"></a></li>
-	<li>Powered by <b>laoy8! <a href="http://www.laoy8.net/" target="_blank">V3.0sp1</a><b></b></b></li><!--这里可放网站统计代码--></div><b><b>
+	<!--这里可放网站统计代码--></div><b><b>
 <script language="javascript" src="./js/Std_StranJF.Js"></script>
 <div id="clear"></div>
 
