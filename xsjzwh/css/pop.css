@@ -1,0 +1,10 @@
+body{
+font-size: 9pt; font-family:Arial; 
+background-color:gainsboro;
+}
+td,select,div,span,button { font-size: 9pt; font-family:Arial; }
+BUTTON {width:5em; border-width: 1pt; }
+input { border: 1pt solid black; font-size: 9pt; background:url("inputbg.gif"); padding:1pt 3pt;}
+.title {font-weight:bold}
+a:link { color: #0000BB }
+a:visited { color: #0000BB }

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://www.xsjzwh.ynu.edu.cn/Reglink.asp -->
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript" src="chrome-extension://khbjahpecnkenngkidhioicnfpakihgo/iframe_raw.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>云南大学奖助文化网-链接申请</title>
+<meta name="keywords" content="云南大学奖助文化网,云南大学学生处">
+<meta name="description" content="云南大学学生处">
+<style>
+body {margin:0;padding:0;}
+body,td {font-size:12px;}
+</style>
+</head>
+
+<body>
+
+<script language="javascript">
+function CheckForm()
+{ 
+  if (document.myform.Title.value==""){
+	alert("请填写网站名称！");
+	document.myform.Title.focus();
+	return false;
+  }
+  if (document.myform.LinkUrl.value==""){
+	alert("请填写网址！");
+	document.myform.LinkUrl.focus();
+	return false;
+  }
+  if (document.myform.QQ.value==""){
+	alert("请填写联系QQ！");
+	document.myform.QQ.focus();
+	return false;
+  }
+  var filter=/^\s*[0-9]{5,10}\s*$/;
+  if (!filter.test(document.myform.QQ.value)) { 
+	alert("QQ填写不正确！"); 
+	document.myform.QQ.focus();
+	return false; 
+  }
+}
+</script>
+<form onsubmit="return CheckForm();" id="myform" name="myform" method="post" action="http://www.xsjzwh.ynu.edu.cn/Reglink.asp?action=savenew">
+  <table width="266" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:20px;">
+    <tbody><tr>
+      <td width="28%" height="30" align="right">网站名称：</td>
+      <td width="72%" align="center"><input name="Title" type="text" id="Title"></td>
+    </tr>
+    <tr>
+      <td height="30" align="right">网站地址：</td>
+      <td align="center"><input type="text" name="LinkUrl" id="LinkUrl"></td>
+    </tr>
+    <tr>
+      <td height="30" align="right">Logo地址：</td>
+      <td align="center"><input type="text" name="LogoUrl" id="LogoUrl"></td>
+    </tr>
+    <tr>
+      <td height="30" align="right">站长QQ：</td>
+      <td align="center"><input type="text" name="QQ" id="QQ"></td>
+    </tr>
+    <tr>
+      <td height="30">&nbsp;</td>
+      <td align="left" style="padding-left:20px;"><input type="submit" name="button" id="button" value="申请"></td>
+    </tr>
+  </tbody></table>
+</form>
+
+
+</body></html>
