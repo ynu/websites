@@ -67,7 +67,7 @@ window.onload=autoScroll;
 <div id="webhead" style="height:auto;">
 	<div id="toplogin" style="display:none;">
 		<span>
-		<script type="text/javascript" src="./js/date.js"></script><font color="" style="font-size:9pt;">2013年3月11日</font>&nbsp;星期一&nbsp; <font color="" style="font-size:9pt;">癸巳年 一月三十</font> <font color="" style="font-size:9pt;"></font> 【蛇】甲寅月 丙子日
+		<script type="text/javascript" src="./js/date.js"></script>
 		</span>
 		
 	</div>
@@ -337,39 +337,37 @@ window.onload=autoScroll;
 <!--人物栏-->
 <div style="float:left;width:728px;">
 <div id="ilist" style="width:728px;margin:0 0 4px 0;">
-	<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=17">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=17">人物栏</a></h6>
+	<h6><span><a href="$cms.getUrl("人物栏")">more...</a></span><a href="$cms.getUrl("人物栏")">人物栏</a></h6>
 	<div class="scrollPic">
 	<div class="scrollL"><img src="./images/arrow_L.png" width="35" height="68"></div>
 	<div class="scrollR"><img src="./images/arrow_R.png" width="33" height="68"></div>
 	<div class="scroll" id="demo">
 	<div id="indemo">
 <div id="demo1">
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=258" target="_blank"><div><img src="./images/2012070279723001.jpg" alt="赵国书"></div><div class="infor">赵国书</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=257" target="_blank"><div><img src="./images/2012070561815593.jpg" alt="熊庆来"></div><div class="infor">熊庆来</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=256" target="_blank"><div><img src="./images/2012070562101985.jpg" alt="方国瑜"></div><div class="infor">方国瑜</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=255" target="_blank"><div><img src="./images/2012070562197421.jpg" alt="吴远之"></div><div class="infor">吴远之</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=254" target="_blank"><div><img src="./images/2012070562129297.jpg" alt="净空法师"></div><div class="infor">净空法师</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=253" target="_blank"><div><img src="./images/2012070562298953.jpg" alt="伍达观"></div><div class="infor">伍达观</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=252" target="_blank"><div><img src="./images/2012070562688753.jpg" alt="何善衡"></div><div class="infor">何善衡</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=218" target="_blank"><div><img src="./images/2012070562714797.jpg" alt="朱日祥"></div><div class="infor">朱日祥</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=217" target="_blank"><div><img src="./images/2012070562803861.jpg" alt="稻盛和夫"></div><div class="infor">稻盛和夫</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=216" target="_blank"><div><img src="./images/2012070562387437.jpg" alt="张文勋"></div><div class="infor">张文勋</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=215" target="_blank"><div><img src="./images/2012070562991845.png" alt="赵展岳"></div><div class="infor">赵展岳</div></a></div>
+
+	#foreach($article in $cms.getContents("人物栏",20))
+		<div class="picBox">
+			<a href="$cms.getUrl($article)" target="_blank">
+				<div>
+					<img src="$cms.getPictureUrl($article)" alt="$article.name">
+				</div>
+				<div class="infor">$article.name</div>
+			</a>
+		</div>
+	#end
 
 </div>
 <div id="demo2">
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=258" target="_blank"><div><img src="./images/2012070279723001.jpg" alt="赵国书"></div><div class="infor">赵国书</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=257" target="_blank"><div><img src="./images/2012070561815593.jpg" alt="熊庆来"></div><div class="infor">熊庆来</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=256" target="_blank"><div><img src="./images/2012070562101985.jpg" alt="方国瑜"></div><div class="infor">方国瑜</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=255" target="_blank"><div><img src="./images/2012070562197421.jpg" alt="吴远之"></div><div class="infor">吴远之</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=254" target="_blank"><div><img src="./images/2012070562129297.jpg" alt="净空法师"></div><div class="infor">净空法师</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=253" target="_blank"><div><img src="./images/2012070562298953.jpg" alt="伍达观"></div><div class="infor">伍达观</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=252" target="_blank"><div><img src="./images/2012070562688753.jpg" alt="何善衡"></div><div class="infor">何善衡</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=218" target="_blank"><div><img src="./images/2012070562714797.jpg" alt="朱日祥"></div><div class="infor">朱日祥</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=217" target="_blank"><div><img src="./images/2012070562803861.jpg" alt="稻盛和夫"></div><div class="infor">稻盛和夫</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=216" target="_blank"><div><img src="./images/2012070562387437.jpg" alt="张文勋"></div><div class="infor">张文勋</div></a></div>
-<div class="picBox"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=215" target="_blank"><div><img src="./images/2012070562991845.png" alt="赵展岳"></div><div class="infor">赵展岳</div></a></div>
-
+	#foreach($article in $cms.getContents("人物栏",20))
+		<div class="picBox">
+			<a href="$cms.getUrl($article)" target="_blank">
+				<div>
+					<img src="$cms.getPictureUrl($article)" alt="$article.name">
+				</div>
+				<div class="infor">$article.name</div>
+			</a>
+		</div>
+	#end
 </div>
     	</div>
 	</div>
@@ -393,40 +391,32 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <!--资助单位-->
 <div id="ilist212" style="margin:4px 0 4px 0;">
-	<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=20">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=20">资助单位</a></h6>
+	<h6><span><a href="$cms.getUrl("资助单位")">more...</a></span><a href="$cms.getUrl("资助单位")">资助单位</a></h6>
 <div style="position: relative;height: 686px;">
 <div id="lt_top" style="overflow:hidden;height:686px;width:210px;position: absolute;top: 0px;left: 0px;"> 
 <div style="height: 800%;">
 <div id="lt_top1"> 
 		<ul id="indeximg" style="border-bottom:0;margin-bottom:0;height:656px;overflow:visible;">
-			<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"><img src="./images/2012070956110513.png" alt="五星电器" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"><img src="./images/2012070685423049.png" alt="华民慈善基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"><img src="./images/2012070241925657.gif" alt="思源基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"><img src="./images/2012070353312193.jpg" alt="宝钢教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"><img src="./images/2012070257986317.jpg" alt="轩辕教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"><img src="./images/2012070241323897.jpg" alt="宋庆龄基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"><img src="./images/2012062947935349.jpg" alt="大益爱心基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"><img src="./images/2012062771712129.jpg" alt="招商银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"><img src="./images/2012070241794725.png" alt="红云红河" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"><img src="./images/2012070170651985.gif" alt="恒生银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"><img src="./images/2012070256635925.jpg" alt="雅居乐地产" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"></a></li>
-
+			#foreach($article in $cms.getContents("资助单位",20))
+				<li style="height:auto;line-height:0;width:170px;">
+					<a href="$cms.getUrl($article)" target="_blank">
+						<img src="$cms.getPictureUrl($article)" alt="$article.name" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;">
+					</a>
+					<br><a href="$cms.getUrl($article)" target="_blank"></a>
+				</li>
+			#end
 		</ul>
 </div>
 <div id="lt_top2"> 
 		<ul id="indeximg" style="border-bottom:0;margin-bottom:0;height:656px;overflow:visible;">
-			<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"><img src="./images/2012070956110513.png" alt="五星电器" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=325" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"><img src="./images/2012070685423049.png" alt="华民慈善基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=318" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"><img src="./images/2012070241925657.gif" alt="思源基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=244" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"><img src="./images/2012070353312193.jpg" alt="宝钢教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=242" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"><img src="./images/2012070257986317.jpg" alt="轩辕教育基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=239" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"><img src="./images/2012070241323897.jpg" alt="宋庆龄基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=238" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"><img src="./images/2012062947935349.jpg" alt="大益爱心基金会" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=233" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"><img src="./images/2012062771712129.jpg" alt="招商银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=246" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"><img src="./images/2012070241794725.png" alt="红云红河" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=245" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"><img src="./images/2012070170651985.gif" alt="恒生银行" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=241" target="_blank"></a></li>
-<li style="height:auto;line-height:0;width:170px;"><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"><img src="./images/2012070256635925.jpg" alt="雅居乐地产" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;"></a><br><a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=240" target="_blank"></a></li>
-
+			#foreach($article in $cms.getContents("资助单位",20))
+				<li style="height:auto;line-height:0;width:170px;">
+					<a href="$cms.getUrl($article)" target="_blank">
+						<img src="$cms.getPictureUrl($article)" alt="$article.name" style="border:1px solid #ccc;padding:2px;width:170px;height:50px;">
+					</a>
+					<br><a href="$cms.getUrl($article)" target="_blank"></a>
+				</li>
+			#end
 		</ul>
 </div>
 </div>
@@ -442,13 +432,9 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <div class="mw">
 	<div class="link"><b>友情链接：</b><a href="http://www.ydxsc.ynu.edu.cn/" target="_blank">云南大学学生处</a>
-【<a href="http://www.xsjzwh.ynu.edu.cn/Link.asp">更多...</a>】【<a href="javascript:void(0)" onclick="document.getElementById(&#39;light&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.width = document.body.scrollWidth + &#39;px&#39;;document.getElementById(&#39;fade&#39;).style.height = document.body.scrollHeight + &#39;px&#39;;document.getElementById(&#39;light&#39;).style.left = (parseInt(document.body.scrollWidth) - 400) / 2 + &#39;px&#39;;">链接申请</a>】</div>
+【<a href="$cms.getUrl("友情链接")">更多...</a>】【<a href="javascript:void(0)" onclick="document.getElementById(&#39;light&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.display=&#39;block&#39;;document.getElementById(&#39;fade&#39;).style.width = document.body.scrollWidth + &#39;px&#39;;document.getElementById(&#39;fade&#39;).style.height = document.body.scrollHeight + &#39;px&#39;;document.getElementById(&#39;light&#39;).style.left = (parseInt(document.body.scrollWidth) - 400) / 2 + &#39;px&#39;;">链接申请</a>】</div>
 </div>
-<!--
-<div class="mw">
-	<div class="link"></div>
-</div>
--->
+
 <div id="light" class="white_content"> 
 	<h5><span><a href="javascript:void(1)" onclick="document.getElementById(&#39;light&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;fade&#39;).style.display=&#39;none&#39;"><img src="./images/close.gif" alt="关闭"></a></span>链接申请</h5>
 <iframe id="link" src="./js/Reglink.htm" width="100%" height="170" scrolling="NO" frameborder="0"></iframe>
@@ -457,8 +443,7 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <div id="webcopy">
 	<li class="copyDis">云南大学学生处 &#169; 2013 版权所有 All Rights Reserved.</li>
-	<li class="copyDis"> <a href="http://www.miibeian.gov.cn/" target="_blank"></a></li>
-	<li>Powered by <b>laoy8! <a href="http://www.laoy8.net/" target="_blank">V3.0sp1</a><b></b></b></li><!--这里可放网站统计代码--></div><b><b>
+	<!--这里可放网站统计代码--></div><b><b>
 <script language="javascript" src="./js/Std_StranJF.Js"></script>
 <div id="clear"></div>
 
