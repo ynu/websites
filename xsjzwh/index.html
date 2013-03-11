@@ -229,44 +229,8 @@ window.onload=autoScroll;
 
 		<div id="clear"></div>
         
-<!--
-        <div id="toplist">
-			<ul>
-            
-            </ul>
-        </div>
--->
 	</div>
 	<div id="iright">
-    	
-	    <!--<div class="nTableft">
-      	<div class="TabTitleleft">
-      		<ul id="myTab1">
-					<li class="active" style="width:100%;text-align:left;" onMouseOver="nTabs(this,0);">&nbsp;&nbsp;站内公告</li>
-      		</ul>
-    	</div>
-		<div id="myTab1_Content0" style="clear:both;">
-			<ul id="Artlist10num">
-		<li><span style="float:right;font-style:italic;font-family:Arial; ">01-14</span><font class='laoynoi1'>01</font>.<a href="/List.asp?ID=368" target="_blank" >关于对云南省普洱市景谷县籍生源地信用助学贷款学生的提示</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-24</span><font class='laoynoi1'>02</font>.<a href="/List.asp?ID=367" target="_blank" >2012年第一批生源地信用助学贷款发放名单（截止到2012年12月12日）</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-21</span><font class='laoynoi1'>03</font>.<a href="/List.asp?ID=366" target="_blank" >关于国家励志奖学金，省政府励志奖学金等助学金发放通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-20</span><font class='laoynoi2'>04</font>.<a href="/List.asp?ID=365" target="_blank" >我校举行“广发银行希望奖学金”捐赠仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-05</span><font class='laoynoi2'>05</font>.<a href="/List.asp?ID=363" target="_blank" >华民慈善扶助项目的通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-30</span><font class='laoynoi2'>06</font>.<a href="/List.asp?ID=362" target="_blank" >我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class='laoynoi2'>07</font>.<a href="/List.asp?ID=361" target="_blank" >2012年宋庆龄基金会丰田助学金获助同学名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class='laoynoi2'>08</font>.<a href="/List.asp?ID=360" target="_blank" >2012年二炮助学金公示名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class='laoynoi2'>09</font>.<a href="/List.asp?ID=359" target="_blank" >2012-2013学年雅居乐地产助学金颁发仪式举行</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class='laoynoi2'>10</font>.<a href="/List.asp?ID=358" target="_blank" >东陆奖学金公示名单</a></li>
-
-            </ul>
-   		</div>
-  		<div id="myTab1_Content1" class="none" style="clear:both;">
-			<ul id="Artlist10num">
-            <li>没有</li>
-            </ul>
-		</div>
-  		</div>-->
-
 <div id="clear"></div>
 <div id="ilist212" style="margin:0 0 4px 0;">
     	
@@ -300,62 +264,72 @@ window.onload=autoScroll;
 <div class="mw">
     <div style="float:left;width:730px;margin-top:4px;">
 		<div id="ilist">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=10">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=10">政府奖助学金</a></h6>
+			<h6><span><a href="$cms.getUrl("政府奖助学金")">more...</a></span><a href="$cms.getUrl("政府奖助学金")">政府奖助学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-05</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=301" target="_blank">省政府奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-05</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=300" target="_blank">国家奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-04</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=269" target="_blank">西部开发助学工程助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-04</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=267" target="_blank">省政府励志奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-04</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=266" target="_blank">国家励志奖学金</a></li>
+				#foreach($article in $cms.getContents("政府奖助学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 		<div id="ilist" style="margin-left:6px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=7">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=7">学校奖助学金</a></h6>
+			<h6><span><a href="$cms.getUrl("学校奖助学金")">more...</a></span><a href="$cms.getUrl("学校奖助学金")">学校奖助学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=353" target="_blank">富滇银行小企业信贷专营中心基金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=352" target="_blank">Google大学生励志助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=351" target="_blank">云南大学笹川优秀青年教育基金科研课题资助金、优秀科研成果奖励金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-16</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=350" target="_blank">经济学院“欣城”助学基金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=308" target="_blank">方国瑜奖学金</a></li>
+				#foreach($article in $cms.getContents("学校奖助学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
+			</ul>
 			</ul>
 		</div>
 <div id="clear"></div>		<div id="ilist">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=11">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=11">社会奖学金</a></h6>
+			<h6><span><a href="$cms.getUrl("社会奖学金")">more...</a></span><a href="$cms.getUrl("社会奖学金")">社会奖学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-10</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=349" target="_blank">岳虹研究生奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=317" target="_blank">张文勋奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=313" target="_blank">招商银行奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=311" target="_blank">香港思源奖助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=310" target="_blank">华藏奖学金</a></li>
+				#foreach($article in $cms.getContents("社会奖学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 		<div id="ilist" style="margin-left:6px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=22">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=22">社会助学金</a></h6>
+			<h6><span><a href="$cms.getUrl("社会助学金")">more...</a></span><a href="$cms.getUrl("社会助学金")">社会助学金</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-06</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=314" target="_blank">二炮助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=232" target="_blank">种子助学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=231" target="_blank">中商财富助学项目</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=230" target="_blank">中美教育基金GSS奖学金</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">06-28</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=229" target="_blank">雅居乐地产助学金</a></li>
+				#foreach($article in $cms.getContents("社会助学金",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 <div id="clear"></div>		<div id="clear"></div>
 <div id="ilist" style="width:728px;margin:0 0 4px 0;"><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=27" target="_blank"><img src="./images/2012070536928097.gif"></a></div>		<div id="clear"></div>
 		<div id="ilist">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=23">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=23">获奖感言</a></h6>
+			<h6><span><a href="$cms.getUrl("获奖感言")">more...</a></span><a href="$cms.getUrl("获奖感言")">获奖感言</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=251" target="_blank">获奖学生感言5</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=250" target="_blank">获奖学生感言4</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=249" target="_blank">获奖学生感言3</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=248" target="_blank">获奖学生感言2</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-02</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=247" target="_blank">获奖学生感言1</a></li>
+				#foreach($article in $cms.getContents("获奖感言",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 		<div id="ilist" style="margin-left:6px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=24">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=24">励志故事</a></h6>
+			<h6><span><a href="$cms.getUrl("励志故事")">more...</a></span><a href="$cms.getUrl("励志故事")">励志故事</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-10</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=348" target="_blank">李强：走出一条自强之路</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">07-10</span>·<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=347" target="_blank">李超——大学生身边的楷模</a></li>
+				#foreach($article in $cms.getContents("励志故事",5))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						·<a href="$cms.getUrl($article)" target="_blank">$article.name</a>
+					</li>
+				#end
 			</ul>
 		</div>
 <div id="clear"></div>
