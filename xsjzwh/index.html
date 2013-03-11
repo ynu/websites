@@ -204,19 +204,25 @@ window.onload=autoScroll;
 
 <!--公告-->
 <div id="ilist" style="margin-left:2px;">
-			<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=26">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=26">公告</a></h6>
+			<h6><span><a href="$cms.getUrl("公告")">more...</a></span><a href="$cms.getUrl("公告")">公告</a></h6>
 			<ul>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">01-14</span><font class="laoynoi1">01</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=368" target="_blank">关于对云南省普洱市景谷县籍生源地信用助学贷款学生的提示</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-24</span><font class="laoynoi1">02</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=367" target="_blank">2012年第一批生源地信用助学贷款发放名单（截止到2012年12月12日）</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-21</span><font class="laoynoi1">03</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=366" target="_blank">关于国家励志奖学金，省政府励志奖学金等助学金发放通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-20</span><font class="laoynoi2">04</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=365" target="_blank">我校举行“广发银行希望奖学金”捐赠仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">12-05</span><font class="laoynoi2">05</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=363" target="_blank">华民慈善扶助项目的通知</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-30</span><font class="laoynoi2">06</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=362" target="_blank">我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class="laoynoi2">07</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=361" target="_blank">2012年宋庆龄基金会丰田助学金获助同学名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-16</span><font class="laoynoi2">08</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=360" target="_blank">2012年二炮助学金公示名单</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class="laoynoi2">09</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=359" target="_blank">2012-2013学年雅居乐地产助学金颁发仪式举行</a></li>
-<li><span style="float:right;font-style:italic;font-family:Arial; ">11-13</span><font class="laoynoi2">10</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=358" target="_blank">东陆奖学金公示名单</a></li>
-
+				#set($n = 0)
+				#foreach($article in $cms.getContents("公告",10))
+					<li>
+						<span style="float:right;font-style:italic;font-family:Arial; ">$cms.format($article.publishDate,"MM/dd")</span>
+						#if($article.isTip != 0) 
+							<font class="laoynoi1">
+						#else
+							<font class="laoynoi2">
+						#end
+						#if(n++ < 10)
+							0$n</font>
+						#else
+							$n</font>
+						#end
+						.<a href="$cms.getUrl($article)" target="_blank">#summary($article.name 34)</a>
+					</li>
+				#end
 			</ul>
 </div>
 <!--公告结束-->
