@@ -87,103 +87,69 @@ window.onload=autoScroll;
 	<div id="clear"></div>
 	<div id="webmenu">
 		<ul>
-		  <li class="ldmc" id="ld1" style="zoom: 1; z-index: 1;"> <a href="./js/index.html" target="_top">首 页</a></li>
-<li class="ldmc" id="ld2" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=25" target="_top" class="ldparent">资助政策</a>
+		  <li class="ldmc" id="ld1" style="zoom: 1; z-index: 1;"> <a href="$cms.getUrl("首页")" target="_top">首 页</a></li>
+<li class="ldmc" id="ld2" style="zoom: 1; z-index: 1;">
+	| <a href="$cms.getUrl("资助政策")" target="_top" class="ldparent">资助政策</a>
+	<div id="xmenu" style="width: 250px; z-index: 2;">
+		#foreach($article in $cms.getContents("资助政策",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
+	</div>
+</li>
+<li class="ldmc" id="ld3" style="zoom: 1; z-index: 1;">
+	| <a href="$cms.getUrl("政府奖助学金")" target="_top" class="ldparent">政府奖助学金</a>
+	<div id="xmenu" style="width: 250px; z-index: 2;">
+		#foreach($article in $cms.getContents("政府奖助学金",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
+	</div>
+</li>
+<li class="ldmc" id="ld4" style="zoom: 1; z-index: 1;">
+	| <a href="$cms.getUrl("学校奖助学金")" target="_top" class="ldparent">学校奖助学金</a>
+	<div id="xmenu" style="width: 250px; z-index: 2;">
+		#foreach($article in $cms.getContents("学校奖助学金",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
+	</div>
+</li>
+<li class="ldmc" id="ld5" style="zoom: 1; z-index: 1;">
+	| <a href="$cms.getUrl("社会奖学金")" target="_top" class="ldparent">社会奖学金</a>
+	<div id="xmenu" style="width: 250px; z-index: 2;">
+		#foreach($article in $cms.getContents("社会奖学金",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
+	</div>
+</li>
+<li class="ldmc" id="ld6" style="zoom: 1; z-index: 1;">
+	| <a href="$cms.getUrl("社会助学金")" target="_top" class="ldparent">社会助学金</a>
 
 <div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?354.html">云大学〔2007〕22号]关于印发《</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?323.html">国家助学贷款（农行）毕业生贷款情况查</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?322.html">生源地助学贷款高校鉴定证明</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?321.html">2012-2013学年生源地信用助学</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?320.html">国家开发银行生源地信用助学贷款信贷政</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?319.html">国家开发银行助学贷款支付宝使用说明</a></div>
+		#foreach($article in $cms.getContents("社会助学金",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
+</div>
 </li>
-<li class="ldmc" id="ld3" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=10" target="_top" class="ldparent">政府奖助学金</a>
+<li class="ldmc" id="ld7" style="zoom: 1; z-index: 1;">
+| <a href="$cms.getUrl("获奖感言")" target="_top" class="ldparent">获奖感言</a>
 
 <div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?301.html">省政府奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?300.html">国家奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?269.html">西部开发助学工程助学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?267.html">省政府励志奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?266.html">国家励志奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?265.html">国家助学金</a></div>
+		#foreach($article in $cms.getContents("获奖感言",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
+</div>
 </li>
-<li class="ldmc" id="ld4" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=7" target="_top" class="ldparent">学校奖助学金</a>
+<li class="ldmc" id="ld8" style="zoom: 1; z-index: 1;">
+	| <a href="$cms.getUrl("励志故事")" target="_top" class="ldparent">励志故事</a>
 
 <div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?353.html">富滇银行小企业信贷专营中心基金</a>
+		#foreach($article in $cms.getContents("励志故事",6))
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+		#end
 
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?352.html">Google大学生励志助学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?351.html">云南大学笹川优秀青年教育基金科研课题</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?350.html">经济学院“欣城”助学基金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?308.html">方国瑜奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?303.html">熊庆来奖学金</a></div>
+</div>
 </li>
-<li class="ldmc" id="ld5" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=11" target="_top" class="ldparent">社会奖学金</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?349.html">岳虹研究生奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?317.html">张文勋奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?313.html">招商银行奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?311.html">香港思源奖助学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?310.html">华藏奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?309.html">恒生银行内地奖学金</a></div>
-</li>
-<li class="ldmc" id="ld6" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=22" target="_top" class="ldparent">社会助学金</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?314.html">二炮助学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?232.html">种子助学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?231.html">中商财富助学项目</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?230.html">中美教育基金GSS奖学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?229.html">雅居乐地产助学金</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?228.html">新长城——特困大学生自强项目</a></div>
-</li>
-<li class="ldmc" id="ld7" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=23" target="_top" class="ldparent">获奖感言</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?251.html">获奖学生感言5</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?250.html">获奖学生感言4</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?249.html">获奖学生感言3</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?248.html">获奖学生感言2</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?247.html">获奖学生感言1</a></div>
-</li>
-<li class="ldmc" id="ld8" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=24" target="_top" class="ldparent">励志故事</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?348.html">李强：走出一条自强之路</a>
-
-<a href="http://www.xsjzwh.ynu.edu.cn/Html/?347.html">李超——大学生身边的楷模</a></div>
-</li>
-<li class="ldmc" id="ld9" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Guestbook.asp" target="_top">留言本</a></li>
+<li class="ldmc" id="ld9" style="zoom: 1; z-index: 1;">
+	| <a href="/cms/modules/onlineLeaveMessageList.jsp?typeID=71&siteID=83" target="_top">留言本</a></li>
 
 <!-- script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script -->
 			
