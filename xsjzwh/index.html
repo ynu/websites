@@ -10,7 +10,7 @@
 <!-- script type="text/javascript" src="./js/main.asp"></script -->
 <!--横向滚动图片开始-->
 <style type="text/css">
-.scrollPic {position:relative;height:135px;background:url(people_01.gif) no-repeat;}
+.scrollPic {position:relative;height:135px;/*background:url(people_01.gif) no-repeat;*/}
 .scrollPic .scrollL {position:absolute;top:32px;left:0px;width:35px;height:68px;z-index:10;}
 .scrollPic .scrollR {position:absolute;top:32px;left:695px;width:33px;height:68px;z-index:11;}
 .scrollPic .scroll {position:absolute;top:10px;left:35px;height:120px;width:658px;overflow:hidden;}
@@ -185,14 +185,14 @@ window.onload=autoScroll;
 </li>
 <li class="ldmc" id="ld9" style="zoom: 1; z-index: 1;">| <a href="http://www.xsjzwh.ynu.edu.cn/Guestbook.asp" target="_top">留言本</a></li>
 
-<script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script>
+<!-- script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script -->
 			
 		</ul>
 	</div>
 	<div id="clear"></div>
     <div class="mw">
 <div class="dh">
-		<div style="float:right;margin-top:-5px;background:url(/images/search.jpg) left no-repeat;padding-left:70px;">
+		<div style="float:right;margin-top:-5px;background:url(./images/search.jpg) left no-repeat;padding-left:70px;">
 <form id="form1" name="form1" method="post" action="http://www.xsjzwh.ynu.edu.cn/Search.asp?action=search" target="_blank">
 <input name="KeyWord" type="text" id="KeyWord" value="" maxlength="10" size="13" class="borderall" style="height:17px;">
   <select name="bbs" id="bbs" style="display:none;">
@@ -214,12 +214,12 @@ window.onload=autoScroll;
 				var config='5|0xffffff|0x009900|80|0xffffff|0xff0000|0x009900';
 				//-- config 参数设置 -- 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字颜色|当前按键颜色|普通按键色彩 --
 				var files='',links='', texts='';
-				files+='|http://www.news.ynu.edu.cn/zhxw/images/201212/1355967873572.JPG';links+='|List.asp?ID=365';texts+='|我校举行“广发银行希望奖学金”捐赠仪式'; 
+				files+='|./images/1.JPG';links+='|List.asp?ID=365';texts+='|我校举行“广发银行希望奖学金”捐赠仪式'; 
 				files+='|http://www.news.ynu.edu.cn/xysd/images/201211/1353378358821.jpg';links+='|List.asp?ID=362';texts+='|我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式'; 
 				files+='|http://www.news.ynu.edu.cn/xysd/images/201211/1352362580550.JPG';links+='|List.asp?ID=359';texts+='|2012-2013学年雅居乐地产助学金颁发仪式举行'; 
-				files+='|/UploadFiles/201207/2012070632092361.jpg';links+='|List.asp?ID=236';texts+='|火箭兵奖学金'; 
-				files+='|/UploadFiles/201206/2012062838841989.jpg';links+='|List.asp?ID=230';texts+='|中美教育基金GSS奖学金'; 
-				files+='|/UploadFiles/201206/2012062838053613.jpg';links+='|List.asp?ID=227';texts+='|伍达观教育基金助学金'; 
+				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201207/2012070632092361.jpg';links+='|List.asp?ID=236';texts+='|火箭兵奖学金'; 
+				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201206/2012062838841989.jpg';links+='|List.asp?ID=230';texts+='|中美教育基金GSS奖学金'; 
+				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201206/2012062838053613.jpg';links+='|List.asp?ID=227';texts+='|伍达观教育基金助学金'; 
 				files=files.substring(1);links=links.substring(1);texts=texts.substring(1);
 				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
 				document.write('<param name="movie" value="/images/swfnews.swf" />');
@@ -227,30 +227,12 @@ window.onload=autoScroll;
 				document.write('<param name="menu" value="false" />');
 				document.write('<param name=wmode value="opaque" />');
 				document.write('<param name="FlashVars" value="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'" />');
-				document.write('<embed src="/images/swfnews.swf" wmode="opaque" FlashVars="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+				document.write('<embed src="./images/swfnews.swf" wmode="opaque" FlashVars="config='+config+'&bcastr_flie='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
 				document.write('</object>');
 				</script>
 				
 	</div>
 	<div id="icenter1" style="width:360px;height:251px;">
-    	<!--<div class="notice">
-        	<div style="padding-top:2px;"><b>公告：</b></div>
-            <div style="padding-top:5px;"><script type="text/javascript" src="/js/marquee.js"></script> 
-                <ul id="laonotic" style="width:260px;">
-            		<li>没有</li>
-                </ul>
-                <script type="text/javascript">
-				
-				new Marquee("laonotic",0,5,260,20,50,3000,3000)
-				
-				</script>
-            </div>
-		</div>-->
-    	<!--<div class="topnews">
-			<h4><a href="List.asp?ID=222">红河助学金</a></h4>
-              <div class="topjx">　　简介：红云红河烟草（集团）有限责任公司（简称红云红河集团）成立于2008年11月8日，由原红云烟草（集团）有限责任公司和红河烟草（集团）有限责任公司合并组建，　红云红河集团是以烟草为主业，跨行业、跨地……[<a href="List.asp?ID=222">详细</a>]</div>
-            
-		</div>-->
 
 <!--公告-->
 <div id="ilist" style="margin-left:2px;">
