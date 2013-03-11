@@ -270,17 +270,24 @@ window.onload=autoScroll;
 <div id="clear"></div>
 <div id="ilist212" style="margin:0 0 4px 0;">
     	
-	<h6><span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=25">more...</a></span><a href="http://www.xsjzwh.ynu.edu.cn/Class.asp?ID=25">资助政策</a></h6>
+	<h6><span><a href="$cms.getUrl("资助政策")">more...</a></span><a href="$cms.getUrl("资助政策")">资助政策</a></h6>
 		<ul>
-			<li><font class="laoynoi1">01</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=323" target="_blank">国家助学贷款（农行）毕业生贷款情况查询入口</a></li>
-<li><font class="laoynoi1">02</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=354" target="_blank">云大学〔2007〕22号]关于印发《云南大学国家励志奖学金管理暂行办法》的通知</a></li>
-<li><font class="laoynoi1">03</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=322" target="_blank">生源地助学贷款高校鉴定证明</a></li>
-<li><font class="laoynoi2">04</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=321" target="_blank">2012-2013学年生源地信用助学贷款问题解答</a></li>
-<li><font class="laoynoi2">05</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=319" target="_blank">国家开发银行助学贷款支付宝使用说明</a></li>
-<li><font class="laoynoi2">06</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=315" target="_blank">云南省生源地信用助学贷款申请材料及审查要点</a></li>
-<li><font class="laoynoi2">07</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=316" target="_blank">云南省生源地信用助学贷款工作安排及办理说明</a></li>
-<li><font class="laoynoi2">08</font>.<a href="http://www.xsjzwh.ynu.edu.cn/List.asp?ID=320" target="_blank">国家开发银行生源地信用助学贷款信贷政策</a></li>
-
+		#set($n = 0)
+				#foreach($article in $cms.getContents("资助政策",10))
+					<li>
+						#if($article.isTip != 0) 
+							<font class="laoynoi1">
+						#else
+							<font class="laoynoi2">
+						#end
+						#if(n++ < 10)
+							0$n</font>
+						#else
+							$n</font>
+						#end
+						.<a href="$cms.getUrl($article)" target="_blank">#summary($article.name 34)</a>
+					</li>
+				#end
 		</ul>
 </div>
 
