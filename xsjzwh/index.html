@@ -180,15 +180,17 @@ window.onload=autoScroll;
 				var config='5|0xffffff|0x009900|80|0xffffff|0xff0000|0x009900';
 				//-- config 参数设置 -- 自动播放时间(秒)|文字颜色|文字背景色|文字背景透明度|按键数字颜色|当前按键颜色|普通按键色彩 --
 				var files='',links='', texts='';
-				files+='|./images/1.JPG';links+='|List.asp?ID=365';texts+='|我校举行“广发银行希望奖学金”捐赠仪式'; 
-				files+='|http://www.news.ynu.edu.cn/xysd/images/201211/1353378358821.jpg';links+='|List.asp?ID=362';texts+='|我校举行轩辕教育基金会“种子助学项目”助学金颁发仪式'; 
-				files+='|http://www.news.ynu.edu.cn/xysd/images/201211/1352362580550.JPG';links+='|List.asp?ID=359';texts+='|2012-2013学年雅居乐地产助学金颁发仪式举行'; 
-				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201207/2012070632092361.jpg';links+='|List.asp?ID=236';texts+='|火箭兵奖学金'; 
-				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201206/2012062838841989.jpg';links+='|List.asp?ID=230';texts+='|中美教育基金GSS奖学金'; 
-				files+='|http://www.xsjzwh.ynu.edu.cn/UploadFiles/201206/2012062838053613.jpg';links+='|List.asp?ID=227';texts+='|伍达观教育基金助学金'; 
-				files=files.substring(1);links=links.substring(1);texts=texts.substring(1);
+				
+				#set($n = 0)
+				#foreach($article in $cms.getContents("新闻", 200))
+					#if ($cms.hasPicture($article) && $n <6)
+						files+='|$cms.getPictureUrl($article)';
+						links+='|$cms.getUrl($article)';
+						texts+='|$article.name';                       
+					#end                
+				#end 
 				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
-				document.write('<param name="movie" value="/images/swfnews.swf" />');
+				document.write('<param name="movie" value="./images/swfnews.swf" />');
 				document.write('<param name="quality" value="high" />');
 				document.write('<param name="menu" value="false" />');
 				document.write('<param name=wmode value="opaque" />');
