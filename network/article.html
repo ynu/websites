@@ -3,10 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>$curChannel.name - 云南大学网络与信息中心</title>
+<title>$curArticle.name - 云南大学网络与信息中心</title>
 <link rel="shortcut icon" href="favicon.ico" type=”image/x-icon”/>
 <link rel="stylesheet" href="css/public-more.css" type="text/css" />
 <link rel="stylesheet" href="css/sidebar-style.css" type="text/css" />
+<link rel="stylesheet" href="css/xgfj.css" type="text/css" />
 <!--[if IE]><link rel="stylesheet" href="css/public.plus.allie.css" type="text/css" /> <![endif]-->
 <!--[if lte IE 7]><link rel="stylesheet" href="css/public.plus.ie67.css" type="text/css" /> <![endif]-->
 <!--[if IE 6]><link rel="stylesheet" href="css/public.plus.ie6.css" type="text/css" /><![endif]-->
@@ -46,7 +47,7 @@ Modified:nanokeke
 
 <body>
 <div id="layout" class="layout">
-#parse("header.vm")
+	#parse("header.vm")
     <div id="content" class="content">
         <div id="sections">
         <div id="sidebar-follow">
@@ -56,28 +57,33 @@ Modified:nanokeke
 </div></div>
 
 <div class="post">
-	#foreach($article in $cms.getPageContents($curChannel,$curPage))
-		<div class="post-prev">
-			<div class="bar-info">
-				<span class="date">$cms.format($article.publishDate,"yyyy-MM-dd")</span>
-				<span class="origin">来源: $article.source</span>
-				<span class="author">作者: $article.author</span>
-				<span class="click">阅读数：<script src="/cms/web/count.jsp?articleID=$artitle.ID"></script></span>
-			</div>
-			<div class="title">
-				<a href="#post_content">$article.name</a>
-			</div>
-     		<div class="intro">$article.aummary</div>
-     		<div class="readmore"><a href="$cms.getUrl($article)">详情...</a></div>
-     	</div>
-	#end
-     
-     <div id="page-nav">
-	 	<span><a href="$cms.getIndexFileName($curChannel, 1)">首 &nbsp; 页</a></span>
-		<span><a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a></span>
-		<span class="next"><a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</a></span>
-		<span class="last-page"><a href="$cms.getIndexFileName($curChannel, $totalPage)">尾 &nbsp; 页</a></span>
+     <div class="post-prev">
+     <div class="bar-info">
+	 	<span class="date">$cms.format($curArticle.publishDate,"yyyy-MM-dd")</span>
+		<span class="origin">来源: $curArticle.source</span>
+		<span class="author">作者: $curArticle.author</span>
+		<span class="click">阅读数：<script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script></span>
 	</div>
+     <div class="title">$curArticle.name</div>
+     <div class="content">
+
+       $curArticle.content
+     </div>
+     </div>
+     <div class="xgfj">
+		<div class="xgfj_title">
+			<img src="http://www.grs.ynu.edu.cn/images/list_title.gif" width="12"  height="13" />
+			<h4>相关附件</h4>
+		</div>
+		<div class="com_list1">
+		  <dl>
+		  	#foreach($doc in $cms.getAttachments($curArticle))
+		      <dd><a href="$cms.getUrl($doc)">$doc.srcFile</a></dd>
+		    #end
+		  </dl>
+	  </div>
+	</div> 
+     
      </div>
         </div>
         
