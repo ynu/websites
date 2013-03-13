@@ -64,115 +64,7 @@ window.onload=autoScroll;
 </head>
 <body>
 <div class="mwall">
-<div id="webhead" style="height:auto;">
-	<div id="toplogin" style="display:none;">
-		<span>
-		<script type="text/javascript" src="./js/date.js"></script>
-		</span>
-		
-	</div>
-	<div id="logo">
-		<a href="http://http//www.xsjzwh.ynu.edu.cn/"><img src="./images/2012070360348581.jpg" alt="云南大学奖助文化网"></a>
-	</div>
-	<div id="banner">
-	</div>
-	<div id="topright" style="display:none;">
-		<div class="topright3"><!-- script type="text/javascript" src="./js/skin.asp"></script --><li class="menu2" onmouseover="mlist.style.display=&#39;&#39;" onmouseout="mlist.style.display=&#39;none&#39;" style="cursor:hand;">选择风格
-		<div id="mlist" style="display:none;">
-<a href="javascript:changecss('/css/css1.css')">黑色幽默</a><br><a href="javascript:changecss('/css/css2.css')">秋天来了</a><br><a href="javascript:changecss('/css/css3.css')">老Ｙ天下</a><br><a href="javascript:changecss('/css/css4.css')">极速风格</a><br><a href="javascript:changecss('/css/css5.css')">玫瑰红色</a><br><a href="javascript:changecss('/css/css6.css')">灰色世界</a><br><a href="javascript:changecss('/css/css8.css')">第三元素</a><br><a href="javascript:changecss('/css/css9.css')">世界之窗</a><br><a href="javascript:changecss('/css/css10.css')">清新绿色</a><br></div>
-		</li><li><a href="javascript:addfavorite()">加入收藏</a></li><li><a id="StranLink" href="javascript:StranBody()" title="點擊以繁體中文方式浏覽">繁體中文</a></li><li><a href="http://www.xsjzwh.ynu.edu.cn/sitemap.asp">网站地图</a></li></div><div id="clear"></div>
-		<div class="textad">	</div>
-	</div>
-</div>
-	<div id="clear"></div>
-	<div id="webmenu">
-		<ul>
-		  <li class="ldmc" id="ld1" style="zoom: 1; z-index: 1;"> <a href="$cms.getUrl("首页")" target="_top">首 页</a></li>
-<li class="ldmc" id="ld2" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("资助政策")" target="_top" class="ldparent">资助政策</a>
-	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("资助政策",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-	</div>
-</li>
-<li class="ldmc" id="ld3" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("政府奖助学金")" target="_top" class="ldparent">政府奖助学金</a>
-	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("政府奖助学金",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-	</div>
-</li>
-<li class="ldmc" id="ld4" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("学校奖助学金")" target="_top" class="ldparent">学校奖助学金</a>
-	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("学校奖助学金",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-	</div>
-</li>
-<li class="ldmc" id="ld5" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("社会奖学金")" target="_top" class="ldparent">社会奖学金</a>
-	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("社会奖学金",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-	</div>
-</li>
-<li class="ldmc" id="ld6" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("社会助学金")" target="_top" class="ldparent">社会助学金</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("社会助学金",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-</div>
-</li>
-<li class="ldmc" id="ld7" style="zoom: 1; z-index: 1;">
-| <a href="$cms.getUrl("获奖感言")" target="_top" class="ldparent">获奖感言</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("获奖感言",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-</div>
-</li>
-<li class="ldmc" id="ld8" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("励志故事")" target="_top" class="ldparent">励志故事</a>
-
-<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("励志故事",6))
-			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
-		#end
-
-</div>
-</li>
-<li class="ldmc" id="ld9" style="zoom: 1; z-index: 1;">
-	| <a href="/cms/modules/onlineLeaveMessageList.jsp?typeID=71&siteID=83" target="_top">留言本</a></li>
-
-<script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script>
-			
-		</ul>
-	</div>
-	<div id="clear"></div>
-    <div class="mw">
-<div class="dh">
-		<div style="float:right;margin-top:-5px;background:url(./images/search.jpg) left no-repeat;padding-left:70px;">
-<form id="form1" name="form1" method="post" action="http://www.xsjzwh.ynu.edu.cn/Search.asp?action=search" target="_blank">
-<input name="KeyWord" type="text" id="KeyWord" value="" maxlength="10" size="13" class="borderall" style="height:17px;">
-  <select name="bbs" id="bbs" style="display:none;">
-    <option value="1">站内搜索</option>
-    <option value="3">百度搜索</option>
-    <option value="4">Google搜索</option>
-    <option value="5">youdao搜索</option>
-    <option value="6">雅虎搜索</option>
-  </select>
-<input type="submit" name="Submit" value="搜 索" class="borderall" style="height:21px;">
-</form>
-</div>
-您现在的位置：<a href="./js/index.html">云南大学奖助文化网</a> &gt;&gt; 首页
-</div>
+#parse("header.vm")
 	<div id="ileft1" style="width:360px;height:251px;">
 				<script type="text/javascript">
 				var swf_width=360;
@@ -440,13 +332,6 @@ window.onload=autoScroll;
 <iframe id="link" src="./js/Reglink.htm" width="100%" height="170" scrolling="NO" frameborder="0"></iframe>
 </div> 
 <div id="fade" class="black_overlay"></div> 
-<div id="clear"></div>
-<div id="webcopy">
-	<li class="copyDis">云南大学学生处 &#169; 2013 版权所有 All Rights Reserved.</li>
-	<!--这里可放网站统计代码--></div><b><b>
-<script language="javascript" src="./js/Std_StranJF.Js"></script>
-<div id="clear"></div>
+#parse("footer.vm");
 
-</b></b></div><b><b>
-
-</b></b></body></html>
+</body></html>
