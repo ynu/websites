@@ -1,0 +1,27 @@
+
+<p>
+			云南省高等教育学会保卫学专业委员会　版权所有
+			<br />
+           邮政编码：650091　联系电话:+86(0871)65031xxxx　电子邮箱：xxx@ynu.edu.cn
+		</p>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("yhs.云南省高等教育学会保卫学专业委员会");
+
+} catch(err) {}</script>
