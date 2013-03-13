@@ -1,0 +1,27 @@
+
+<p>
+			云南大学科学技术处　版权所有　　地址:云南省昆明市翠湖北路2号云南大学科学技术处
+			<br />
+           邮政编码：650091　联系电话:+86(0871)5031446　电子邮箱：sto@ynu.edu.cn
+		</p>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("sto.科学技术处");
+
+} catch(err) {}</script>

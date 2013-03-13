@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学科学技术处</title>
+<link rel="stylesheet" type="text/css" href="css/base_new.css" media="all" />
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    #parse("header.vm")
+    <div id="content">
+    <div class="cont02_left">
+    <div id="index_mid">
+            <div class="mid01">
+                <div class="title">
+                    <a href="$cms.getUrl("科研动态")">更多>></a><h3>科研动态</h3>
+                </div>
+                <div class="con">
+                    <div class="flash_news">
+                        <SCRIPT type=text/javascript>
+                                var imgUrl=new Array();
+                                var imgLink=new Array();
+                                var imgName=new Array();
+                                var n=1;                                                        
+                                #foreach($article in $cms.getContents("图片新闻", 200))
+                    #if($article.type==4||$article.type==5)
+                    #set($fullArticle=$cmsService.getArticle($article.srcContentID))
+                        #foreach($attimg in $cmsService.getPageDatas("FROM Attachment as att WHERE (att.type=1 or att.type=2) and att.parent.ID=$fullArticle.ID", 1, 1))
+                            imgUrl[n]  = "$cms.getUrl($attimg)";                 
+                            imgLink[n] = "$cms.getUrl($fullArticle)";
+                            imgName[n] = "$fullArticle.name";                         
+                             n++;
+                        #end
+                    #else
+                        #foreach($attimg in $cmsService.getPageDatas("FROM Attachment as att WHERE (att.type=1 or att.type=2) and att.parent.ID=$article.ID", 1, 1))
+                            imgUrl[n]  = "$cms.getUrl($attimg)";
+                            imgLink[n] = "$cms.getUrl($article)";
+                            imgName[n] = "$article.name";
+                            n++;
+                        #end      
+                    #end
+                #end                        
+                                        var texts = "";
+                                        var links = "";
+                                        var pics = "";
+                                        var count=1;
+                                        for(var h=1; h<n; h++) {
+                                        if (count>6)
+                                        break;
+                                        if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+                                            if (imgName[h].length > 20)
+                                            imgName[h] = imgName[h].substring(0, 20) + "...";
+                                            texts += imgName[h] + "|";
+                                            links += imgLink[h] + "|";
+                                            pics += imgUrl[h] + "|";
+                                            count++;
+                                            }
+                                        }
+                                        texts = texts.substring(0, texts.length-1);
+                                        links = links.substring(0, links.length-1);
+                                        pics = pics.substring(0, pics.length-1);
+                                        var focus_width=243
+                                        var focus_height=182
+                                        var text_height=25
+                                        var swf_height = focus_height+text_height
+                                        document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+                                        
+                        document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus2.swf"><param name="quality" value="high">');                
+                                        document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+                                                                                               
+                                        document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+                                        
+                                        document.write('<embed src="images/focus2.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+                        </SCRIPT>
+                    </div>
+                    <div class="tab_list">
+                        <div class="con_list1">
+                              <ul>
+                                  #foreach($article in $cms.getContents("科研动态",9))
+                              <li><span>$cms.format($article.publishDate)</span>
+                                  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+                                  #summary($article.name 30)  </a>                          
+                              </li>
+                             #end
+                                 
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid02">
+            <div id="index_left">
+            <div class="left01">
+                <div class="title">
+                    <a href="$cms.getUrl("通知公告")">更多>></a>
+                    <h3>通知公告</h3>
+                </div>
+                <div class="con">
+                    <div class="con_list2">
+                          <ul>
+                          #foreach($article in $cms.getContents("通知公告",9))
+                              <li><span>$cms.format($article.publishDate)</span>
+                                  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+                                  #summary($article.name 48)  </a>                          
+                              </li>
+                             #end                         
+                             
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>        
+      </div>
+    </div>
+    <div id="index_right">
+            <div class="right01">
+                <div class="title">
+                    <a href="$cms.getUrl("办事指南")">更多>></a><h3>办事指南</h3>
+                </div>
+                <div class="con">
+                        <div class="con_list3">                                       
+                              <ul>
+                                  #foreach($channel in $cms.getChildren("办事指南"))
+                                     <li><a href=$cms.getUrl($channel)>$channel.title</a></li>
+                                  #end
+                              </ul>
+                        </div>
+                </div>
+            </div>
+            
+            <div class="right02">
+                <div class="title">
+                    <a href="$cms.getUrl("下载专区")">更多>></a><h3>下载专区</h3>
+                </div>
+                <div class="con">
+                        <div class="con_list3">
+                              <ul>
+                                  #foreach($channel in $cms.getChildren("下载专区"))
+                                     <li><a href=$cms.getUrl($channel)>$channel.title</a></li>
+                                  #end
+                                       
+                              </ul>
+                        </div>
+                </div>
+            </div>
+            <div class="ser">
+                    <form name="dataForm" class="search" action="/cms/search/searchResults.jsp" target="_blank" method="post">
+                        <input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">                    
+                        <input type="text" class="notxt" value="输入关键字" id="query" name="query" 
+                        onblur="if(this.value=='') {this.value='输入关键字';this.form.keywords.style.color='#666666'}" 
+                        onclick="if(this.value=='输入关键字'){this.value='';this.form.keywords.style.color='#000'}" />
+                        <button type="submit"></button>
+                    </form>
+                </div>
+            
+            <div class="yqlj">
+                <div class="title">
+                    <h3>友情链接</h3>
+                </div>
+             <script language="javascript" type="text/javascript"> 
+                function location1(s)
+                {       var d = s.options[s.selectedIndex].value;
+                        window.open(d);
+                        s.selectedIndex=0;            
+                        
+                }
+                function location2(s)
+                {  
+                        var d = s.options[s.selectedIndex].value;
+                        s.selectedIndex=0;
+                        window.top.location.href = d;                        
+                }
+                </script>
+              <div class="con2" style="background:none;">
+                    <select name="m1" onChange="location1(this)" ID="Select1">
+                        <option selected>----相关链接----</option>
+                        #foreach($article in $cms.getContents("相关链接",50))
+                        <option value="$cms.getUrl($article)">$article.name</option>
+                        #end
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="footer">
+        #parse("footer.vm")
+    </div>
+</div>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

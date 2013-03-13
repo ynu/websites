@@ -1,0 +1,13 @@
+
+<div id="header">
+		<div class="banner"></div>
+		<div class="nav">
+			<ul>				
+				<li><a href="http://www.ynu.edu.cn/" class="nav_off" target="_blank">学校主页</a></li>
+				<li><a href="$cms.getUrl("首页")" class="nav_off">本站首页</a></li>	
+				  #foreach($channel in $cms.getTopChildren($rootChannel))
+				<li><a href="$cms.getUrl($channel)" class="nav_off">$channel.title</a></li>	
+				#end				
+			</ul>
+		</div>			
+	</div>
