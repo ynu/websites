@@ -20,30 +20,12 @@
             
             <div class="left01">
                 <div class="title">
-                    <a href="$cms.getUrl("办事指南")">更多>></a><h3>办事指南</h3>
+                    <a href="$cms.getUrl("学会动态")">更多>></a><h3>学会动态</h3>
                 </div>
                 <div class="con">
                     <div class="con_list1">
                           <ul>
-                              #foreach($article in $cms.getContents("办事指南",7))
-                              <li>
-                                  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
-                                  #summary($article.name 14)  </a>                          
-                              </li>
-                             #end    
-                          </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="left01">
-                <div class="title">
-                    <a href="$cms.getUrl("成果专利")">更多>></a><h3>成果专利</h3>
-                </div>
-                <div class="con">
-                    <div class="con_list1">
-                          <ul>
-                              #foreach($article in $cms.getContents("成果专利",7))
+                              #foreach($article in $cms.getContents("学会动态",7))
                               <li>
                                   <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
                                   #summary($article.name 14)  </a>                          
