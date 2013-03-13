@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>云南大学</title>
+<link rel="shortcut icon" href="favicon.ico" type=”image/x-icon”/>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<link href="css/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+</script>
+<script type="text/javascript">
+	jQuery(window).load(function() {
+        jQuery('#slider').nivoSlider();
+	});
+</script>
+
+<script type="text/javascript">
+/*
+Author: mg12
+Feature: MenuList
+Update: 2009/12/13
+Tutorial URL: http://www.neoease.com/wordpress-menubar-6/
+Modified:nanokeke
+*/
+var mouseover_tid = [];
+var mouseout_tid = [];
+jQuery(document).ready(function(){
+	jQuery("#nav ul li").each(function(index){
+		jQuery(this).hover(
+			function(){
+				var _self = this;
+				clearTimeout(mouseout_tid[index]);
+				mouseover_tid[index] = setTimeout(function() {
+					jQuery(_self).find('ul:eq(0)').fadeIn(150);
+				}, 400);
+			},
+
+			function(){
+				var _self = this;
+				clearTimeout(mouseover_tid[index]);
+				mouseout_tid[index] = setTimeout(function() {
+					jQuery(_self).find('ul:eq(0)').fadeOut(200);
+				}, 400);
+			});
+	});
+
+});
+	
+</script>
+
+
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<script type="text/javascript">
+  /* ie6-png-transparent */
+  DD_belatedPNG.fix('#layout,#footer,.footer_info,li.follow,a,background');
+</script>
+<![endif]--> 
+
+<style>
+
+div#mainServiceWrapper
+{
+width:980px;height:120px;margin:1em auto}
+div.mainService{width:225px;height:86px;margin:0 10px;float:left;background:transparent url('/static/site-media/images/main_service.1307407768.png') no-repeat scroll left top;position:relative;z-index:3}
+div.mainService a{display:block;width:119px;height:54px;padding:16px 16px 16px 90px;text-align:right;font-size:12px}
+div.mainService a.student{background:transparent url('http://net.xmu.edu.cn/static/site-media/images/main_service_student.1307407768.jpg') no-repeat scroll 1px 1px}
+div.mainService a.teacher{background:transparent url('http://net.xmu.edu.cn/static/site-media/images/main_service_teacher.1307407768.jpg') no-repeat scroll 1px 1px}
+div.mainService a.department{background:transparent url('http://net.xmu.edu.cn/static/site-media/images/main_service_department.1307407768.jpg') no-repeat scroll 1px 1px}div.mainService a.featured{background:transparent url('http://net.xmu.edu.cn/static/site-media/images/main_service_featured.1318072797.jpg') no-repeat scroll 1px 1px}
+div.mainService a span.title{font-size:16px;font-weight:bold;color:#555;line-height:25px;width:119px;text-shadow:4px 4px 8px #888}
+div.mainService a:hover{text-decoration:none}
+div.mainServiceOverlay{display:none;width:225px;height:200px;margin:0;position:absolute;left:-1px;top:-75px;background:-moz-linear-gradient(center top,#FFF 30%,#CCC 100%) repeat scroll 0 0 transparent;background:-webkit-gradient(linear,100% 30%,100% 100%,from(#FFF),to(#CCC));border:1px solid #999;border-radius:12px 12px 12px 12px;box-shadow:0 1px 5px #333}
+div.mainServiceOverlay h1{color:#555;text-align:center;width:225px;padding:5px 0}
+div.mainServiceOverlay a{text-align:center;height:20px;padding:0 0 0 28px}
+div.mainServiceOverlay ul{list-style:none;padding:0 10px}
+div.mainServiceOverlay li a{display:inline;background:transparent url('/static/site-media/images/ul_arrow.1307407768.png') no-repeat scroll left;width:auto}
+div.mainServiceOverlay div.more{position:absolute;bottom:5px;right:15px}
+div.mainServiceOverlay div.more a{width:auto}
+
+</style>
+</head>
+
+<body>
+
+
+<div id="layout" class="layout">
+<!--开始页头内容-->
+<div id="header" class="header">
+    <div class="top">
+        <div class="banner">
+            <div class="tbnav">
+            <ul>
+            <li><a href="http://www.ynu.edu.cn">云大首页</a></li>
+            <li><a href="www.yn.edu.cn">云南主节点</a></li>
+            <li class="nobd"><a href="#" >硕士教育</a></li>
+			
+            </ul>
+            </div>
+        </div>
+        <div class="logo" title="欢迎光临云南大学综合门户网站"></div>
+        <div class="l_right">
+        <div id="nav" class="nav">
+        <ul>
+			<li><a href="http://www.news.ynu.edu.cn/">中心介绍</a></li>
+			<li>
+				<a href="#">校园网概况</a>
+			</li>
+			<li><a href="#">安全法规</a></li>
+			<li><a href="http://www.news.ynu.edu.cn/">常用下载</a></li>
+			<li><a href="http://www.news.ynu.edu.cn/">信息资源</a></li>
+			<li><a href="http://www.news.ynu.edu.cn/">网络服务</a></li>
+		</ul>
+		
+        
+        </div>
+        <div class="search_box"><input name="searchbox" type="text" class="searchbox" /><div class="info"><a href="#">确定</a></div>
+      </div>
+        </div>
+    </div>
+</div>
+<!--结束页头内容-->
+<div class="clear"></div>
+<!--开始主体内容-->
+<div id="content" class="content">
+    <div class="focus">
+        <div class="focus_frame"><div class="frame_top1"></div><div class="frame_top2"></div><div class="frame_head" unable="on"><strong>焦点关注</strong></div>
+        <div class="focus_content">
+        <div id="wrapper">
+        <div id="slider-wrapper">
+            <div id="slider" class="nivoSlider">
+                <a href="#more"><img src="images/jf/jf1.jpg" alt="" title="#htmlcaption1" /></a>
+                <a href="#more"><img src="images/jf/jf2.jpg" alt="" title="#htmlcaption2" /></a>
+                <a href="#more"><img src="images/jf/jf3.jpg" alt="" title="#htmlcaption3" /></a>
+                <a href="#more"><img src="images/jf/jf4.jpg" alt="" title="#htmlcaption4" /></a>
+            </div>
+            <div id="htmlcaption1" class="nivo-html-caption">
+                文渊楼<br />数据中心机房
+                <span class="more"><a href="#more">详情...</a></span>
+            </div>
+            <div id="htmlcaption2" class="nivo-html-caption">
+                科学馆<br />核心机房
+                <span class="more"><a href="#more">详情...</a></span>
+            </div>
+            <div id="htmlcaption3" class="nivo-html-caption">
+                呈贡机房展示1
+                <span class="more"><a href="#more">详情...</a></span>
+            </div>
+            <div id="htmlcaption4" class="nivo-html-caption">
+                呈贡机房展示2
+                <span class="more"><a href="#more">详情...</a></span>
+            </div>
+</div>
+    </div>
+</div>
+      </div>
+    </div>
+	
+	<div id="mainWrapper">
+        
+        <div id="mainServiceWrapper">
+            <div class="mainService">
+                <a href="/service/student/" class="student">
+                    <span class="title">学生服务</span>
+                </a>
+            </div>
+            <div class="mainService">
+                <a href="/service/teacher/" class="teacher">
+                    <span class="title">教工服务</span>
+                </a>
+          </div>
+            <div class="mainService">
+                <a href="/service/department/" class="department">
+                    <span class="title">部门服务</span>
+                </a>
+      </div>
+            <div class="mainService">
+                <a href="/service/featured/" class="featured">
+                    <span class="title">特色服务</span>
+                </a>
+    </div>
+  </div>
+</div>
+    
+
+</div>
+<!--结束主体内容-->
+<!--开始页脚内容-->
+<div id="footer" class="footer">
+    <div class="foot_info">
+    <ul class="intro"><p class="title">关于云大</p><p>云南大学网络与信息中心是直属学校领导的处级单位，工作职能为负责云南大学校园网与信息系统的建设、运行、维护和管理； 同时，云南大学网络与信息中心是中国教育科研计算机网云南主节点单位--CERNET云南网络中心，承担着云南省教育科研计算网络的建设、运行和管理工作，并提供各云南省各大学校园网与CERNET的互连和接入INTERNET服务。</p></ul>
+    <ul class="links">
+		<p class="title">直达链接</p>
+		<marquee direction="up" height="110px"  scrolldelay="200">
+		<li><a href="http://bbs.ynu.edu.cn/" target="_blank">[12-20] 这里是重要通知重要通知重要通知</a></li>
+		<li><a href="http://ynunews.cuepa.cn/" target="_blank">[12-23] 这里是重要通知重要通知重要通知云大学报</a></li>
+		<li><a href="http://www.lib.ynu.edu.cn/" target="_blank">[12-25] 这里是重要通知重要通知重要通知图书馆</a></li>
+		<li><a href="http://www.lib.ynu.edu.cn/" target="_blank">[12-25] 这里是重要通知重要通知重要通知图书馆</a></li>
+		<li><a href="http://www.lib.ynu.edu.cn/" target="_blank">[12-25] 这里是重要通知重要通知重要通知图书馆</a></li>
+		<li><a href="http://www.lib.ynu.edu.cn/" target="_blank">[12-25] 这里是重要通知重要通知重要通知图书馆</a></li>
+		<li><a href="http://www.lib.ynu.edu.cn/" target="_blank">[12-25] 这里是重要通知重要通知重要通知图书馆</a></li>
+		</marquee>
+	</ul>
+    <ul>
+    <li class="contact">
+      <p class="title">联系我们</p>
+      网络维护电话：(0871)6503-1141<br />
+	  信息业务电话：(0871)6503-1006<br />
+	  综合业务电话：(0871)6503-1601<br />
+	  传真：(0871)6503-1611<br />
+	  呈贡校区: 158-7793-4177/158-7793-4277 <br />
+	  地址：云南省昆明市翠湖北路2号(650091)<br /></li>
+    </ul>
+    
+    </div>
+    <div id="copyright" class="copyright">Copyright © 2012 云南大学 云南大学网络与信息中心 滇ICP备05004791号</div>
+</div>
+<!--结束页脚内容-->
+</div>   
+
+
+</body>
+</html>
+</em></em>

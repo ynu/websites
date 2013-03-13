@@ -1,0 +1,5 @@
+.tbnav li {padding:0 2px 0 5px;}
+#nav ul li ul{border-top:#013567 35px;border:#013567;top:24px;}
+#content {margin-top: 124px;}
+.box_content{margin-top:-32px;}
+.box_content ul li{margin-bottom:-37px;/*ie6\ie7适用间距*/}
