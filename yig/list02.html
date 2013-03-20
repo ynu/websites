@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南省地理研究所-$curChannel.title</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+<body>
+
+<div id="wrap">
+#parse("header.vm")
+  <div class="content02">
+<div class="left01">
+<div class="pic">
+<div class="title02"><h1>$curChannel.parent.title</h1></div>
+<div class="list03">
+<ul>
+ #foreach($channel in $cms.getChildren($curChannel.parent))
+<li><a href="$cms.getUrl($channel)" target="_blank">$channel.title</a></li>
+#end
+</ul>
+</div>
+</div>
+#parse("tzgg.vm")
+</div>
+<div class="right01">
+<div class="right01_title"><h1><span>您现在的位置：</span>#channelNav()</h1>
+</div>
+<div class="right01_list">
+<ul>
+ #foreach($article in $cms.getPageContents($curChannel,$curPage))
+<li><span>$cms.format($article.publishDate)</span><a href="$cms.getUrl($article)" target="_blank" title="$article.name">$article.name</a></li>
+#end
+</ul> 
+<div id="fenye">#page()</div>
+</div>
+</div>
+</div>
+<div class="footer">#parse("footer.vm")</div>
+</div>
+
+</body></html>

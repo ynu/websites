@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<HEAD><TITLE>云南大学工程技术研究院</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<STYLE type=text/css>.style3 {
+	COLOR: #006699
+}
+.style6 {
+	FONT-SIZE: 12px
+}
+.style7 {
+	COLOR: #006699; FONT-SIZE: 12px
+}
+.style31 {
+	COLOR: #006699; FONT-SIZE: 12px
+}
+BODY {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #0000ff; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+</STYLE>
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY>
+
+<DIV align=center>
+<TABLE border=1 cellSpacing=1 borderColor=#ffffff width=742 bgColor=#ffffff><!--DWLayoutTable-->
+  <TBODY>
+  #parse("header.vm")
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff borderColor=#ffffff colSpan=7>
+      <DIV align=left></DIV>
+      <DIV align=left></DIV>
+      <DIV class=style6 align=left>
+      <DIV align=left>
+      <BLOCKQUOTE class=style6>
+        <DIV align=center>
+        <BLOCKQUOTE>
+          <P>$curArticle.name</P>
+        </BLOCKQUOTE></DIV></BLOCKQUOTE></DIV>
+      <BLOCKQUOTE class=style6>
+          <P 
+          align=left>$curArticle.content
+          <br>
+          #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</P>
+      </BLOCKQUOTE>
+      </DIV>
+      <DIV align=left></DIV></TD></TR>
+  <TR bgColor=#ffffff>
+    <TD height=17>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD width=145><SPAN class=style6></SPAN></TD>
+    <TD width=145>&nbsp;</TD>
+    <TD width=145><SPAN class=style6></SPAN></TD>
+    <TD width=145>&nbsp;</TD>
+    <TD width=145>&nbsp;</TD></TR>
+  <TR bgColor=#ffffff>
+    <TD height=31 colSpan=7>
+      <DIV class=style7 align=center>
+      <DIV align=left></DIV></DIV>
+      <DIV class=style31 align=center><IMG border=0 
+      src="images/lingyu.png" width=750 height=30 
+  useMap=#Map9></DIV></TD></TR>
+  <TR>
+    <TD colSpan=7>#parse("footer.vm")</TD></TR></TBODY></TABLE></DIV><map name="Map9">
+  <area shape="rect" coords="75,5,740,24" href="$cms.getUrl('通知公告')">
+</map>
+<map name="Map10">
+  <area shape="rect" coords="134,9,659,76" href="$cms.getUrl('首页')">
+</map>
+</body></html>

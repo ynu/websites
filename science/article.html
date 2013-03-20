@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> $curArticle.name </title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("head.vm")
+<div class="content03">
+#parse("left.vm")
+<div class="con03_right">
+<div class="title07"><h1>$curChannel.title</h1>
+</div>
+<div id="main_b1" >
+		   <h3>$curArticle.name</h3>
+		<div id="author">作者：$!{curArticle.author} | 发布日期：$cms.format($curArticle.publishDate)&nbsp; | &nbsp;浏览量：<script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script>次&nbsp;&nbsp;【 <a onclick="work.style.fontSize='24px';"  href="#">大</a>&nbsp;&nbsp;<a onclick="work.style.fontSize='16px';" href="#">中</a>&nbsp;&nbsp;<a onclick="work.style.fontSize='12px';" href="#">小</a>  】<a onClick="window.close(); return false;" href="#"> [关闭窗口]</a></div>
+		<div id="work" style="height:auto;">$!{curArticle.content}</div>
+
+<div class="xgfj">
+		<div class="xgfj_title">
+			<img src="/pub/grs/images/list_title.gif" width="12"  height="13" />
+			<h4>相关附件</h4>
+		</div>
+		<div class="com_list1">
+		  <dl>
+		  	#foreach($doc in $cms.getAttachments($curArticle))
+		      <dd><a href="$cms.getUrl($doc)">$doc.srcFile</a></dd>
+		    #end
+		  </dl>
+	  </div>
+	</div>
+
+        <div id="beside">
+
+#if ($cms.getRelatesByKeyword($curArticle,0,5).size()>0)
+<h1>相关文章</h1>
+#end
+#foreach($article in $cms.getRelatesByKeyword($curArticle,0,5))</p>
+<ul>
+<li><span>$cms.format($article.publishDate,"MM-dd")</span><a href="$cms.getUrl($article)" target="_blank" title="$article.name">#summary($article.name 22)</a></li>
+</ul>
+#end 
+
+    </div>
+      </div>
+</div>
+</div>
+#parse("footer.vm")	
+</div>
+</body></html>

@@ -1,0 +1,38 @@
+
+<TABLE height=20 cellSpacing=0 cellPadding=0 width=750 border=0>
+<TBODY>
+<TR>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("首页")" target=_blank>首页</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("实验室介绍")" target=_blank>实验室介绍</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("药物研究院")" target=_blank>药物研究院</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("机构设置")" target=_blank>机构设置</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("研究方向")" target=_blank>研究方向</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("学术带头人")" target=_blank>学术带头人</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("科研项目")" target=_blank>科研项目</A></DIV></TD>
+<TD width=5>
+<DIV align=center>&nbsp;</DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("科研成果")" target=_blank>科研成果</A></DIV></TD>
+<TD width=5>
+<DIV align=center></DIV></TD>
+<TD bgColor=#adea10>
+<DIV align=center><A href="$cms.getUrl("学术交流")" target=_blank>学术交流</A></DIV></TD></TR></TBODY></TABLE>

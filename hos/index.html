@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问云南大学校医院</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<script src="http://202.203.208.88:8080/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+
+<script language="javascript">
+<!--
+//图片滚动列表 mengjia 070927
+var Speed_1 = 10; //速度(毫秒)
+var Space_1 = 20; //每次移动(px)
+var PageWidth_1 = 138 * 5; //翻页宽度
+var interval_1 =10000; //翻页间隔
+var fill_1 = 0; //整体移位
+var MoveLock_1 = false;
+var MoveTimeObj_1;
+var MoveWay_1="right";
+var Comp_1 = 0;
+var AutoPlayObj_1=null;
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay_1(){clearInterval(AutoPlayObj_1);AutoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',interval_1)}
+function ISL_GoUp_1(){if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="left";MoveTimeObj_1=setInterval('ISL_ScrUp_1();',Speed_1);}
+function ISL_StopUp_1(){if(MoveWay_1 == "right"){return};clearInterval(MoveTimeObj_1);if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){Comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrUp_1(){if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+GetObj('ISL_Cont_1').scrollLeft-=Space_1}
+function ISL_GoDown_1(){clearInterval(MoveTimeObj_1);if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="right";ISL_ScrDown_1();MoveTimeObj_1=setInterval('ISL_ScrDown_1()',Speed_1)}
+function ISL_StopDown_1(){if(MoveWay_1 == "left"){return};clearInterval(MoveTimeObj_1);if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){Comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrDown_1(){if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+GetObj('ISL_Cont_1').scrollLeft+=Space_1}
+function CompScr_1(){if(Comp_1==0){MoveLock_1=false;return}
+var num,TempSpeed=Speed_1,TempSpace=Space_1;if(Math.abs(Comp_1)<PageWidth_1/2){TempSpace=Math.round(Math.abs(Comp_1/Space_1));if(TempSpace<1){TempSpace=1}}
+if(Comp_1<0){if(Comp_1<-TempSpace){Comp_1+=TempSpace;num=TempSpace}else{num=-Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft-=num;setTimeout('CompScr_1()',TempSpeed)}else{if(Comp_1>TempSpace){Comp_1-=TempSpace;num=TempSpace}else{num=Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft+=num;setTimeout('CompScr_1()',TempSpeed)}}
+function picrun_ini(){
+GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(AutoPlayObj_1)}
+GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+AutoPlay_1();
+}
+//示滚动图片结束
+//-->
+</script>
+
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("head.vm")
+<div class="content01">
+<div class="con_left">
+<div class="health">
+<div class="health_title"><h1>健康教育专栏</h1><a href="$cms.getUrl("健康教育专栏")" target="_blank">更多>></a></div>
+<div class="health_list">
+  <ul>
+  #foreach($article in $cms.getContents("健康教育专栏",6))
+<li> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 14)</a></li>
+#end
+								 
+							  </ul>
+</div>
+</div>
+<div class="publicity">
+<div class="health_title"><h1>爱卫宣传专栏</h1><a href="$cms.getUrl("爱卫宣传专栏")" target="_blank">更多>></a></div>
+<div class="publicity_list">
+  <ul>
+  #foreach($article in $cms.getContents("爱卫宣传专栏",6))
+<li> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 14)</a></li>
+#end
+	 
+							  </ul>
+</div>
+<div class="publicity_bottom"></div>
+</div>
+<div class="publicity">
+<div class="health_title"><h1>友情链接</h1><a href="$cms.getUrl("友情链接")" target="_blank">更多>></a></div>
+<div class="publicity_list">
+  <ul>
+   #foreach($article in $cms.getContents("友情链接",6))
+<li> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 14)</a></li>
+#end 
+	 
+							  </ul>
+</div>
+<div class="publicity_bottom"></div>
+</div>
+</div>
+<div class="con_right">
+<div class="express">
+<div class="express_title"><h1>医院快讯</h1><a href="$cms.getUrl("医院快讯")" target="_blank"><img src="images/more.gif" width="36" height="11" /></a></div>
+<div class="express_list">
+<ul>
+#foreach($article in $cms.getContents("医院快讯",6))
+<li><span>$cms.format($article.publishDate)</span> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">$article.name</a></li>
+#end
+
+							  </ul>
+</div>
+</div>
+<div class="news">
+<div class="news_title"><h1>图片新闻</h1><a href="$cms.getUrl("图片新闻")" target="_blank"><img src="images/more.gif" width="36" height="11" /></a></div>
+<div class="news_list">
+<div id="case">
+				<div id="case_gd" class="blk_18">
+				
+					<a onMouseUp="ISL_StopUp_1()" class="LeftBotton" onMouseDown="ISL_GoUp_1()" onMouseOut="ISL_StopUp_1()" href="javascript:void(0);" target=_self></a>
+					<div class="pcont" id="ISL_Cont_1">
+						<div class="ScrCont">
+							<div id="List1_1">
+							#foreach($article in $cms.getContents("图片新闻",10))
+								<a class="pl" href="$cms.getUrl($article)" target=_blank><img width="130" height="104" alt="" src="$cms.getPictureUrl($article)" ><span>#summary($article.name 7)</span></a>
+								#end
+							</div>
+							<div id="List2_1"></div>					
+						</div>				
+					</div>
+					<a onMouseUp="ISL_StopDown_1()" class="RightBotton" onMouseDown="ISL_GoDown_1()" onMouseOut="ISL_StopDown_1()" href="javascript:void(0);" target=_self></a>
+				</div>
+
+				<div class="mid_bom"></div>
+				<SCRIPT type=text/javascript>
+				<!--
+				picrun_ini()
+				//-->
+				</SCRIPT>			
+			</div>
+</div>
+</div>
+<div class="con02">
+<div class="information">
+<div class="i_title"><h1>医保信息</h1><a href="$cms.getUrl("学生医保")" target="_blank"><img src="images/more.gif" width="36" height="11" /></a></div>
+<div class="i_list">
+<ul>
+#foreach($article in $cms.getContents("医保信息",6))
+<li><span>$cms.format($article.publishDate)</span> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">$article.name</a></li>
+#end
+
+							  </ul>
+
+</div>
+</div>
+<div class="download">
+<div class="download_title"><h1>下载专区</h1><a href="$cms.getUrl("下载专区")" target="_blank"><img src="images/more.gif" width="36" height="11" /></a></div>
+<div class="download_list">
+ <ul>
+    #foreach($article in $cms.getContents("下载专区",6))
+<li> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 12)</a></li>
+#end 
+	 
+							  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+#parse("footer.vm")
+</div>
+
+
+</body></html>

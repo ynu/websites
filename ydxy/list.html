@@ -1,0 +1,262 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学校友总会</title>
+<link type="text/css" rel="stylesheet" href="css/list_style.css">
+<link type="text/css" rel="stylesheet" href="css/list_chromestyle.css">
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/xwzxlb_cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/frame2_cicro_userdefine.css">
+<meta content="MSHTML 6.00.2900.5803" name="GENERATOR">
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script><script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+<body>
+
+<div id="container">
+#parse("header.vm")
+  <div id="leftbar">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="180px" height="180px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroW4IR22_0317_9649_ydxy_25_info_title1">
+<tr>
+<td>最新公告</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroW4IR22_0317_9649_ydxy_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroW4IR22_0317_9649_ydxy_25_info_content">
+<marquee id="info3_001MA0R77_8810_3698_ydxy_18_scrollArea" direction="up" height="180px" width="180px" scrolldelay="0" scrollamount="2" border="0" onMouseOver="info3_001MA0R77_8810_3698_ydxy_18_scrollArea.stop()" onMouseOut="info3_001MA0R77_8810_3698_ydxy_18_scrollArea.start()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("最新公告",100))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroW4IR22_0317_9649_ydxy_25_info_listrow1">
+<td width="1" valign="top"><IMG src="images/Forward.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroW4IR22_0317_9649_ydxy_25_info_alistrow1"><span id="CicroW4IR22_0317_9649_ydxy_25__dTitle_1">#summary($article.name 19)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="150px" height="25px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroC80276_4810_7907_ydxy_25_pic_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroC80276_4810_7907_ydxy_25_pic_content"><a href="$cms.getUrl("校友刊物")" class="CicroC80276_4810_7907_ydxy_25_pic_pic"><img width="150px" height="25px" border="0" src="images/xykw.jpg"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<table width="180px" height="210px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroU3LA7Q_7318_9988_ydxy_25__content"><P align=center><STRONG><FONT style="FONT-SIZE: 14px; COLOR: #000000">联系我们</FONT></STRONG></P>
+<P>电话（传真）：<BR>0871-5033921<br>0871-5035360</P>
+<P>地址：<br>云南省昆明市翠湖北路2号云南大学文津楼A座208室<br>
+邮编：650091<br><NORMAL>Email：<BR><FONT style="FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif">xiaoyou@ynu.edu.cn</FONT><NORMAL></P></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="content">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="500px" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroM0BDSL_3093_6617_ydxy_25_Local_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroFFT681_2172_2706_ydxy_25_text_content">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置：</td><td valign="middle" class="page">$curChannel.title</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="content2">
+<table>
+<tbody>
+<tr>
+<td width="500">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="title1">
+<TR></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroAZI8Y2_6334_6095_ydxy_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroAZI8Y2_6334_6095_ydxy_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" valign="top">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+ #foreach($article in $cms.getPageContents($curChannel,$curPage))
+<tr onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''" class="CicroAZI8Y2_6334_6095_ydxy_25_info_listrow1">
+<td width="1" valign="top"><img src="images/icon3.jpg"></td><td><a class="CicroAZI8Y2_6334_6095_ydxy_25_info_listrow1_a" target="_blank" href="$cms.getUrl($article)" title="$article.name"><span id="CicroAZI8Y2_6334_6095_ydxy_25__dTitle_1">$article.name</span></a></td><td width="1" height="0" class="vertical"><IMG src="images\space.gif" border="0" width="1"></td><td>$cms.format($article.publishDate)</td>
+</tr>
+<tr class="horizontal">
+<td colspan="30" width="1" height="0"><IMG src="images\space.gif" border="0" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<form name="form1">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroAZI8Y2_6334_6095_ydxy_25_info_nov">
+<tr>
+<td class="page"><a href="$cms.getIndexFileName($curChannel, 1)" >首页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a>&nbsp;&nbsp;<A class="CicroAZI8Y2_6334_6095_ydxy_25_turnpage" HREF="$cms.getIndexFileName($curChannel, $nextPage)">下一页</A>&nbsp;&nbsp;<A class="CicroAZI8Y2_6334_6095_ydxy_25_turnpage" HREF="$cms.getIndexFileName($curChannel, $totalPage)">末页
+                     </A></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="footer">#parse("footer.vm")
+</div>
+<table width="480"></table>
+</div>
+
+</body></html>

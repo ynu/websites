@@ -1,0 +1,54 @@
+
+	<div id="header">
+		<div id="logo"></div>
+		<div id="dt"></div>
+</div>
+	
+	<div id="nav">
+		<div class="time">今天是<script>
+function writeDateInfo()
+{
+        var day="";
+        var month="";
+        var ampm="";
+        var ampmhour="";
+        var myweekday="";
+        var year="";
+        mydate=new Date();
+        myweekday=mydate.getDay();
+        mymonth=mydate.getMonth()+1;
+        myday= mydate.getDate();
+        myyear= mydate.getYear();
+        year=(myyear > 200) ? myyear : 1900 + myyear;
+        if(myweekday == 0)
+        weekday=" 星期日";
+        else if(myweekday == 1)
+        weekday=" 星期一";
+        else if(myweekday == 2)
+        weekday=" 星期二";
+        else if(myweekday == 3)
+        weekday=" 星期三";
+        else if(myweekday == 4)
+        weekday=" 星期四";
+        else if(myweekday == 5)
+        weekday=" 星期五";
+        else if(myweekday == 6)
+        weekday=" 星期六";
+        document.write(year+"年"+mymonth+"月"+myday+"日"+weekday);
+} 
+
+</script>
+
+<script>writeDateInfo();</script></div>
+		<div id="nav01">
+			<ul>
+				<li><a href="$cms.getUrl($rootChannel)">首 页</a></li>
+				#foreach($channel in $cms.getTopChildren($rootChannel))
+				<li><a href=$cms.getUrl($channel)>$channel.title</a></li>
+				#end
+				
+		  </ul>
+		</div>
+	</div>
+	
+	<div id="header01"><img src="images/tu.jpg" /></div>

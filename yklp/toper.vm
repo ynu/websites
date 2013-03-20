@@ -1,0 +1,15 @@
+
+<div id="toper">
+<div id="banner">
+<div id="header">
+<ul>
+<li class="first">
+<a accesskey="1" title="" href="$cms.getUrl($rootChannel)">本站主页</a>
+</li>
+<li>
+<a accesskey="2" title="" href="$cms.getUrl("English")">English</a>
+</li>
+</ul>
+</div>
+</div>
+</div>

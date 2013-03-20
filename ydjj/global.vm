@@ -1,0 +1,235 @@
+
+##??????????
+
+##????????????????????????#channelNav()
+#macro (channelNav)
+    #foreach($tmpChannel in $cms.getPathChannels($curChannel.parent))
+             <a href="$cms.getUrl($tmpChannel)">$tmpChannel.title</a>&raquo;
+    #end
+    $curChannel.title
+#end
+
+##????????????????????????#articleNav()
+#macro (articleNav)
+    #foreach($tmpChannel in $cms.getPathChannels($curChannel))
+             <a href="$cms.getUrl($tmpChannel)">$tmpChannel.title</a>&raquo;
+    #end
+    $curArticle.name
+#end
+
+##????????????????????????????length??????????????#summary($article 30)
+#macro(summary $title $length) 
+    #if ($title.length()>$length)
+        ${title.substring(0, $length)}... 
+    #else 
+        $title 
+    #end
+#end
+
+##????????????????????????????#contents($curChannel 10)
+#macro(contents $channel $count)
+<TABLE>
+  <TBODY>
+  #foreach($content in $cms.getContents($channel,$count)) 
+  <TR>
+   <TD>
+      <A href="$cms.getUrl($content)">#summary($content.name 30)&nbsp;($cms.format($content.publishDate))</A>
+   </TD>
+  </TR>
+  #end
+  </TBODY>
+</TABLE>
+#end
+
+##????????????????????????????????????#curContents(10)
+#macro(curContents $count)
+  #contents($curChannel $count)
+#end
+
+##????????????????????????????????????#pageContents()
+#macro(pageContents)
+<TABLE>
+  <TBODY>
+  #foreach($content in $cms.getPageContents($curChannel, $curPage)) 
+  <TR>
+   <TD>
+      <A href="$cms.getUrl($content)">#summary($content.name 30)&nbsp;($cms.format($content.publishDate))</A>
+   </TD>
+  </TR>
+  #end
+  </TBODY>
+</TABLE>
+#end
+
+##????????????????????????????????????#channelContents("????????" 10)
+#macro(channelContents $channelName $count)
+<TABLE>
+  <TBODY>
+  #foreach($content in $cms.getContents($channelName,$count)) 
+  <TR>
+   <TD>
+      <A href="$cms.getUrl($content)">#summary($content.name 30)&nbsp;($cms.format($content.publishDate))</A>
+   </TD>
+  </TR>
+  #end
+  </TBODY>
+</TABLE>
+#end
+
+##??????????????????????????????????????????????????#blockContents("????" "????????" 10)
+#macro(blockContents $channelName $blockName $count)
+<TABLE>
+  <TBODY>
+  #foreach($content in $cms.getContents($channelName, $blockName, $count)) 
+  <TR>
+   <TD>
+      <A href="$cms.getUrl($content)">#summary($content.name 30)&nbsp;($cms.format($content.publishDate))</A>
+   </TD>
+  </TR>
+  #end
+  </TBODY>
+</TABLE>
+#end
+
+
+##????????????????#page()
+#macro(page)
+<table>
+??$totalRows??????????$totalPage??????????<font color=red>$curPage</font>??&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, 1)">??????</a>
+<a href="$cms.getIndexFileName($curChannel, $prePage)">??????</a>
+<a href="$cms.getIndexFileName($curChannel, $nextPage)">??????</a>
+<a href="$cms.getIndexFileName($curChannel, $totalPage)">??????</a>
+</table>
+#end
+
+
+##??????????????????????????????????#relates()
+#macro(relates)
+<TABLE>
+   <TBODY>
+   #foreach($content in $cms.getRelated($curArticle))
+   <TR>
+      <TD><A href="$cms.getUrl($content)">#summary($content.name 30)&nbsp;($cms.format($content.publishDate))</A></TD>
+   </TR>
+   #end
+   </TBODY>
+</TABLE>
+#end
+
+##??????????????????????????????????#attachments()
+#macro(attachments)
+<TABLE>
+   <TBODY>
+   #foreach($doc in $cms.getAttachments($curArticle))
+   <TR>
+      <TD><A href="$cms.getUrl($doc)">$doc.srcFile</A> </TD>
+   </TR>#end
+   </TBODY>
+</TABLE>
+#end
+
+##????????????????????????#showGrade()
+#macro (showGrade $content)
+    #if ($content.grade>=2))
+           <img src="/images/important.gif" border=0>
+    #end
+#end
+
+##????????????????????????#showNew($content)
+#macro (showNew $content)
+    #if ($cms.isNew($content, 1))
+           <img src="/gov/images/bgxt/new003.gif" border=0>
+    #end
+#end
+
+##??????????????????????????#subChannel($curChannel table) 
+#macro (subChannel $channels $disStyle)
+#if($disStyle == 'table')
+<table>
+  #foreach($channel in $cms.getChildren($channels))
+    <tr>
+      <td><a href=$cms.getUrl($channel)>$channel.title</a></td>
+    </tr>
+    #end
+</table>
+#end
+#if($disStyle == 'li')
+<table>
+  #foreach($channel in $cms.getChildren($channels))
+    <li><a href=$cms.getUrl($channel)>$channel.title</a></li>
+    #end
+</table>
+#end
+#if($disStyle == 'br')
+<table>
+  #foreach($channel in $cms.getChildren($channels))<a href=$cms.getUrl($channel)>$channel.title<br>
+  #end </a>
+</table>
+#end
+
+##????????????????????#showPoll($place)
+#macro (showPlacePoll $place)
+    <script language="JavaScript" >
+    function openPoll(bSubmit,  form)
+    {
+            pollForm = eval("document."+form);
+    	if (!bSubmit)
+    	{
+                   pollForm.pollFlag.value = 1;
+                }else{
+                   pollForm.pollFlag.value = 0;
+                }
+    	newWindow = window.open("","pollwin","toolbar,resizable,scrollbars,dependent,width=400,height=280");
+    	newWindow.focus(); 
+    	pollForm.submit();
+    	return false;
+    
+    }
+    </script>
+        #set ($poll = $cms.getPoll($place))
+        #if ($poll)
+            #set ($optionArray = $stringUtil.split($poll.options, "|"))
+           <form method="POST" action="/cms/web/userPoll.jsp" target="pollwin" name="pollForm$poll.ID">
+           <table align="center">
+                <input type=hidden name="pollID" value="$poll.ID">
+                <input type=hidden name="pollFlag" value="0">
+                <tr><td height="25">$poll.title</td></tr>
+                    #set ($i = 0)
+                    #foreach( $strOption in $optionArray )
+                        <tr><td height="22">
+                        #if ($poll.type==0)
+                           <input type=radio name=postPoll value="$i">$strOption
+                        #else
+                           <input type=checkbox name=postPoll value="$i">$strOption
+                        #end
+                        </td></tr>
+                        #set ($i=$i+1)
+                    #end
+                <tr>
+<td align="center" height="35">
+    <input type="image" src="/pub/sgzyw/images/tj.jpg" value="????" onClick="openPoll(true,'pollForm$poll.ID')">
+                <input type="image" src="/pub/sgzyw/images/ck.jpg" value="????" onClick="openPoll(false,'pollForm$poll.ID')">
+                </td></tr>
+            </table>
+           </form>
+        #end
+#end
+
+##??????????????????????????#hasPicture($content)
+#macro (hasPicture $content) 
+#if ($cms.hasPicture($content)) 
+   <img src="/images/new.gif" border=0> 
+#end 
+#end 
+#macro (hasRelatePicture $content) 
+#if ($cms.hasRelatePicture($content)) 
+  <img src="/images/pic.gif" border=0> 
+#end 
+#end 
+
+##????????????????????????????????#hasAttachment($content)
+#macro (hasAttachment $content) 
+#if ($cmsService.getArticleAttachmentCount($content.ID, 3)>0) 
+  <img src="/images/att.gif" border=0> 
+#end 
+#end 

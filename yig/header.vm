@@ -1,0 +1,21 @@
+
+<div id="header"></div>
+<div class="nav">
+<ul>
+      <li style="background:none;"><a href="$cms.getUrl("首页")">首&nbsp;页</a></li>
+			 <li><a href="$cms.getUrl("研究所概况")">研究所概况</a></li>
+			 <li><a href="$cms.getUrl("科室专栏")">科室专栏</a></li>
+			 <li><a href="$cms.getUrl("职工专栏")">职工专栏</a> </li>
+			 <li><a href="$cms.getUrl("科研")">科&nbsp;研</a> </li>
+			 <li><a href="$cms.getUrl("教学")">教&nbsp;学</a></li>
+	  <li><a href="http://www.ynu.edu.cn/" target="_blank">云大主页</a></li>
+    </ul>
+    <div class="ser">				
+				<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" class="search">
+				  <input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+				  <input type="text" class="notxt" value="输入关键字" id="query" name="query" 
+					onblur="if(this.value=='') {this.value='输入关键字';this.form.keywords.style.color='#666666'}" 
+					onclick="if(this.value=='输入关键字'){this.value='';this.form.keywords.style.color='#000'}" />				 
+				  <button type="submit"></button>		</form>
+	  </div>
+</div>

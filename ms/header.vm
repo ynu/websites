@@ -1,0 +1,86 @@
+
+
+<div id="header">
+  <div class="banner"></div>
+  <div class="nav">
+    <ul>
+	<li onMouseOver="onOver('lable01')" onMouseOut="onOut('lable01')"> <a href="$cms.getUrl("首页")" target="_self" class="nav_off" id="group"> <span class="off_d">首页</span></a>
+         
+      </li>
+      <li onMouseOver="onOver('group_lable')" onMouseOut="onOut('group_lable')"> <a href="#" target="_self" class="nav_off" id="group"> <span class="off_d">学院概况</span></a>
+          <div class="group_lable" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("学院概况"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+      <li onMouseOver="onOver('down_lable')" onMouseOut="onOut('down_lable')"> <a href="#" target="_self" class="nav_off"> <span class=" off_d">党群工作</span></a>
+          <div class="down_lable" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("党群工作"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+      <li onMouseOver="onOver('cue_lable5')" onMouseOut="onOut('cue_lable5')"> <a href="#" target="_self" class="nav_off"> <span class="off_d">系所中心</span></a>
+          <div class="cue_lable5" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("系所中心"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+      <li onMouseOver="onOver('cue_lable4')" onMouseOut="onOut('cue_lable4')"> <a href="#" target="_self" class="nav_off"> <span class=" off_d">教育教学</span></a>
+          <div class="cue_lable4" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("教育教学"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+      <li onMouseOver="onOver('cue_lable')" onMouseOut="onOut('cue_lable')"> <a href="#" class="nav_off" id="product" > <span class=" off_c">科学研究</span></a>
+          <div class="cue_lable" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("科学研究"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+      <li onMouseOver="onOver('cue_lable1')" onMouseOut="onOut('cue_lable1')"> <a href="#" class="nav_off" id="product" > <span class=" off_c">学生工作</span></a>
+          <div class="cue_lable1" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("学生工作"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+      <li onMouseOver="onOver('cue_lable2')" onMouseOut="onOut('cue_lable2')"> <a href="#" class="nav_off" id="product" > <span class=" off_c">招生就业</span></a>
+          <div class="cue_lable2" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("招生就业"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div>
+      </li>
+
+      </li>
+    <li onMouseOver="onOver('cue_lable7')" onMouseOut="onOut('cue_lable7')"> <a href="$cms.getUrl("学生工作室")" target="_self" class="nav_off" id="group"> <span class="off_d">学生工作室</span></a>
+          <div class="cue_lable7" style="visibility:hidden;">
+            <ul>
+              #foreach($channel in $cms.getChildren("学生工作室"))
+              <li><a href="$cms.getUrl($channel)" target="_self">$channel.title</a></li>
+              #end
+            </ul>
+          </div
+
+    </ul>
+  </div>
+</div>

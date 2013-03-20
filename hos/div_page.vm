@@ -1,0 +1,8 @@
+
+
+<div id="fenye"> <a href="$cms.getIndexFileName($curChannel, 1)">首页</a> <a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a> 
+							  #foreach($index in [1..$totalPage])
+#if ($index == $curPage)
+<a href="$cms.getIndexFileName($curChannel, $index)" style="margin:0px 10px 0px 0px; color:#FF0000; text-decoration:underline;">$index</a> #else
+<a href="$cms.getIndexFileName($curChannel, $index)" style="margin:0px 10px 0px 0px;">$index</a> #end #end
+<a href="$cms.getIndexFileName($curChannel, $nextPage)" style="margin:0px 8px 0px 0px;">下一页</a> <a href="$cms.getIndexFileName($curChannel, $totalPage)">尾页</a> </div>

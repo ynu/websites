@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$curArticle.name</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+<body>
+
+<div id="wrap">
+#parse("header.vm")
+  <div class="content04">
+<div class="content04_title"><h1><span>您现在的位置：</span>#articleNav()</h1>
+</div>
+<div id="main_b1" >
+		   <h3>$curArticle.name</h3>
+		<div id="author">来源：$!{curArticle.source} | 发布日期：$cms.format($curArticle.publishDate,"yyyy-MM-dd hh:mm:ss")&nbsp; | &nbsp;浏览量：
+		  <script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script>
+	    &nbsp;<a href="#" onClick="window.close(); return false;"> [关闭窗口]</a></div>
+		<div id="work">$curArticle.content<br />
+	    #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color="red">$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</div>
+       #if ($cmsService.getArticleAttachmentCount($curArticle.ID, 3)>0) 
+	    <div id="beside">
+   <h1>相关附件</h1>
+		   <ul>
+		   #foreach($doc in $cms.getAttachments($curArticle)) 
+	         <li><span></span> <a href="$cms.getUrl($doc)">$doc.srcFile</a></li>
+			 #end
+      </ul>
+   </div>
+   #end
+    </div>
+</div>
+<div class="footer">#parse("footer.vm")</div>
+</div>
+
+</body></html>

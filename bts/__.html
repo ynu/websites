@@ -1,0 +1,149 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>云南大学工商管理与旅游管理学院-首页</title>
+
+<style type="text/css">
+<!--
+body,td,th {
+ font-size: 12px;
+ color: #30160A;
+}
+.line{line-height:150%;}
+.font{color:#ff3300;font-size:14px;}
+a:link {
+ color: #000033;
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+ color: #000033;
+}
+a:hover {
+ text-decoration: none;
+ color: #FF3300;
+}
+a:active {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a1:link {
+ color: #FF3300;
+ text-decoration: none;
+}
+.a1:visited {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a2:link {
+ color: #432412;FILTER: dropshadow(color=#ffffff offx=1,offy=1,positive=1)
+ text-decoration: none;
+}
+.a2:visited {
+ text-decoration: none;
+ color: #432412;FILTER: dropshadow(color=#ffffff offx=1,offy=1,positive=1)
+}
+.a2:hover {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a2:active {
+ text-decoration: none;
+ color: #FF3300;
+}
+body {
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+}
+-->
+</style>
+
+</head>
+<body bgcolor="#ffffff" screen_capture_injected="true">
+
+<table cellspacing="0" cellpadding="0" width="1005" border="0">
+<tbody>
+<tr>                                   
+<td rowspan="2"><img height="384" src="/images/index_2.gif" width="451"></td>
+<td><img height="144" alt="" src="/images/index_3.gif" width="388"></td>
+<td><img height="144" src="/images/index_4.gif" width="166"></td></tr>
+<tr>
+<td valign="top" background="/images/index_5.gif">
+<table cellspacing="0" cellpadding="0" width="84%" align="center" border="0">
+<tbody>                                           
+<tr>                                                                    
+<td class="font" align="middle" colspan="2" height="22">学院新闻</td></tr>
+<tr>
+<td colspan="2">&nbsp;</td></tr>                                
+<tr>                                                                          
+<td class="line" colspan="2">                           
+<marquee onMouseOver="this.stop()" onMouseOut="this.start()" scrollamount="2" scrolldelay="100" direction="up" height="160">
+
+    #foreach($article in $cms.getContents("学院新闻",5))                                      
+        ·<a href="$cms.getUrl($article)"> #summary($article.name 14)[$cms.format($article.publishDate,"yyyy.MM.dd")]</a><br><br>      
+    #end
+</marquee></td></tr>
+<tr>                          
+<td colspan="2">&nbsp;</td></tr>
+<tr>                                    
+<td class="a1" align="right" width="93%"><a class="a1" href="$cms.getUrl("学院新闻")">more...</a></td>
+<td width="7%">&nbsp;</td></tr></tbody></table></td>
+<td valign="bottom" background="/images/index_6.gif" height="240" ?="">
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+<tbody>
+<tr>
+<td align="middle">&nbsp;</td></tr>
+<tr>
+<td align="middle" height="120">&nbsp;</td></tr>
+<tr>
+<td valign="center" align="middle" height="40"><img height="30" src="/images/0000000517.gif" width="102"></td></tr>
+<tr>
+<td align="middle"><a href="http://webmail.ynu.edu.cn/"><img height="34" src="/images/0000000514.jpg" width="102" border="0"></a></td></tr></tbody></table></td></tr>
+<tr>
+<td colspan="3"><img height="10" src="/images/index_7.gif" width="1005"></td></tr>
+<tr>
+<td background="/images/index_8.gif" colspan="3" height="31">
+<table cellspacing="0" cellpadding="0" width="90%" border="0">
+<tbody>
+<tr>
+<td width="19%">&nbsp;</td>
+<td width="31%">今天是：
+<script language="javascript">
+ function isnArray()
+{
+argnr=isnArray.arguments.length
+for(var i=0;i<argnr;i++)
+{this[i+1]=isnArray.arguments[i];}
+}
+var isnDays=new isnArray("星期一","星期二","星期三","星期四","星期五","星期六","星期日");isnDays[0]="星期日";
+mydate = new Date();
+myyear = mydate.getFullYear();
+mymonth = mydate.getMonth()+1;
+today = mydate.getDate();
+document.write(myyear+"年"+mymonth+"月"+today+"日");
+document.write(" ")
+document.write(isnDays[mydate.getDay()]);
+      </script>
+ </td>
+<td width="25%">&nbsp;</td>
+<td width="25%">&nbsp;</td></tr></tbody></table></td></tr>
+<tr>
+<td align="middle" background="/images/index_9.gif" colspan="3" height="31">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle">
+        #foreach($channel in $cms.getChildren("首页"))
+        &nbsp;|&nbsp;<A href=$cms.getUrl($channel)>$channel.title</A>
+    #end                                                                                                             
+</td></tr></tbody></table></td></tr>
+<tr>            
+<td valign="top" align="middle" background="/images/index_10.gif" colspan="3" height="140">
+<table height="100" cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+<tbody>
+<tr>
+<td align="middle"><br>　　　<br><br>版权所有：云南大学工商管理与旅游管理学院<br><br>地址：昆明市翠湖北路2号 &nbsp;邮编：650091 &nbsp;Email：<a href="mailto:hibts@qq.com">hibts@qq.com</a> </td></tr></tbody></table></td></tr></tbody></table>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

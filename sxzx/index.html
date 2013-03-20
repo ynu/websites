@@ -1,0 +1,317 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>${curChannel.title}_思想战线</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<link href="css/main.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+/**/
+.STYLE1 {
+        COLOR: #ffffff
+}
+/**/
+</style>
+<meta content="MSHTML 6.00.6000.16735" name="GENERATOR">
+<link rel="stylesheet" type="text/css" href="css/S23S01_0751_5984_sxzx_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<script language="JavaScript" src="js/scroll.js"></script>
+</head>
+<body>
+
+<table width="760" align="center" border="0">
+<tbody>
+#parse("header.vm")
+<tr>
+<td valign="top" width="200" height="420">
+<table width="200" border="0">
+<tbody>
+<tr>
+<td height="28"><a href="$cms.getUrl('公告')" target="_blank"><img height="24" src="images/tiao3.gif" width="200" border="0"></a></td>
+</tr>
+<tr>
+<td valign="top" align="middle" background="images/ba.gif" height="240">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="99%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroIM3GQ2_3878_7483_sxzx_25_info_content">
+<marquee id="info3_001N5734M_9139_3865_sxzx_18_scrollArea" direction="up" height="200px" width="170px" scrolldelay="0" scrollamount="1" border="0" onMouseOver="info3_001N5734M_9139_3865_sxzx_18_scrollArea.stop()" onMouseOut="info3_001N5734M_9139_3865_sxzx_18_scrollArea.start()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("公告",5))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1">$article.name</a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left"><img src="images/left1.gif"></td>
+</tr>
+<tr>
+<td valign="top" align="middle" width="100%" background="images/be.GIF" height="163">
+<table cellspacing="0" cellpadding="0" width="200" border="0">
+<tbody>
+<tr>
+<td align="middle" background="">
+<table width="97%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroW8LX68_7528_0545_sxzx_25_frlink_content">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr align="center" class="form">
+<td class="listrow1">
+<script language="javascript" type="text/javascript"> 
+				function location1(s)
+                {       var d = s.options[s.selectedIndex].value;
+			window.open(d);
+			s.selectedIndex=0;       
+                }
+function location2(s)
+                {  
+						var d = s.options[s.selectedIndex].value;
+						s.selectedIndex=0;
+				        window.top.location.href = d;     
+                }
+</script>
+<select name="m1" class="CicroW8LX68_7528_0545_sxzx_25_frlink_select" style="width:150px; color:#666666" onChange="location1(this)" ID="Select1">
+					    <option selected="selected">校内链接</option>
+						#foreach($article in $cms.getContents("校内链接",50))
+						<option value="$cms.getUrl($article)">$article.name</option>
+						#end
+					  </select></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="middle" background="">
+<table width="97%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroF3SRM4_7054_5879_sxzx_25_frlink_content">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr align="center" class="form">
+<td class="listrow1">
+<select name="m1" class="CicroW8LX68_7528_0545_sxzx_25_frlink_select" style="width:150px; color:#666666" onChange="location1(this)" ID="Select1">
+					    <option selected="selected">校外链接</option>
+						#foreach($article in $cms.getContents("校外链接",50))
+						<option value="$cms.getUrl($article)">$article.name</option>
+						#end
+					  </select></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="180px" height="80px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content"><a class="content"><img width="180px" height="80px" border="0" src="images/linka[1]new.jpg"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</td><td valign="top" width="380">
+<table width="380" border="0">
+<tbody>
+<tr>
+<td><a href="$cms.getUrl('新闻')" target="_blank"><img height="28" src="images/tiao1.gif" width="380" border="0"></a></td>
+</tr>
+<tr>
+<td valign="top" align="middle" background="images/bb.GIF" height="240">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="98%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroSBMDP5_9983_7354_sxzx_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("新闻",10))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1">#summary($article.name 20)</a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="middle" background="images/bd.GIF" height="182">
+<table width="370" height="160" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="middle">
+<div class="CicroK130H4_7689_4552_sxzx_25_rolllink_content" id="rolllink3_001M0227Q_8170_0587_sxzx_18_scrollArea" width="370" height="160" style="border:0" onMouseOver="rolllink3_001M0227Q_8170_0587_sxzx_18_scrollArea.state='stop'" onMouseOut="rolllink3_001M0227Q_8170_0587_sxzx_18_scrollArea.state='scroll'">
+<table height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+#foreach($article in $cms.getContents("图片",10))
+<td height="160" class="listcol1"><img class="CicroK130H4_7689_4552_sxzx_25_rolllink_pic" border="0" id="linkpic1" height="160" title="编辑部周边" src="$cms.getPictureUrl($article)"></td><td width="1" class="td"><IMG SRC="/cws.files/component/wares/rolllink/rolllink.files/images/spacer.gif" width="1" ALT="列间距"></td>
+#end
+</tr>
+</table>
+</div>
+<script language="JavaScript">var testDiv = "rolllink3_001M0227Q_8170_0587_sxzx_18"+"_scrollArea"; var speed = "80"; var width = "370"; var height = "160"; var direct = "left"; var direction = "left"; if (direct == "right"){ direction = "right"; } window.onload = new Function("scroll(document.all[testDiv], width, height, direction, speed)");</script></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td valign="top" width="160">
+<table width="160" border="0">
+<tbody>
+<tr>
+<td height="58"><a href="$cms.getUrl('往期目录介绍')" target="_blank"><img height="58" src="images/tiao4.gif" width="160" border="0"></a></td>
+</tr>
+<tr>
+<td valign="top" align="middle" background="images/bc.GIF" height="391">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="98%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroI0CQ0T_7160_0259_sxzx_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("往期目录介绍",20))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1">#summary($article.name 12)</a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td background="images/a.jpg" colspan="3" height="50">#parse("footer.vm")</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

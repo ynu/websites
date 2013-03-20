@@ -1,0 +1,54 @@
+
+<div id="tail">
+<div id="chromemenu" class="chromestyle">
+<ul>
+<li>
+<a href="" rel="dropmenu1">实验室建设</a>
+</li>
+<li>
+<a href="" rel="dropmenu2">新闻中心</a>
+</li>
+<li>
+<a href="" rel="dropmenu3">研究方向</a>
+</li>
+<li>
+<a href="$cms.getUrl("人才培养")">人才培养</a>
+</li>
+<li>
+<a href="$cms.getUrl("科研成果")">科研成果</a>
+</li>
+<li>
+<a href="" rel="dropmenu4">学术交流</a>
+</li>
+<li>
+<a href="$cms.getUrl("数据中心")">数据中心</a>
+</li>
+</ul>
+</div>
+<div style="WIDTH: 100px" id="dropmenu1" class="dropmenudiv">
+#foreach($channel in $cms.getChildren("实验室建设"))
+<a href=$cms.getUrl($channel)>$channel.title</a>
+#end
+</div>
+<div style="WIDTH: 100px" id="dropmenu2" class="dropmenudiv">
+#foreach($channel in $cms.getChildren("新闻中心"))
+<a href=$cms.getUrl($channel)>$channel.title</a>
+#end
+</div>
+<div style="WIDTH: 100px" id="dropmenu3" class="dropmenudiv">
+#foreach($channel in $cms.getChildren("研究方向"))
+<a href=$cms.getUrl($channel)>$channel.title</a>
+#end
+</div>
+<div style="WIDTH: 100px" id="dropmenu4" class="dropmenudiv">
+#foreach($channel in $cms.getChildren("学术交流"))
+<a href=$cms.getUrl($channel)>$channel.title</a>
+#end</div>
+<script type="text/javascript">
+//
+
+cssdropdown.startchrome("chromemenu")
+
+//
+						</script>
+</div>

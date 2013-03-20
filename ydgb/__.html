@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>    
+<title>首页</title><title></title>
+</head>
+<body>
+    
+<div id="container">    
+<div id="banner">
+<div id="header">
+</div></div><div id="menu">
+<div id="tabsH"> #parse("导航.vm")</div>
+</div><!--menu END -->    
+<div id="wrapper">    <div id="content">      <div id="intro">             
+    <div id="text">     
+    <P>
+        云大宾馆是按标准设计建造的商务性宾馆，坐落在风景秀美的云南大学西侧，交通十分便利，昆明翠湖公园近在咫尺，步行八分钟即可到达。
+        宾馆四周毗邻：云南师范大学、云南民族大学及昆明理工大学，是您在昆进行学术交流、进修培训、举办会议、旅游考察的首选之地。
+        宾馆拥有客房130间，其中标间107间，豪华商务单间12间，普通套房7间，豪华套房4间，房间内宽敞明亮、装饰新颖，温馨舒适，设施齐全，房间内设有电话均可拨打国内外长途，配备了免费的Intetnel网络。
+        </P>     
+        <P>为了您的方便，我宾馆在订房上采用电话或传真订房（订房电话机传真0871?5034190），订房请提前预订，如您特殊原因不能到店，在3天前告知宾馆，可使用支票，现金、信用卡（国内、国外）结账，从而方便了您的费用结算。</P>
+        <P>宾馆经营川、滇、粤味菜肴，任君品尝。其中宴会厅还设有大小不同风格的包间数个以满足您宴请的需求，（如您在用餐方面有特殊的要求或禁忌，请您在订餐前与我们说明，我们将尽力让您满意。</P>    
+        <P>宾馆拥有大、小型会议室20多个，装修各异、大方舒适，会议室还配有多媒体及音响设备等一体化，是您举办大、中、小型会议的理想场所。</P>    
+        <P>为了您的方便，宾馆商务中心提供打印、传真、电子邮件收发、票务代订、旅游等服务，全心支持您的工作。</P>        
+        </div>      
+        </div><!--intro END -->    
+        <div id=con1><MARQUEE scrollAmount=5 scrollDelay=75 direction=left width=400 height=180>                
+        <img src="/images/20100729153516.jpg" width=240 border=0 />                     
+        <img src="/images/20100809151108.jpg" width=240 border=0 />                     
+        <img src="/images/0_100_1828.gif" width=240 border=0 />                     
+        <img src="/images/1.JPG" width=240 border=0 />                     
+        <img src="/images/2.JPG" width=240 border=0 />                            
+        <img src="/images/5.JPG" width=240 border=0 />                
+        </MARQUEE></div>
+        <div id=con2>      
+        <ul class="servi">
+            #foreach($article in $cms.getContents("宾馆动态", 7))
+                <LI>
+                    <a href="$cms.getUrl($article)">
+                        #summary($article.name 26) 
+                        [$cms.format($article.publishDate, "yyyy-MM-dd")]
+                    </a>
+                </LI>
+            #end
+            
+        </ul></div>
+        </div><!--content END -->
+        </div><!--wrapper END -->    </div>
+        <!--container END -->
+        <div id="footer">
+        <p>版权所有:<a href="/" >云大宾馆</a></p>
+        <p>地址:云南省昆明市翠湖北路2号 邮编:650091</p>
+        <p>电话: 0871 - 5034179, 5034189</p><p>制作维护:云南大学网络与信息中心</p>
+        </div><!--footer END -->
+#parse("ga.vm")
+</body></html>

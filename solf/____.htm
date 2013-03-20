@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><META content="text/html; charset=utf-8" http-equiv=Content-Type><HEAD><TITLE>云南大学外国语学院</TITLE>
+<META name=description content=云南大学外国语学院>
+<META name=keywords content=云南大学外国语学院,云大外语学院,外语本科教学,外语研究生教学,英语系,西语系,东语系><LINK 
+rel="shortcut icon" href="favicon.ico">
+<LINK 
+rel=stylesheet type=text/css href="css/style.css">
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+  </SCRIPT>
+
+<STYLE type=text/css>.style2 {
+	FONT-SIZE: 16px
+}
+.style3 {
+	FONT-FAMILY: "宋体"; FONT-SIZE: 14px
+}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY>
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=822 align=center>
+  <TBODY>
+  <TR>
+    <TD colSpan=4><IMG alt=Header src="images/header.png" width=822 
+      height=247></TD></TR>
+  <TR>
+    <TD height=40 vAlign=top background="images/showdow_left.jpg" rowSpan=1 
+    width=42><IMG src="images/whitecorner_topleft.jpg" width=42 
+      height=23> </TD>
+    <TD bgColor=#ffffff height=23 vAlign=top width=528>
+      <TABLE style="TEXT-ALIGN: left; WIDTH: 100%" border=0 cellSpacing=0 
+      cellPadding=4>
+        <TBODY>
+        <TR>
+          <TD style="VERTICAL-ALIGN: middle">
+            <DIV id=homeheadline>
+            <H1><BR></H1>
+            <H1><A class=mainlevelright>$curChannel.title</A></H1>
+			#foreach($article in $cms.getContents($curChannel,1))
+            <TABLE style="TEXT-ALIGN: left; WIDTH: 100%" border=0 cellSpacing=0 
+            cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD style="WIDTH: 30px; VERTICAL-ALIGN: top"><BR></TD>
+                <TD style="VERTICAL-ALIGN: top">
+                  <H1 class=style2 align=center><BR>$article.name</H1>
+                  </TD></TR></TBODY></TABLE>
+				  #end
+				  </DIV></TD></TR>
+        <TR>
+          <TD style="VERTICAL-ALIGN: top">
+		  #foreach($article in $cms.getContents($curChannel,1))
+            <TABLE style="TEXT-ALIGN: left; WIDTH: 100%" border=0 cellSpacing=0 
+            cellPadding=8>
+              <TBODY>
+              <TR>
+                <TD style="WIDTH: 25px; VERTICAL-ALIGN: top"><BR></TD>
+                <TD style="VERTICAL-ALIGN: top">
+                  <P class=style3>
+				  #set ($fullArticle=$cmsService.getArticle($article.ID))
+                  $fullArticle.content
+                  </P>
+                  </TD></TR></TBODY></TABLE>
+				  #end
+				  </TD></TR></TBODY></TABLE></TD>
+    <TD bgColor=#a9a9a9 vAlign=top rowSpan=1 width=2><BR></TD>
+    <TD bgColor=#275275 vAlign=top rowSpan=1 width=251 align=middle>
+	 #parse("right.vm")
+	</TD>
+  </TR>
+  <TR>
+    <TD style="VERTICAL-ALIGN: bottom" width=42 colSpan=2><IMG 
+      src="images/whitecorner_bottomleft.jpg" height=35> </TD>
+    <TD style="VERTICAL-ALIGN: top"><BR></TD>
+    <TD bgColor=#275275 vAlign=top width=251><BR></TD></TR>
+  <TR>
+    <TD bgColor=#a9a9a9 rowSpan=2 width=42>&nbsp;</TD>
+    <TD bgColor=#a9a9a9 height=30 vAlign=top rowSpan=2 width=530 colSpan=2>
+      <DIV id=footernav>
+        <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+          <TBODY>
+            <TR>
+              <TD><TABLE border=0 cellSpacing=1 cellPadding=0 width="100%">
+                  <TBODY>
+                    <TR>
+                      <TD noWrap><A id=active_menubottom class=mainlevelbottom 
+                        href="$cms.getUrl('首页')">首页</A><SPAN 
+                        class=mainlevelbottom> </SPAN><A class=mainlevelbottom 
+                        href="$cms.getUrl('联系')">联系</A><SPAN 
+                        class=mainlevelbottom> </SPAN><A class=mainlevelbottom 
+                        href="$cms.getUrl('相关链接')">相关链接</A><SPAN 
+                        class=mainlevelbottom> </SPAN><A class=mainlevelbottom 
+                        href="$cms.getUrl('公告信息')">最近更新</A><SPAN 
+                        class=mainlevelbottom> </SPAN></TD>
+                    </TR>
+                  </TBODY>
+              </TABLE></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+      </DIV></TD>
+    <TD vAlign=top width=251 align=right><IMG 
+      src="images/blackcorner.png" width=251 height=20> </TD></TR>
+  <TR>
+    <TD vAlign=bottom align=right>
+      <DIV id=footer>
+      <DIV align=right>&copy;2005-2008 云南大学外国语学院版权所有<BR><A class=footer 
+      href="mailto:hominidhe@163.com" target=_blank>Hominid He</A>制作 
+    </DIV></DIV></TD></TR></TBODY></TABLE>
+</body></html>

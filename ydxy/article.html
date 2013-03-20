@@ -1,0 +1,65 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学校友总会</title>
+<link type="text/css" rel="stylesheet" href="css/style3.css">
+<link type="text/css" rel="stylesheet" href="css/chromestyle.css">
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/n3_cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="/pattern/frame_n3.files/cicro_userdefine.css">
+<meta content="MSHTML 6.00.2900.5803" name="GENERATOR">
+<meta name="keywords" content="">
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+<body>
+
+<div id="container">
+#parse("header.vm")
+  <div id="content">
+<table>
+<tbody>
+<tr>
+<td width="700">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="700px" height="1px">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroH7OZDF_6621_7928_ydxy_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroH7OZDF_6621_7928_ydxy_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroH7OZDF_6621_7928_ydxy_25_info_title3">
+<tr>
+<td>
+<div class="CicroH7OZDF_6621_7928_ydxy_25_info_title2">$curArticle.name</div>
+发布时间：$cms.format($curArticle.publishDate,"yyyy-MM-dd hh:mm:ss")访问次数：
+<script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="CicroH7OZDF_6621_7928_ydxy_25_info_content1">
+<tr>
+<td valign="top" class="CicroH7OZDF_6621_7928_ydxy_25_info_content1">
+  <div id="content">$curArticle.content<br>
+    #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</div></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="footer">#parse("footer.vm")</div>
+<div id="footer2"></div>
+</div>
+
+</body></html>

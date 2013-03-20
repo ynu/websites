@@ -1,0 +1,16 @@
+
+<div class="piclinks">
+					
+						<div class="link01"><img src="images/piclink01.jpg" width="197" height="62" /></div>
+						<div class="btn"><a href="$cms.getUrl("教师风采")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+						
+						<div class="link01"><img src="images/piclink02.jpg" width="197" height="62" /></div>
+						<div class="btn"><a href="$cms.getUrl("学院党建")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+						
+						<div class="link01"><img src="images/piclink03.jpg" width="197" height="62" /></div>
+						<div class="btn"><a href="$cms.getUrl("专业硕士")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+												
+						<div class="link01"><img src="images/piclink04.jpg" width="197" height="62" /></div>
+						<div class="btn"><a href="$cms.getUrl("东陆经济英才")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+						
+					</div>

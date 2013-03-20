@@ -1,0 +1,143 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>::云南省古生物研究重点实验室::</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="css/style_list.css">
+<link rel="stylesheet" type="text/css" href="css/chromestyle_list.css">
+<script type="text/javascript" src="js/chrome.js"></script>
+
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script><script language="javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine_list.css">
+<style type="text/css">
+a{ font-weight:normal; color:#666666}
+a:hover{font-weight:normal; color:#990000}
+a:visited{ font-weight:normal;color:#666666}
+</style>
+</head>
+<body>
+
+#parse("toper.vm")
+<div id="container">
+#parse("menu.vm")
+<div id="leftbar2"></div>
+<div id="content">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="350px" height="30px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置：</td><td valign="middle" class="page" >$curChannel.title</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<TR></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroD58YR7_8541_2921_yklp_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" valign="top">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+<tr onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''" class="CicroD58YR7_8541_2921_yklp_25_info_listrow1" height="23">
+<td width="11" valign="top"><img src="images/tb7.gif"></td>
+<td width="475"><a class="CicroD58YR7_8541_2921_yklp_25_info_listrow1_a" target="_blank" href="$cms.getUrl($article)" title="$article.name" style="font-size:12px; color:#333333; font-weight:100"><span id="CicroD58YR7_8541_2921_yklp_25__dTitle_1">$article.name</span></a></td><td width="1" height="0"><IMG src="images\space.gif" border="0" width="1"></td><td width="85" style="font-size:12px">$cms.format($article.publishDate)</td>
+</tr>
+<tr class="horizontal">
+<td colspan="30" height="0"><IMG src="images\space.gif" border="0" height="1"></td>
+</tr>
+#end
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="CicroD58YR7_8541_2921_yklp_25_info_listfoot">
+<td>
+
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroD58YR7_8541_2921_yklp_25_info_nov">
+<tr>
+<td class="page"><a href="$cms.getIndexFileName($curChannel, 1)"  style="font-weight:normal" >首页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)" style="font-weight:normal">上一页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $nextPage)" style="font-weight:normal">下一页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $totalPage)" style="font-weight:normal">末页</a></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+</div>
+#parse("footer.vm")
+
+</body></html>

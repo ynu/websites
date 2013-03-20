@@ -1,0 +1,34 @@
+
+<div id="footer">
+			<div class="footer_01"></div>
+			<div class="footer_02">
+				<p>
+					云南大学法学院  地址：昆明市一二一大街182号云南大学英华园北学楼 邮编：650091
+
+					<br /> 
+					E-mail:lawschool@ynu.edu.cn电话：0871-5033171(院办), 5033627(研究生办), 5032800(教务办)  版权所有 2011 
+				</p>
+			</div>
+			<div class="footer_03"></div>
+		</div>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("law.法学院");
+
+} catch(err) {}</script>

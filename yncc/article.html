@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$curArticle.name</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+  #parse("header.vm") 
+  <div class="content03">
+    <div class="content03_top">
+   <div id="dangqian">您当前的位置：#channelNav()>> 正文 </div>
+      <div class="ser">
+         #parse("search.vm")
+      </div>
+    </div>
+      <div class="content03_bottom">
+      <div class="bottom_title"><h1>$curChannel.title</h1></div>
+      <div class="bottom_list">
+    <div id="main_b1" >
+		   <h3>$curArticle.name</h3>
+		<div id="author">作者：$!{curArticle.author} | 发布日期：$cms.format($curArticle.publishDate) | &nbsp;
+		  <script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script>
+		  &nbsp;【 <a onclick="Zoom.style.fontSize='20px';" href="#">大</a>&nbsp;&nbsp;<a onclick="Zoom.style.fontSize='16px';" href="#">中</a>&nbsp;&nbsp;<a onclick="Zoom.style.fontSize='12px';" href="#">小</a>  】<a href="#" onClick="window.close(); return false;"> [关闭窗口]</a></div>
+		<div id="work"><font id="Zoom"> $curArticle.content<br />
+		  #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color="red">$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</font></div>
+    </div>
+    
+      </div>
+      </div>
+  </div>
+   <div class="footer02">#parse("footer.vm")</div>
+</div>
+
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+
+</body></html>

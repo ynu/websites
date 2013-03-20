@@ -1,0 +1,30 @@
+
+<div id="header">
+		<div id="banner"></div>		
+		<div id="menu">
+			  <div id="menu-bg">
+			  <div id="menu-parent">
+			  #set($i=1)
+			   #foreach($channel in $cms.getTopChildren($rootChannel))
+			  <a id="par$i">$channel.title</a>
+			  #set($i=$i+1)
+			  #end			 
+			  </div>  
+			  <div id="menu-son">
+			   #set($j=1)
+			    #foreach($channel in $cms.getTopChildren($rootChannel))
+				#if($j==1)
+				<span style="display:block;">
+				#else
+				<span>
+				#end<div id="son$j">
+				 #foreach($chl in $cms.getChildren($channel))
+				   |<a href="$cms.getUrl($chl)">$chl.title</a> #end
+				</div></span>
+				 #set($j=$j+1)
+				#end				
+			  </div>
+			  </div>
+			</div>
+			<script type="text/javascript" src="js/m.js"></script>
+		</div>

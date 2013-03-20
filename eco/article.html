@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$curArticle.name</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">var def=1;</script>
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	#parse("header.vm")
+	    <div id="content">
+		  <div id="list_left">
+		  #parse("leftpiclinks.vm")</div>
+			
+		<div id="article">
+			<h3>$curArticle.name</h3>
+			 <div id="art_from">
+				<span>来源：$!{curArticle.source} </span><span>发文时间：$cms.format($curArticle.publishDate)</span>			 </div>
+			 <div id="pp">$curArticle.content<br />
+		     #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color="red">$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</div>
+			#if ($cmsService.getArticleAttachmentCount($curArticle.ID, 3)>0) 
+			<div class="xgfj">
+				<div class="xgfj_title">
+					<img src="images/list_title.gif" width="12"  height="13" alt="最新公告"/>
+					<h4>相关附件</h4>
+				</div>
+				<div class="com_list1">
+					  <dl>
+						  #foreach($doc in $cms.getAttachments($curArticle)) 
+						  <dd>
+							<span></span>
+							  <a title="" href="$cms.getUrl($doc)" target="_blank">
+							  $doc.srcFile</a>						  
+						  </dd>#end						  
+					  </dl>
+				
+				</div>
+			</div>
+			#end
+		</div>
+			
+		</div>
+		<div id="footer" style="margin-top:5px;">
+			<div class="footer_01"></div>
+			<div class="footer_02">
+				<p>
+					#parse("footer.vm") 
+				</p>
+			</div>
+			<div class="footer_03"></div>
+		</div>
+</div>
+
+</body></html>

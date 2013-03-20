@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学资源环境与地球科学学院</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="wrap">
+	#parse("header.vm")
+	
+  <div id="con">
+  	<div id="wz01">
+			<div id="wz01_bt">
+			  <div class="list_wz">您现在的位置：#parse("channelnav.vm")</div>
+	  </div>
+	  <div id="wz01_zw">
+	  	<h3>$curArticle.name</h3>
+		<div style="background-color: #CCCCCC; line-height:23px; margin:0 auto; font-size:12px; color:#666666" align="center">来源： $!{curArticle.source} | 发布日期：$cms.format($curArticle.publishDate)</div>
+		<div id="wz01_zw1" style="overflow:hidden;">    $curArticle.content<br>
+#if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end
+
+#if ($cmsService.getArticleAttachmentCount($curArticle.ID, 3)>0) 
+			<div class="xgfj">
+				<div class="xgfj_title">
+				<img src="images/list_title.gif" width="12"  height="13" />
+				  <h4>相关附件1</h4>
+				</div>
+				<div class="com_list1">
+					  <dl>
+						  #foreach($doc in $cms.getAttachments($curArticle)) 
+						  <dd>
+							<span>$cms.format($curArticle.publishDate)</span>
+							  <a title="$doc.srcFile" href="$cms.getUrl($doc)" target="_blank">
+							  $doc.srcFile</a>						  
+						  </dd>
+						  #end
+					  </dl>
+				
+				</div>
+			</div>
+			#end
+
+</div>
+
+	  </div>
+	</div>
+  </div>
+	#parse("footer.vm")
+</div>
+
+</body></html>

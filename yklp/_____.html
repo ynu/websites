@@ -1,0 +1,132 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>::云南省古生物研究重点实验室::</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/chromestyle.css">
+<script type="text/javascript" src="js/chrome.js"></script>
+<meta name="GENERATOR" content="MSHTML 8.00.6001.18928">
+
+
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine_cylb.css">
+<style type="text/css">
+a{ font-weight:normal; color:#666666}
+a:hover{font-weight:normal; color:#990000}
+a:visited{ font-weight:normal;color:#666666}
+</style>
+</head>
+<body>
+
+#parse("toper.vm")
+<div id="container">
+<div id="tail">
+#parse("menu.vm")
+
+
+</div>
+<div id="leftbar2" style="width:200px"></div>
+<div id="content">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="350px" height="30px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置：实验室成员</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="580px" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroQY1SWN_4185_9845_yklp_25_picinfo_content">
+
+<table width="" border="0" cellspacing="0" cellpadding="0">
+<tr>
+#set ($i=0)
+
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+#set ($i = $i+1)
+
+#if ($i%3==0)
+
+
+<td valign="top" width="33.333333333333336%">
+<table border="0" cellspacing="0" cellpadding="0" width="180" height="135">
+<tr>
+<td class="CicroQY1SWN_4185_9845_yklp_25_picinfo_pic"><a href="$cms.getUrl($article)" target="_blank"><img src="$cms.getPictureUrl($article)" border="0"  ></a></td>
+</tr>
+<tr class="CicroQY1SWN_4185_9845_yklp_25_picinfo_listrow1">
+<td align="center"><a href="$cms.getUrl($article)" target="_blank" class="CicroQY1SWN_4185_9845_yklp_25_picinfo_alistrow1" style=" color:#333333; font-size:12px; font-weight:100"><span id="CicroQY1SWN_4185_9845_yklp_25__dTitle_3">$article.name</a></td>
+</tr>
+</table>
+</td>
+</tr><tr>
+#else
+<td valign="top" width="33.333333333333336%">
+<table border="0" cellspacing="0" cellpadding="0" width="180" height="135">
+<tr>
+<td class="CicroQY1SWN_4185_9845_yklp_25_picinfo_pic"><a href="$cms.getUrl($article)" target="_blank"><img src="$cms.getPictureUrl($article)" border="0" ></a></td>
+</tr>
+<tr class="CicroQY1SWN_4185_9845_yklp_25_picinfo_listrow1">
+<td align="center"><a href="$cms.getUrl($article)" target="_blank" class="CicroQY1SWN_4185_9845_yklp_25_picinfo_alistrow1" style=" color:#333333; font-size:12px; font-weight:100"><span id="CicroQY1SWN_4185_9845_yklp_25__dTitle_3">$article.name</a></td>
+</tr>
+</table>
+</td>
+#end
+#end
+</tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroQY1SWN_4185_9845_yklp_25_picinfo_nov">
+<tr>
+<td class="CicroQY1SWN_4185_9845_yklp_25_turnpage"><a href="$cms.getIndexFileName($curChannel, 1)">首页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $totalPage)">末页</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+#parse("footer.vm")
+
+</body></html>

@@ -1,0 +1,15 @@
+
+#foreach($tmpChannel in $cms.getPathChannels($curChannel.parent))
+	#set($count=$cms.getChannelCount(${tmpChannel.ID}))
+	#if($count==0 || $tmpChannel==$rootChannel)
+	<a href="$cms.getUrl($tmpChannel)">
+	#else
+		
+		#foreach($chiChannel in $cms.getChildren($tmpChannel,0,1))
+		<a href="$cms.getUrl($chiChannel)">
+		#end
+		
+	#end
+$tmpChannel.title</a>
+
+&raquo;#end <a href="$cms.getUrl($curChannel)"> $curChannel.title</a>

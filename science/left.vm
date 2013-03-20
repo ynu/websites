@@ -1,0 +1,88 @@
+
+<div class="con03_left">
+#set($count=$cms.getChannelCount(${curChannel.ID}))
+#if($count==0 && $curChannel.parent.title == "首页")
+    <div class="notice">
+    <div class="title03"><h1>通知公告</h1><a href="$cms.getUrl("通知公告")">
+    <img src="images/more.jpg" /></a></div>	
+    <div class="list02">
+    <ul>
+	#foreach($article in $cms.getContents("通知公告",8))
+	    <li><a href="$cms.getUrl($article)">#summary($article.name 13)</a></li>
+	#end
+     </ul>
+    </div>
+    </div>
+#elseif($count==0 && $curChannel.parent.title != "首页")
+<div class="notice02" style="height:auto;">
+    <div class="title06"><h1>$curChannel.parent.title</h1></div>	
+    <div class="list07">
+    <ul>
+	#foreach($channel in $cms.getChildren($curChannel.parent))
+					 <li ><a href="$cms.getUrl($channel)">$channel.title </a></li>
+    #end
+					 
+		</ul>
+    </div>
+    </div>
+
+#else
+<div class="notice02" style="height:auto;">
+    <div class="title06"><h1>$curChannel.title</h1></div>	
+    <div class="list07">
+    <ul>
+	#foreach($channel in $cms.getChildren($curChannel))
+					 <li ><a href="$cms.getUrl($channel)">$channel.title </a></li>
+    #end
+					 
+		</ul>
+    </div>
+    </div>
+
+#end
+    <div class="down" style="margin-top:5px;">
+    <div class="title03"><h1 style="color:#0877c1;" >常用下载</h1><a href="$cms.getUrl("常用下载")"><img src="images/more.jpg" /></a></div>	
+    <div class="list05">
+     <ul>
+	 #foreach($article in $cms.getContents("常用下载",4))
+				     <li><a href="$cms.getUrl($article)">#summary($article.name 5)</a></li>
+     #end
+				   </ul>
+    </div>
+    </div>
+    <div class="down" style="margin-top:5px;">
+    <div class="title03"><h1 style="color:#0877c1;" >友情链接</h1><a href="#"><img src="images/more.jpg" /></a></div>	
+    <div class="list06">
+
+				     <select name="inner">
+				     <option>--------校内链接--------</option>
+					 #foreach($article in $cms.getContents("校内链接",10))
+					 <option value="$cms.getUrl($article)">$article.name</option>
+#end
+</select>
+<SCRIPT language=vbs>
+sub inner_onchange()
+if inner.value<>"#" then
+window.open inner.value,""
+end if
+end sub
+</SCRIPT>
+
+
+				   <select name="side">
+				     <option>--------校外链接--------</option>
+					 #foreach($article in $cms.getContents("校外链接",10))
+					 <option value="$cms.getUrl($article)">$article.name</option>
+#end
+</select>
+<SCRIPT language=vbs>
+sub side_onchange()
+if side.value<>"#" then
+window.open side.value,""
+end if
+end sub
+</SCRIPT>
+
+    </div>
+    </div>
+</div>

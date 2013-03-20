@@ -1,0 +1,21 @@
+
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<div id="CicroFLOL35_3152_4621_gongh_25__content"><img src="images/banner21.gif" width="942" height="205" border="0" usemap="#Map" />
+  <map name="Map" id="Map">
+    <area shape="rect" coords="416,2,467,19" href="http://www.ynu.edu.cn" />
+    <area shape="rect" coords="390,21,447,36" href="$cms.getUrl("社区简介")" />
+    <area shape="rect" coords="367,37,425,54" href="$cms.getUrl("机构设置")" />
+    <area shape="rect" coords="354,54,409,73" href="$cms.getUrl("教代会团长")" />
+    <area shape="rect" coords="328,75,389,91" href="$cms.getUrl("组织机构2")" />
+    <area shape="rect" coords="312,91,369,110" href="$cms.getUrl("工会活动")" />
+    <area shape="rect" coords="290,112,355,126" href="$cms.getUrl("女工工作")" />
+    <area shape="rect" coords="273,127,334,144" href="$cms.getUrl("规章制度")" />
+    <area shape="rect" coords="259,145,317,163" href="$cms.getUrl("活动介绍")" />
+    <area shape="rect" coords="238,165,300,181" href="$cms.getUrl("先进集体")" />
+    <area shape="rect" coords="223,184,280,199" href="$cms.getUrl("健康专列")" />
+  </map>
+</div></td>
+</tr>
+</table>

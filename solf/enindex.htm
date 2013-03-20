@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<HEAD><TITLE>School of Foreign Languages, Yunnan University</TITLE>
+<META name=description content="School of Foreign Languages, Yunnan University">
+<META name=keywords 
+content="School of Foreign Languages, Yunnan University"><LINK 
+rel="shortcut icon" href="favicon.ico">
+<LINK 
+rel=stylesheet type=text/css href="css/style.css">
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+  </SCRIPT>
+
+<STYLE type=text/css>.style1 {
+	FONT-SIZE: 10px
+}
+</STYLE>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY>
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=822 align=center>
+  <TBODY>
+  <TR>
+    <TD colSpan=5><IMG alt=Title src="images/header.png" width=822 
+      height=247></TD></TR>
+  <TR>
+    <TD vAlign=top width=308>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=308 height=457>
+        <TBODY>
+        <TR>
+          <TD height=19 background="images/white_shadow.jpg" 
+            colSpan=2><IMG src="images/white_top.jpg" width=308 
+          height=19></TD></TR>
+        <TR>
+          <TD background='images/white_shadow.jpg' width=42>&nbsp;</TD>
+          <TD bgColor=#ffffff height="30%" vAlign=top width=266 align=left>
+            <DIV id=homeheadline>
+            <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <H1><A 
+                  href="$cms.getUrl('Announcements')" 
+                  target=_self>Announcements</A><BR></H1>
+				  #foreach($article in $cms.getContents("Announcements",8))
+				  <a href="$cms.getUrl($article)" title="$article.name" target="_blank">$article.name</a><BR>
+				  #end<BR><A 
+                  href="$cms.getUrl('Announcements')" 
+                  target=_self>More...</A><BR></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD height=38 colSpan=2><IMG src="images/white_divider.jpg" 
+            width=308 height=38></TD></TR>
+        <TR>
+          <TD background='images/white_shadow.jpg'>&nbsp;</TD>
+          <TD bgColor=#ffffff height="30%" vAlign=top align=left>
+            <DIV id=homeheadline>
+            <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD>
+                 <H1><A 
+                  href="$cms.getUrl('International Tests')" 
+                  target=_self>International Tests</A><BR></H1>
+				  #foreach($article in $cms.getContents("International Tests",8))
+				  <a href="$cms.getUrl($article)" title="$article.name" target="_blank">$article.name</a><BR>
+				  #end<BR><A 
+                  href="$cms.getUrl('International Tests')" 
+                  target=_self>More...</A><BR></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD height=38 colSpan=2><IMG src="images/white_divider.jpg" 
+            width=308 height=38></TD></TR>
+        <TR>
+          <TD background='images/white_shadow.jpg'>&nbsp;</TD>
+          <TD bgColor=#ffffff height="30%" vAlign=top align=left>
+            <DIV id=homeheadline>
+            <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <H1><A 
+                  href="$cms.getUrl('Research')" 
+                  target=_self>Research</A><BR></H1>
+				  #foreach($article in $cms.getContents("Research",8))
+				  <a href="$cms.getUrl($article)" title="$article.name" target="_blank">$article.name</a><BR>
+				  #end<BR><A 
+                  href="$cms.getUrl('Research')" 
+                  target=_self>More...</A><BR></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD height=34 background='images/white_shadow.jpg' 
+            colSpan=2><IMG src="images/white_bottom.jpg" width=308 
+            height=34></TD></TR></TBODY></TABLE></TD>
+    <TD bgColor=#a9a9a9 width=2>&nbsp;</TD>
+    <TD bgColor=#ffffff height=457 vAlign=top width=260 align=left>
+      <DIV id=homeheadline>
+      <TABLE class=moduletable cellSpacing=18 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD>
+            <H1><A 
+            href="$cms.getUrl('Overview')" 
+            target=_self>Overview</A></H1><BR>
+			<P>
+			#foreach($article in $cms.getContents("Overview",1))
+			#set ($fullArticle=$cmsService.getArticle($article.ID))
+			$fullArticle.content
+			#end
+            </P>
+			<A 
+            href="$cms.getUrl('Overview')" 
+            target=_self>More...</A> </TD></TR></TBODY></TABLE></DIV></TD>
+    <TD bgColor=#a9a9a9 rowSpan=3 width=2><IMG src="images/bg_gray.jpg" 
+      width=2></TD>
+    <TD bgColor=#275275 height=457 vAlign=top width=250 align=middle>
+	#parse("en_right.vm")
+	</TD>
+  </TR>
+  <TR>
+    <TD vAlign=bottom colSpan=3>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=571>
+        <TBODY>
+        <TR>
+          <TD width=42>&nbsp;</TD>
+          <TD width=529 align=left>
+            <DIV id=footernav>
+            <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=1 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD noWrap><A id=active_menubottom class=mainlevelbottom 
+                        href="$cms.getUrl("english")">Home</A><SPAN 
+                        class=mainlevelbottom> </SPAN><A class=mainlevelbottom 
+                        href="$cms.getUrl("Contact")">Contact</A><SPAN 
+                        class=mainlevelbottom> </SPAN><A class=mainlevelbottom 
+                        href="$cms.getUrl("Links")">Links</A><SPAN 
+                        class=mainlevelbottom> </SPAN><A class=mainlevelbottom 
+                        href="$cms.getUrl("News")">News</A><SPAN 
+                        class=mainlevelbottom> 
+              </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></TD>
+    <TD bgColor=#275275 vAlign=bottom><IMG src="images/blackcorner.png" 
+      width=250 height=20></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD align=right>
+      <DIV id=footer>
+      <DIV align=right>&copy;2005 School of Foreign Languages, YNU<BR>
+        All Rights 
+      Reserved<BR>Designed by <A class=footer href="mailto:hominidhe@163.com" 
+      target=_blank>Hominid He</A>
+      <SCRIPT language=JavaScript charset=gb2312 
+      src="images/stat.htm"></SCRIPT>
+       </DIV></DIV></TD></TR></TBODY></TABLE>
+</body></html>

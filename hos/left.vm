@@ -1,0 +1,27 @@
+
+
+<div class="con_left">
+<div class="health">
+<div class="health_title"><h1>健康教育专栏</h1><a href="$cms.getUrl("健康教育专栏")" target="_blank">更多>></a></div>
+<div class="health_list">
+  <ul>
+  #foreach($article in $cms.getContents("健康教育专栏",6))
+<li> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 12)</a></li>
+#end				 
+							  </ul>
+</div>
+</div>
+
+<div class="publicity">
+<div class="health_title"><h1>友情链接</h1><a href="$cms.getUrl("友情链接")" target="_blank">更多>></a></div>
+<div class="publicity_list">
+  <ul>
+ #foreach($article in $cms.getContents("友情链接",6))
+<li> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">#summary($article.name 12)</a></li>
+#end	  
+	 
+							  </ul>
+</div>
+<div class="publicity_bottom"></div>
+</div>
+</div>

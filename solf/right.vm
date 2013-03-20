@@ -1,0 +1,56 @@
+
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=210 align=center>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <DIV id=contentarea-home><BR>
+                  <DIV id=search>
+                  <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post">
+                  <input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+                  <DIV align=center><INPUT 
+                  onblur="if(this.value=='') this.value='搜索...';" 
+                  class=inputbox3 
+                  onfocus="if(this.value=='搜索...') this.value='';" value=搜索... 
+                  size=30 type=text name="query"><INPUT type="submit" value=搜索 name=submit> </DIV></FORM></DIV></DIV></TD></TR>
+              <TR>
+                <TD>
+                  <H3>网站栏目</H3></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD>
+            <DIV id=rightmenu>
+            <TABLE class=moduletable cellSpacing=0 cellPadding=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
+                  
+				    <TR>
+                      <TD style="VERTICAL-ALIGN: top"><A class=mainlevelright 
+                        href="$cms.getUrl('首页')">网站首页</A></TD></TR>
+                    #foreach($channel in $cms.getTopChildren($rootChannel))
+				    <TR>
+                      <TD style="VERTICAL-ALIGN: top"><A class=mainlevelright 
+                        href="$cms.getUrl($channel)" title="$channel.title">$channel.title</A></TD></TR>
+					#end
+                  </TABLE></TD></TR>
+              <TR>
+                <TD>
+                  <DIV id=contentarea-home>
+                  <TABLE border=0 cellSpacing=15 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR align=left>
+                      <TD>
+                        <P><B>语言:</B><BR></P>
+                        <P><A 
+                        href="$cms.getUrl('首页')"><IMG 
+                        style="BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 40px; HEIGHT: 24px; BORDER-TOP: 0px solid; BORDER-RIGHT: 0px solid" 
+                        alt=Chinese 
+                        src="images/cn-text.png"></A>&nbsp;<A 
+                        href="$cms.getUrl('english')"><IMG 
+                        style="BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 61px; HEIGHT: 24px; BORDER-TOP: 0px solid; BORDER-RIGHT: 0px solid" 
+                        alt=English 
+                    src="images/en-text.png"></A></P></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>

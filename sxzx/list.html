@@ -1,0 +1,99 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>${curChannel.title}_思想战线</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<link href="css/main.css" type="text/css" rel="stylesheet">
+
+<meta content="MSHTML 6.00.6000.16608" name="GENERATOR">
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script><script language="javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/S23S01_0751_5984_sxzx_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+</head>
+<body>
+
+<table width="766" align="center" border="0">
+<tbody>
+#parse("header.vm")
+<tr>
+<td height="300">
+<table width="760" background="images/think.gif" border="0" valign="top">
+<tbody>
+<tr>
+<td valign="top" height="30" background="images/bg02.gif" style="color:#fff; padding-top:5px; padding-left:10px;">$curChannel.title</td>
+</tr>
+<tr>
+<td valign="top" height="300"><table width="98%" height="1px" border="0" align="center" cellpadding="0" cellspacing="0" id="组件外围表格">
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr></tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td valign="top" class="maintable"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+          <tr>
+            <td valign="top" class="CicroSBMDP5_9983_7354_sxzx_25_info_content"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              #foreach($article in $cms.getPageContents($curChannel,$curPage))
+			  <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+                <td><a  href="$cms.getUrl($article)" title="$article.name" target="_blank" class="listrow1">#summary($article.name 45)</a></td>
+              </tr>
+              <tr>
+                <td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+              </tr>
+			  #end
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
+</tr>
+<tr>
+<td background="images/a.jpg" height="50">#parse("footer.vm")</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

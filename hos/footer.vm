@@ -1,0 +1,24 @@
+
+
+<div class="footer">云南大学校医院 版权所有 <script src="/cms/web/channelVisitLog.jsp?parentID=$rootChannel.ID"></script> </div>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("hos.校医院");
+
+} catch(err) {}</script>

@@ -1,0 +1,16 @@
+
+<div class="piclinks">
+                    
+                        <div class="link01"><img src="images/piclink01.jpg" width="193" height="58" /></div>
+                        <div class="btn"><a href="http://www.tyxy.ynu.edu.cn/gspydd/"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+                        
+                        <div class="link01"><img src="images/piclink02.jpg" width="193" height="58" /></div>
+                        <div class="btn"><a href="http://www.tyxy.ynu.edu.cn/xyty/tyjlb/"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+                        
+                        <div class="link01"><img src="images/piclink03.jpg" width="193" height="58" /></div>
+                        <div class="btn"><a href="#"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+                                                
+                        <div class="link01"><img src="images/piclink04.jpg" width="193" height="58" /></div>
+                        <div class="btn"><a href="#"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+                        
+                    </div>                                                                       

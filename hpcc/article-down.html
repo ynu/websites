@@ -1,0 +1,78 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$curChannel.title</title>
+<style type="text/css">
+/**/
+.STYLE1 {
+        FONT-WEIGHT: bold; FONT-SIZE: 24px; FONT-FAMILY: "隶书"; COLOR: #000000
+}
+BODY {
+        BACKGROUND-COLOR: #f2f3f4
+}
+.STYLE2 {
+        FONT-SIZE: 18px; COLOR: #000000
+}
+/**/
+</style>
+<link rel="stylesheet" type="text/css" href="css/MI0M50_2653_5496_hpcc_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<style type="text/css">
+<!--
+.gun {FONT-FAMILY: "宋体"; FONT-SIZE: 12px; TEXT-DECORATION: none}
+.publishdate {font-family:"宋体"; font-size:12px; text-align:center}
+-->
+</style>
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+
+</head>
+<body designtimesp="-1">
+
+<table border="1" cellspacing="0" bordercolor="#CDDBF6" cellpadding="0" width="550" bgcolor="#FFFFFF" align="center">
+
+<tr>
+<td bgcolor="#FFFFFF"><img style="WIDTH: 500px; HEIGHT: 90px" border="0" hspace="0" alt="" src="images/newspage.jpg" width="500" height="90"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" height="451" valign="top"><div style="font-size:12px; line-height:26px;">
+  <TABLE border=0 cellSpacing=0 cellPadding=0 width=761>
+    <TBODY>
+      <TR>
+        <TD bgColor=#eff3f8 height=30 width=761 background="images/bg02.gif">&nbsp;&nbsp;文件下载</TD>
+      </TR>
+      <TR>
+        <TD height=355 vAlign=top align="center"><TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0 width=726 
+height=299>
+            <TBODY>
+              <TR>
+                <TD valign="top">
+				<table width="100%" style="font-size:12px; line-height:28px; border:1px #CCCCCC solid">
+					
+					<tr><td width="71%" style="border-bottom:1px #CCCCCC solid">文件名称：$curArticle.name</td>
+					<td width="29%" style="border-bottom:1px #CCCCCC solid">更新时间：$cms.format($curArticle.publishDate)</td>
+					</tr>
+					 #foreach($doc in $cms.getAttachments($curArticle))
+					<tr><td>文件大小：$doc.filesize（Byte）&nbsp;&nbsp;下载次数：<script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script>
+					    </td><td>文件类型：$doc.fileExt</td></tr>#end
+					<tr><td height="10" colspan="2" bgcolor="#FFFFFF"></td></tr>
+					#if($curArticle.summary!="")
+					<tr><td height="10" colspan="2" bgcolor="#FFFFFF">$curArticle.summary</td></tr>
+					#end
+					 #foreach($doc in $cms.getAttachments($curArticle))
+					<tr><td colspan="2" bgcolor="#F2F2F2"><A href="/cms/modules/downloadFiles.jsp?file=$cms.getPhyUrl($doc)&articleID=$curArticle.ID" target="_blank">$doc.name </A> </td></tr>
+					#end
+				</table>
+				
+				
+				</TD>
+              </TR>
+            </TBODY>
+        </TABLE></TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+</div></td>
+</tr>
+</table>
+
+</body></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/style.css" type="text/css" rel="stylesheet"  />
+	<SCRIPT language=javascript src="js/time1.js"></SCRIPT>
+	<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+	<title>高等教育研究院</title>
+</head>
+<body>
+<div class="whole">
+	#parse("head.vm")	
+		<div class="info_content">
+			<div class="infosubbar">
+				<span>您现在的位置：</span>
+					<a href="$cms.getUrl("首页")">首页</a>&gt;&gt;
+					#if($curChannel.parent.title=="首页")
+					<a href="$cms.getUrl($curChannel)">$curChannel.title</a>
+					#else
+					#foreach($channel in $cms.getChildren($curChannel.parent,0,1))
+					<a href="$cms.getUrl($channel)">$curChannel.parent.title</a>
+					#end
+					&gt;&gt;<a href="$cms.getUrl($curChannel)">$curChannel.title</a>
+					#end &gt;&gt;<a href="#">当前文章</a>
+			</div>
+    <div class="maininfo"> 
+      <h2>$curArticle.name</h2>
+      <div class="introduction"> <span>文章来源：$!{curArticle.source}&nbsp;&nbsp;作者：$!{curArticle.author}&nbsp;&nbsp;点击数：
+        <script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script>
+        次&nbsp;&nbsp;发布时间：$cms.format($curArticle.publishDate)</span></div>
+				<div class="maintext">
+				$!{curArticle.content}
+				</div>
+			</div>
+		
+		
+		<!--  文章详情end  --></div>
+#parse("footer.vm")
+	</div>
+
+</body></html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+
+<table width="250" border="0" cellpadding="0" cellspacing="0" class="box">
+  <tr>
+    <td><div class="box_list2">
+      <h3>最近更新</h3>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  	#foreach($article in $cmsService.getPageDatas("From Content where siteID=$curChannel.site.ID and status=7 order by creationDate desc",1,6))
+		<tr><td class="newstitle"><div>?<a href="$cms.getUrl($article)" target="_blank">$article.name</a></div><span></span></td></tr>
+		#end
+		</table>
+    </div></td>
+  </tr>
+</table>
+<table width="250" border="0" cellpadding="0" cellspacing="0" class="box">
+  <tr>
+    <td><div class="box_list2">
+      <h3>热点排行</h3>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  #foreach($article in $cmsService.getPageDatas("from Content where siteID=$curChannel.site.ID and status=7 order by viewCount desc",1,6))
+	  <tr><td class="newstitle"><div>?<a href="$cms.getUrl($article)" target="_blank">$article.name</a></div><span></span></td></tr>
+      #end	  
+	</table>
+    </div></td>
+  </tr>
+</table>
+
+
+</body></html>

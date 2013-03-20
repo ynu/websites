@@ -1,0 +1,188 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学高性能计算中心</title>
+<style type="text/css">
+/**/
+/**/
+BODY {
+        FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+        FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TH {
+        FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.STYLE1 {
+        FONT-SIZE: 11px
+}
+A:link {
+        COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:visited {
+        COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:hover {
+        COLOR: #ff0000; TEXT-DECORATION: none
+}
+A:active {
+        COLOR: #ff0000; TEXT-DECORATION: none
+}
+BODY {
+        BACKGROUND-images: none
+}
+.STYLE2 {
+        COLOR: #ffffff
+}
+/**/
+/**/
+</style>
+<meta name="GENERATOR" content="MSHTML 8.00.6001.19088">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<script language="javascript" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/MI0M50_2653_5496_hpcc_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<meta name="keywords" content="">
+<meta name="publishDate" content="2011-07-28 19:25:46">
+<meta name="updateDate" content="2009-09-12 11:30:57">
+<meta name="generatDate" content="2009-09-12 11:30:54">
+<meta name="generator" content="CWS 3.0">
+<meta name="Author" content="Cicro Software Inc.">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<script language="javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/MI0M50_2653_5496_hpcc_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+</head>
+<body topmargin="0">
+
+<table border="0" cellspacing="0" cellpadding="0" width="780" align="center">
+<tbody>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="760" align="center">
+<tbody>
+<tr>
+  <td height="140" background="images/logo.jpg" colspan="2"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="760" height="140">
+    <param name="movie" value="images/logo2.swf">
+    <param name="quality" value="high">
+    <embed src="images/logo2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="760" height="140"></embed>
+  </object></td>
+</tr>
+<tr><td colspan="2">#parse("menu.vm")</td></tr>
+<tr>
+<td height="1210" valign="top" background="http://202.203.208.88:8080/cms/binary/images/97/20121106031706681126.jpg" width="225">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td height="60"></td><td>&nbsp;</td>
+</tr>
+#foreach($article in $cms.getContents("首页左侧",8))
+<tr>
+
+
+<br type="_moz" />
+<span style="color: #000000">&nbsp;&nbsp;&mdash;云大校历及活动</span><br type="_moz" />
+<span style="color: #000000"><br />
+
+
+<td height="30">
+<div align="right">
+<img src="images/icon2.jpg" width="14" height="16"></div>
+</td><td><a href="$cms.getUrl($article)">$article.name</a></td>
+</tr>
+#end
+<tr>
+<td height="30"></td><td>&nbsp;</td>
+</tr>
+<tr>
+<td height="30">
+<div align="right">
+<img src="images/icon2.jpg" width="14" height="16"></div>
+</td><td>&nbsp;<a href="http://bbs.ynu.edu.cn/wForum/board.php?name=Hpc">高性能计算论坛</a></td>
+</tr>
+</table>
+</td><td bgcolor="#EFF8FC" valign="top" width="554">
+<table border="0" cellspacing="1" bordercolor="#FFFFFF" cellpadding="1" width="99%">
+<tbody>
+<tr>
+<td height="42" background="images/righttitle_bg2.jpg" colspan="2"></td>
+</tr>
+<tr>
+<td>
+<p>&nbsp;</p>
+<p>
+<a href="$cms.getUrl("新闻公告")"></a></p></td><td>
+<p>&nbsp;&nbsp;&nbsp;</p>
+#foreach($article in $cms.getContents("新闻公告",5))
+<p>&nbsp;&nbsp;&nbsp; <a href="$cms.getUrl($article)">$article.name</a></p>
+#end
+</td>
+<tr>
+<td colspan="2">
+<div align="right">
+<a href="$cms.getUrl("新闻公告")"><img border="0" src="images/more.jpg" width="58" height="30"></a>&nbsp;</div></td>
+</tr>
+<tr>
+<td height="42" background="images/righttitle_bg1.jpg" colspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td height="182" width="11%">&nbsp;</td><td width="89%">
+<br>
+<br>
+#foreach($article in $cms.getContents("研发项目",7))
+<img src="images/icon.jpg" width="6" height="6">&nbsp;<a href="$cms.getUrl($article)">$article.name</a>
+<br>
+<br>
+#end
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor="#7291AE" height="60" colspan="2">
+<div class="STYLE1" align="center">
+<p class="STYLE2">#parse("footer.vm")</p>
+</div>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div style="Z-INDEX: 100; POSITION: absolute; BOTTOM: 0px; RIGHT: 0px" id="chatDiv">
+<iframe style="BACKGROUND-COLOR: transparent" id="temperature" height="150" src="http://202.203.210.30/temperature/weather_out" frameborder="0" width="140" allowtransparency="" name="temperature" scrolling="no"></iframe>
+
+</div>
+<script language="javascript" type="text/javascript">
+//
+window.onscroll = function () {
+        var div = document.getElementById("chatDiv");
+        div.style.top = document.body.scrollTop + document.body.clientHeight-150;
+        div.style.left = document.body.scrollLeft + document.body.clientWidth-140;
+    };
+window.onresize = window.onscroll;
+window.onscroll();
+//
+				</script>
+
+</body></html>

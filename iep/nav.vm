@@ -1,0 +1,11 @@
+
+<DIV id=navcontainer>
+      <UL id=navlist>
+        <LI><A class=normal id=a1 href="$cms.getUrl("中文版")">首页</A> </LI>
+		#set($i=1)
+       #foreach($channel in $cms.getTopChildren($rootChannel))
+	   #set($i=$i+1)
+	    <LI><A class=normal id=a$i href=$cms.getUrl($channel)>$channel.title</a></LI>
+        #end
+      </UL>
+    </DIV>

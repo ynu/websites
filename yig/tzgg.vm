@@ -1,0 +1,11 @@
+
+<div class="pic01">
+<div class="pic01_title"><h1>通知公告</h1><a href="$cms.getUrl("通知公告")" target="_blank">>>更多</a></div>
+<div class="pic01_list">
+ <ul>
+#foreach($article in $cms.getContents("通知公告",6))
+<li><span>$cms.format($article.publishDate)</span><a href="$cms.getUrl($article)" target="_blank" title="$article.name">#summary($article.name 9)</a></li>
+#end
+</ul>
+</div>
+</div>

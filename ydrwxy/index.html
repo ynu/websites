@@ -1,0 +1,1403 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学人文学院－首页</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<script type="text/javascript" src="js/stuHover.js"></script>
+<meta name="GENERATOR" content="MSHTML 8.00.6001.18975">
+<meta name="keywords" content="">
+<script language="javascript">
+
+//toHTML 将&lt;替换成<,&gt;替换成>
+//参数 objoct 
+
+function toHTML(objoct)
+{
+	xml = objoct.innerHTML;
+
+	a = xml.replace(/&lt;/ig, '\x3c');
+	b = a.replace(/&gt;/ig, "\x3e");
+	c = b.replace(/&amp;nbsp/ig,"&nbsp");
+    d = c.replace(/&amp;/ig,"");
+	return d;
+}
+
+
+function getYourCookie(set_zero,total,isCompensate,digit_number,initial){
+var expdate=new Date();
+var visits;//以下设置COOKIES时间为1年,自己随便设置该时间..
+
+expdate.setTime(expdate.getTime()+(24*60*60*1000*365));
+
+if(!(visits=GetCookie("visits")))
+visits=0;
+visits++;
+
+visits += "";
+digit_number = digit_number - visits.length;
+if(isCompensate == 1){
+	for(i=1;i<=digit_number;i++){
+		visits = "0" + visits;
+	}
+}
+
+totallength = total.length;
+
+			for(i=0;i<totallength;i++)
+			{
+				if(total.substring(i,i+1) != "0"){
+					total = total.substring(i,totallength);
+					break;
+				}
+			}
+
+var flag = 0;
+total = parseInt(total) - parseInt(initial);
+total = total + "";
+if(total.substring(0,1) == "0")
+			flag = 1;
+
+if(flag == 1){
+	visits = 0;
+	if(isCompensate == 1){
+		for(i=1;i<=digit_number;i++){
+			visits = "0" + visits;
+		}
+	}
+}
+SetCookie("visits",visits,expdate,"/",null,false);
+//以下信息显示可以使用标准的HTML语法,自己随便设置。
+//document.write("你已经光临本页"+"<FONT COLOR=red>"+visits+"</FONT>"+"次！");
+
+try{
+your.innerHTML = visits;
+}catch(e){
+}
+function getCookieVal(offset)
+
+{
+	var endstr=document.cookie.indexOf(";",offset);
+	if(endstr==-1)
+		endstr=document.cookie.length;
+	return unescape(document.cookie.substring(offset,endstr));
+
+}
+
+function GetCookie(name)
+
+{
+	var arg=name+"=";
+	var alen=arg.length;
+	var clen=document.cookie.length;
+	var i=0;
+	while(i<clen)
+	{
+		var j=i+alen;
+		if(document.cookie.substring(i,j)==arg)
+			return getCookieVal(j);
+		i=document.cookie.indexOf(" ",i)+1;
+		if(i==0)
+			break;
+	}
+	return null;
+}
+
+function SetCookie(name,value)
+
+{
+var argv=SetCookie.arguments;
+var argc=SetCookie.arguments.length;
+var expires=(2<argc)?argv[2]:null;
+var path=(3<argc)?argv[3]:null;
+var domain=(4<argc)?argv[4]:null;
+var secure=(5<argc)?argv[5]:false;
+document.cookie=name+"="+escape(value)+((expires==null)?"":("; expires="+expires.toGMTString()))+((path==null)?"":("; path="+path))+((domain==null)?"":("; domain="+domain))+((secure==true)?"; secure":"");}
+
+function ResetCounts(name)
+
+{
+visits=0;
+SetCookie("visits",visits,expdate,"/",null,false);location.reload();
+}
+}
+
+function writeSimInfoContent(oDest,oStr)
+{
+	xml = oStr.innerHTML;
+	xml = xml.replace(/&gt;&lt;br\/&gt;/ig,'&gt;');
+	a = xml.replace(/&lt;/ig, '\x3c');
+	b = a.replace(/&gt;/ig, "\x3e");
+	c = b.replace(/&amp;nbsp/ig,"&nbsp");
+    d = c.replace(/&amp;/ig,"");
+	oDest.innerHTML = d;
+}
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+<body style="BACKGROUND-IMAGE: url('images/body-bg.gif'); BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: 50% top">
+
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td></td><td bgcolor="#D8BE80" width="780">
+#parse("header.vm")
+<table style="BACKGROUND-IMAGE: url('images/mainmenu-bg-2.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: 50% top" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td height="48" width="220" align="middle"><script language="JavaScript" type="text/javascript">
+//
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray(
+"星期日",
+"星期一",
+"星期二",
+"星期三",
+"星期四",
+"星期五",
+"星期六");
+document.write("今天是&#160;",
+today.getYear(),"年",
+today.getMonth()+1,"月",
+today.getDate(),"日&#160;&#160;",
+d[today.getDay()+1]); 
+//
+												</script></td>
+<td width="20">&nbsp;</td>
+<td>
+<table width="100%" height="24px">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroHHV468_2904_3438_ydrwxy_25_emaillogon_content"><span style="display:none" id="spanid_emaillogon3_001XAM3FF_3022_7481_ydrwxy_18">
+<div></div>
+</span>
+<form name="emaillogon3_001XAM3FF_3022_7481_ydrwxy_18_form" method="post" class="form" style="margin-bottom:0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="listcol1">用户</td><td rowspan="7"><img src="images/spacer.gif" width="5" height="1"></td><td class="listcol2"><input type="text" name="username" value="" class="CicroHHV468_2904_3438_ydrwxy_25_emaillogon_input"></td><td rowspan="7"><img src="images/spacer.gif" width="5" height="1"></td><td class="listcol1">密码</td><td rowspan="7"><img src="images/spacer.gif" width="5" height="1"></td><td class="listcol2"><input type="password" name="password" value="" class="CicroHHV468_2904_3438_ydrwxy_25_emaillogon_input"></td><td rowspan="7"><img src="images/spacer.gif" width="5" height="1"></td><td class="listcol1">域名</td><td rowspan="7"><img src="images/spacer.gif" width="5" height="1"></td><td class="listcol2"><select name="domainname" class="CicroHHV468_2904_3438_ydrwxy_25_emaillogon_select"></select><input type="hidden" name="temp_of_span" value="d2"></td><td rowspan="7"><img src="images/spacer.gif" width="5" height="1"></td><td class="listcol1"><button class="CicroHHV468_2904_3438_ydrwxy_25_emaillogon_button" name="button" type="submit" onClick="return dosubmit_emaillogon3_001XAM3FF_3022_7481_ydrwxy_18(emaillogon3_001XAM3FF_3022_7481_ydrwxy_18_form);" style="cursor:hand">登陆邮箱</button><input type="hidden" name="newopen" value="_blank"></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">function dosubmit_emaillogon3_001XAM3FF_3022_7481_ydrwxy_18(theForm) { var spanstr; var dom_value; var span_url; var span_usp; var span_usv; var span_psp; var span_psv; var span_dom; var span_all; var sgl = String.fromCharCode(60); var sgr = String.fromCharCode(62); if (theForm.username.value==null||theForm.username.value=="") { alert('请输入姓名！'); return false; } span_usv = theForm.username.value; span_psv = theForm.password.value; if(theForm.temp_of_span.value != "d2") { span_url = theForm.url.value; span_usp = theForm.userpara.value; span_psp = theForm.pswpara.value; span_dom = theForm.domms.value; span_all = theForm.all_dom_p.value; }else{ dom_value = theForm.domainname.value; span_url = dom_value.split("}{")[0]; span_usp = dom_value.split("}{")[1]; span_psp = dom_value.split("}{")[2]; span_all = dom_value.split("}{")[3]; span_dom = dom_value.split("}{")[4]; } if(span_all == "yes"){ span_usv = span_usv + "@" + span_dom; } spanstr = "start---"; spanstr = spanstr+sgl + "form name='alice' action='"; spanstr = spanstr+span_url + "' method='post'"; if(theForm.newopen.value == "_self"){ spanstr = spanstr + " target='_self'"; } if(theForm.newopen.value == "_blank"){ spanstr = spanstr + " target='_blank'"; } spanstr = spanstr + sgr+sgl + "input type='text' name='"; spanstr = spanstr + span_usp + "' value='"; spanstr = spanstr + span_usv + "'" + sgr; spanstr = spanstr + sgl + "input type='password' name='"; spanstr = spanstr + span_psp + "' value='"; spanstr = spanstr + span_psv + "'"+sgr; spanstr = spanstr + sgl + "input type='submit'"; spanstr = spanstr + " value='cicro website' name='awp'" + sgr; spanstr = spanstr + sgl + "/form"+sgr; spanid_emaillogon3_001XAM3FF_3022_7481_ydrwxy_18.innerHTML = spanstr; alice.submit(); theForm.username.value = ""; theForm.password.value = ""; return false; }</script></td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/left-bg-1.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: right top" valign="top" width="210" align="middle">
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td height="5"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td class="title_01" height="24">会员登录</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<form method="post" name="CicroY5A0D5_4798_5932_ydrwxy_25__member_login_form" onSubmit="return member_login_checked()" style="margin-bottom:0px" action="/structure/index" class="form">
+<SCRIPT LANGUAGE="JavaScript">window.onerror = new Function("return true;"); String.prototype.Trim=function(){return this.replace(/(^\s*)|(\s*$)/g,"");}; function member_login_checked() { if(CicroY5A0D5_4798_5932_ydrwxy_25__member_login_form.username.value.Trim()=="") { alert("用户名称不可为空！"); return false; } if(CicroY5A0D5_4798_5932_ydrwxy_25__member_login_form.password.value.Trim()=="") { alert("密码不可为空！"); return false; } return true; }</SCRIPT>
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroY5A0D5_4798_5932_ydrwxy_25_member_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="listcol1">用户名称</td><td rowspan="9" class="CicroY5A0D5_4798_5932_ydrwxy_25_member_vertical"><img src="images/spacer.gif" width="1" height="1" ALT=""></td><td class="listcol2"><input name="username" type="text" class="CicroY5A0D5_4798_5932_ydrwxy_25_member_input"></td>
+</tr>
+<tr height="1">
+<td class="horizontal"><IMG SRC="images/spacer.gif" Width="1" HEIGHT="1" ALT=""></td><td class="horizontal"><IMG SRC="images/spacer.gif" Width="1" HEIGHT="1" ALT=""></td>
+</tr>
+<tr>
+<td class="listcol1">登录密码</td><td class="listcol2"><input name="password" type="password" class="CicroY5A0D5_4798_5932_ydrwxy_25_member_input"></td>
+</tr>
+<tr height="1">
+<td class="horizontal"><IMG SRC="images/spacer.gif" Width="1" HEIGHT="1" ALT=""></td><td class="horizontal"><IMG SRC="images/spacer.gif" Width="1" HEIGHT="1" ALT=""></td>
+</tr>
+<tr>
+<td class="listcol1"><a href="/structure/member/Regrule" class="listcol1">会员注册</a></td><td class="listcol2"><button type="submit" name="Member_Login_OK" style="width:100;cursor:hand" class="CicroY5A0D5_4798_5932_ydrwxy_25_member_button">登 录</button></td>
+</tr>
+<tr height="1">
+<td class="horizontal"><IMG SRC="images/spacer.gif" Width="1" HEIGHT="1" ALT=""></td><td class="horizontal"><IMG SRC="images/spacer.gif" Width="1" HEIGHT="1" ALT=""></td>
+</tr>
+<tr>
+<td class="listcol1"><a href="/structure/member/FindPass" class="listcol1">找回密码</a></td><td class="listcol2"><input type="checkbox" name="auto_login" value="true" style="width:12px;height:12px;border:0px">自动登陆</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="24" width="10"><img src="images/title_book_01.gif" width="30" height="22"></td><td class="title_01">信息公告</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="100">
+<table width="180" height="150" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_content">
+<marquee id="RollBoard3_001HDK461_0767_3610_ydrwxy_18_scrollArea" direction="up" scrolldelay="1" scrollamount="1" border="0" align="center" valign="top" onMouseOver="RollBoard3_001HDK461_0767_3610_ydrwxy_18_scrollArea.stop()" onMouseOut="RollBoard3_001HDK461_0767_3610_ydrwxy_18_scrollArea.start()" width="180" height="150">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("信息公告",3))
+<tr class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_listrow1">
+<td class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_listhead">&nbsp;<img src="images/st_1.gif">&nbsp;$article.name</td>
+</tr>
+<tr class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_tr">
+<td><img src="images/spacer.gif" height="1" width="1"></td>
+</tr>
+<tr class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_listrow1">
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td style="word-wrap:break-word">&nbsp;<div id="detail1" style="display:none">&lt;A href="$cms.getUrl($article)" target=_blank&gt;$article.summary&lt;/A&gt;</div>
+<SCRIPT LANGUAGE="JavaScript">var index =1; var v = eval("detail"+ index); //document.write(v.innerHTML);</SCRIPT><script language="JavaScript">document.write( toHTML(v));</script></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="CicroHNXU02_4060_8185_ydrwxy_25_rollboard_tr">
+<td><img src="images/spacer.gif" height="1" width="1"></td>
+</tr>
+#end
+</table>
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="24" width="10"><img src="images/title_book_01.gif" width="30" height="22"></td><td class="title_01">系所中心</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<ul class="noindent">
+<li>
+<a href="$cms.getUrl('中文系')" target="_blank">中文系</a>
+</li>
+<li>
+<a href="$cms.getUrl('历史系')" target="_blank">历史系</a>
+</li>
+<li>
+<a href="$cms.getUrl('哲学系')" target="_blank">哲学系</a>
+</li>
+<li>
+<a href="$cms.getUrl('新闻系')" target="_blank">新闻系</a>
+</li>
+<li>
+<a href="$cms.getUrl('素质教育部')" target="_blank">素质教育部</a>
+</li>
+<li>
+<a href="http://www.jclab.ynu.edu.cn" target="_blank">新闻传播实验教学中心</a>
+</li>
+<li>
+<a href="http://www.ydrwzk.com/" target="_blank">人文学院自考办</a>
+</li>
+<li>
+<a href="http://www.chamagudao.ynu.edu.cn/" target="_blank">茶马古道文化研究所</a>
+</li>
+<li>
+<a href="http://www.xnhjs.com/" target="_blank">西南环境史研究网</a>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="24" width="10"><img src="images/title_book_01.gif" width="30" height="22"></td><td class="title_01" height="24">精品课程</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<ul class="noindent">
+#foreach($article in $cms.getContents("精品课程",4))
+<li>
+<a href="$cms.getUrl($article)">$article.name</a>
+</li>
+#end
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="24" width="10"><img src="images/title_book_01.gif" width="30" height="22"></td><td class="title_01">博客汇集</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<ul class="noindent">
+#foreach($article in $cms.getContents("博客汇集",3))
+<li>
+<a href="$cms.getUrl($article)">$article.name</a>
+</li>
+#end
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="200">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="24" width="10"><img src="images/title_book_01.gif" width="30" height="22"></td><td class="title_01">搜索</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<table width="180px" height="10px" border="0" align="center" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_title1">
+<tr>
+<td>站内搜索</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_maintable">
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+     <input name="siteID" value="$curChannel.site.ID" type = "hidden">
+<tr>
+<td align="center"><input name="query" type="text" maxlength="30" class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_input"></td>
+</tr>
+<tr>
+<td colspan="3" class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_horizontal"><IMG SRC="images/spacer.gif" HEIGHT="5" ALT="行间距"></td>
+</tr>
+<tr>
+<td colspan="3" class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_horizontal"><IMG SRC="images/spacer.gif" HEIGHT="5" ALT="行间距"></td>
+</tr>
+<tr>
+<td align="center"><button type="submit" name="Submit" style="width:50" class="CicroO57P3W_4443_7459_ydrwxy_25_simsearch_button">搜索</button></td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>function checkform(theForm) { if(theForm.keyword.value.match(/^[\s]*$/) != null) { alert("请输入关键字"); return false; } return true; }</script></td>
+</tr>
+<tr>
+<td>
+<iframe id="GoogleSearch" height="115" marginheight="0" src="googlesearch.htm" frameborder="0" width="100%" name="GoogleSearch" marginwidth="0" scrolling="no" align="middle"></iframe>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="200">
+<tbody>
+<tr>
+<td align="middle">
+<table border="0" cellpadding="0" cellspacing="0" height="50" width="120">
+<tr height="0">
+<td colspan="3"></td>
+</tr>
+<tr>
+<td width="0"></td><td>
+<table width="118" height="58" border="0" style="background-image:url('images/sample17.jpg');">
+<tr>
+<td width="91%" height="30" align="right" style="text-align:right;vertical-align:top;padding-top:18px; padding-right:0px; padding-bottom:0px; padding-left:0px;"><font class="font"><script src="/cms/modules/VisitLog_today.jsp?parentID=$rootChannel.ID"></script></font></td><td width="9%" align="right" valign="top"></td>
+</tr>
+<tr>
+<td height="15" align="right" style="text-align:right;vertical-align:top;padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;"><font class="font"><script src="/cms/modules/VisitLog_total.jsp?parentID=$rootChannel.ID"></script></font></td><td align="right" valign="top"></td>
+</tr>
+</table>
+</td><td width="0"></td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url('images/left-bg-2.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" valign="top" width="14"><img src="images/left-bg-2.gif" width="14" height="24"></td><td valign="top" align="middle">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td width="3"></td><td valign="top">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" valign="top" width="1"><img src="images/vert_px.gif"></td><td>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td align="middle">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="240px" height="200px">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroR71PGL_1011_3600_ydrwxy_25_picinfo_content">
+<table width="240" height="180" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<STYLE type="text/css">#imgTitle { FILTER: ALPHA(opacity=70); LEFT: 0px; OVERFLOW: hidden; POSITION: relative; TEXT-ALIGN: left } #imgTitle_up { LEFT: 0px; HEIGHT: 0px; TEXT-ALIGN: left; } #imgTitle_down { LEFT: 0px; TEXT-ALIGN: right; font-size:12px } .imgClass { BORDER-RIGHT: #fff 0px solid; BORDER-TOP: #fff 0px solid; BORDER-LEFT: #fff 0px solid; BORDER-BOTTOM: #fff 0px solid } #txtFrom { VERTICAL-ALIGN: middle; PADDING-TOP: 0px; TEXT-ALIGN: center } .button100 { PADDING-RIGHT: 2px; PADDING-LEFT: 2px; BACKGROUND: #7b7b63; PADDING-BOTTOM: 2px; MARGIN: 1px; Font-size:10px;BORDER-LEFT: #fff 0px solid; PADDING-TOP: 2px; TEXT-DECORATION: none } A.button100 { COLOR: #ffffff; FONT-FAMILY: sans-serif; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none;Font-size:10px; } A.button100:link { COLOR: #ffffff; FONT-FAMILY: sans-serif; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none ;Font-size:10px; } A.button100:visited { COLOR: #ffffff; FONT-FAMILY: sans-serif; BACKGROUND-COLOR: #000000; TEXT-DECORATION: none ;Font-size:10px; } A.button100:hover { BACKGROUND: #fff; COLOR: #fff; FONT-FAMILY: sans-serif; TEXT-DECORATION: none;Font-size:10px; } .trans { FILTER: progid:DXImageTransform.Microsoft.Alpha(startX=0, startY=0, finishX=100, finishY=100,style=1,opacity=0,finishOpacity=40); WIDTH: 70px; BACKGROUND-COLOR: #000 }</STYLE>
+<SCRIPT language="JavaScript" type="text/javascript">var imgWidth=240; /*图片宽*/ var imgHeight=180; /*图片高*/ var textFromHeight=24; /*焦点字框高度 (单位为px)*/ var titlesize=10; /*焦点字框高度 (单位为px)*/ var TimeOut=5+"000"; /*每张图切换时间 (单位毫秒)*/ var textStyle="whiter"; /*焦点字class style (不是连接class)*/ var textLinkStyle="whiter"; /*焦点字连接class style*/ var buttonLineOn="#ce0609"; /*button下划线on的颜色*/ var buttonLineOff="#000"; /*button下划线off的颜色*/ var imgUrl=new Array(); var imgLink=new Array(); var imgAlt=new Array(); var adNum=0; if('yes'=='no') textFromHeight=0;</SCRIPT><SCRIPT language="JavaScript" type="text/javascript">/*焦点字框高度样式表 开始*/ document.write('<style type="text/css">'); document.write('#focuseFrom{width:'+(imgWidth+2)+';margin: 0px; padding:0px;height:'+(imgHeight+textFromHeight)+'px; overflow:hidden;}'); document.write('#txtFrom{height:'+textFromHeight+'px;line-height:'+textFromHeight+'px;width:'+imgWidth+'px;overflow:hidden;}'); document.write('#imgTitle{width:'+imgWidth+';top:-41px;height:24px}'); document.write('</style>'); /*焦点字框高度样式表 结束*/</SCRIPT><SCRIPT language="JavaScript" type="text/javascript">imgUrl[1]='http://www.ydrwxy.ynu.edu.cn/upload/htmleditor//Web_DSCF73271.jpg'; imgLink[1]='/structure/test/test01/test01_01?infid=9'; imgAlt[1]='人文学院开展“三生”教育';</SCRIPT><SCRIPT language="JavaScript" type="text/javascript">imgUrl[2]='http://www.ydrwxy.ynu.edu.cn/upload/htmleditor//image001_Web.jpg'; imgLink[2]='/structure/test/test01/test01_01?infid=8'; imgAlt[2]='08级对外汉语举行迎新晚会';</SCRIPT><SCRIPT language="JavaScript" type="text/javascript">imgUrl[3]='http://www.ydrwxy.ynu.edu.cn/upload/htmleditor//DSC_3534_Web.jpg'; imgLink[3]='/structure/test/test01/test01_01?infid=7'; imgAlt[3]='新闻系举办“新闻系一家亲”迎新生晚会';</SCRIPT><SCRIPT language="JavaScript" type="text/javascript">imgUrl[4]='http://www.ydrwxy.ynu.edu.cn/upload/picinfo/P24J8M_5697_6231_ydrwxy_18/1213409557835vod_20060309.jpg'; imgLink[4]='/structure/test/test01/test01_01?infid=6'; imgAlt[4]='1';</SCRIPT><SCRIPT language="JavaScript" type="text/javascript">imgUrl[5]='/upload/picinfo/P24J8M_5697_6231_ydrwxy_18/1213409557835vod_20060309.jpg'; imgLink[5]='/structure/test/test01/test01_01?infid=5'; imgAlt[5]='vod_20060309';</SCRIPT>
+<div id="focuseFrom">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><script language="JavaScript" src="/cws.files/component/wares/picinfo/picinfo.files/js/picspecial.js"></script><a onClick="goUrl()" target="_blank"><img style="FILTER: revealTrans(duration=1,transition=5);" border="0" vspace="0" name="imgInit" class="CicroR71PGL_1011_3600_ydrwxy_25_picinfo_pic" src="http://www.ydrwxy.ynu.edu.cn/upload/htmleditor//Web_DSCF73271.jpg" alt="人文学院开展&ldquo;三生&rdquo;教育" width="240" height="180"></a><SCRIPT language="JavaScript" type="text/javascript">nextAds();</SCRIPT>
+<div id="txtFrom">
+<span id="focustext"></span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="imgTitle">
+<div id="imgTitle_down">
+<a class="trans"></a><script language="JavaScript" src="/cws.files/component/wares/picinfo/picinfo.files/js/picbutton.js"></script>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" valign="top" width="1"><img src="images/vert_px.gif"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+</td><td width="5"></td><td valign="top">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td height="36" width="80"><a href="$cms.getUrl('人文动态')" target="_blank"><span class="title_01">人文动态</span></a></td>
+<td align="right"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+  <form name="form1" method="post" action=""><tr>
+    <td width="70%">
+      <input type="text" name="textfield" class="CicroY5A0D5_4798_5932_ydrwxy_25_member_input">
+   
+    </td>
+    <td width="30%"><input style="width:45px; background:#999999" type="submit" name="Submit" value="搜索"></td>
+  </tr> </form>
+</table></td>
+<td width="10"></td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("人文动态",6))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroJKQBGH_7494_8802_ydrwxy_25_info_listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1"><span id="CicroJKQBGH_7494_8802_ydrwxy_25__dTitle_1">#summary($article.name 18)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="CicroJKQBGH_7494_8802_ydrwxy_25_info_horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="22" align="right"><a href="$cms.getUrl('人文动态')" target="_blank">&gt;&gt;&gt;更多</a></td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+</td><td width="4"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="60">
+<table width="550px" height="60px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroRCMYP6_2470_0440_ydrwxy_25__content"><div id="Banner02" style="width: 550px; height: 60px; text-align: center; background: #FFFFFF url('images/zgyd11dbh_02.gif') left top repeat-x; border: #d0d0d0 0px solid; margin: 0px 0px 0px 0px; float: none;">
+  <OBJECT codeBase=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0 height=60 width=550 classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000>
+    <PARAM NAME="movie" VALUE="images/top_banner_900x150_04.swf">
+    <PARAM NAME="quality" VALUE="high">
+    <PARAM NAME="wmode" VALUE="transparent">
+    <embed src="images/top_banner_900x150_04.swf" height=60 width=550 quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>
+  </OBJECT>
+</div></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td valign="top">
+<table border="0" width="100%" bgcolor="#A48139">
+<tbody>
+<tr>
+<td height="22" width="30"><img src="images/title_book_01.gif" width="30" height="22"></td><td width="280"><a href="jxzy/" target="_blank"><span class="title_01">教学资源</span></a></td>
+<td width="50" align="right"><a href="$cms.getUrl('教学资源')" target="_blank">&gt;&gt;&gt;更多</a></td>
+<td width="10">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="4">
+<table border="0" cellspacing="8" width="100%" bgcolor="#D8BE80">
+<tbody>
+<tr>
+<td height="100" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ #foreach($article in $cms.getContents("教学资源",4))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroJS01PZ_5357_1792_ydrwxy_25_info_listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1"><span id="CicroJS01PZ_5357_1792_ydrwxy_25__dTitle_1">#summary($article.name 25)</span></a></td>
+</tr>
+<tr>
+<td colspan="6"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="2"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%" bgcolor="#A48139">
+<tbody>
+<tr>
+<td height="22" width="30"><img src="images/title_book_01.gif" width="30" height="22"></td><td width="280"><a href="$cms.getUrl('党团建设')" target="_blank"><span class="title_01">党团建设</span></a></td>
+<td width="50" align="right"><a href="$cms.getUrl('党团建设')" target="_blank">&gt;&gt;&gt;更多</a></td>
+<td width="10">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="4">
+<table border="0" cellspacing="8" width="100%" bgcolor="#D8BE80">
+<tbody>
+<tr>
+<td height="100" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ #foreach($article in $cms.getContents("党团建设",4))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroJS01PZ_5357_1792_ydrwxy_25_info_listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1"><span id="CicroJS01PZ_5357_1792_ydrwxy_25__dTitle_1">#summary($article.name 25)</span></a></td>
+</tr>
+<tr>
+<td colspan="6"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="2"></td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%" bgcolor="#A48139">
+<tbody>
+<tr>
+<td height="22" width="30"><img src="images/title_book_01.gif" width="30" height="22"></td><td width="280"><a href="xszj/" target="_blank"><span class="title_01">学生之家</span></a></td>
+<td width="50" align="right"><a href="$cms.getUrl('学生之家')" target="_blank">&gt;&gt;&gt;更多</a></td>
+<td width="10">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="4">
+<table border="0" cellspacing="8" width="100%" bgcolor="#D8BE80">
+<tbody>
+<tr>
+<td height="100" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ #foreach($article in $cms.getContents("学生之家",4))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroJS01PZ_5357_1792_ydrwxy_25_info_listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1"><span id="CicroJS01PZ_5357_1792_ydrwxy_25__dTitle_1">#summary($article.name 25)</span></a></td>
+</tr>
+<tr>
+<td colspan="6"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td></td><td width="165" align="middle">
+<table border="0" width="100%" bgcolor="#A48139">
+<tbody>
+<tr>
+<td height="32"><a href="pic/" target="_blank"><span class="title_01"> 人文风景</span></a></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroND2YKB_8179_5549_ydrwxy_25_picinfo_content">
+<table width="" border="0" cellspacing="0" cellpadding="0">
+<script language="JavaScript" src="/cws.files/component/wares/picinfo/picinfo.files/js/setImg.js"></script>
+#foreach($article in $cms.getContents("人文风景",3))
+<tr>
+<td valign="top" width="100%">
+<table border="0" cellspacing="0" cellpadding="0" width="160" height="124">
+<tr>
+<td class="CicroND2YKB_8179_5549_ydrwxy_25_picinfo_pic"><a href="$cms.getUrl($article)" target="_blank"><img src="$cms.getPictureUrl($article)" border="0" width="160" height="124"></a></td>
+</tr>
+</table>
+</td><td rowspan="11" class="CicroND2YKB_8179_5549_ydrwxy_25_picinfo_td"><IMG SRC="images/spacer.gif" HEIGHT="1" width="1px"></td>
+</tr>
+<tr class="CicroND2YKB_8179_5549_ydrwxy_25_picinfo_tr">
+<td><IMG SRC="images/spacer.gif" WIDTH="1" height="1px"></td>
+</tr>
+#end
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td height="0"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="28" align="right"><a href="pic/" target="_blank">&gt;&gt;&gt;更多</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="60">
+<table width="550px" height="60px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroBG216M_2817_8904_ydrwxy_25__content"><IMG height=60 src="images/pic_550-60-2.jpg" width=550 border=0></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td width="50%">
+<table border="0" width="100%" bgcolor="#A48139">
+<tbody>
+<tr>
+<td height="24" width="30"><img src="images/title_book_01.gif" width="30" height="22"></td><td width="90%"><a href="$cms.getUrl('招生信息')" target="_blank"><span class="title_01">招生信息</span></a></td>
+</tr>
+<tr>
+<td colspan="2">
+<table border="0" width="100%" bgcolor="#D8BE80">
+<tbody>
+<tr>
+<td height="124" valign="top"><table border="0" cellpadding="0" cellspacing="0"  width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="title1">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("招生信息",5))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroZS336Z_2091_5362_ydrwxy_25_info_listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1"><span id="CicroV0G670_4371_5759_ydrwxy_25__dTitle_1">#summary($article.name 20)</span></a></td>
+</tr>
+<tr>
+<td colspan="10"><IMG SRC="images/spacer.gif" width="1" height="1" ALT="行间距"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right"><a href="$cms.getUrl('招生信息')" target="_blank">&gt;&gt;&gt;更多</a></td>
+</tr>
+</tbody>
+</table>
+</td><td></td><td width="50%">
+<table border="0" width="100%" bgcolor="#A48139">
+<tbody>
+<tr>
+<td height="24" width="30"><img src="images/title_book_01.gif" width="30" height="22"></td><td width="90%"><a href="$cms.getUrl('报刊杂志')" target="_blank"><span class="title_01">报刊杂志</span></a></td>
+</tr>
+<tr>
+<td colspan="2">
+<table border="0" width="100%" bgcolor="#D8BE80">
+<tbody>
+<tr>
+<td height="124" valign="top">
+<table border="0" cellpadding="0" cellspacing="0"  width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="title1">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("报刊杂志",5))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroZS336Z_2091_5362_ydrwxy_25_info_listrow1">
+<td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="listrow1"><span id="CicroV0G670_4371_5759_ydrwxy_25__dTitle_1">#summary($article.name 20)</span></a></td>
+</tr>
+<tr>
+<td colspan="10"><IMG SRC="images/spacer.gif" width="1" height="1" ALT="行间距"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right"><a href="$cms.getUrl('报刊杂志')" target="_blank">&gt;&gt;&gt;更多</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td height="24" width="10"><img src="images/title_book_01.gif" width="30" height="22"></td><td class="title_01">友情链接</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td><td align="middle">
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td>
+<table border="0" width="100%">
+<tbody>
+#set ($i=0)
+<tr>
+#foreach($article in $cms.getContents("友情链接",8)) 
+#set ($i = $i+1)
+#if ($i%4==0)
+<td width="25%"><a href="$cms.getUrl($article)"><span id="CICRO_INS">$article.name</span></a></td>
+</tr><tr>
+#else
+<td width="25%"><a href="$cms.getUrl($article)"><span id="CICRO_INS">$article.name</span></a></td>
+#end
+#end
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y; BACKGROUND-POSITION: left top" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" height="1" colspan="3"></td>
+</tr>
+<tr>
+<td height="10" colspan="3"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td height="2"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td height="150" align="middle">
+<table width="100%" height="150px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroDK461J_7698_7978_ydrwxy_25__content">#parse("footer.vm")</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td></td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

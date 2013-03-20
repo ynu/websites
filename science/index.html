@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问物理科学与技术学院</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("head.vm")
+<div class="content01">
+<div id="change">
+<div class="title01"><h1>学院风采</h1><a href="$cms.getUrl("学院风采")"><img src="images/more.jpg" /></a></div>				 
+<div id="picture">
+		<script type="text/javascript">
+var imgUrl=new Array();
+var imgLink=new Array();
+// var imgName=new Array();
+
+var n=1;
+
+		#foreach($article in $cms.getContents("学院风采",20))
+		#if ($cms.hasPicture($article))
+imgUrl[n] = "$cms.getPictureUrl($article)";
+imgLink[n] = "$cms.getUrl($article)";
+
+n++;
+#end
+#end
+
+var links = "";
+var pics = "";
+var count=1;
+for(var h=1; h<n; h++) {
+if (count>6)
+break;
+if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)) {
+//if (imgName[h].length > 20)
+//imgName[h] = imgName[h].substring(0, 20) + "...";
+links += imgLink[h] + "|";
+pics += imgUrl[h] + "|"; 
+count++;
+}
+}
+links = links.substring(0, links.length-1);
+pics = pics.substring(0, pics.length-1);
+
+
+ var focus_width=297
+ var focus_height=197
+ var text_height=0
+ var swf_height = focus_height+text_height
+ 
+ document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+ document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus1.swf"><param name="quality" value="high"><param name="bgcolor" value="#a4dbd6">');
+ document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+ document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+ document.write('</object>');
+ </script>
+	  </div>
+    </div>
+    <div class="news">
+    <div class="title02"><h1>新闻动态</h1><a href="$cms.getUrl("新闻动态")"><img src="images/more.jpg" /></a></div>	
+    <div class="list02">
+    <ul>
+	#foreach($article in $cms.getContents("新闻动态",8))
+					  <li><span>$cms.format($article.publishDate)</span><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 20)</a></li>
+					  #end
+					  
+		</ul>
+    </div>		
+    </div>
+    <div class="notice">
+    <div class="title03"><h1>通知公告</h1><a href="$cms.getUrl("通知公告")"><img src="images/more.jpg" /></a></div>	
+    <div class="list02">
+    <ul>
+	#foreach($article in $cms.getContents("通知公告",8))
+					  <li><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 13)</a></li>
+	#end
+		</ul>
+    </div>
+    </div>
+</div>
+<div class="content02">
+<div class="we">
+<div class="title04"><h1>联系我们</h1></div>				 
+<div class="list04">
+<div class="num01"><img src="images/nk_11_01.jpg" width="311" height="53" usemap="#Map"/>
+    <map name="Map" id="Map">
+      <area shape="rect" coords="18,26,87,50" href="mailto:yuanzhang@ynu.edu.cn" />
+      <area shape="rect" coords="112,26,183,49" href="#" />
+      <area shape="rect" coords="203,26,271,48" href="#" />
+    </map>
+</div>
+<div class="num"><h1>院办公室：5035570（校本部）<br />
+院办公室：5034922（校本部）<br />
+院教务办：5033707（校本部）<br />
+物理系办公室：5033705<br />
+材料系办公室：5031124</h1></div>
+</div>
+</div>
+<div class="news">
+    <div class="title02"><h1  style="color:#0877c1;">重要信息</h1><a href="#"><img src="images/more.jpg" /></a></div>	
+    <div class="list02">
+    <ul>
+	#foreach($article in $cms.getContents("重要信息",8))
+					  <li><span>$cms.format($article.publishDate)</span><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 20)</a></li>
+					  #end
+					  
+		</ul>
+    </div>		
+    </div>
+    <div class="content02_right">
+    <div class="down">
+    <div class="title03"><h1 style="color:#0877c1;" >常用下载</h1><a href="#"><img src="images/more.jpg" /></a></div>	
+    <div class="list05">
+     <ul>
+	 #foreach($article in $cms.getContents("常用下载",4))
+				     <li><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 5)</a></li>
+     #end
+				   </ul>
+    </div>
+    </div>
+    <div class="down" style="margin-top:5px;">
+    <div class="title03"><h1 style="color:#0877c1;" >友情链接</h1><a href="#"><img src="images/more.jpg" /></a></div>	
+    <div class="list06">
+
+
+
+				     <select name="inner">
+				     <option selected>--------校内链接--------</option>
+					 #foreach($article in $cms.getContents("校内链接",10))
+					 <option value="$cms.getUrl($article)">$article.name</option>
+#end
+</select>
+<SCRIPT language=vbs>
+sub inner_onchange()
+if inner.value<>"#" then
+window.open inner.value,""
+end if
+end sub
+</SCRIPT>
+
+				   <select name="side">
+				     <option selected>--------校外链接--------</option>
+					 #foreach($article in $cms.getContents("校外链接",10))
+					 <option value="$cms.getUrl($article)">$article.name</option>
+#end
+</select>
+<SCRIPT language=vbs>
+sub side_onchange()
+if side.value<>"#" then
+window.open side.value,""
+end if
+end sub
+</SCRIPT>
+
+
+		
+
+    </div>
+    </div>
+    </div>
+    
+</div>
+#parse("footer.vm")		
+</div>
+
+</body></html>

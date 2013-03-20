@@ -1,0 +1,8 @@
+
+<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" class="search">
+			<input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+            <input type="text" class="notxt" value="输入搜索关键字" id="query" name="query" 
+					onblur="if(this.value=='') {this.value='输入搜索关键字';this.form.keywords.style.color='#D8D8D8'}" 
+					onclick="if(this.value=='输入搜索关键字'){this.value='';this.form.keywords.style.color='#000'}" />
+          <button type="submit"></button>
+        </form>

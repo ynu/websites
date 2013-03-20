@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学公共管理学院</title>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+<script src="/cms/web/writeLog.jsp?channelID=124"></script>
+<meta name="公共管理学院" content="云南大学,公共管理学院" />
+<style type="text/css">
+<!--
+.STYLE1 {color: #FFFFFF}
+-->
+</style>
+
+</head>
+
+<body>
+
+
+<div id="wrap">
+<div id="header">
+  	#parse("menu.vm")
+  </div>
+  <div id="mainContent">
+    <div id="sidebar"></div>   
+	
+    <div id="content">
+	<div id="sidebar2"> 
+		<div class="title_div">			
+<div class="title_text1">&nbsp;&nbsp;学院新闻</div>
+<div class="title_shadow1">&nbsp;&nbsp;学院新闻</div></div>
+		<div class="news">
+			<ul>#foreach($article in $cms.getContents("学院新闻",6))
+				<li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 14) </a>$cms.format($article.publishDate)</li>
+				#end
+			</ul>
+		</div>
+		<div class="more"><a href="$cms.getUrl("学院新闻")" target="_blank" ><img src="images/more1.gif" border=0/></a></div>
+	</div>	
+	
+	<div id="sidebar3"> 
+		<div class="title_div">			
+<div class="title_text1">&nbsp;&nbsp;通知公告</div>
+<div class="title_shadow1">&nbsp;&nbsp;通知公告</div></div>
+		<div class="news">
+			<ul>#foreach($article in $cms.getContents("通知公告",6))
+				<li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 14) </a>$cms.format($article.publishDate)</li>
+				#end
+			</ul>
+		</div>
+		<div class="more"><a href="$cms.getUrl("通知公告")" target="_blank" ><img src="images/more1.gif" border=0/></a></div>
+	</div>	
+	
+	<div id="sidebar4">
+	  		<div class="title_div">			
+<div class="title_text1">&nbsp;&nbsp;新闻图片</div>
+<div class="title_shadow1">&nbsp;&nbsp;新闻图片</div></div>
+		<div class="flash_news">
+								<SCRIPT type=text/javascript>
+										var imgUrl=new Array();
+										var imgLink=new Array();
+										var imgName=new Array();
+										var n=1;										
+		#foreach($article in $cms.getContents("新闻图片", 200))
+					#if($article.type==4||$article.type==5)
+					#set($fullArticle=$cmsService.getArticle($article.srcContentID))
+						#foreach($attimg in $cmsService.getPageDatas("FROM Attachment as att WHERE (att.type=1 or att.type=2) and att.parent.ID=$fullArticle.ID", 1, 1))
+	    					imgUrl[n]  = "$cms.getUrl($attimg)";
+	    					imgLink[n] = "$cms.getUrl($fullArticle)";
+	    					imgName[n] = "$fullArticle.name";
+            				 n++;
+						#end
+					#else
+						#foreach($attimg in $cmsService.getPageDatas("FROM Attachment as att WHERE (att.type=1 or att.type=2) and att.parent.ID=$article.ID", 1, 1))
+	    					imgUrl[n]  = "$cms.getUrl($attimg)";
+	    					imgLink[n] = "$cms.getUrl($article)";
+	    					imgName[n] = "$article.name";
+            				n++;
+						#end  	
+					#end
+				#end	
+																			
+												var texts = "";
+												var links = "";
+												var pics = "";
+												var count=1;
+												for(var h=1; h<n; h++) {
+												if (count>6)
+												break;
+												if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+													if (imgName[h].length > 30)
+													imgName[h] = imgName[h].substring(0, 30) + "...";
+													texts += imgName[h] + "|";
+													links += imgLink[h] + "|";
+													pics += imgUrl[h] + "|";
+								   					count++;
+													}
+												}
+												texts = texts.substring(0, texts.length-1);
+												links = links.substring(0, links.length-1);
+												pics = pics.substring(0, pics.length-1);
+												var focus_width=257
+												var focus_height=172
+												var text_height=0
+												var swf_height = focus_height+text_height
+												document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+												
+								document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#B3D0F8">');				
+												document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+												
+												document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+												
+												document.write('<embed src="images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#B3D0F8" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+								</SCRIPT>
+		</div>
+	</div><br />
+	<div id="sidebar5"></div><br />
+	<div id="sidebar6"> 		
+		<div class="title_div">			
+<div class="title_text">&nbsp;&nbsp;就业信息</div>
+<div class="title_shadow">&nbsp;&nbsp;就业信息</div></div>
+		<div class="news">
+			<ul>#foreach($article in $cms.getContents("就业信息",6))
+				<li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 14) </a>$cms.format($article.publishDate)</li>
+				#end
+			</ul>
+		</div>
+		<div class="more"><a href="$cms.getUrl("就业信息")" target="_blank" ><img src="images/more1.gif" border=0/></a></div>
+	</div>		
+	<div id="sidebar7"> 
+		<div class="title_div">			
+<div class="title_text">&nbsp;&nbsp;校园文化</div>
+<div class="title_shadow">&nbsp;&nbsp;校园文化</div></div>
+		<div class="news">
+			<ul>#foreach($article in $cms.getContents("校园文化",6))
+				<li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 14) </a>$cms.format($article.publishDate)</li>
+				#end
+			</ul>
+		</div>
+	<div class="more"><a href="$cms.getUrl("校园文化")" target="_blank" ><img src="images/more1.gif" border=0/></a></div>
+	</div>		
+	<div id="sidebar8"> 
+	<div class="title_div">			
+<div class="title_text">&nbsp;&nbsp;MPA信息</div>
+<div class="title_shadow">&nbsp;&nbsp;MPA信息</div></div>
+		<div class="news">
+			<ul>#foreach($article in $cms.getContents("重要通知1",6))
+				<li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 14) </a>$cms.format($article.publishDate)</li>
+				#end
+			</ul>
+		</div>
+<div class="more"><a href="$cms.getUrl("重要通知1")" target="_blank" ><img src="images/more1.gif" border=0/></a></div>
+	</div>	
+    </div>
+	
+	
+  </div>
+ <div id="footer"> 
+   #parse("footer.vm")
+  </div>
+</div>
+ 
+
+</body></html>

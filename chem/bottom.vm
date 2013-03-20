@@ -1,0 +1,9 @@
+
+<TABLE style="MARGIN-BOTTOM: 8px" border=0 cellSpacing=0 cellPadding=0 width=854 
+align=center>
+  
+  <TR>
+    <TD class=about><A href="$cms.getUrl("联系我们")" target=_blank>联系我们</A> 
+		| <A  href="$cms.getUrl("免责申明")" target=_blank>免责申明</A> 
+        | <A href="$cms.getUrl("下载专区")" target=_blank>下载专区</A> 
+		| <A href="http://www.chem.ynu.edu.cn/" target=_blank>技术支持</A> </TD></TR></TABLE>

@@ -1,0 +1,32 @@
+
+<DIV id=footer>
+      <UL>
+        <LI><A href="http://www.ynu.edu.cn/" target="_blank">云南大学主页</A>
+        <LI><A href="$cms.getUrl("版权声明")">版权声明</A>
+        <LI><A href="$cms.getUrl("关于我们")">关于我们</A>
+        <LI 
+  style="BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"><A 
+  href="$cms.getUrl("联系我们")">联系我们</A> </LI>
+      </UL>
+    </DIV>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("iep.国际合作与交流处");
+
+} catch(err) {}</script>

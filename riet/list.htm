@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>云南大学工程技术研究院</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<STYLE type=text/css>.style3 {
+	COLOR: #006699
+}
+.style6 {
+	FONT-SIZE: 12px
+}
+.style7 {
+	COLOR: #006699; FONT-SIZE: 12px
+}
+.style31 {
+	COLOR: #006699; FONT-SIZE: 12px
+}
+BODY {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #0000ff; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+.style38 {
+	FONT-STYLE: italic; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+</STYLE>
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY>
+
+<DIV align=center>
+<TABLE border=1 cellSpacing=1 borderColor=#ffffff width=742 bgColor=#ffffff><!--DWLayoutTable-->
+  <TBODY>
+  #parse("header.vm")
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff height=33 borderColor=#ffffff colSpan=2><IMG border=0 
+      src="images/bt111.png" width=210 height=25></TD>
+    <TD bgColor=#ffffff vAlign=top borderColor=#ffffff rowSpan=6 colSpan=5>
+      <DIV align=left></DIV>
+      <DIV align=left>
+      #foreach($article in $cms.getPageContents($curChannel,$curPage))
+	  <P class=style38><A 
+      href="$cms.getUrl($article)" title="$article.name">$article.name</A></P>
+      #end</DIV></TD></TR>
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff height=71 vAlign=center borderColor=#ffffff width=102 
+    align=middle><SPAN class=style3><IMG src="images/1.png" width=97 
+      height=67></SPAN></TD>
+    <TD bgColor=#ffffff height=71 vAlign=center borderColor=#ffffff width=101 
+    align=middle><IMG src="images/2.png" width=97 height=67></TD></TR>
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff height=71 vAlign=center borderColor=#ffffff 
+      align=middle><IMG src="images/4.png" width=97 height=67></TD>
+    <TD bgColor=#ffffff height=71 vAlign=center borderColor=#ffffff 
+      align=middle><IMG src="images/5.png" width=97 height=67></TD></TR>
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff vAlign=center borderColor=#ffffff align=middle><SPAN 
+      class=style3><IMG src="images/6.png" width=97 height=67></SPAN></TD>
+    <TD bgColor=#ffffff vAlign=center borderColor=#ffffff align=middle><IMG 
+      src="images/7.png" width=97 height=67></TD></TR>
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff height=23 vAlign=bottom borderColor=#ffffff colSpan=2>
+      <DIV align=left><IMG border=0 src="images/bt222.png" width=210 
+      height=25></DIV></TD></TR>
+  <TR borderColor=#99ccff>
+    <TD bgColor=#ffffff vAlign=top borderColor=#ffffff colSpan=2 
+      align=left><table width="100%" height="122" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><table width="90%" border="0" align="center" cellpadding="0" cellspacing="6">
+          #set ($i=0)
+          <tr> #foreach($channel in $cms.getChildren("下载中心")) 
+            #set ($i = $i+1)
+            #if ($i%2==0)
+            <TD><div align="center"><A href="$cms.getUrl($channel)">$channel.title</A></div></TD>
+          </tr>
+            <tr> #else
+              <TD><div align="center"><A href="$cms.getUrl($channel)">$channel.title</A></div></TD>
+              #end
+              #end </tr>
+        </table></td>
+      </tr>
+    </table></TD></TR>
+  <TR bgColor=#ffffff>
+    <TD height=17>&nbsp;</TD>
+    <TD>&nbsp;</TD>
+    <TD width=94><SPAN class=style6></SPAN></TD>
+    <TD width=94>&nbsp;</TD>
+    <TD width=94><SPAN class=style6></SPAN></TD>
+    <TD width=90>&nbsp;</TD>
+    <TD width=145>&nbsp;</TD></TR>
+  <TR bgColor=#ffffff>
+    <TD height=31 colSpan=7>
+      <DIV class=style7 align=center>
+      <DIV align=left></DIV></DIV>
+      <DIV class=style31 align=center><IMG border=0 src="images/lingyu.png" 
+      width=750 height=30 useMap=#Map9></DIV></TD></TR>
+  <TR>
+    <TD colSpan=7>#parse("footer.vm")</TD></TR></TBODY></TABLE></DIV><map name="Map9">
+  <area shape="rect" coords="75,5,740,24" href="$cms.getUrl('通知公告')">
+</map>
+<map name="Map10">
+  <area shape="rect" coords="134,9,659,76" href="$cms.getUrl('首页')">
+</map>
+</body></html>

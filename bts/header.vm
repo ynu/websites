@@ -1,0 +1,68 @@
+
+<table cellspacing="0" cellpadding="0" width="100%" border="0">    
+<tbody>             
+<tr>             
+<td background="/images/lm_02.gif" height="24" >
+<table cellspacing="0" cellpadding="0" width="100%" align="right" border="0">
+<tbody>                  
+<tr>                           
+<td width="33%">&nbsp;</td> 
+<td width="21%">&nbsp;</td>       
+<td width="46%" align="right">今天是：
+<script language="javascript">
+ function isnArray()                                    
+{
+argnr=isnArray.arguments.length
+for(var i=0;i<argnr;i++)                                    
+{this[i+1]=isnArray.arguments[i];}
+}
+var isnDays=new isnArray("星期一","星期二","星期三","星期四","星期五","星期六","星期日");isnDays[0]="星期日";
+mydate = new Date();
+myyear = mydate.getFullYear();
+mymonth = mydate.getMonth()+1;
+today = mydate.getDate();
+document.write(myyear+"年"+mymonth+"月"+today+"日");
+document.write("，")
+document.write(isnDays[mydate.getDay()]);
+      </script>
+ </td></tr></tbody></table></td></tr>         
+<tr>
+<td height="126" width="886" align="left" valign="top" ><img  src="/images/lm_04.gif" width="886"  height="126" >&nbsp;</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td valign="top" background="/images/lm_05.gif" height="38" width="886">
+<table height="30" cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>                                                                        
+<td class="a01" align="middle">
+ <a href="http://www.bts.ynu.edu.cn/">首页</a> 
+#foreach($channel in $cms.getChildren("首页"))
+    <A href=$cms.getUrl($channel)>$channel.title</A>
+#end
+
+
+      
+  
+</td></tr></tbody></table></td></tr></tbody></table>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("bts.工商管理与旅游管理学院");
+
+} catch(err) {}</script>

@@ -1,0 +1,60 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学监审处</title>
+<link href="css/main.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+/**/
+.STYLE3 {
+        FONT-SIZE: 12px
+}
+.STYLE5 {
+        FONT-SIZE: 9pt
+}
+/**/
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<link rel="stylesheet" type="text/css" href="css/ZMLG6J_7241_6667_jjs_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+</head>
+<body>
+
+#parse("header.vm")
+<table style="BACKGROUND-IMAGE: none" cellspacing="0" cellpadding="0" width="753" align="center" border="0">
+<tbody>
+<tr>
+<td width="100%">
+
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+#foreach($article in $cms.getContents($curChannel,1))
+#set ($fullArticle=$cmsService.getArticle($article.ID))
+$fullArticle.content
+#end
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学经济学院 - $curChannel.title</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">var def=1;</script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	#parse("header.vm")
+	    <div id="content">
+			<div id="list_left">
+				<div class="sublist">
+					<div class="title">
+					  <h3>$curChannel.title</h3></div>
+					<div class="con">
+						<ul>#foreach($channel in $cms.getChildren($curChannel))
+							<li><a href="$cms.getUrl($channel)">$channel.title</a></li>#end
+						</ul>
+					</div>
+				</div>
+				#parse("leftpiclinks.vm")
+		  </div>
+			<div id="list_right">				
+				<div class="title"><h3>$curChannel.title</h3></div>
+				<div class="con">
+					#foreach($channel in $cms.getChildren($curChannel))
+						#if($cms.getChannelCount(${channel.ID})>0)
+							#foreach($channel2 in $cms.getChildren($channel))
+							<div class="tab_list3">
+								  <dl>									  
+									  #foreach($article in $cms.getContents($channel2,6))
+									  <dd>
+											<span>[$cms.format($article.publishDate)]</span>
+										  #if($article.type==4||$article.type==5)
+										  #set($fullArticle=$cmsService.getArticle($article.srcContentID))   
+										  #set($chl=$cmsService.getChannel($fullArticle.parentID))
+										  【$chl.title】<a title="$fullArticle.name" href="$cms.getUrl($article)" target="_blank">
+										  $fullArticle.name </a>	
+										  #else
+										  #set($chl=$cmsService.getChannel($article.parentID))
+										  【$chl.title】<a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  $article.name</a>	
+										  #end					  
+									  </dd>#end									  
+								  </dl>
+							</div>
+							#end
+						#else
+						<div class="tab_list3">
+								  <dl>									  
+									  #foreach($article in $cms.getContents($channel,8))
+									  <dd>
+											<span>[$cms.format($article.publishDate)]</span>
+										  #if($article.type==4||$article.type==5)
+										  #set($fullArticle=$cmsService.getArticle($article.srcContentID))   
+										  #set($chl=$cmsService.getChannel($fullArticle.parentID))
+										  【$chl.title】<a title="$fullArticle.name" href="$cms.getUrl($article)" target="_blank">
+										  $fullArticle.name </a>	
+										  #else
+										  #set($chl=$cmsService.getChannel($article.parentID))
+										  【$chl.title】<a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  $article.name</a>	
+										  #end					  
+									  </dd>#end									  
+								  </dl>
+						</div>
+						#end
+					#end
+					<div class="list_sort">
+						
+					</div>									
+				</div>
+			</div>
+			
+		</div>
+		<div id="footer" style="margin-top:5px;">
+			<div class="footer_01"></div>
+			<div class="footer_02">
+				<p>
+					#parse("footer.vm")  
+				</p>
+			</div>
+			<div class="footer_03"></div>
+		</div>
+</div>
+
+</body></html>

@@ -1,0 +1,153 @@
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td height="185" align="middle">
+<table width="100%" height="185px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroL124B0_1658_3219_ydrwxy_25__content"><TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD align=middle height=185>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<td height="35" style="background-image:url('images/top-1.gif'); background-position:top; background-repeat:repeat-x">&nbsp;</td>
+<TR>
+<TD align=middle height=150>
+<OBJECT codeBase=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0 height=150 width=778 classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000>
+  <PARAM NAME="_cx" VALUE="20585"><PARAM NAME="_cy" VALUE="3969"><PARAM NAME="FlashVars" VALUE=""><PARAM NAME="Movie" VALUE="images/xueyuan_index_top.swf"><PARAM NAME="Src" VALUE="images/xueyuan_index_top.swf"><PARAM NAME="WMode" VALUE="Window"><PARAM NAME="Play" VALUE="-1"><PARAM NAME="Loop" VALUE="-1"><PARAM NAME="Quality" VALUE="High"><PARAM NAME="SAlign" VALUE=""><PARAM NAME="Menu" VALUE="-1"><PARAM NAME="Base" VALUE=""><PARAM NAME="AllowScriptAccess" VALUE=""><PARAM NAME="Scale" VALUE="ShowAll"><PARAM NAME="DeviceFont" VALUE="0"><PARAM NAME="EmbedMovie" VALUE="0"><PARAM NAME="BGColor" VALUE=""><PARAM NAME="SWRemote" VALUE=""><PARAM NAME="MovieData" VALUE=""><PARAM NAME="SeamlessTabbing" VALUE="1"><PARAM NAME="Profile" VALUE="0"><PARAM NAME="ProfileAddress" VALUE=""><PARAM NAME="ProfilePort" VALUE="0"><PARAM NAME="AllowNetworking" VALUE="all"><PARAM NAME="AllowFullScreen" VALUE="false"></OBJECT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="BACKGROUND-IMAGE: url('images/mainmenu-bg-1.gif'); BACKGROUND-REPEAT: repeat-x; BACKGROUND-POSITION: left top" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td height="38">
+<table width="100%" height="32px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<div id="CicroJ23WP8_9115_0851_ydrwxy_25__content"><TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD width=60 height=38>&nbsp;</TD>
+<TD height=38><!-- MainMenu -->
+<UL id=nav>
+<LI class=top><A class=top_link id=MainMenu1 href="$cms.getUrl('首页')"><SPAN class=down>网站首页</SPAN></A> 
+<UL class=sub>
+<LI><A href="http://www.ynu.edu.cn/" target=_blank>云大首页</A></LI>
+<LI><A href="http://www.ydrwxy.ynu.edu.cn/" target=_blank>人文学院首页</A></LI>
+<LI><A href="http://www.ydrwxy.ynu.edu.cn/structure/xwx/" target=_blank>新闻系首页</A></LI>
+<LI><A href="http://www.jclab.ynu.edu.cn/" target=_blank>文学与传播实验教学中心</A></LI></UL></LI>
+<LI class=top><A class=top_link id=MainMenu2 href="#"><SPAN class=down>学院概况</SPAN></A> 
+<UL class=sub>
+#foreach($channel in $cms.getChildren("学院概况"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end</UL></LI>
+<LI class=top><A class=top_link id=MainMenu3 href="#"><SPAN class=down>系所中心</SPAN></A> 
+<UL class=sub>
+<LI><A class=fly href="$cms.getUrl('首页')" target=_blank>人文学院</A> 
+<UL>
+<LI><A href="$cms.getUrl('人文动态')">人文动态</A></LI>
+<LI><A class=fly href="$cms.getUrl('学院概况1')">学院概况</A> 
+<UL>
+#foreach($channel in $cms.getChildren("学院概况"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end
+</UL></LI>
+<LI><A class=fly href="#">党团建设</A> 
+<UL>
+#foreach($channel in $cms.getChildren("党团建设"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end
+</UL></LI>
+<LI><A class=fly href="#">教学资源</A> 
+<UL>
+#foreach($channel in $cms.getChildren("教学资源"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end
+</UL></LI>
+<LI><A class=fly href="#">精品课程</A> 
+<UL>
+#foreach($channel in $cms.getChildren("精品课程"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end
+</UL></LI>
+<LI><A href="$cms.getUrl('学生之家')">学生之家</A></LI>
+<LI><A href="$cms.getUrl('招生信息')">招生信息</A></LI>
+<LI><A class=fly href="#">报刊杂志</A> 
+<UL>
+#foreach($channel in $cms.getChildren("报刊杂志"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end
+</UL></LI>
+<LI><A href="$cms.getUrl('人文风景')">人文风景</A></LI></UL></LI>
+<LI><A href="$cms.getUrl('中文系')" target=_blank>中文系</A></LI>
+<LI><A href="$cms.getUrl('历史系')" target=_blank>历史系</A></LI>
+<LI><A href="$cms.getUrl('哲学系')" target=_blank>哲学系</A></LI>
+<LI><A href="$cms.getUrl('新闻系')" target=_blank>新闻系</A></LI>
+<LI><A href="$cms.getUrl('素质教育部')" target=_blank>素质教育部</A></LI>
+<LI><A class=fly href="http://www.jclab.ynu.edu.cn/" target=_blank>文学与传播实验教学中心</A>
+</LI>
+<LI><A href="http://www.ydrwzk.com/" target=_blank>人文学院自考办</A></LI>
+<LI><A href="http://www.chamagudao.ynu.edu.cn/" target=_blank>云南大学茶马古道文化研究所</A></LI>
+<LI><A href="http://www.xnhjs.com/" target=_blank>西南环境史研究网</A></LI>
+</UL></LI>
+<LI class=top><A class=top_link id=MainMenu4 href="#"><SPAN class=down>党团建设</SPAN></A> 
+<UL class=sub>
+#foreach($channel in $cms.getChildren("党团建设"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end</UL></LI>
+<LI class=top><A class=top_link id=MainMenu5 href="#"><SPAN class=down>教学资源</SPAN></A> 
+<UL class=sub>
+#foreach($channel in $cms.getChildren("教学资源"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end</UL></LI>
+<LI class=top><A class=top_link id=MainMenu6 href="#"><SPAN class=down>精品课程</SPAN></A> 
+<UL class=sub>
+#foreach($channel in $cms.getChildren("精品课程"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end</UL></LI>
+<LI class=top><A class=top_link id=MainMenu7 href="$cms.getUrl('学生之家')"><SPAN>学生之家</SPAN></A></LI>
+<LI class=top><A class=top_link id=MainMenu8 href="$cms.getUrl('招生信息')"><SPAN>招生信息</SPAN></A></LI>
+<LI class=top><A class=top_link id=MainMenu9 href="#"><SPAN class=down>报刊杂志</SPAN></A> 
+<UL class=sub>
+#foreach($channel in $cms.getChildren("报刊杂志"))
+<LI><A href="$cms.getUrl($channel)">$channel.title</A></LI>
+#end</UL></LI></UL><!-- MainMenu --></TD></TR></TBODY></TABLE></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>

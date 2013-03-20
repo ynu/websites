@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南省电子计算中心</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+
+ 	#parse("header.vm")  
+  <div class="content01">
+    <div class="flash_new">
+      <script type=text/javascript>
+										var imgUrl=new Array();
+										var imgLink=new Array();
+										var imgName=new Array();
+										var n=1;
+										#foreach($article in $cms.getContents("图片新闻", 200))
+	#foreach($articleImg in $cmsService.getPageDatas("FROM Attachment as att WHERE att.type=1 and att.parent.ID=$article.ID", 1, 1))
+	    imgUrl[n]  = "$cms.getUrl($articleImg)";
+	    imgLink[n] = "$cms.getUrl($article)";
+	    imgName[n] = "$article.name";
+            	 n++;
+	#end
+#end
+																			
+												var texts = "";
+												var links = "";
+												var pics = "";
+												var count=1;
+												for(var h=1; h<n; h++) {
+												if (count>6)
+												break;
+												if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+													if (imgName[h].length > 20)
+													imgName[h] = imgName[h].substring(0, 20) + "...";
+													texts += imgName[h] + "|";
+													links += imgLink[h] + "|";
+													pics += imgUrl[h] + "|";
+													count++;
+													}
+												}
+												texts = texts.substring(0, texts.length-1);
+												links = links.substring(0, links.length-1);
+												pics = pics.substring(0, pics.length-1);
+												var focus_width=263
+												var focus_height=188
+												var text_height=18
+												var swf_height = focus_height+text_height
+												document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+												
+								document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#0a86ea">');				
+												document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+												
+												document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+												
+												document.write('<embed src="images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#0a86ea" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+								</script>
+    </div>
+    <div class="content01_right">
+      <div class="ser">
+	  		#parse("search.vm")
+      </div>
+      <div class="noitce">
+        <div class="noitce_title">
+          <h1>通知公告</h1>
+          <a href="$cms.getUrl("通知公告")" target="_blank"><img src="images/more.gif" width="53" height="22" /></a></div>
+        <div class="noitce_list">
+          <ul>
+		    #foreach($article in $cms.getContents("通知公告",6))
+            <li><span>$cms.format($article.publishDate)</span>
+		    <a href="$cms.getUrl($article)"  target="_blank" title="$article.name">#summary($article.name 28) </a></li>
+			#end           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content02">
+    <div class="content02_left">
+    <div class="link">
+    <div class="link_title"><h1>友情链接</h1><a href="$cms.getUrl("友情链接")" target="_blank"><img src="images/more.gif" width="53" height="22" /></a></div>
+    <div class="link_list">
+    <ul>
+           #foreach($article in $cms.getContents("友情链接",50))
+            <li><a href="$cms.getUrl($article)"  target="_blank" title="$article.name">#summary($article.name 6)</a></li>
+			#end   		   
+          </ul>
+    </div>
+    <div class="link_bottom"></div>
+    </div>
+    <div class="message"><a href="/cms/modules/createOnlineLeaveMessage.jsp?typeID=2&siteID=$curChannel.site.ID" target="_blank"><img src="images/ly.jpg" width="132" height="41" /></a></div>
+    <div class="Stats">
+    <div class="text01">访问统计</div>
+    <h1><br />您是<br /><span><script src="/cms/modules/channelVisitLog.jsp?parentID=$rootChannel.ID"></script></span><br />位访客</h1></div>
+    </div>
+    <div class="content02_right">
+    <div class="work">
+    <div class="work_title"><h1>工作动态</h1>
+          <a href="$cms.getUrl("工作动态")" target="_blank"><img src="images/more.gif" width="53" height="22" /></a></div>
+          <div class="work_list">
+           <ul>
+		    #foreach($article in $cms.getContents("工作动态",3))
+            <li><span>$cms.format($article.publishDate)</span>
+				<a href="$cms.getUrl($article)"  target="_blank" title="$article.name">#summary($article.name 40) </a></li>
+			#end 
+            
+          </ul>
+        </div>
+    </div>
+    <div class="work" style="margin-top:10px;">
+    <div class="work_title"><h1>科研成果</h1>
+          <a href="$cms.getUrl("科研成果")" target="_blank"><img src="images/more.gif" width="53" height="22" /></a></div>
+           <div class="white">
+				<div style="clear:both; height:0px; line-height:0px; overflow:hidden; margin-top:-4px;"></div>
+				    <div class="scenery">
+					<style type="text/css">
+						#demo{overflow:hidden; width:100%;}
+						#indemo {float:left;width:800%;}
+						#demo1,#demo2 {float:left;}
+					</style>
+					<div id="demo">
+						<div id="indemo">
+							<div id="demo1">
+							<ul>
+							#foreach($article in $cms.getContents("科研成果",8))
+								<li><a href="$cms.getUrl($article)"><img src="$cms.getPictureUrl($article)"" width="140" height="95" border="0" />
+									<h3>#summary($article.name 8)</h3></a></li>
+							#end 
+							</ul>
+							</div>
+							<div id="demo2"></div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						var speed=10;
+						var tab=document.getElementById("demo");
+						var tab1=document.getElementById("demo1");
+						var tab2=document.getElementById("demo2");
+						tab2.innerHTML=tab1.innerHTML;
+						function Marquee(){
+						if(tab2.offsetWidth-tab.scrollLeft<=0)
+						tab.scrollLeft-=tab1.offsetWidth
+						else{
+						tab.scrollLeft++;
+						}
+						}
+						var MyMar=setInterval(Marquee,speed);
+						tab.onmouseover=function() {clearInterval(MyMar)};
+						tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+					</script>
+					
+				</div>
+          </div>
+    </div>
+    <div class="footer">#parse("footer.vm")</div>
+    </div>
+  </div>
+</div>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学公共管理学院</title>
+<link href="css/news.css" rel="stylesheet" type="text/css" />
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+<meta name="公共管理学院" content="云南大学,公共管理学院" />
+<script language=javascript> 
+	function topmenu(num)
+	{
+		menu1 = document.getElementById('dicatop1').style;
+		menu2 = document.getElementById('dicatop2').style;
+		menu3 = document.getElementById('dicatop3').style;			
+		if( num == 1 )
+		{
+				menu1.display = 'block';
+				menu2.display = 'none';
+				menu3.display = 'none';               
+		}
+		else if( num == 2 )
+		{
+				menu1.display = 'none';
+				menu2.display = 'block';
+				menu3.display = 'none';                    
+		}
+		   else if( num == 3 )
+		{			  
+				menu1.display = 'none';
+				menu2.display = 'none';
+				menu3.display = 'block';
+		} 		
+	}
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+  <div id="header">
+  	#parse("menu.vm")
+  </div>
+  <div id="mainContent">
+  	<div id="banner">
+		<div class="left"> 
+		   <marquee direction="left" width="276" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2">
+		     德高志远  厚学强术
+		   </marquee>
+		
+		</div>
+		<div class="right">#if($curChannel.parent.logo!="")
+		<img src="images/$curChannel.parent.logo" width="377" height="79" />
+		#else
+		<img src="images/list_logo1.jpg" width="377" height="79" />
+		#end</div>
+	</div>
+	<div class="clear"></div>
+	<div id="con_news">
+		<div class="leftsidebar">
+		   <div class="title">$curChannel.parent.title</div>
+		   <div class="leftnav">
+		      <ul>
+			    #foreach($channel in $cms.getChildren($curChannel.parent))
+				<li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+				#end				
+			  </ul>
+		   </div>
+		   <div class="bottom"></div>
+		</div>
+		<div class="news_right">
+			<div class="sub_bot"></div>
+			<div class="news_right01">
+						<div class="n_title"><h3>$curChannel.title</h3></div>
+						<div class="n_con">
+								<div class="con_list2">
+									  <ul>
+										 #foreach($article in $cms.getPageContents($curChannel,$curPage))
+										  <li>
+											  <span>[$cms.format($article.publishDate)]</span>
+											  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">$article.name</a>						  
+										  </li>
+										  #end										  
+									  </ul>
+								</div>
+								
+								<div class="list_sort">#page()</div>
+								<div class="clear"></div>
+						</div>
+					</div>
+	  </div>
+	</div>
+	<div class="clear"></div>
+  </div>
+  <div id="footer02"><div class="pp">  #parse("footer.vm")</div> </div>
+</div>
+
+</body></html>

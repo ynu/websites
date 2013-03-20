@@ -1,0 +1,461 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>::云南省古生物研究重点实验室::</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/chromestyle.css">
+<script type="text/javascript" src="js/chrome.js"></script>
+<meta name="GENERATOR" content="MSHTML 8.00.6001.18928">
+
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+</head>
+<body>
+
+#parse("toper.vm")
+<div id="container">
+#parse("menu.vm")
+<div id="leftbar">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroM5Q1CC_1818_8934_yklp_25_info_title1">
+<tr>
+<td align="left"><img border="0" src="images/g.jpg" title="最新公告"></td>
+<td><a class="CicroM5Q1CC_1818_8934_yklp_25_info_amore" href="$cms.getUrl("最新公告")" target="_blank">更多...</a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroM5Q1CC_1818_8934_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroM5Q1CC_1818_8934_yklp_25_info_content">
+<marquee id="info3_001Z02L80_5487_4485_yklp_18_scrollArea" direction="up" height="112px" width="200px" scrolldelay="0" scrollamount="1" border="0" onMouseOver="info3_001Z02L80_5487_4485_yklp_18_scrollArea.stop()" onMouseOut="info3_001Z02L80_5487_4485_yklp_18_scrollArea.start()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("最新公告",20))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor='#FFFFFF'" class="CicroM5Q1CC_1818_8934_yklp_25_info_listrow1">
+<td width="1" valign="top"><IMG src="images/icon1.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroM5Q1CC_1818_8934_yklp_25_info_alistrow1"><span id="CicroM5Q1CC_1818_8934_yklp_25__dTitle_1">$article.name</span></a>(2009-07-05)</td>
+</tr>
+#end
+</table>
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="xszz"></div>
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroJ5I002_9703_9301_yklp_25_frlink_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroJ5I002_9703_9301_yklp_25_frlink_content">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+
+#foreach($article in $cms.getContents("学术组织",6))
+
+<tr class="CicroJ5I002_9703_9301_yklp_25_frlink_listrow1" align="left">
+<td width="100%" align="left"><a class="CicroJ5I002_9703_9301_yklp_25_frlink_listrow1_a" href="$cms.getUrl($article)" target="_blank"><img border="0" src="images/tb5.gif">#summary($article.name 14)</a></td>
+</tr>
+
+#end
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="yqlj"></div>
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroF84N7F_4242_7513_yklp_25_frlink_content">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+  #foreach($article in $cms.getContents("友情链接",15))
+<tr class="CicroF84N7F_4242_7513_yklp_25_frlink_listrow1" align="center">
+<td width="100%"><a class="CicroF84N7F_4242_7513_yklp_25_frlink_listrow1_a" href="$cms.getUrl($article)" target="_blank"><img border="0" src="images/icon2.gif">#summary($article.name 15)</a></td>
+</tr>
+#end
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="content">
+<div id="cont1">
+<div id="p1">
+<table width="200px" height="150px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroQ57LGO_6264_6798_yklp_25_pic_content"><a href="images/x.jpg" target="_blank"><img width="200px" height="150px" border="0" src="images/4.bmp"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="con1">
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroX44Q1G_2488_7721_yklp_25_info_title1">
+<tr>
+<td><img border="0" src="images/sys.jpg" title="实验室介绍"></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroX44Q1G_2488_7721_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroX44Q1G_2488_7721_yklp_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroX44Q1G_2488_7721_yklp_25_info_listrow1">
+<td width="1" valign="top"><IMG src="images/ico0.gif" border="0">&nbsp;</td>
+<td>
+ #foreach($article in $cms.getContents("实验室介绍2",1))
+<a href="$cms.getUrl($article)" target="_blank" title="  " class="CicroX44Q1G_2488_7721_yklp_25_info_alistrow1"><span id="CicroX44Q1G_2488_7721_yklp_25__dTitle_1">    $!{article.summary}</span></a><br>
+#end
+</td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cont2">
+<div id="con3">
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroI257PX_8328_0572_yklp_25_info_title1">
+<tr>
+<td><img border="0" src="images/xw.jpg" title="综合新闻"></td><td><a class="CicroI257PX_8328_0572_yklp_25_info_amore" href="$cms.getUrl("综合新闻")" target="_blank">更多...</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroI257PX_8328_0572_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroI257PX_8328_0572_yklp_25_info_content"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  #foreach($article in $cms.getContents("综合新闻",5))
+  <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroI257PX_8328_0572_yklp_25_info_listrow1">
+    <td width="1" valign="top"><img src="images/icon1.gif" border="0">&nbsp;</td>
+    <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroI257PX_8328_0572_yklp_25_info_alistrow1"><span id="CicroI257PX_8328_0572_yklp_25__dTitle_1">#summary($article.name 17)</span></a></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  #end
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="con4">
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroH71IW5_9713_5201_yklp_25_info_title1">
+<tr>
+<td><img border="0" src="images/dt.jpg" title="科考动态"></td><td><a class="CicroH71IW5_9713_5201_yklp_25_info_amore" href="$cms.getUrl("科考动态")" target="_blank">更多...</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroH71IW5_9713_5201_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroH71IW5_9713_5201_yklp_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+ #foreach($article in $cms.getContents("科考动态",5))
+  <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroI257PX_8328_0572_yklp_25_info_listrow1">
+    <td width="1" valign="top"><img src="images/icon1.gif" border="0">&nbsp;</td>
+    <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroI257PX_8328_0572_yklp_25_info_alistrow1"><span id="CicroI257PX_8328_0572_yklp_25__dTitle_1">#summary($article.name 17)</span></a></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  #end
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cont1">
+<div id="con3">
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroYWYNGM_4182_8561_yklp_25_info_title1">
+<tr>
+<td><img border="0" src="images/hy.jpg" title="会议信息"></td><td><a class="CicroYWYNGM_4182_8561_yklp_25_info_amore" href="$cms.getUrl("会议信息")" target="_blank">更多...</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroYWYNGM_4182_8561_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroYWYNGM_4182_8561_yklp_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+#foreach($article in $cms.getContents("会议信息",5))
+  <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroI257PX_8328_0572_yklp_25_info_listrow1">
+    <td width="1" valign="top"><img src="images/icon1.gif" border="0">&nbsp;</td>
+    <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroI257PX_8328_0572_yklp_25_info_alistrow1"><span id="CicroI257PX_8328_0572_yklp_25__dTitle_1">#summary($article.name 17)</span></a></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  #end
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="con4">
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroZQ1T2F_8169_7248_yklp_25_info_title1">
+<tr>
+<td><img border="0" src="images/zt.jpg" title="专题报道"></td><td><a class="CicroZQ1T2F_8169_7248_yklp_25_info_amore" href="$cms.getUrl("专题报道")" target="_blank">更多...</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroZQ1T2F_8169_7248_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroZQ1T2F_8169_7248_yklp_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+#foreach($article in $cms.getContents("专题报道",5))
+  <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroI257PX_8328_0572_yklp_25_info_listrow1">
+    <td width="1" valign="top"><img src="images/icon1.gif" border="0">&nbsp;</td>
+    <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroI257PX_8328_0572_yklp_25_info_alistrow1"><span id="CicroI257PX_8328_0572_yklp_25__dTitle_1">#summary($article.name 17)</span></a></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  #end
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="cont1">
+<div id="con3">
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroKU03Q6_6016_5868_yklp_25_info_title1">
+<tr>
+<td><img border="0" src="images/kycg.jpg" title="科研成果"></td><td><a class="CicroKU03Q6_6016_5868_yklp_25_info_amore" href="$cms.getUrl("科研成果")" target="_blank">更多...</a></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroKU03Q6_6016_5868_yklp_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroKU03Q6_6016_5868_yklp_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("科研成果",5))
+  <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroI257PX_8328_0572_yklp_25_info_listrow1">
+    <td width="1" valign="top"><img src="images/icon1.gif" border="0">&nbsp;</td>
+    <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroI257PX_8328_0572_yklp_25_info_alistrow1"><span id="CicroI257PX_8328_0572_yklp_25__dTitle_1">#summary($article.name 17)</span></a></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1"></td>
+  </tr>
+  #end
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+#parse("footer.vm")
+
+</body></html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学资源环境与地球科学学院</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("header.vm")
+	
+	<div id="con">
+	  <div id="con_left">
+			<div class="survey">
+            <div class="s_title"><h1>学院概况</h1></div>
+            <div class="s_list">
+            <ul>
+						<li><a href="$cms.getUrl("学院介绍")" class="wz1" target="_blank">学院介绍 </a></li>
+						<li><a href="$cms.getUrl("现任领导")" class="wz2" target="_blank">现任领导</a></li>
+						<li style="border-bottom:1px solid #c4d7ed;" ><a href="$cms.getUrl("教授委员会")" class="wz3" target="_blank">教授委员会 </a></li>
+						
+			  </ul>
+            </div>
+            </div>
+			<div class="ads" style="height:160px">
+            <div class="title01"><h1>联系方式</h1></div>
+            <div class="list01">
+            <h1>
+            党委办公室：0871-5032820<br />
+行政办公室：0871-5033733<br />
+教务办公室：0871-5033735<br />
+研究生教务办公室：0871-5033019</h1>
+            </div>
+            </div>
+			<div class="system">
+             <div class="title01"><h1>规章制度</h1></div>
+             <div class="more"><a href="cms.getUrl("规章制度")"><img src="images/more.jpg" width="36" height="11" /></a></div>
+             <div class="list02">
+               <ul>
+			   #foreach($article in $cms.getContents("规章制度",7))
+					  <li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 12) $cms.format($article.publishDate,"MM/dd")  </a></li>
+				#end
+                      
+		</ul>
+             </div>
+            </div>	
+		</div>
+        <div id="con_cen">
+        <div class="news">
+        <div class="title02"><h1>图片新闻</h1><a href="$cms.getUrl("图片新闻")"><img src="images/more.jpg" width="36" height="11" /></a></div>
+        <div class="list03">
+        <div class="news_flash">
+        	 <SCRIPT type=text/javascript>
+		var imgUrl=new Array();
+		var imgLink=new Array();
+		var imgName=new Array();
+		var n=1;
+		                
+				#foreach($article in $cms.getContents("图片新闻", 200))
+				#if ($cms.hasPicture($article))
+				imgUrl[n] = "$cms.getPictureUrl($article)";
+				imgLink[n] = "$cms.getUrl($article)";
+				var vTitle='$article.name';
+				if (vTitle.length>18)
+				vTitle=vTitle.substring(0,15)+"...";
+				imgName[n] = vTitle;
+				n++;
+				#end
+				#end
+
+											
+				var texts = "";
+				var links = "";
+				var pics = "";
+				var count=1;
+				for(var h=1; h<n; h++) {
+				if (count>6)
+				break;
+				if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+					if (imgName[h].length > 20)
+					imgName[h] = imgName[h].substring(0, 20) + "...";
+					texts += imgName[h] + "|";
+					links += imgLink[h] + "|";
+					pics += imgUrl[h] + "|";
+					count++;
+					}
+				}
+				texts = texts.substring(0, texts.length-1);
+				links = links.substring(0, links.length-1);
+				pics = pics.substring(0, pics.length-1);
+				var focus_width=185
+				var focus_height=139
+				var text_height=0
+				var swf_height = focus_height+text_height
+				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+				
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#FFFFFF"> <param name="wmode" value="transparent"> ');				
+				document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+				
+				document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+				
+				document.write('<embed src="images/focus.swf" wmode="opaque"  FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" wmode="transparent" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</SCRIPT>
+        </div>
+        <div class="n_left">
+         <ul>
+		 
+		 #foreach($article in $cms.getContents("图片新闻",6))
+					 
+					  <li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 16)  </a></li>
+			#end
+		</ul>
+        </div>
+        </div>
+        </div>
+        <div class="news02">
+        <div class="title02"><h1>学院快讯</h1><a href="$cms.getUrl("学院快讯")"><img src="images/more.jpg" width="36" height="11" /></a></div>
+        <div class="list04">
+         <ul>
+					 #foreach($article in $cms.getContents("学院快讯",4))
+					  <li><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 26) $cms.format($article.publishDate,"MM/dd") </a></li>
+					  #end
+
+		</ul>
+        </div>
+        </div>
+        <div class="links">
+        <div class="title02"><h1>友情链接</h1><a href="$cms.getUrl("友情链接")"><img src="images/more.jpg" width="36" height="11" /></a></div>
+        <div class="list05">
+         <ul>
+		 #foreach($article in $cms.getContents("友情链接",6))
+			<li><a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 12) </a></li>
+		#end
+		</ul>
+        </div>
+        </div>
+        </div>
+		<div id="con_right">
+			<div id="con_right1">
+				<div id="tab04">
+					<div id="tab04_bt">
+						<h3>党团工作</h3>
+						<a href="$cms.getUrl("党团工作")"><img src="images/more.jpg" /></a>
+					</div>
+					<div id="tab04_zw">
+						<div class="tab_list4">
+							<dl>
+							#foreach($article in $cms.getContents("党团工作",5))
+								<dd>
+									<a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 8) </a>&nbsp;$cms.format($article.publishDate,"MM/dd")
+								</dd>
+								#end
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+				<div id="jiange"></div>
+				
+				<div id="tab04">
+					<div id="tab04_bt">
+						<h3>学生工作</h3>
+						<a href="$cms.getUrl("学生工作")"><img src="images/more.jpg" /></a>
+					</div>
+					<div id="tab04_zw">
+						<div class="tab_list4">
+							<dl>
+								#foreach($article in $cms.getContents("学生工作",5))
+								<dd>
+									<a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 8) </a>&nbsp;$cms.format($article.publishDate,"MM/dd")
+								</dd>
+								#end
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+				<div id="jiange"></div>
+				
+				<div id="tab04">
+					<div id="tab04_bt">
+						<h3>资料下载</h3>
+						<a href="$cms.getUrl("资料下载")"><img src="images/more.jpg" /></a>
+					</div>
+					<div id="tab04_zw">
+						<div class="tab_list4">
+							<dl>
+								#foreach($article in $cms.getContents("资料下载",5))
+								<dd>
+									<a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 8) </a>&nbsp;$cms.format($article.publishDate,"MM/dd")
+								</dd>
+								#end
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+		  </div>
+	  </div>
+	</div>
+	
+	#parse("footer.vm")
+	
+</div>
+
+</body></html>

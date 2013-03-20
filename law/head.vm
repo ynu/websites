@@ -1,0 +1,81 @@
+
+<div id="header">
+		<div id="banner"><img src="images/a01.jpg" width="910" height="139"  usemap="#Map"/>
+        <map name="Map" id="Map">            
+ 
+  <area shape="rect" coords="44,32,399,110" href="$cms.getUrl("首页")" />
+</map>
+</div>
+		
+		<div id="menu">
+			  <div id="menu-bg">
+			  <div id="menu-parent">
+			  #set($i=0)
+			  #foreach($channel in $cms.getTopChildren($rootChannel))
+			  #set($i = $i+1)
+                                                  #if($channel.title!="师资力量")
+                                                  #foreach($channel1 in $cms.getChildren($channel,0,1))
+			  <a href="$cms.getUrl($channel1)" id="par$i">$channel.title</a>
+                                                  #end
+                                                  #else
+			  <a href="$cms.getUrl($channel)" id="par$i">$channel.title</a>
+                                                  #end
+			  #end
+			  
+			  </div>  
+			  <div id="menu-son">
+				<div id="son1" style="display:block;">
+				   #foreach($channel in $cms.getChildren("新闻公告"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son2">
+				#foreach($channel in $cms.getChildren("学院概况"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son3">
+					#foreach($channel in $cms.getChildren("教育教学"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son4">
+				  #foreach($channel in $cms.getChildren("师资力量"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son5">
+					#foreach($channel in $cms.getChildren("科学研究"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son6">
+					#foreach($channel in $cms.getChildren("招生就业"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son7">
+					#foreach($channel in $cms.getChildren("党委工作"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son8">
+					#foreach($channel in $cms.getChildren("团学工作"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son9">
+					#foreach($channel in $cms.getChildren("对外交流"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+				<div id="son10">
+					#foreach($channel in $cms.getChildren("校友网"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|
+					#end
+				</div>
+			  </div>
+			  </div>
+			</div>
+			<script type="text/javascript" src="js/m.js"></script>
+		</div>

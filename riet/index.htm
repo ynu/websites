@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>云南大学工程技术研究院</title>
+<style type="text/css">
+<!--
+.style3 {color: #006699}
+.style6 {font-size: 12px}
+.style7 {color: #006699; font-size: 12px; }
+.style8 {font-size: 12}
+.style28 {font-size: 18px; }
+.style31 {color: #006699; font-size: 12px;}
+body {
+	margin-top: 0px;
+	background-image: url();
+	margin-bottom: 0px;
+	background-color: #0000FF;
+	font-size:12px;
+}
+a { text-decoration:none; color:#000000}
+a:hover{ color:#3366FF}
+.style33 {font-size: 36px; }
+.style34 {color: #FFFF00}
+.style35 {color: #FFFF00; font-weight: bold; }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body>
+
+<div align="center">      
+      <table width="742" border="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+        <!--DWLayoutTable-->
+        #parse("header.vm")
+        <tr bordercolor="#99CCFF">
+          <td height="33" colspan="2" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/bt111.png" width="210" height="25" border="0"></td>
+          <td colspan="4" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/bt33.png" width="380" height="30" border="0" usemap="#Map"></td>
+          <td width="145" valign="bottom" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/bt6.png" width="140" height="20" border="0"></td>
+        </tr>
+        <tr bordercolor="#99CCFF">
+          <td width="102" height="71" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><span class="style3"><img src="images/1.png" width="97" height="67"></span></td>
+          <td width="101" height="71" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/2.png" width="97" height="67"></td>
+          <td colspan="4" rowspan="2" align="left" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="left"><img src="images/wenzi11.gif" width="380" height="140"></div></td>
+          <td rowspan="3" valign="top" bgcolor="#FFFFFF">            
+		  <marquee scrollAmount=1 width=140 height=160 direction=up><FONT size=2>
+		  #foreach($article in $cms.getContents("通知公告",10))
+		            <a href="$cms.getUrl($article)">·$article.name</a><br>
+		   #end
+		  </FONT>
+		  </marquee></td>
+        </tr>
+        <tr bordercolor="#99CCFF">
+          <td height="71" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/4.png" width="97" height="67"></td>
+          <td height="71" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/5.png" width="97" height="67"></td>
+        </tr>
+        <tr bordercolor="#99CCFF">
+          <td rowspan="3" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><span class="style3"><img src="images/6.png" width="97" height="67"></span></td>
+          <td rowspan="3" align="center" valign="middle" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/7.png" width="97" height="67"></td>
+          <td height="29" colspan="4" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/bt44.png" alt="" width="380" height="30" border="0" usemap="#Map2"></td>
+        </tr>
+        <tr>
+          <td colspan="4" rowspan="4" align="left" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="left">            <span class="style6"><img src="images/wenzi2.gif" width="380" height="78"></span></div></td>
+          <td height="23" valign="bottom" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="left"><span class="style28"><img src="images/bt7.png" width="140" height="20" border="0"></span></div></td>
+        </tr>
+        <tr>
+          <td rowspan="5" valign="top" bordercolor="#99CCFF" bgcolor="#FFFFFF"><div align="left"><img src="images/lianjie.gif" width="140" height="160" border="0" usemap="#Map4"></div></td>
+        </tr>
+        <tr bordercolor="#99CCFF">
+          <td height="23" colspan="2" valign="bottom" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><div align="left"><img src="images/bt222.png" width="210" height="25" border="0"></div></td>
+        </tr>
+        <tr bordercolor="#99CCFF">
+          <td colspan="2" rowspan="3" align="left" valign="top" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><table width="100%" height="122" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><table width="90%" border="0" align="center" cellpadding="0" cellspacing="6">
+                #set ($i=0)
+				<tr>
+				#foreach($channel in $cms.getChildren("下载中心")) 
+                #set ($i = $i+1)
+				#if ($i%2==0)
+                   <TD><div align="center"><A href="$cms.getUrl($channel)">$channel.title</A></div></TD>
+                </tr>
+                <tr>
+				#else
+                  <TD><div align="center"><A href="$cms.getUrl($channel)">$channel.title</A></div></TD>
+                #end
+				#end
+				</tr>
+              </table></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="35" colspan="4" bordercolor="#FFFFFF" bgcolor="#FFFFFF"><img src="images/bt55.png" width="380" height="30" border="0" usemap="#Map3"></td>
+        </tr>
+        <tr>
+          <td height="61" colspan="4" valign="top"  bgcolor="#FFFFFF"><div align="left">            <span class="style8"><img src="images/wenzi3.gif" width="380" height="66"></span></div></td>
+        </tr>
+        <tr  bgcolor="#FFFFFF">
+          <td height="17">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td width="94"><span class="style6"></span></td>
+          <td width="94">&nbsp;</td>
+          <td width="94"><span class="style6"></span></td>
+          <td width="90">&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr  bgcolor="#FFFFFF">
+          <td height="31" colspan="7"><div align="center" class="style7">
+            <div align="left"></div>
+          </div>            
+          <div align="center" class="style31"><img src="images/lingyu.png" width="750" height="30" border="0" usemap="#Map9"></div></td>
+        </tr>
+      
+          <td colspan="7">#parse("footer.vm")</td>
+        </tr>
+  </table>
+</div>
+<map name="Map2">
+  <area shape="rect" coords="29,4,217,26" href="$cms.getUrl('研究院概况')">
+</map>
+<map name="Map3">
+  <area shape="rect" coords="25,4,159,26" href="$cms.getUrl('研究院概况')">
+</map>
+<map name="Map">
+  <area shape="rect" coords="25,2,172,25" href="$cms.getUrl('研究院概况')">
+</map>
+<map name="Map4">
+  <area shape="rect" coords="9,12,100,35" href="http://www.mse.tsinghua.edu.cn/">
+  <area shape="rect" coords="9,40,110,58" href="http://www.nanoctr.cn/">
+  <area shape="rect" coords="9,64,113,81" href="http://www.c-mrs.org.cn/">
+  <area shape="rect" coords="9,88,125,106" href="http://mse.fudan.edu.cn/">
+  <area shape="rect" coords="8,113,80,129" href="http://mse.fudan.edu.cn/">
+</map>
+<map name="Map9">
+  <area shape="rect" coords="75,5,740,24" href="$cms.getUrl('通知公告')">
+</map>
+<map name="Map10">
+  <area shape="rect" coords="134,9,659,76" href="$cms.getUrl('首页')">
+</map>
+
+</body></html>

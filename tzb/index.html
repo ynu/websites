@@ -1,0 +1,601 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学党委统战部</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/chromestyle.css">
+<script type="text/javascript" src="js/chrome.js"></script>
+<meta name="GENERATOR" content="MSHTML 8.00.6001.18828">
+
+<meta name="keywords" content="">
+<meta name="publishDate" content="2009-10-31 11:44:55">
+<meta name="updateDate" content="2009-05-06 20:53:33">
+<meta name="generatDate" content="2009-04-09 20:00:07">
+<meta name="generator" content="CWS 3.0">
+<meta name="Author" content="Cicro Software Inc.">
+
+<script language="javascript">
+
+//toHTML 将&lt;替换成<,&gt;替换成>
+//参数 objoct 
+
+function toHTML(objoct)
+{
+	xml = objoct.innerHTML;
+
+	a = xml.replace(/&lt;/ig, '\x3c');
+	b = a.replace(/&gt;/ig, "\x3e");
+	c = b.replace(/&amp;nbsp/ig,"&nbsp");
+    d = c.replace(/&amp;/ig,"");
+	return d;
+}
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/RU4G1A_2181_6733_tzb_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+</head>
+<body><body>
+
+<div id="container">
+#parse("header.vm")
+<div id="leftbar">
+<table width="180" height="140" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroAD88ZK_9537_0418_tzb_25_rollboard_title1">
+<tr>
+<td>公告栏</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroAD88ZK_9537_0418_tzb_25_rollboard_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroAD88ZK_9537_0418_tzb_25_rollboard_content">
+<marquee id="RollBoard3_001F61F3V_2075_0981_tzb_18_scrollArea" direction="up" scrolldelay="1" scrollamount="1" border="0" align="center" valign="top" onMouseOver="RollBoard3_001F61F3V_2075_0981_tzb_18_scrollArea.stop()" onMouseOut="RollBoard3_001F61F3V_2075_0981_tzb_18_scrollArea.start()" width="180" height="140">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("公告栏",10))
+<tr class="CicroAD88ZK_9537_0418_tzb_25_rollboard_listrow1">
+<td class="CicroAD88ZK_9537_0418_tzb_25_rollboard_listhead">&nbsp;$article.name</td>
+</tr>
+<tr class="horizontal">
+<td height="20">&nbsp;</td>
+</tr>
+#end
+</table>
+
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="180px" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="CicroM368T1_9960_2204_tzb_25_text_maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroM368T1_9960_2204_tzb_25_text_content">
+<div id="CicroM368T1_9960_2204_tzb_25__content">部长信箱：
+tongzhanbu@ynu.edu.cn</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="180px" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroWIN3MF_5997_7558_tzb_25_frlink_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroWIN3MF_5997_7558_tzb_25_frlink_content">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+#foreach($article in $cms.getContents("友情链接",13))
+<tr class="CicroWIN3MF_5997_7558_tzb_25_frlink_listrow1" align="center">
+<td width="100%"><a class="CicroWIN3MF_5997_7558_tzb_25_frlink_listrow1_a" href="$cms.getUrl($article)" target="_blank">&nbsp;<img border="0" src="images/s1.jpg">&nbsp;$article.name</a></td>
+</tr>
+<tr>
+<td colspan="1">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroWIN3MF_5997_7558_tzb_25_frlink_horizontal"><img src="feber_is_a_sexy_boy.gif" height="1" width="1"></td>
+</tr>
+</table></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="content">
+<table width="580px" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="lan1">
+<div id="dtbt" style="background:url(images/4.jpg)">统 战 动 态</div>
+<table>
+<tbody>
+<tr>
+<td>
+<table width="240px" height="180px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<div id="CicroHLN2VB_3633_4340_tzb_25__content"><style type="text/css">
+html,body,ul,p,h1,h3{margin:0;padding:0;}
+html,body{color:#FFF;font:bold 14px/2 Georgia, Verdana, Arial, "宋体";text-align:center;}
+h1{margin:20px 0;}
+.copyright{font-style:italic;}
+#dyimgview{
+	position:relative;
+	width:240px;
+	margin:auto;
+	padding:0px;
+	background:#FEFEFE;
+}
+#dyimgview .hd{
+	position:absolute;
+	z-index:4;
+	right:22px;
+	top:156px;
+}
+#dyimgview h3 a{
+	display:inline;
+	float:left;
+	width:20px;
+	height:20px;
+	margin-right:2px;
+	color:#fff;
+	font-size:12px;
+	font-family:Simsun;
+	line-height:20px;
+	text-decoration:none;
+	text-align:center;
+}
+#dyimgview h3 a:hover{
+	background:#000;
+	color:#F00;
+}
+#dyimgview .bd ul{
+	position:relative;
+	overflow:hidden;
+	height:180px;
+	padding:0px;
+	list-style:none;
+}
+#dyimgview .bd li{
+	height:180px;
+}
+#dyimgview .bd p{
+	zoom:1;
+	position:relative;
+	margin-top:-24px;
+	padding-top:24px;
+	color:#333;
+	font-weight:normal;
+	text-align:right;
+	background:#BBB;
+}
+#dyimgview .bd p span{
+	position:absolute;
+	top:0;
+	overflow:hidden;
+	width:20px;
+	height:20px;
+	background:#000;
+}
+#dyimgview #a1 p span{
+	left:106px;
+}
+#dyimgview #a2 p span{
+	left:128px;
+}
+#dyimgview #a3 p span{
+	left:150px;
+}
+#dyimgview #a4 p span{
+	left:172px;
+}
+#dyimgview #a5 p span{
+	left:194px;
+}
+#dyimgview ul img{
+	width:240px;
+	height:180px;
+	vertical-align:top;
+	border:none;
+}
+</style>
+</head>
+
+<div id="dyimgview">
+<div class="hd">
+	<h3>
+				#set($countq=0)
+				#foreach($article in $cms.getContents("统战动态", 200))
+				#if ($cms.hasPicture($article))
+				#set($countq=$countq+1)
+				#if($countq <= 5)
+	<a href="#a$countq">$countq</a>
+	#end
+		#end
+		#end
+	</h3>
+</div>
+<div class="bd">
+	<ul>
+				#set($count=0)
+				#foreach($article in $cms.getContents("统战动态", 200))
+				#if ($cms.hasPicture($article))
+				#set($count=$count+1)
+				#if($count <= 5)
+		<li id="a$count">
+			<a href="$cms.getUrl($article)" class="tips">
+			
+			<img src="$cms.getPictureUrl($article)" alt="$article.name" width="241" height="157"/></a>
+			<p>$article.name<span></span></p>
+		</li>
+		#end
+		#end
+		#end
+	</ul>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td valign="top">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="285px" height="180px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="title1">
+<tr></tr>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroE80KJE_0533_1921_tzb_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("统战动态",8))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><IMG src="images/ico2.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroE80KJE_0533_1921_tzb_25_info_alistrow1"><span id="CicroE80KJE_0533_1921_tzb_25__dTitle_1">#summary($article.name 19)</span></a></td>
+</tr>
+
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="nov">
+<tr>
+<td><a class="CicroE80KJE_0533_1921_tzb_25_info_amore" href="$cms.getUrl("统战动态")" target="_blank">&gt; 更多</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="lan2">
+<div id="con1">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroJBAJ8Z_7096_2330_tzb_25_info_title1">
+<tr>
+<td>政策理论</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroJBAJ8Z_7096_2330_tzb_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("政策理论",7))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><IMG src="images/ico2.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroJBAJ8Z_7096_2330_tzb_25_info_alistrow1"><span id="CicroJBAJ8Z_7096_2330_tzb_25__dTitle_1">#summary($article.name 15)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="nov">
+<tr>
+<td><a class="CicroJBAJ8Z_7096_2330_tzb_25_info_amore" href="$cms.getUrl("政策理论")" target="_blank">&gt; 更多</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroH48844_3396_3422_tzb_25_info_title1">
+<tr>
+<td>建言献策</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroH48844_3396_3422_tzb_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("建言献策",7))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><IMG src="images/ico2.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroJBAJ8Z_7096_2330_tzb_25_info_alistrow1"><span id="CicroJBAJ8Z_7096_2330_tzb_25__dTitle_1">#summary($article.name 15)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="nov">
+<tr>
+<td><a class="CicroH48844_3396_3422_tzb_25_info_amore" href="$cms.getUrl("建言献策")" target="_blank">&gt; 更多</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="con2">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroRVDH6B_2522_7074_tzb_25_info_title1">
+<tr>
+<td>人物风采</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroRVDH6B_2522_7074_tzb_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("人物风采",7))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><IMG src="images/ico2.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroJBAJ8Z_7096_2330_tzb_25_info_alistrow1"><span id="CicroJBAJ8Z_7096_2330_tzb_25__dTitle_1">#summary($article.name 15)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="nov">
+<tr>
+<td><a class="CicroRVDH6B_2522_7074_tzb_25_info_amore" href="$cms.getUrl("人物风采")" target="_blank">&gt; 更多</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroFGUFL8_3528_3889_tzb_25_info_title1">
+<tr>
+<td>云南大学统战工作通讯</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroFGUFL8_3528_3889_tzb_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("云南大学统战工作通讯",7))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><IMG src="images/ico2.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroJBAJ8Z_7096_2330_tzb_25_info_alistrow1"><span id="CicroJBAJ8Z_7096_2330_tzb_25__dTitle_1">#summary($article.name 15)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="nov">
+<tr>
+<td><a class="CicroFGUFL8_3528_3889_tzb_25_info_amore" href="$cms.getUrl("云南大学统战工作通讯")" target="_blank">&gt; 更多</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+#parse("footer.vm")
+</div>
+
+</body></html>

@@ -1,0 +1,39 @@
+
+<script type="text/javascript">
+    
+ var focus_width= 240; 
+ var focus_height= 180;
+ var text_height= 18;
+ var swf_height = focus_height+text_height;
+ var pics='';
+ var links='';
+ var texts='';                       
+ var src = 'images/pixviewer.swf'; 
+               
+var n=1;
+#foreach($article in $cms.getContents("建设动态", 200))
+    #if ($cms.hasPicture($article))
+        if (n++ < 7)
+        {
+             pics=pics+ '$cms.getPictureUrl($article)' + '|';   
+             links=links+'$cms.getUrl($article)' + '|';  
+             var vTitle='$article.name';                       
+             if (vTitle.length>17)
+             vTitle=vTitle.substring(0,17)+"...";                         
+             texts=texts + vTitle + '|';
+        }
+    #end                
+
+#end 
+                                                     
+ links=links.substring(0,links.length-1);
+ texts=texts.substring(0,texts.length-1);
+ pics=pics.substring(0,pics.length-1);
+ document.write('<center><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+ document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value='+src+'><param name="quality" value="high"><param name="bgcolor" value="#DADADA">');
+ document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+ document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+ document.write('<\/object><\/center>');
+                    
+
+</script>

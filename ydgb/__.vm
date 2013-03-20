@@ -1,0 +1,12 @@
+
+<ul>    
+<li><a href="$cms.getUrl("宾馆动态")" title="宾馆动态"><span>宾馆动态</span></a></li>    
+<li><a href="$cms.getUrl("宾馆简介")" title="宾馆简介"><span>宾馆简介</span></a></li>
+    <li><a href="http://j.map.baidu.com/L9Ec" title="地理位置" target="_blank"><span>地理位置</span></a></li>    
+    <li><a href="$cms.getUrl("客房服务")" title="客房服务"><span>客房服务</span></a></li>   
+    <li><a href="$cms.getUrl("会展中心")" title="会展中心"><span>会展中心</span></a></li>    
+    <li><a href="$cms.getUrl("餐饮美食")" title="餐饮美食"><span>餐饮美食</span></a></li>    
+    <li><a href="$cms.getUrl("商务中心")" title="商务中心"><span>商务中心</span></a></li>    
+    <li><a href="$cms.getUrl("在线订房")" title="在线订房"><span>在线订房</span></a></li>    
+    <li><a href="$cms.getUrl("意见反馈")" title="意见反馈"><span>意见反馈</span></a></li>  
+    </ul>

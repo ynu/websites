@@ -1,0 +1,20 @@
+
+<div id="list_right">				
+				<div class="title"><h3>$curChannel.title</h3></div>
+				<div class="con">
+						<div class="tab_list3">
+								  <dl>
+								  #foreach($article in $cms.getPageContents($curChannel,$curPage))
+									  <dd>
+									        <span>[$cms.format($article.publishDate)]</span>
+										  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  $article.name</a>									  </dd>
+								  #end  
+								  </dl>
+				  </div>
+					<div class="list_sort">
+						 共$totalPage页&nbsp;&nbsp;当前$curPage&nbsp;|&nbsp;$totalPage页 &nbsp; <a href="$cms.getIndexFileName($curChannel, 1)">首页</a>&nbsp;|&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a>
+						&nbsp;|&nbsp;<a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</a>&nbsp;|&nbsp;<a href="$cms.getIndexFileName($curChannel, $totalPage)">尾页</a> 
+					</div>									
+				</div>
+			</div>

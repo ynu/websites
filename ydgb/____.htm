@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<title>
+$curChannel.name - 云大宾馆
+</title>
+<body screen_capture_injected="true">
+
+
+    
+
+<div id="container">
+	<div id="banner"><div id="header"></div></div>
+
+<div id="menu">
+<div id="tabsH">#parse("导航.vm")</div>
+</div><!--menu END -->
+
+    
+
+<div id="wrapper2">
+
+    <div id="content2">
+    <div id="intro">
+        <ul>
+          
+            	#foreach($article in $cms.getPageContents($curChannel,$curPage))
+		<li>
+
+			<a href="$cms.getUrl($article)">$article.name</a>
+			<span>[$cms.format($article.publishDate)]</span>
+		</li>
+
+            	#end         
+           </ul>
+        
+    <div class="Pager">
+      <div>共1页:</div><a href="http://www.ydbg.ynu.edu.cn/p/ydbg_dt?pg=1&" class="Current">1</a>
+    </div>
+
+</div><!--content END -->
+</div><!--wrapper END -->
+
+    
+
+</div><!--container END -->
+
+<div id="footer"><p>版权所有:<a href="http://www.ydbg.ynu.edu.cn/">云大宾馆</a></p>
+<p>地址:云南省昆明市翠湖北路2号 邮编:650091</p>
+<p>电话: 0871 - 5034179, 5034189</p>
+<p>制作维护:云南大学网络与信息中心</p>
+</div><!--footer END -->
+</div>
+#parse("ga.vm")
+</body></html>

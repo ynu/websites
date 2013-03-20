@@ -1,0 +1,69 @@
+
+<div id="header">
+		<div id="banner">
+			<object width="910" height="139" codebase=	" http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+			  <param value="images/header.swf" name="movie">
+			  <param value="high" name="quality">
+			  <param value="Opaque" name="wmode">
+			  <embed width="910" height="139" type="application/x-shockwave-flash" pluginspage=" http://www.macromedia.com/go/getflashplayer" quality="high" src="images/header.swf">
+			</object>
+		</div>
+		
+		<div id="menu">
+			  <div id="menu-bg">
+			  <div id="menu-parent">
+			  <a href="$cms.getUrl($rootChannel)" id="par1">首 页</a>
+			  <a href="$cms.getUrl("学院新闻")" id="par2">学院新闻</a>
+			  <a href="$cms.getUrl("学院简介")" id="par3">学院概况</a>
+			  <a href="$cms.getUrl("师资概况")" id="par4">师资队伍</a>
+			  <a href="$cms.getUrl("专业设置")" id="par5">本科生教育</a>
+			  <a href="$cms.getUrl("yjs专业设置")" id="par6">研究生教育</a>
+			  <a href="$cms.getUrl("科研成果")" id="par7">学术研究</a>
+			  <a href="$cms.getUrl("团学天地")" id="par8">学生工作</a>
+			  <a href="$cms.getUrl("社会服务动态")" id="par9">社会服务</a>
+			  <a href="$cms.getUrl("联系我们")" id="par10">联系我们</a>
+			  </div>  
+			  <div id="menu-son">
+				<div id="son1" style="display:block;">
+				  欢迎访问云南大学经济学院！
+				</div>
+				<div id="son2">
+					#foreach($channel in $cms.getChildren("学院新闻"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son3">
+					#foreach($channel in $cms.getChildren("学院概况"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son4">
+				  #foreach($channel in $cms.getChildren("师资队伍"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son5">
+					#foreach($channel in $cms.getChildren("本科生教育"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son6">
+					#foreach($channel in $cms.getChildren("研究生教育"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son7">
+					#foreach($channel in $cms.getChildren("学术研究"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son8">
+					#foreach($channel in $cms.getChildren("学生工作"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son9">
+				#foreach($channel in $cms.getChildren("社会服务"))
+					<a href="$cms.getUrl($channel)">$channel.title</a>|#end
+				</div>
+				<div id="son10">
+					
+				</div>
+			  </div>
+			  </div>
+			</div>
+			<script type="text/javascript" src="js/m.js"></script>
+		</div>

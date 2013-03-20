@@ -1,0 +1,139 @@
+<HTML><HEAD><TITLE>$curArticle.name</TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<STYLE type=text/css>A {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff00ff
+}
+A:link {
+	COLOR: #205064
+}
+A:visited {
+	COLOR: #205064
+}
+TD {
+	LINE-HEIGHT: 150%; FONT-FAMILY: 宋体; COLOR: #628296; FONT-SIZE: 9pt
+}
+BODY {
+	BACKGROUND-IMAGE: url('images/bg.gif'); BACKGROUND-ATTACHMENT: fixed; BACKGROUND-REPEAT: repeat; BACKGROUND-POSITION: center 50%
+}
+.style2 {
+	FONT-FAMILY: "楷体_GB2312"; COLOR: #ffffff; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+.manu:hover {
+	COLOR: #f8b03e; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+.manu:visited {
+	COLOR: #666666; FONT-SIZE: 12px
+}
+.manu:link {
+	COLOR: #666666; FONT-SIZE: 12px
+}
+.style4 {
+	FONT-FAMILY: "宋体"; COLOR: #0033cc
+}
+.style7 {
+	FONT-FAMILY: "宋体"; COLOR: #666666
+}
+.style10 {
+	FONT-SIZE: 12pt
+}
+.style12 {
+	FONT-SIZE: 10pt
+}
+</STYLE>
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+//
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+//
+				</SCRIPT>
+
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+<LINK rel=stylesheet type=text/css 
+href="images/O3DFUM_3797_7321_sds_17.css"><LINK rel=stylesheet 
+type=text/css href="images/cicro_userdefine.css"></HEAD>
+<BODY 
+onload="MM_preloadImages('images/xyjj1.gif','images/xybbs1.gif','images/xydt1.gif','images/kyqk1.gif','images/xshd1.gif','images/zlxz1.gif','images/zsxx1.gif')" 
+leftMargin=0 topMargin=0 bgColor=#ffffff marginheight="0" marginwidth="0">
+
+<DIV align=center>
+#parse("header.vm")</DIV>
+<DIV align=center>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=761>
+  <TBODY>
+  <TR>
+    <TD bgColor=#eff3f8 height=30 vAlign=top width=761 background="images/bg02.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD height=355 vAlign=top align="center">
+      <TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0 width=726 
+height=299>
+        <TBODY>
+        <TR>
+          <TD valign="top">
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+            height="100%">
+              <TBODY>
+              <TR>
+                <TD class=maintable vAlign=top>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                  height="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=CicroBG8F3M_2875_8963_sds_25_info_content 
+                      vAlign=top>
+                        <TABLE class=CicroBG8F3M_2875_8963_sds_25_info_title3 
+                        border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <DIV style="font-size:18px; font-weight:bold; color:#000000; height:40px; text-align:center; padding-top:5px;">$curArticle.name</DIV>
+							  发布时间：$cms.format($curArticle.publishDate)访问次数： <script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script>
+							 </TD></TR></TBODY></TABLE>
+                        <TABLE class=CicroBG8F3M_2875_8963_sds_25_info_content1 border=0 cellSpacing=0 cellPadding=0 width="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=CicroBG8F3M_2875_8963_sds_25_info_content1 
+                            vAlign=top><br/>
+                              <DIV id=content style="color:#333333; line-height:24px;">
+                              <P align=left>&nbsp;&nbsp;&nbsp;$curArticle.content</P>
+          </DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<DIV align=center>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=760>
+  <TBODY>
+  <TR>
+    <TD background=images/botton-a-bg.gif><IMG 
+      src="images/botton-a-bg.gif" width=4 height=18></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=760>
+  <TBODY>
+  <TR>
+    <TD bgColor=#73abcb height=60>
+      <DIV align=center><FONT style="COLOR: #ffffff" 
+      color=#ffffff>版权所有&nbsp;云南大学发展研究院</FONT> 
+</DIV></TD></TR></TBODY></TABLE></DIV>
+</body></html>

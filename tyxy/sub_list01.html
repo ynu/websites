@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$curChannel.title -云南大学体育学院</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">var def=1;</script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("header.vm")
+  <div id="content">
+			<div id="list_left">
+				<div class="sublist">
+					<div class="title">
+					  <h3>$curChannel.title</h3></div>
+					<div class="con">
+						<ul>#foreach($channel in $cms.getChildren($curChannel))
+							<li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+							#end							
+						</ul>
+					</div>
+				</div>
+				#parse("piclinks.vm")				
+	</div>
+			<div id="list_right">				
+				<div class="title"><h3>$curChannel.title</h3></div>
+				<div class="con">
+						<div class="tab_list3">
+								  <dl> #foreach($article in $cms.getPageContents($curChannel,$curPage))
+									  <dd>
+											<span>[$cms.format($article.publishDate)]</span>
+										  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  $article.name </a>						  
+									  </dd>
+									#end						
+								  </dl>
+						</div>
+					<div class="list_sort">
+						 #page()</div>									
+				</div>
+			</div>
+			
+		</div>
+		<div id="footer" style="margin-top:5px;">
+			<div class="footer_01"></div>
+			<div class="footer_02">
+				#parse("footer.vm")
+			</div>
+			<div class="footer_03"></div>
+		</div>
+</div>
+
+</body></html>

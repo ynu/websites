@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+<head> 
+<title>云南大学 | 国际合作与交流处 港澳台办</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+<!-- Site Meta //--> 
+ 
+<!-- Metadata //--> 
+
+<meta name="copyright" content="Copyright (c) 2010 云南大学网络智能实验室 All Rights Reserved" />
+<meta name="description" content="云大外办,云南大学国际合作与交流处网站,云南大学港澳台事物办公室网站,Yunnan university office of international cooperation and exchange & office of HongKong Macao Taiwan affairs" />
+<meta name="keywords" content="云南大学外办,云南大学国际合作与交流处 港澳台办官方网站,云大外办,Yunnan university office of international cooperation and exchange & office of HongKong Macao Taiwan affairs，Yunnan university" /> 
+<meta name="Robots" contect="all"/>
+<meta name="author" content="jichengyang | tieli#ynu.edu.cn" />
+<!-- CSS //--> 
+<link rel="stylesheet" type="text/css" href="css/global.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
+
+<!-- Additional CSS //--> 
+ 
+			<link rel="stylesheet" type="text/css" href="css/news.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="/css/sub.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="/css/jScrollPane.css" media="screen" /> 
+<style type="text/css"> 
+a.jScrollArrowUp {padding:0; height:15px; background-image: url(img/up.gif);}
+a.jScrollArrowDown {padding:0; height:15px; background-image: url(img/dn.gif);}
+.cal td {padding: 3px;}
+</style> 
+<style type="text/css"> 
+<!--
+#middleBody {background-color:#E6E4D8; background-image:none;}
+#pagebody {width: 610px; padding: 0px 10px 30px 20px; background-image:none; background-color:#E6E4D8;}
+#pagebody_holder {background:none;}
+#breadcrumb {display:none;}
+#subnav {background-image:none; background-color:#E6E4D8;}
+a.lt_a{ color:#000;}
+a.lt_a:hover{ color:#9C0;}
+a.red_a,.red_a{color:#c4582b;}
+a.red_a:hover{ color:#9C0;}
+#lt_li ul li{margin:10px 0 10px 28px;list-style: circle;}
+#lt_li ul li a{ display:block; color:#000; }
+#lt_li ul li a:hover{ color:#9C0; }
+-->
+</style> 
+
+
+ 
+ 
+</head> 
+<body>
+ 
+
+<div id="top_bg"></div> 
+<div id="content_bg"> 
+  <div id="page-container"> 
+ 
+  #parse("header.vm") 
+  #parse("nav.vm") 
+ 
+				<div id="section_title" style="border-top:1px solid #fff;"> 
+   <span style="font-size:24px;">资源下载</span> 
+</div> 	
+ 
+<div id="middleBody"> 
+		
+      <!--SUBS--> 
+      <div id="subnav"> 
+       
+	<ul> <li><a>资源类别</a> </li>
+	#set($count=$cms.getChannelCount(${curChannel.ID}))
+     #if($count==0)
+	 #foreach($channel in $cms.getChildren($curChannel.parent))
+ 		<li><a href=$cms.getUrl($channel) style="font-size:12px">$channel.title</a> </li>
+ 	 #end
+	 #else
+	 #foreach($channel in $cms.getChildren($curChannel))
+ 		<li><a href=$cms.getUrl($channel)  style="font-size:12px">$channel.title</a> </li>
+ 	 #end
+	 #end
+ 	</ul>    
+      </div> 
+      <!--END SUBS-->
+
+    <div id="pagebody_holder">   
+      
+          <!--BREADCRUMB AREA--> 
+        <div id="breadcrumb"> 
+          <div id="breadcrumb_text"> 
+
+                        
+          <span class="currentLin">News &amp; Events</span> 
+            <!--END BREADCRUMB AREA--> 
+          </div> 
+        </div> 
+ 
+      <!--BODY AREA--> 
+      <div id="pagebody">
+     
+<div id="newsBody"> 
+ <h2 class="mainBody">资源下载列表</h2> 
+ #foreach($article in $cms.getPageContents($curChannel,$curPage))
+ 
+ 			#if($article.type==4||$article.type==5)
+				 #set($fullArticle=$cmsService.getArticle($article.srcContentID))
+				 #set($chl=$cmsService.getChannel($fullArticle.parentID))
+			#else
+				#set($fullArticle=$article)
+				#set($chl=$curChannel)
+			#end	 
+<div class="newsItem">
+ <h3><span class="red_a">$article.name</span>&nbsp;&nbsp;&nbsp;&nbsp;资源类别：$chl.title</h3>
+            <div class="newsImage"> <a> 
+			
+				 
+				 #if ($cmsService.getArticleAttachmentCount($fullArticle.ID, 3)>0) 
+					#foreach($doc in $cms.getAttachments($fullArticle)) 
+						#if($doc.fileExt=="doc")
+						<img src="images/Word_Icon.jpg " />
+						#else
+							#if($doc.fileExt=="pdf")
+							<img src="images/PDF_icon.gif " />
+							#else
+								#if($doc.fileExt=="zip")
+								<img src="images/7z_icon.png " />
+								#else
+								<img src="images/nopic.gif " />
+								#end
+							#end
+						#end
+						
+					#end
+				#end
+			
+			
+			 </a> </div>
+            <div class="newsText">#if($!{fullArticle.summary}!="") $!{fullArticle.summary} #else 暂无内容 #end</div>
+            <div class="clear"></div>
+            <div class="newsPub">
+			 
+				 
+				#if ($cmsService.getArticleAttachmentCount($fullArticle.ID, 3)>0) 
+					#foreach($doc in $cms.getAttachments($fullArticle)) 
+					大小：$doc.filesize Byte &nbsp;&nbsp;
+					<a class="red_a" href="$cms.getUrl($doc)">本地下载</a>
+					#end
+				#else
+					暂无下载
+				#end
+			
+			
+			</div>
+          </div>
+          <br />
+
+	#end
+         
+           <FORM name=pageForm action="" method=post>
+                <TABLE cellSpacing=0 cellPadding=0 width="100%" align=left border=0>
+                  <TBODY>
+                    <TR>
+                      <TD align=left width="15%">当前页$curPage/$totalPage</TD>
+                      <TD align=right width="70%"><A class=lt_a 
+        href="$cms.getIndexFileName($curChannel, 1)">首页</A>| 
+		<a class=lt_a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a> |
+		<A class=lt_a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</A> | <A class=lt_a 
+        href="$cms.getIndexFileName($curChannel, $totalPage)">尾页</A>|转到第
+                        <select name="page" onchange="javascript:PageFormSubmit()">
+#foreach($currPage in [1..$totalPage])
+#set ($selected = '')
+#if($currPage == $curPage)
+#set ($selected = 'selected')
+#end
+<option value="$cms.getIndexFileName($curChannel, $currPage)" $selected>$currPage</option>
+#end
+</select>
+<SCRIPT language=JavaScript>
+
+function PageFormSubmit()
+{
+document.location.href=document.pageForm.page.options[document.pageForm.page.selectedIndex].value;
+}
+</SCRIPT>
+
+                        页 </TD>
+                    </TR>
+                  </TBODY>
+                </TABLE>
+				</FORM>
+
+ 
+</div> 
+
+<div id="topLevelSide"> 
+<h3 class="bannerSubHead">热门下载</h3> 
+<div id="lt_li"> 
+<ul>
+#foreach($article in $cmsService.getPageDatas("from Content where ( parentID=377 or parentID=378 or parentID=379 or parentID=380 or parentID=381 or parentID=382 or parentID=383) and status=7 order by viewCount desc",1,8))
+			#if($article.type==4||$article.type==5)
+				 #set($fullArticle=$cmsService.getArticle($article.srcContentID))
+				 #set($chl=$cmsService.getChannel($fullArticle.parentID))
+			#else
+				#set($fullArticle=$article)
+				#set($chl=$curChannel)
+			#end	
+		#if ($cmsService.getArticleAttachmentCount($fullArticle.ID, 3)>0) 
+					#foreach($doc in $cms.getAttachments($fullArticle)) 		 
+					 <li><a href="$cms.getUrl($doc)">$fullArticle.name</a></li>
+ 					#end
+ 		#end
+#end
+</ul> 
+</div>
+<div class="clear"></div> 
+</div>  
+
+
+  <!--END BODY AREA--> 
+    </div> 
+<div class="clear"></div> 
+</div> 
+ #parse("footer.vm") 
+  </div> 
+</div> 
+<div id="bottom_bg"></div> 
+#parse("copyright.vm")  
+ 
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

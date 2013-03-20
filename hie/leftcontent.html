@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/style.css" type="text/css" rel="stylesheet"  />
+	<SCRIPT language=javascript src="js/time1.js"></SCRIPT>
+	<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+	<title>高等教育研究院</title>
+</head>
+<body>
+
+	<div class="whole">
+	#parse("head.vm")	
+		<div class="list_menu">
+			<h3>$curChannel.parent.title</h3>
+			<ul style="height:auto">
+			#foreach($channel in $cms.getChildren($curChannel.parent))
+#if($channel.title=="团队与导师")
+#foreach($channel1 in $cms.getChildren($channel,0,1))
+<li><a href="$cms.getUrl($channel1)">$channel.title</a></li>
+#end
+#else
+<li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+                     #end  #end
+			</ul>
+			<div class="menubtm">
+				<img src="images/menubtm_1.jpg" width="195" height="180" />
+			</div>
+		<!--   左侧列表end  --></div>
+		<div class="list_content">
+		
+			<div class="listside_right">
+				<div class="subbar">
+					<span>您现在的位置：</span>
+					<a href="$cms.getUrl("首页")">首页</a>&gt;&gt;
+					#if($curChannel.parent.title=="首页")
+					<a href="$cms.getUrl($curChannel)">$curChannel.title</a>
+					#else
+					#foreach($channel in $cms.getChildren($curChannel.parent,0,1))
+					<a href="$cms.getUrl($channel)">$curChannel.parent.title</a>
+					#end
+					&gt;&gt;<a href="#">$curChannel.title</a>
+					#end
+				</div>
+				<ul style=" height: 450px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	SCROLLBAR-FACE-COLOR: #FFDDAA;
+	SCROLLBAR-HIGHLIGHT-COLOR: #DEEB9F;
+	SCROLLBAR-SHADOW-COLOR: #DEEB9F;
+	SCROLLBAR-3DLIGHT-COLOR:#DEEB9F;
+	SCROLLBAR-TRACK-COLOR: #FFFACD;
+	SCROLLBAR-ARROW-COLOR: #4A590D;
+	SCROLLBAR-DARKSHADOW-COLOR: #DEEB9F;">
+				$!{curArticle.content}
+					
+				</ul>
+												
+			<!--  右侧内容 end  --></div>
+		
+		
+		<!--  右侧列表内容end  --></div>
+                     #parse("footer.vm")
+	</div>
+
+</body></html>

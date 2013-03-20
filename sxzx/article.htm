@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>${curArticle.name}_思想战线</TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="css/main.css">
+<META name=GENERATOR content="MSHTML 8.00.7600.16821">
+<LINK rel=stylesheet type=text/css 
+href="css/S23S01_0751_5984_sxzx_17.css">
+<LINK rel=stylesheet 
+type=text/css href="css/cicro_userdefine.css">
+<BODY>
+
+<TABLE border=0 width=766 align=center>
+  <TBODY>
+  #parse("header.vm")
+  <TR>
+    <TD height=300>
+      <TABLE border=0 width=760 background="images/think.gif" 
+        valign="top"><TBODY>
+        <TR>
+          <TD height=300 vAlign=top>
+            <TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0 width="100%" 
+            height=1>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                  height="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=maintable vAlign=top>
+                        <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                        height="100%">
+                          <TBODY>
+                          <TR>
+                            <TD class=content vAlign=top>
+                              <TABLE class=nov border=0 cellSpacing=0 
+                              cellPadding=0 width="100%" align=center>
+                                <TBODY>
+                                <TR>
+                                <TD>
+                                <DIV 
+                                class=CicroDDR470_1304_1838_sxzx_25_info_title2>$curArticle.name</DIV></TD></TR></TBODY></TABLE>
+                              <TABLE class=content border=0 cellSpacing=0 
+                              cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD class=content vAlign=top>
+                                <DIV id=content style="font-size:14px;">$curArticle.content<br>
+                                  #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end<br>
+                                  <table border="0" width="100%">
+                                    #foreach($doc in $cms.getAttachments($curArticle))
+                                      <tr>
+                                        <td><a href="$cms.getUrl($doc)">$doc.srcFile</a></td>
+                                      </tr>
+                                    #end
+                                  </table>
+</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD height=50 background="images/a.jpg">#parse("footer.vm")</TD>
+        </TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+</body></html>

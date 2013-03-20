@@ -1,0 +1,275 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学校友总会</title>
+<link type="text/css" rel="stylesheet" href="css/list_style.css">
+<link type="text/css" rel="stylesheet" href="css/list_chromestyle.css">
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/lb_cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/frame2_cicro_userdefine.css">
+<meta content="MSHTML 6.00.2900.5803" name="GENERATOR">
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script><script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+<body>
+
+<div id="container">
+#parse("header.vm")
+  <div id="leftbar">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="180px" height="180px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroW4IR22_0317_9649_ydxy_25_info_title1">
+<tr>
+<td>最新公告</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroW4IR22_0317_9649_ydxy_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroW4IR22_0317_9649_ydxy_25_info_content">
+<marquee id="info3_001MA0R77_8810_3698_ydxy_18_scrollArea" direction="up" height="180px" width="180px" scrolldelay="0" scrollamount="2" border="0" onMouseOver="info3_001MA0R77_8810_3698_ydxy_18_scrollArea.stop()" onMouseOut="info3_001MA0R77_8810_3698_ydxy_18_scrollArea.start()">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("最新公告",100))
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroW4IR22_0317_9649_ydxy_25_info_listrow1">
+<td width="1" valign="top"><IMG src="images/Forward.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroW4IR22_0317_9649_ydxy_25_info_alistrow1"><span id="CicroW4IR22_0317_9649_ydxy_25__dTitle_1">#summary($article.name 19)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+</table>
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="150px" height="25px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroC80276_4810_7907_ydxy_25_pic_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroC80276_4810_7907_ydxy_25_pic_content"><a href="$cms.getUrl("校友刊物")" class="CicroC80276_4810_7907_ydxy_25_pic_pic"><img width="150px" height="25px" border="0" src="images/xykw.jpg"></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br>
+<table width="180px" height="210px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroU3LA7Q_7318_9988_ydxy_25__content"><P align=center><STRONG><FONT style="FONT-SIZE: 14px; COLOR: #000000">联系我们</FONT></STRONG></P>
+<P>电话（传真）：<BR>0871-5033921<br>0871-5035360</P>
+<P>地址：<br>云南省昆明市翠湖北路2号云南大学文津楼A座208室<br>
+邮编：650091<br><NORMAL>Email：<BR><FONT style="FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif">xiaoyou@ynu.edu.cn</FONT><NORMAL></P></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="content">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="500px" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroM0BDSL_3093_6617_ydxy_25_Local_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroFFT681_2172_2706_ydxy_25_text_content">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置：</td><td valign="middle" class="page">$curChannel.title</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="content2">
+  <table>
+    <tbody>
+      <tr>
+        <td width="500"><table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+            <tr>
+              <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr></tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td class="CicroF012CA_4864_7788_ydxy_25_picinfo_maintable"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td valign="top" class="CicroF012CA_4864_7788_ydxy_25_picinfo_content">
+						  <table width="90%" border="0" cellspacing="0" cellpadding="0">
+						  #set ($i=0)                               
+                                <tr>
+								#foreach($article in $cms.getPageContents($curChannel,$curPage)) 
+								#set ($i = $i+1)
+								#if ($i%3==0)
+                                  <td width="33%" align="center" valign="top"><table border="0" cellspacing="0" cellpadding="0" width="120" height="164">
+                                    <tr>
+                                      <td align="center" class="CicroF012CA_4864_7788_ydxy_25_picinfo_pic">
+									  #foreach($attimg in $cmsService.getPageDatas("FROM Attachment as att WHERE (att.type=1 or att.type=2) and att.parent.ID=$article.ID", 1, 1))
+									  <a href="$cms.getUrl($article)" target="_blank" title="$article.name">
+									  <img src="$cms.getUrl($attimg)" border="0" width="120" height="164"></a>#end</td>
+                                    </tr>
+									<tr class="CicroF012CA_4864_7788_ydxy_25_picinfo_listrow1">
+                                        <td align="center" height="30" valign="top">
+										<a href="$cms.getUrl($article)" target="_blank" class="CicroF012CA_4864_7788_ydxy_25_picinfo_alistrow1">
+										<span id="CicroF012CA_4864_7788_ydxy_25__dTitle_12">#summary($article.name 19) </span></a></td>
+                                      </tr>
+                                  </table></td>                                  
+                                </tr><tr>
+								#else
+								 <td width="33%" align="center" valign="top"><table border="0" cellspacing="0" cellpadding="0" width="120" height="164">
+                                    <tr>
+                                      <td align="center" class="CicroF012CA_4864_7788_ydxy_25_picinfo_pic">
+									   #foreach($attimg in $cmsService.getPageDatas("FROM Attachment as att WHERE (att.type=1 or att.type=2) and att.parent.ID=$article.ID", 1, 1))
+									  <a href="$cms.getUrl($article)" target="_blank" title="$article.name">
+									  <img src="$cms.getUrl($attimg)" border="0" width="120" height="164"></a>#end</td>
+                                    </tr>
+									<tr class="CicroF012CA_4864_7788_ydxy_25_picinfo_listrow1">
+                                        <td align="center" height="30" valign="top">
+										<a href="$cms.getUrl($article)" target="_blank" class="CicroF012CA_4864_7788_ydxy_25_picinfo_alistrow1">
+										<span id="CicroF012CA_4864_7788_ydxy_25__dTitle_12">#summary($article.name 19) </span></a></td>
+                                      </tr>
+                                  </table></td>  
+								#end  #end
+								</tr>
+                                <tr class="CicroF012CA_4864_7788_ydxy_25_picinfo_tr">
+                                  <td><IMG SRC="images/spacer.gif" WIDTH="1" height="1px"></td>
+                                  <td><IMG SRC="images/spacer.gif" WIDTH="1" height="1px"></td>
+                                  <td><IMG SRC="images/spacer.gif" WIDTH="1" height="1px"></td>
+                                </tr>                               
+                              </table>
+						  </td>
+                        </tr>
+                    </table></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroF012CA_4864_7788_ydxy_25_picinfo_nov">
+                  <tr>
+                    <td class="CicroF012CA_4864_7788_ydxy_25_turnpage"><span class="page"><a href="$cms.getIndexFileName($curChannel, 1)" class="CicroF012CA_4864_7788_ydxy_25_turnpage" >首页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)" class="CicroF012CA_4864_7788_ydxy_25_turnpage">上一页</a>&nbsp;&nbsp;<A class="CicroF012CA_4864_7788_ydxy_25_turnpage" HREF="$cms.getIndexFileName($curChannel, $nextPage)" >下一页</A>&nbsp;&nbsp;<A class="CicroF012CA_4864_7788_ydxy_25_turnpage" HREF="$cms.getIndexFileName($curChannel, $totalPage)">末页 </A></span></td>
+                  </tr>
+              </table></td>
+            </tr>
+        </table></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div id="footer">#parse("footer.vm")
+</div>
+<table width="480"></table>
+</div>
+
+</body></html>

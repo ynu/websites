@@ -1,0 +1,92 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>::云南省古生物研究重点实验室::</title>
+<meta content="text/html; charset=gbk" http-equiv="Content-Type">
+<LINK 
+rel=stylesheet type=text/css href="css/style_article.css"><LINK 
+rel=stylesheet type=text/css href="css/chromestyle_article.css">
+<SCRIPT type=text/javascript src="js/chrome.js"></SCRIPT>
+
+
+<LINK rel=stylesheet type=text/css 
+href="css/EMPTYSTYLE.css"><LINK rel=stylesheet type=text/css 
+href="css/cicro_userdefine_article.css"><LINK rel=stylesheet 
+type=text/css href="css/cicro_userdefine(1).css">
+<style type="text/css">
+a{ font-weight:normal; color:#666666}
+a:hover{font-weight:normal; color:#990000}
+a:visited{ font-weight:normal;color:#666666}
+</style>
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</HEAD>
+<BODY>
+
+#parse("toper.vm")
+<DIV id=container>
+#parse("menu.vm")</DIV>
+<DIV id=content3>
+<div id="shadow">
+<div class="shadow1">
+<div class="shadow2">
+<div class="shadow3">
+<div class="shadow4">
+<div class="shadow5">
+
+<TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=700 height=30>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE border=0 cellSpacing=1 cellPadding=0 width="100%" 
+            height="100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR class=page>
+                      <TD vAlign=center>当前位置：<a href="$cms.getUrl($curChannel)" style="font-weight:normal">$curChannel.title</a> > 内容 </TD>
+                      </TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0 width=800 height=1>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" height="100%">
+        <TBODY>
+        <TR>
+          <TD vAlign=top>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+            height="100%">
+              <TBODY>
+              <TR>
+                <TD class=CicroBTAJH8_9069_6012_yklp_25_info_content 
+                  vAlign=top><TABLE 
+                  class=CicroBTAJH8_9069_6012_yklp_25_info_title3 border=0 
+                  cellSpacing=0 cellPadding=0 width="100%" align=center>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV 
+                        class=CicroBTAJH8_9069_6012_yklp_25_info_title2>$curArticle.name</DIV></TD></TR></TBODY></TABLE>
+                  <TABLE class=CicroBTAJH8_9069_6012_yklp_25_info_content1 
+                  border=0 cellSpacing=0 cellPadding=0 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=CicroBTAJH8_9069_6012_yklp_25_info_content1 
+                      vAlign=top>
+                        <DIV id=content style="text-align:left">
+                       $curArticle.content<br>
+#if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+#parse("footer.vm")
+</body></html>

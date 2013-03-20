@@ -1,0 +1,8 @@
+
+<tr bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+          <td colspan="7"><img src="images/logo1.gif" width="750" height="250" border="0" usemap="#Map10"></td>
+        </tr>
+        <tr valign="top" bordercolor="#FFFFFF">
+          <td height="25" colspan="7" bgcolor="#FFFFFF">
+            <div align="left">            <a href="$cms.getUrl('首页')"><img src="images/anniu1.png" alt="" name="anniu1" width="100" height="21" border="0"></a><img src="images/pic/spacer.gif" width="3" height="22"><a href="$cms.getUrl('研究院概况')"><img src="images/anniu2.png" alt="" name="anniu1" width="99" height="21" border="0"></a><img src="images/pic/spacer.gif" width="3" height="22"><a href="$cms.getUrl('党建工作')"><img src="images/anniu3.png" alt="" name="anniu1" width="100" height="21" border="0"></a><img src="images/pic/spacer.gif" width="3" height="22"><a href="$cms.getUrl('科研成果')"><img src="images/anniu4.png" alt="" name="anniu1" width="100" height="21" border="0"></a><img src="images/pic/spacer.gif" width="3" height="22"><a href="$cms.getUrl('人才培养')"><img src="images/anniu5.png" alt="" name="anniu1" width="100" height="21" border="0"></a><img src="images/pic/spacer.gif" width="3" height="22"><a href="$cms.getUrl('学术交流')"><img src="images/anniu6.png" alt="" name="anniu1" width="100" height="20" border="0"></a><img src="images/pic/spacer.gif" width="3" height="22"><a href="$cms.getUrl('工会活动')"><img src="images/anniu7.png" alt="" name="anniu1" width="99" height="20" border="0"></a> <a href="http://bbs.ynu.edu.cn/"><img src="images/BBS.gif" width="25" height="22" border="0"></a></div></td>
+        </tr>

@@ -1,4 +1,4 @@
-<div id="webhead" style="height:auto;">
+ï»¿<div id="webhead" style="height:auto;">
 	<div id="toplogin" style="display:none;">
 		<span>
 		<script type="text/javascript" src="./js/date.js"></script>
@@ -6,84 +6,84 @@
 		
 	</div>
 	<div id="logo">
-		<a href="http://http//www.xsjzwh.ynu.edu.cn/"><img src="./images/2012070360348581.jpg" alt="ÔÆÄÏ´óÑ§½±ÖúÎÄ»¯Íø"></a>
+		<a href="http://http//www.xsjzwh.ynu.edu.cn/"><img src="./images/2012070360348581.jpg" alt="äº‘å—å¤§å­¦å¥–åŠ©æ–‡åŒ–ç½‘"></a>
 	</div>
 	<div id="banner">
 	</div>
 	<div id="topright" style="display:none;">
-		<div class="topright3"><!-- script type="text/javascript" src="./js/skin.asp"></script --><li class="menu2" onmouseover="mlist.style.display=&#39;&#39;" onmouseout="mlist.style.display=&#39;none&#39;" style="cursor:hand;">Ñ¡Ôñ·ç¸ñ
+		<div class="topright3"><!-- script type="text/javascript" src="./js/skin.asp"></script --><li class="menu2" onmouseover="mlist.style.display=&#39;&#39;" onmouseout="mlist.style.display=&#39;none&#39;" style="cursor:hand;">é€‰æ‹©é£æ ¼
 		<div id="mlist" style="display:none;">
-<a href="javascript:changecss('/css/css1.css')">ºÚÉ«ÓÄÄ¬</a><br><a href="javascript:changecss('/css/css2.css')">ÇïÌìÀ´ÁË</a><br><a href="javascript:changecss('/css/css3.css')">ÀÏ£ÙÌìÏÂ</a><br><a href="javascript:changecss('/css/css4.css')">¼«ËÙ·ç¸ñ</a><br><a href="javascript:changecss('/css/css5.css')">Ãµ¹åºìÉ«</a><br><a href="javascript:changecss('/css/css6.css')">»ÒÉ«ÊÀ½ç</a><br><a href="javascript:changecss('/css/css8.css')">µÚÈıÔªËØ</a><br><a href="javascript:changecss('/css/css9.css')">ÊÀ½çÖ®´°</a><br><a href="javascript:changecss('/css/css10.css')">ÇåĞÂÂÌÉ«</a><br></div>
-		</li><li><a href="javascript:addfavorite()">¼ÓÈëÊÕ²Ø</a></li><li><a id="StranLink" href="javascript:StranBody()" title="üc“ôÒÔ·±ówÖĞÎÄ·½Ê½ä¯Ó[">·±ówÖĞÎÄ</a></li><li><a href="http://www.xsjzwh.ynu.edu.cn/sitemap.asp">ÍøÕ¾µØÍ¼</a></li></div><div id="clear"></div>
+<a href="javascript:changecss('/css/css1.css')">é»‘è‰²å¹½é»˜</a><br><a href="javascript:changecss('/css/css2.css')">ç§‹å¤©æ¥äº†</a><br><a href="javascript:changecss('/css/css3.css')">è€ï¼¹å¤©ä¸‹</a><br><a href="javascript:changecss('/css/css4.css')">æé€Ÿé£æ ¼</a><br><a href="javascript:changecss('/css/css5.css')">ç«ç‘°çº¢è‰²</a><br><a href="javascript:changecss('/css/css6.css')">ç°è‰²ä¸–ç•Œ</a><br><a href="javascript:changecss('/css/css8.css')">ç¬¬ä¸‰å…ƒç´ </a><br><a href="javascript:changecss('/css/css9.css')">ä¸–ç•Œä¹‹çª—</a><br><a href="javascript:changecss('/css/css10.css')">æ¸…æ–°ç»¿è‰²</a><br></div>
+		</li><li><a href="javascript:addfavorite()">åŠ å…¥æ”¶è—</a></li><li><a id="StranLink" href="javascript:StranBody()" title="é»æ“Šä»¥ç¹é«”ä¸­æ–‡æ–¹å¼æµè¦½">ç¹é«”ä¸­æ–‡</a></li><li><a href="http://www.xsjzwh.ynu.edu.cn/sitemap.asp">ç½‘ç«™åœ°å›¾</a></li></div><div id="clear"></div>
 		<div class="textad">	</div>
 	</div>
 </div>
 	<div id="clear"></div>
 	<div id="webmenu">
 		<ul>
-		  <li class="ldmc" id="ld1" style="zoom: 1; z-index: 1;"> <a href="$cms.getUrl("Ê×Ò³")" target="_top">Ê× Ò³</a></li>
+		  <li class="ldmc" id="ld1" style="zoom: 1; z-index: 1;"> <a href="$cms.getUrl("é¦–é¡µ")" target="_top">é¦– é¡µ</a></li>
 <li class="ldmc" id="ld2" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("×ÊÖúÕş²ß")" target="_top" class="ldparent">×ÊÖúÕş²ß</a>
+	| <a href="$cms.getUrl("èµ„åŠ©æ”¿ç­–")" target="_top" class="ldparent">èµ„åŠ©æ”¿ç­–</a>
 	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("×ÊÖúÕş²ß",6))
+		#foreach($article in $cms.getContents("èµ„åŠ©æ”¿ç­–",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 	</div>
 </li>
 <li class="ldmc" id="ld3" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("Õş¸®½±ÖúÑ§½ğ")" target="_top" class="ldparent">Õş¸®½±ÖúÑ§½ğ</a>
+	| <a href="$cms.getUrl("æ”¿åºœå¥–åŠ©å­¦é‡‘")" target="_top" class="ldparent">æ”¿åºœå¥–åŠ©å­¦é‡‘</a>
 	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("Õş¸®½±ÖúÑ§½ğ",6))
+		#foreach($article in $cms.getContents("æ”¿åºœå¥–åŠ©å­¦é‡‘",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 	</div>
 </li>
 <li class="ldmc" id="ld4" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("Ñ§Ğ£½±ÖúÑ§½ğ")" target="_top" class="ldparent">Ñ§Ğ£½±ÖúÑ§½ğ</a>
+	| <a href="$cms.getUrl("å­¦æ ¡å¥–åŠ©å­¦é‡‘")" target="_top" class="ldparent">å­¦æ ¡å¥–åŠ©å­¦é‡‘</a>
 	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("Ñ§Ğ£½±ÖúÑ§½ğ",6))
+		#foreach($article in $cms.getContents("å­¦æ ¡å¥–åŠ©å­¦é‡‘",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 	</div>
 </li>
 <li class="ldmc" id="ld5" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("Éç»á½±Ñ§½ğ")" target="_top" class="ldparent">Éç»á½±Ñ§½ğ</a>
+	| <a href="$cms.getUrl("ç¤¾ä¼šå¥–å­¦é‡‘")" target="_top" class="ldparent">ç¤¾ä¼šå¥–å­¦é‡‘</a>
 	<div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("Éç»á½±Ñ§½ğ",6))
+		#foreach($article in $cms.getContents("ç¤¾ä¼šå¥–å­¦é‡‘",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 	</div>
 </li>
 <li class="ldmc" id="ld6" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("Éç»áÖúÑ§½ğ")" target="_top" class="ldparent">Éç»áÖúÑ§½ğ</a>
+	| <a href="$cms.getUrl("ç¤¾ä¼šåŠ©å­¦é‡‘")" target="_top" class="ldparent">ç¤¾ä¼šåŠ©å­¦é‡‘</a>
 
 <div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("Éç»áÖúÑ§½ğ",6))
+		#foreach($article in $cms.getContents("ç¤¾ä¼šåŠ©å­¦é‡‘",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 </div>
 </li>
 <li class="ldmc" id="ld7" style="zoom: 1; z-index: 1;">
-| <a href="$cms.getUrl("»ñ½±¸ĞÑÔ")" target="_top" class="ldparent">»ñ½±¸ĞÑÔ</a>
+| <a href="$cms.getUrl("è·å¥–æ„Ÿè¨€")" target="_top" class="ldparent">è·å¥–æ„Ÿè¨€</a>
 
 <div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("»ñ½±¸ĞÑÔ",6))
+		#foreach($article in $cms.getContents("è·å¥–æ„Ÿè¨€",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 </div>
 </li>
 <li class="ldmc" id="ld8" style="zoom: 1; z-index: 1;">
-	| <a href="$cms.getUrl("ÀøÖ¾¹ÊÊÂ")" target="_top" class="ldparent">ÀøÖ¾¹ÊÊÂ</a>
+	| <a href="$cms.getUrl("åŠ±å¿—æ•…äº‹")" target="_top" class="ldparent">åŠ±å¿—æ•…äº‹</a>
 
 <div id="xmenu" style="width: 250px; z-index: 2;">
-		#foreach($article in $cms.getContents("ÀøÖ¾¹ÊÊÂ",6))
+		#foreach($article in $cms.getContents("åŠ±å¿—æ•…äº‹",6))
 			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
 		#end
 
 </div>
 </li>
 <li class="ldmc" id="ld9" style="zoom: 1; z-index: 1;">
-	| <a href="/cms/modules/onlineLeaveMessageList.jsp?typeID=71&siteID=83" target="_top">ÁôÑÔ±¾</a></li>
+	| <a href="/cms/modules/onlineLeaveMessageList.jsp?typeID=71&siteID=83" target="_top">ç•™è¨€æœ¬</a></li>
 
 <script type="text/JavaScript">for(n=1;n<=9;n++)ldc(n,false);</script>
 			
@@ -96,14 +96,14 @@
 <form id="form1" name="form1" method="post" action="http://www.xsjzwh.ynu.edu.cn/Search.asp?action=search" target="_blank">
 <input name="KeyWord" type="text" id="KeyWord" value="" maxlength="10" size="13" class="borderall" style="height:17px;">
   <select name="bbs" id="bbs" style="display:none;">
-    <option value="1">Õ¾ÄÚËÑË÷</option>
-    <option value="3">°Ù¶ÈËÑË÷</option>
-    <option value="4">GoogleËÑË÷</option>
-    <option value="5">youdaoËÑË÷</option>
-    <option value="6">ÑÅ»¢ËÑË÷</option>
+    <option value="1">ç«™å†…æœç´¢</option>
+    <option value="3">ç™¾åº¦æœç´¢</option>
+    <option value="4">Googleæœç´¢</option>
+    <option value="5">youdaoæœç´¢</option>
+    <option value="6">é›…è™æœç´¢</option>
   </select>
-<input type="submit" name="Submit" value="ËÑ Ë÷" class="borderall" style="height:21px;">
+<input type="submit" name="Submit" value="æœ ç´¢" class="borderall" style="height:21px;">
 </form>
 </div>
-ÄúÏÖÔÚµÄÎ»ÖÃ£º<a href="./js/index.html">ÔÆÄÏ´óÑ§½±ÖúÎÄ»¯Íø</a> &gt;&gt; Ê×Ò³
+æ‚¨ç°åœ¨çš„ä½ç½®ï¼š<a href="./js/index.html">äº‘å—å¤§å­¦å¥–åŠ©æ–‡åŒ–ç½‘</a> &gt;&gt; é¦–é¡µ
 </div>

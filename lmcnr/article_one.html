@@ -1,0 +1,226 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>$curArticle.name</title>
+<meta content="all" name="robots">
+<meta content="云南大学省部共建教育部自然资源药物化学重点实验室" name="description">
+<link href="css/style_index.css" type="text/css" rel="stylesheet" />
+<link href="css/EMPTYSTYLE.css" type="text/css" rel="stylesheet" />
+<link href="css/cicro_userdefine.css" type="text/css" rel="stylesheet" />
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2">
+
+<table cellspacing="0" width="780" align="center" bgcolor="#FFFFFF" border="0">
+<tbody>
+<tr>
+<td><img height="119" src="images/1.jpg" width="780"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" height="20">
+<table style="BORDER-COLLAPSE: collapse" height="20" cellspacing="1" width="751" align="center" bgcolor="#FFFFFF" border="0">
+<tbody>
+<tr>
+<td valign="top" width="747" background="" bgcolor="#FFFFFF" colspan="2">
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<div id="CicroUF0256_6368_9893_lmcnr_25__content">#parse("menu.vm")</div></td></tr></table></td></tr></table></td></tr></table></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td><img height="22" alt="" src="images/14.jpg" width="780"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="782" align="center" bgcolor="#FFFFFF" border="0">
+<tbody>
+<tr valign="top">
+<td width="190">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td width="16"><img height="41" src="images/index1_1.gif" width="16"></td>
+<td width="85" background="images/index1_2.gif" height="41">&nbsp;&nbsp;公告</td>
+<td background="images/index1_5.gif"><img height="41" src="images/index1_4.gif" width="30"></td>
+<td width="14"><img height="41" src="images/index1_7.gif" width="14"></td>
+</tr>
+<tr>
+<td background="images/index1_8.gif" height="135">&nbsp;</td>
+<td valign="top" background="images/index1_9.gif" colspan="2">
+<table width="160" height="180" border="0" cellpadding="0" cellspacing="0" id="组件外围表格"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td class="CicroVACRJP_5547_9926_lmcnr_25_rollboard_content"><marquee id="RollBoard3_001U8G5AR_5733_1395_lmcnr_18_scrollArea" direction="up" scrolldelay="1" scrollamount="1" border="0" align="center" valign="top" onMouseOver="RollBoard3_001U8G5AR_5733_1395_lmcnr_18_scrollArea.stop()" onMouseOut="RollBoard3_001U8G5AR_5733_1395_lmcnr_18_scrollArea.start()" width="160" height="180">
+#foreach($article in $cms.getContents("公告",5))
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr class="CicroN6VXMF_0856_4380_lmcnr_25_rollboard_listrow1"><td class="listhead"><img src="images/st_1.gif">&nbsp;&nbsp;$article.name</td></tr><tr class="horizontal"><td><img src="images/spacer.gif" height="1" width="1"></td></tr><tr class="CicroN6VXMF_0856_4380_lmcnr_25_rollboard_listrow1"><td><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td style="word-wrap:break-word"><div id="detail1"> 
+$!{article.summary}</div></td></tr></table></td></tr></table>#end
+</marquee></td></tr></table></td></tr></table></td></tr></table></td>
+<td background="images/index1_10.gif">&nbsp;</td>
+</tr>
+<tr>
+<td><img height="18" src="images/index1_11.gif" width="16"></td>
+<td background="images/index1_12.gif" colspan="2"></td>
+<td><img height="18" src="images/index1_13.gif" width="14"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td background="images/index1_2.gif"><img height="41" src="images/index1_1.gif" width="16"></td>
+<td><img height="41" src="images/index1_2.gif" width="10"></td>
+<td width="89" background="images/index1_2.gif" height="41">最新文章</td>
+<td background="images/index1_5.gif"><img height="41" src="images/index1_4.gif" width="30"></td>
+<td width="140" background="images/index1_5.gif">
+</td>
+<td><img height="41" src="images/index1_7.gif" width="14"></td>
+</tr>
+<tr>
+<td background="images/index1_8.gif">
+</td>
+<td valign="top" align="left" background="images/index1_9.gif" colspan="4">
+<table cellspacing="0" cellpadding="1" width="98%" align="center" border="0"></table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr align="middle">
+<td valign="top" align="left" width="33%" background="">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px"><tr><td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  #foreach($article in $cmsService.getPageDatas("From Content where siteID=$curChannel.site.ID and parentID!=1402 and status=7 order by creationDate desc",1,5))
+    <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroDLP8J2_9158_4820_lmcnr_25_info_listrow1">
+      <td width="1" valign="top"><img src="images/dd.gif" border="0" /></td>
+      <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroDLP8J2_9158_4820_lmcnr_25_info_alistrow1"> 
+	  <span id="CicroDLP8J2_9158_4820_lmcnr_25__dTitle_1">#summary($article.name 8)</span></a></td>
+    </tr>
+    <tr>
+      <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1" /></td>
+    </tr>
+    #end
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr></tr></table></td></tr><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1"><tr><td valign="top" class="CicroM68Z55_4389_7060_lmcnr_25_info_content"><table width="100%" border="0" cellspacing="0" cellpadding="0"></table></td></tr></table></td></tr></table></td></tr></table></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td background="images/index1_10.gif">
+</td>
+</tr>
+<tr>
+<td><img height="18" src="images/index1_11.gif" width="16"></td>
+<td width="250" background="images/index1_12.gif" colspan="4"></td>
+<td><img height="18" src="images/index1_13.gif" width="14"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td background="images/index1_2.gif"><img height="41" src="images/index1_1.gif" width="16"></td>
+<td><img height="41" src="images/index1_2.gif" width="10"></td>
+<td width="89" background="images/index1_2.gif" height="41">热门文章</td>
+<td background="images/index1_5.gif"><img height="41" src="images/index1_4.gif" width="30"></td>
+<td width="140" background="images/index1_5.gif">
+</td>
+<td><img height="41" src="images/index1_7.gif" width="14"></td>
+</tr>
+<tr>
+<td background="images/index1_8.gif">
+</td>
+<td valign="top" align="left" background="images/index1_9.gif" colspan="4">
+<table cellspacing="0" cellpadding="1" width="98%" align="center" border="0"></table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr align="middle">
+<td valign="top" align="left" width="33%" background="">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px"><tr><td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  #foreach($article in $cmsService.getPageDatas("From Content where siteID=$curChannel.site.ID and parentID!=1402 and status=7 order by viewCount desc",1,5))
+    <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroDLP8J2_9158_4820_lmcnr_25_info_listrow1">
+      <td width="1" valign="top"><img src="images/dd.gif" border="0" /></td>
+      <td><a href="$cms.getUrl($article)" target="_blank" title="$article.name" class="CicroDLP8J2_9158_4820_lmcnr_25_info_alistrow1"> 
+	  <span id="CicroDLP8J2_9158_4820_lmcnr_25__dTitle_1">#summary($article.name 8)</span></a></td>
+    </tr>
+    <tr>
+      <td colspan="6" class="horizontal"><img src="images/spacer.gif" width="1" height="1" /></td>
+    </tr>
+    #end
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr></tr></table></td></tr><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1"><tr><td valign="top" class="CicroM68Z55_4389_7060_lmcnr_25_info_content"><table width="100%" border="0" cellspacing="0" cellpadding="0"></table></td></tr></table></td></tr></table></td></tr></table></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td background="images/index1_10.gif">
+</td>
+</tr>
+<tr>
+<td><img height="18" src="images/index1_11.gif" width="16"></td>
+<td width="250" background="images/index1_12.gif" colspan="4"></td>
+<td><img height="18" src="images/index1_13.gif" width="14"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="8" background="images/index_5.gif"></td>
+<td valign="top" align="middle" width="562" bgcolor="#F9F9F9"><br><table cellspacing="0" cellpadding="0" width="97%" border="0">
+<tbody>
+<tr>
+<td width="16"><img height="41" src="images/index1_1.gif" width="16"></td>
+<td width="250" background="images/index1_2.gif" height="41">
+<div align="left"><img src="images/d5.gif">  $curChannel.title</div>
+</td>
+<td width="30" background="images/index1_5.gif"><img height="41" src="images/index1_4.gif" width="30"></td>
+<td background="images/index1_5.gif"></td>
+<td width="14"><img height="41" src="images/index1_7.gif" width="14"></td>
+</tr>
+<tr>
+<td background="images/index1_8.gif"></td>
+<td valign="top" background="images/index1_9.gif" colspan="3">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px"><tr><td><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"><TR></TR></table></td></tr><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1"><tr><td valign="top" class="CicroY55X35_1844_6904_lmcnr_25_info_content">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			
+			<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroF1ZN0Q_6073_9171_lmcnr_25_info_listrow1">
+				<td valign="top">
+					<span>$curArticle.content<br>
+					  #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</span></td>
+				</tr>
+			<tr><td class="horizontal"></td></tr>
+		
+			</table></td></tr></table></td></tr></table></td></tr>
+			</table></td>
+<td width="14" background="images/index1_10.gif" height="100"></td>
+</tr>
+<tr>
+<td><img height="18" src="images/index1_11.gif" width="16"></td>
+<td width="250" background="images/index1_12.gif" colspan="3"></td>
+<td width="14"><img height="18" src="images/index1_13.gif" width="14"></td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="782" align="center" border="0">
+<tbody>
+<tr>
+<td valign="top" align="left" background="images/dx2.gif" height="30">
+<table width="100%" height="21px" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>#parse("link.vm")</td>
+</tr></table></td></tr></table></td>
+</tr>
+<tr>
+<td background="images/dx2.gif" height="30"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="782" align="center" bgcolor="#FFFFFF" border="0">
+<tbody>
+<tr>
+<td valign="bottom" height="22"><img height="22" src="images/14.jpg" width="780"></td>
+</tr>
+<tr>
+<td valign="top" align="middle" height="30">
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0"><tr><td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td class="CicroBTQ68A_8956_2481_lmcnr_25_poweredby_content"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="10%" align="center" valign="middle" class="CicroBTQ68A_8956_2481_lmcnr_25_img_content"></td><td><IMG SRC="images/spacer.gif" WIDTH="1" ALT="列间距"></td><td width="70%" align="center" valign="middle" class="content">#parse("footer.vm")</td><td><IMG SRC="images/spacer.gif" WIDTH="1" ALT="列间距"></td><td align="center" valign="middle"></td></tr></table></td></tr></table></td></tr></table>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

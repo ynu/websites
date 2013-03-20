@@ -1,0 +1,12 @@
+
+<TABLE style="MARGIN-BOTTOM: 8px" border=0 cellSpacing=0 cellPadding=0 width=850 align=center>  
+  <TR>
+    <TD background="images/nav_o.gif" width=8><IMG src="images/nav_l.gif" width=8 height=36></TD>
+    <TD class=nav_m onMouseOver="this.className='nav_o'" onmouseout="this.className='nav_m'"><A href="$cms.getUrl("首页")">首页</A></TD>
+    #foreach($channel in $cms.getTopChildren($rootChannel))
+	<TD class=nav_s>&nbsp;</TD>
+    <TD class=nav_m onMouseOver="this.className='nav_o'" onmouseout="this.className='nav_m'">
+		<A href="$cms.getUrl($channel)">$channel.title</A></TD>
+	 #end   
+    <TD background="images/nav.gif">&nbsp;</TD>
+    <TD width=8><IMG src="images/nav_r.gif" width=8 height=36></TD></TR></TABLE>

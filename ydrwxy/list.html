@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>${curChannel.title}</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style1.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<script type="text/javascript" src="js/stuHover.js"></script>
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="/other/type.files/K7J2JT_9408_9514_ydrwxy_17.css">
+<link rel="stylesheet" type="text/css" href="index.files/cicro_userdefine.css">
+</head>
+<body style="BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url('images/body-bg.gif'); BACKGROUND-REPEAT: repeat">
+
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td></td><td width="780" bgcolor="#D8BE80">
+#parse("header.vm")
+<table style="BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url('images/mainmenu-bg-2.gif'); BACKGROUND-REPEAT: repeat-x" cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle" width="220" height="48"><script language="JavaScript" type="text/javascript">
+//
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray(
+"星期日",
+"星期一",
+"星期二",
+"星期三",
+"星期四",
+"星期五",
+"星期六");
+document.write("今天是&#160;",
+today.getYear(),"年",
+today.getMonth()+1,"月",
+today.getDate(),"日&#160;&#160;",
+d[today.getDay()+1]); 
+//
+												</script></td><td width="20"></td><td>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="24px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置：</td>
+<td valign="middle" class="page">#channelNav()</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td style="BACKGROUND-POSITION: right top; BACKGROUND-IMAGE: url('images/left-bg-1.gif'); BACKGROUND-REPEAT: repeat-y" valign="top" align="middle" width="210">
+<table cellspacing="0" cellpadding="0" width="200" border="0">
+<tbody>
+<tr>
+<td height="5"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="200" border="0">
+<tbody>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x" colspan="3" height="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y" width="1"></td><td align="middle">
+<table width="100%" border="0">
+<tbody>
+<tr>
+<td width="10" height="24"><img height="22" src="images/title_book_01.gif" width="30"></td><td class="title_01">热点信息</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url("images/vert_px.gif"); BACKGROUND-REPEAT: repeat-y" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x" colspan="3" height="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y" width="1"></td><td align="middle">
+<table width="100%" border="0">
+<tbody>
+<tr>
+<td height="160">热点信息</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x" colspan="3" height="1"></td>
+</tr>
+<tr>
+<td colspan="3" height="10"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="200" border="0">
+<tbody>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x" colspan="3" height="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y" width="1"></td><td align="middle">
+<table width="100%" border="0">
+<tbody>
+<tr>
+<td width="10" height="24"><img height="22" src="images/title_book_01.gif" width="30"></td><td class="title_01">搜索</td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/hor_px.gif); BACKGROUND-REPEAT: repeat-x" colspan="3" height="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url(images/vert_px.gif); BACKGROUND-REPEAT: repeat-y" width="1"></td><td align="middle">
+<table width="100%" border="0">
+<tbody>
+<tr>
+<td>
+<table width="180px" height="10px" border="0" align="center" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroKWVJ2D_6361_4078_ydrwxy_25_simsearch_title1">
+<tr>
+<td>站内搜索</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroKWVJ2D_6361_4078_ydrwxy_25_simsearch_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post">
+<input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+<tr>
+<td align="center"><input id="query" name="query" type="text" maxlength="30" class="CicroKWVJ2D_6361_4078_ydrwxy_25_simsearch_input"></td>
+</tr>
+<tr>
+<td colspan="3" class="CicroKWVJ2D_6361_4078_ydrwxy_25_simsearch_horizontal"><IMG SRC="images/spacer.gif" HEIGHT="5" ALT="行间距"></td>
+</tr>
+<tr>
+<td colspan="3" class="CicroKWVJ2D_6361_4078_ydrwxy_25_simsearch_horizontal"><IMG SRC="images/spacer.gif" HEIGHT="5" ALT="行间距"></td>
+</tr>
+<tr>
+<td align="center"><button type="submit" name="Submit" style="width:50" class="CicroKWVJ2D_6361_4078_ydrwxy_25_simsearch_button">搜索</button></td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>function checkform(theForm) { if(theForm.keyword.value.match(/^[\s]*$/) != null) { alert("请输入关键字"); return false; } return true; }</script></td>
+</tr>
+<tr>
+<td><iframe id="GoogleSearch" height="115" marginheight="0" src="http://www.ydrwxy.ynu.edu.cn/googlesearch.htm" frameborder="0" width="100%" name="GoogleSearch" marginwidth="0" scrolling="no" align="middle"></iframe></td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/vert_px.gif'); BACKGROUND-REPEAT: repeat-y" width="1"></td>
+</tr>
+<tr>
+<td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/hor_px.gif'); BACKGROUND-REPEAT: repeat-x" colspan="3" height="1"></td>
+</tr>
+<tr>
+<td colspan="3" height="10"></td>
+</tr>
+</tbody>
+</table>
+</td><td style="BACKGROUND-POSITION: left top; BACKGROUND-IMAGE: url('images/left-bg-2.gif'); BACKGROUND-REPEAT: repeat-y" valign="top" width="14"><img height="24" src="images/left-bg-2.gif" width="14"></td><td valign="top" align="middle">
+<table width="100%" border="0">
+<tbody>
+<tr>
+<td valign="top" height="400">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroALRA7J_7308_8869_ydrwxy_25_info_title1">
+<TR></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroALRA7J_7308_8869_ydrwxy_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" valign="top">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+<tr onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''" class="CicroALRA7J_7308_8869_ydrwxy_25_info_listrow1">
+<td><a class="listrow1" target="_blank" href="$cms.getUrl($article)" title="$article.name">
+<span id="CicroALRA7J_7308_8869_ydrwxy_25__dTitle_1">#summary($article.name 35)</span></a></td><td width="1" height="0" class="CicroALRA7J_7308_8869_ydrwxy_25_info_vertical"><IMG src="images\space.gif" border="0" width="1"></td><td>$cms.format($article.publishDate,"yyyy-MM-dd hh:mm:ss")</td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="listfoot">
+<td>
+<form name="form1">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroALRA7J_7308_8869_ydrwxy_25_info_nov">
+<tr>
+<td class="page">#page()</td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="0">
+<tbody>
+<tr>
+<td height="5"></td>
+</tr>
+<tr>
+<td align="middle" height="60"><script type="text/javascript">
+//
+<!--
+  google_ad_client = "pub-2281215199385521";
+  google_ad_width = 468;
+  google_ad_height = 60;
+  google_ad_format = "468x60_as";
+  google_ad_type = "text_image";
+  google_ad_channel ="9404291933";
+  google_color_border = "FFCC66";
+  google_color_bg = "D8BE80";
+  google_color_link = "F2984C";
+  google_color_url = "674b29";
+  google_color_text = "AA2020";
+//-->
+//
+																</script><script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script></td>
+</tr>
+<tr>
+<td height="5"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle" height="150">
+<table width="100%" height="150px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroKJE7H2_0198_4403_ydrwxy_25__content">#parse("footer.vm")</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td></td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

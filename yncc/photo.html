@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南省电子计算中心</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+  #parse("header.vm")   
+  <div class="content03">
+    <div class="content03_top">
+   <div id="dangqian">您当前的位置：#channelNav()</div>
+      <div class="ser">
+       #parse("search.vm")
+      </div>
+    </div>
+      <div class="content03_bottom">
+      <div class="bottom_title"><h1>$curChannel.title</h1></div>
+      <div class="photo_list">
+      <ul>
+	  #foreach($article in $cms.getPageContents($curChannel,$curPage))
+      <li><a href="$cms.getUrl($article)" target="_blank"><img src="$cms.getPictureUrl($article)" width="120" height="106" border="0" /></a>
+	  		<span><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 6)</a></span></li>
+     #end
+    </ul>
+    <div id="fenye">
+		      #page()
+        </div>
+  </div>
+    
+      </div>
+      </div>
+  </div>
+   <div class="footer02">Copyright ? 2010    云南大学云南省电子计算中心.  All Rights Reserved
+<br />地址：中国云南省昆明市学府路18号  邮编：650223  电话：+86-871-5133358</div>
+</div>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

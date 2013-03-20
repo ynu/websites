@@ -1,0 +1,346 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学离退体工作处</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta content="MSHTML 6.00.2900.2722" name="GENERATOR">
+<style type="text/css">
+/**/
+BODY {
+        BACKGROUND-COLOR: #fff0f5
+}
+/**/
+</style>
+<script language="JavaScript" type="text/JavaScript">
+//
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+//
+				</script>
+<meta name="keywords" content="">
+<meta name="publishDate" content="2005-10-04 21:35:45">
+<meta name="updateDate" content="2005-10-04 20:38:00">
+<meta name="generatDate" content="2005-10-04 20:37:49">
+<meta name="generator" content="CWS 3.0">
+<meta name="Author" content="Cicro Software Inc.">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="Bookmark" href="images/favicon.ico">
+<script language="javascript">
+
+//toHTML 将&lt;替换成<,&gt;替换成>
+//参数 objoct 
+
+function toHTML(objoct)
+{
+	xml = objoct.innerHTML;
+
+	a = xml.replace(/&lt;/ig, '\x3c');
+	b = a.replace(/&gt;/ig, "\x3e");
+	c = b.replace(/&amp;nbsp/ig,"&nbsp");
+    d = c.replace(/&amp;/ig,"");
+	return d;
+}
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine_index.css">
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+
+<div id="Layer1" style="Z-INDEX: 1; WIDTH: 105px; POSITION: absolute; HEIGHT: 86px">
+
+<object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" height="204" width="840" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="_cx" value="22225"><param name="_cy" value="5398"><param name="FlashVars" value=""><param name="Movie" value="images/top.swf"><param name="Src" value="images/top.swf"><param name="WMode" value="Transparent"><param name="Play" value="-1"><param name="Loop" value="-1"><param name="Quality" value="High"><param name="SAlign" value=""><param name="Menu" value="-1"><param name="Base" value=""><param name="AllowScriptAccess" value="always"><param name="Scale" value="ShowAll"><param name="DeviceFont" value="0"><param name="EmbedMovie" value="0"><param name="BGColor" value=""><param name="SWRemote" value=""><param name="MovieData" value=""><param name="SeamlessTabbing" value="1">
+<embed src="images/top.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="840" height="204"></embed>
+</object>
+
+</div>
+<table id="__01" height="952" cellspacing="0" cellpadding="0" width="840" align="center" border="0">
+<tbody>
+<tr>
+<td colspan="4"><img height="79" alt="" src="images/index_01.jpg" width="383" usemap="#map2" border="0"></td><td><img height="79" alt="" src="images/index_02.jpg" width="457" usemap="#map" border="0"></td><td><img height="79" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="36" alt="" src="images/index_03.jpg" width="383"></td><td><img height="36" alt="" src="images/index_04.jpg" width="457"></td><td><img height="36" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td rowspan="3"><img height="185" alt="" src="images/index_05.jpg" width="9"></td><td valign="center" align="middle" background="images/index_06.jpg" colspan="2" rowspan="3">
+<table width="270px" height="180px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroI78037_2521_1773_ltx_25_text_content">
+<div id="CicroI78037_2521_1773_ltx_25__content">
+#foreach($article in $cms.getContents("关于我们",1))
+<P style="FONT-SIZE: 14px; COLOR: #091177"><FONT>
+
+&nbsp;&nbsp;&nbsp; $!{article.summary} ...
+</FONT><A href="$cms.getUrl($article)"><FONT>更多&gt;&gt;&gt;</FONT></A></P>
+#end</div></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td><td rowspan="3"><img height="185" alt="" src="images/index_07.jpg" width="96"></td>
+<td><img height="54" alt="" src="images/index_08.jpg" width="457"></td><td><img height="54" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td><img height="80" alt="" src="images/index_09.jpg" width="457" usemap="#map3" border="0"></td><td><img height="80" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td rowspan="3" valign="top" bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="400px" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="title1">
+<tr></tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroX366V4_8322_9202_ltx_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#set($i=0)
+ #foreach($article in $cms.getContents("宣传栏",5))
+ #set($i=$i+1)
+ #if($i%2==0)
+ <tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow2">
+<td width="1" valign="top"><IMG src="images/yuan.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_self" title="$article.name" class="listrow1"><span id="CicroX366V4_8322_9202_ltx_25__dTitle_1">#summary($article.name 20)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+ #else
+ 
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroX366V4_8322_9202_ltx_25_info_listrow1">
+<td width="1" valign="top"><IMG src="images/yuan.gif" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_self" title="$article.name" class="listrow1"><span id="CicroX366V4_8322_9202_ltx_25__dTitle_1">#summary($article.name 20)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+#end
+
+
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td><td><img height="51" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="84" alt="" src="images/index_11.jpg" width="383"></td><td><img height="84" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="4" rowspan="3"><img height="105" alt="" src="images/index_12.jpg" width="383"></td><td><img height="16" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td><img height="23" alt="" src="images/index_13.jpg" width="457" usemap="#map4" border="0"></td>
+<td><img height="23" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td rowspan="2" valign="top" bgcolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="400px" height="-1px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroQU672I_8479_0123_ltx_25_info_title1">
+<tr></tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroQU672I_8479_0123_ltx_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroQU672I_8479_0123_ltx_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#set($i=0)
+ #foreach($article in $cms.getContents("政策法规",5))
+ #set($i=$i+1)
+ #if($i%2==0) 
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><IMG src="images/b.jpg" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_self" title="$article.name" class="listrow1"><span id="CicroQU672I_8479_0123_ltx_25__dTitle_1">#summary($article.name 20)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#else
+<tr onMouseOut="this.style.backgroundColor=''" onMouseOver="this.style.backgroundColor=''" class="CicroQU672I_8479_0123_ltx_25_info_listrow2">
+<td width="1" valign="top"><IMG src="images/b.jpg" border="0">&nbsp;</td><td><a href="$cms.getUrl($article)" target="_self" title="$article.name" class="listrow1"><span id="CicroQU672I_8479_0123_ltx_25__dTitle_1">#summary($article.name 20)</span></a></td>
+</tr>
+<tr>
+<td colspan="6" class="horizontal"><IMG SRC="images/spacer.gif" width="1" height="1"></td>
+</tr>
+#end
+#end
+
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td><td><img height="66" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="99" alt="" src="images/index_15.jpg" width="383"></td><td><img height="99" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="4" rowspan="2"><img height="71" alt="" src="images/index_16.jpg" width="383"></td><td><img src="images/index_17.jpg" alt="" width="457" height="28" border="0" usemap="#Map5"></td>
+<td><img height="28" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" rowspan="2">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="400px" height="160px">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr></tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroDUZXK7_9667_8747_ltx_25_picinfo_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" class="CicroDUZXK7_9667_8747_ltx_25_picinfo_content">
+<form name="picinfo_piclist_form1" style="margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px">
+<input type="hidden" name="curpage" value="picinfolist/list/curpage">
+<table width="100%" border="0" cellspacing="0" cellpadding="0"></table>
+</form></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroDUZXK7_9667_8747_ltx_25_picinfo_nov">
+<tr>
+<td class="page">首页&nbsp;&nbsp;上一页&nbsp;&nbsp;下一页&nbsp;&nbsp;末页</td>
+</tr>
+</table></td>
+</tr>
+</table></td><td><img height="43" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="2"><img height="164" alt="" src="images/index_19.jpg" width="22"></td><td bgcolor="#FFFFFF">
+<table width="250" height="150" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroKYJ702_6825_6331_ltx_25_rollboard_content">
+<marquee id="RollBoard3_001Z2S601_6718_6651_ltx_18_scrollArea" direction="up" scrolldelay="1" scrollamount="1" border="0" align="center" valign="top" onMouseOver="RollBoard3_001Z2S601_6718_6651_ltx_18_scrollArea.stop()" onMouseOut="RollBoard3_001Z2S601_6718_6651_ltx_18_scrollArea.start()" width="250" height="150">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+ #foreach($article in $cms.getContents("站内公告",5))
+<tr>
+<td style="word-wrap:break-word" class="listrow1">&nbsp;<img src="images/st_1.gif">&nbsp;&nbsp;<a style="color:#183463; font-weight:100">$article.name</a>
+</td>
+</tr>
+<tr height="10"><td>&nbsp;</td></tr>
+#end
+</table></td>
+</tr>
+</table>
+</marquee></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</td><td><img height="164" alt="" src="images/index_21.jpg" width="96"></td><td><img height="164" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="50" alt="" src="images/index_22.jpg" width="383"></td><td><img height="50" alt="" src="images/index_23.jpg" width="457"></td><td><img height="50" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td colspan="5"><img height="78" alt="" src="images/index_24.jpg" width="840"></td><td><img height="78" alt="" src="images/fg.gif" width="1"></td>
+</tr>
+<tr>
+<td><img height="1" alt="" src="images/fg.gif" width="9"></td><td><img height="1" alt="" src="images/fg.gif" width="13"></td><td><img height="1" alt="" src="images/fg.gif" width="265"></td><td><img height="1" alt="" src="images/fg.gif" width="96"></td><td><img height="1" alt="" src="images/fg.gif" width="457"></td><td></td>
+</tr>
+</tbody>
+</table>
+<map id="Map" name="Map">
+<area shape="rect" coords="23,36,112,57" href="$cms.getUrl("宣传兰")">
+<area shape="rect" coords="142,34,225,57" href="$cms.getUrl("娱乐休闲")">
+<area shape="rect" coords="251,35,329,57" href="$cms.getUrl("信息查询")">
+<area shape="rect" coords="343,35,420,57" href="$cms.getUrl("工作交流")">
+</map>
+<map id="Map2" name="Map2">
+<area shape="rect" coords="296,35,375,56" href="$cms.getUrl("政策法规")">
+<area shape="rect" coords="204,34,285,56" href="$cms.getUrl("老年组织")">
+<area shape="rect" coords="113,36,193,58" href="$cms.getUrl("机构概况")">
+</map>
+<map id="Map3" name="Map3">
+<area shape="rect" coords="314,63,358,76" href="$cms.getUrl("宣传栏")">
+</map>
+<map id="Map4" name="Map4">
+<area shape="rect" coords="299,7,344,19" href="$cms.getUrl("政策法规")">
+</map>
+
+
+</body></html>

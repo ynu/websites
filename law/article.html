@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学法学院 - $curArticle.name</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">var def=1;</script>
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("head.vm")	
+	    <div id="content">
+		<div id="list_left">
+#if($curChannel.title=="联系我们"||$curChannel.title=="师资力量"||$curChannel.title=="图书情报")
+                                    #parse("left.vm")
+#else
+			#parse("left1.vm")
+#end			
+                                </div>
+			
+		<div id="article">
+			<h3>$curArticle.name</h3>
+			 <div id="art_from">
+				<span>发文单位：#if($curArticle.source=="") 云南大学法学院 #else $curArticle.source #end </span><span>发文时间：$cms.format($curArticle.publishDate)</span>			 </div>
+			 <div id="pp">
+				$!{curArticle.content}
+				 		 
+			</div>
+			#if ($cmsService.getArticleAttachmentCount($curArticle.ID, 3)>0)
+			<div class="xgfj">
+				<div class="xgfj_title">
+					<img src="images/list_title.gif" width="12"  height="13" alt="最新公告"/>
+					<h4>相关附件</h4>
+				</div>
+				<div class="com_list1">
+					  <dl>
+					  #foreach($doc in $cms.getAttachments($curArticle))
+						  <dd>
+							<span>$cms.format($doc.creationDate)</span>
+							  <a title="$doc.srcFile" href="$cms.getUrl($doc)" target="_blank">
+							  $doc.srcFile</a>						  
+						  </dd>
+					  #end
+					  </dl>
+				
+				</div>
+			</div>
+			#end
+			
+		</div>
+			
+		</div>
+#parse("footer.vm")
+</div>
+</body></html>

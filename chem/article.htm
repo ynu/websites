@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=7.0000" http-equiv="X-UA-Compatible">
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<TITLE>云南大学化学科学与工程学院主页</TITLE>
+<META name=keywords content=化学>
+<META name=description content=云南大学化学科学与工程学院主页>
+<SCRIPT language=javascript src="js/js.js"></SCRIPT>
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+<LINK rel=stylesheet type=text/css href="css/css2.css">
+<STYLE type=text/css>
+.STYLE1 {FONT-SIZE: 14px}
+style2 {LINE-HEIGHT: 25px; FONT-FAMILY: "宋体"; COLOR: #ff0000; FONT-SIZE: 14px; FONT-WEIGHT: bold}
+.STYLE2 {LINE-HEIGHT: 25px; FONT-FAMILY: "宋体"; COLOR: #ff0000; FONT-SIZE: 14px; FONT-WEIGHT: bold}
+BODY {BACKGROUND-REPEAT: repeat}
+.STYLE3 {FONT-FAMILY: "宋体"; COLOR: #333333; FONT-SIZE: 12px}
+.STYLE4 {COLOR: #ff6600}
+</STYLE>
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY style="WIDTH: 100%">
+
+<DIV style="WIDTH: 100%" class=ct>
+<DIV class=ct2>
+<TABLE style="BORDER-BOTTOM: #99bbdd 1px solid; BORDER-LEFT: #99bbdd 1px solid; MARGIN-TOP: 0px; MARGIN-BOTTOM: 2px; BORDER-TOP: #99bbdd 1px solid; BORDER-RIGHT: #99bbdd 1px solid" border=0 cellSpacing=0 cellPadding=0 width=850 align=center height=67>  
+  <TR>
+    <TD vAlign=center background="images/toplogo.gif" align=middle><DIV align=right>#parse("top.vm")</DIV></TD></TR></TABLE></DIV></DIV>
+<DIV style="WIDTH: 100%" class=ct>
+<DIV class=ct2>
+<TABLE style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 2px" border=0 cellSpacing=0 cellPadding=0 width=850 align=center height=111>  
+  <TR>
+    <TD vAlign=bottom align=middle>
+      <DIV align=right><A href="http://www.chem.ynu.edu.cn/"></A>
+      <OBJECT codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 width=850 height=111>
+	  <PARAM NAME="movie" VALUE="images/topflash.swf"><PARAM NAME="quality" VALUE="high"> 
+	  <embed src="images/topflash.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="850" height="111"></embed> </OBJECT></DIV></TD></TR></TABLE></DIV></DIV>
+<DIV style="WIDTH: 100%" class=ct>
+<DIV class=ct2>#parse("menu.vm")</DIV>
+</DIV>
+<table width="854" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td bgcolor="#FFFFFF"><table border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="850" align="left" valign="top"><div class="pathnav"> 您当前位置：#foreach($tmpChannel in $cms.getPathChannels($curChannel))<a href="$cms.getUrl($tmpChannel)">$tmpChannel.title</a>#end &gt;&gt; 阅读文章 </div>
+            <table border="0" align="center" cellpadding="0" cellspacing="0" class="cbox">
+              <tr>
+                <td><table width="846" border="0" align="center" cellpadding="0" cellspacing="0" style="table-layout: fixed; word-wrap:break-word;">
+                    <tr>
+                      <td><div style="text-align:center;"> <h1>$curArticle.name</h1>
+                      </div>
+                          <div class="content_more">$!{curArticle.source} 来源：$!{curArticle.source} 浏览：<span id="News_Hits"><script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script></span> 次</div>
+                        <div class="zoom">
+						<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR>
+<TD class=CicroX6RWMY_9866_6128_chem_25_text_content>
+<DIV id=CicroX6RWMY_9866_6128_chem_25__content>$curArticle.content<br>
+  #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end</DIV></TD></TR></TBODY></TABLE>
+                        </div></td>
+                    </tr>
+                  </table>
+			<div style="padding:5px; margin-top:8px; margin-bottom:8px;" align="center">
+           <div style="width:50%; float:left;">
+			上一篇：#foreach($article in $cmsService.getPageDatas("From Content where parentID=$curChannel.ID and sortID<'$curArticle.sortID' order by sortID desc",1,1))
+<a href="$cms.getUrl($article)">$article.name</a>
+#end
+</div>
+				 <div style="width:50%; float:right;"> 下一篇：#foreach($article in $cmsService.getPageDatas("From Content where parentID=$curChannel.ID and sortID>'$curArticle.sortID' order by sortID asc",1,1))
+<a href="$cms.getUrl($article)">$article.name</a>
+#end</div>
+                  </div>
+				  
+				  <div class="xtitle_box">
+                  <div class="xtitle"><h3>相关文章</h3></div>
+                  <div style="padding:5px;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+					  	 #foreach($article in $cms.getRelatesByKeyword($curArticle,1,5))
+						<tr><td class="newstitle"><div>·<a href="$cms.getUrl($article)" >$article.name</a></div><span> $cms.format($article.publishDate)</span></td></tr>
+						#end
+					</table>
+                  </div>
+				  </div>
+                </td>
+              </tr>
+          </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<DIV class=ct>
+<DIV class=ct2>#parse("bottom.vm")</DIV>
+</DIV>
+<DIV class=ct>
+<DIV class=ct2>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=854 align=center>
+  
+  <TR>
+    <TD class=foot>#parse("footer.vm")</TD>
+  </TR></TABLE></DIV></DIV>
+
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+
+</body></html>

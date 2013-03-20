@@ -1,0 +1,164 @@
+?<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+<TITLE>云大党建—— $curArticle.name </TITLE>
+<META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+<STYLE type=text/css>
+.gun {	FONT-FAMILY: "宋体"; FONT-SIZE: 12px; TEXT-DECORATION: none}
+A:active {	FONT-FAMILY: "宋体"; COLOR: #0066ff; FONT-SIZE: 12px; TEXT-DECORATION: none}
+BODY {	MARGIN: 0px}
+.title{ font-family:"宋体"; font-size:12px; font-weight:bold; text-align:center; line-height:30px;}
+.publishdate{font-family:"宋体"; font-size:12px; text-align:center}
+</STYLE>
+<LINK rel=stylesheet type=text/css href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/content_cicro_userdefine.css">
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+
+</HEAD>
+<BODY bgColor=#fdfdfd>
+
+<TABLE border=0 cellSpacing=0 width=769 align=center height=155>
+  <TBODY>
+  <TR>
+    <TD height=130 vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" height=1>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+            height="100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                  height="100%">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV id=CicroY4P2O7_2997_8230_dj_25__content><IMG 
+                        border=0 
+                        src="images/0_0_logo2.gif"></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD bgColor=#ffcc00 height=25 vAlign=center align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" height=1>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+            height="100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                  height="100%">
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <DIV id=CicroNA81VY_2769_2194_dj_25__content>#parse("menu.vm")</DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=769 bgColor=#ffffff 
+align=center height=577>
+  <TBODY>
+  <TR>
+    <TD height=577 vAlign=top width=188 align=middle><BR>
+      <TABLE border=0 cellSpacing=1 cellPadding=0 width="88%" bgColor=#000000 
+      height=45>
+        <TBODY></TBODY></TABLE></TD>
+    <TD vAlign=top width=581><BR>
+      <DIV align=center>
+      <TABLE class=gun border=0 cellSpacing=1 cellPadding=0 width=769 
+      bgColor=#000000 height=500>
+        <TBODY>
+        <TR>
+          <TD bgColor=#ffffff height=782 vAlign=top>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width=769>
+              <TBODY>
+              <TR>
+                <TD height=30 vAlign=top align=left>
+                  <TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                        height=1>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE border=0 cellSpacing=1 cellPadding=0>
+                                <TBODY>
+                                <TR>
+                                <TD>
+                                <TABLE border=0 cellSpacing=0 cellPadding=0 width="600">                                
+                                <TR class=CicroZW47X2_2990_1989_dj_25_Local_page>
+                                <TD width="75" vAlign=center>当前位置：</TD>
+                                <TD width="525" vAlign=left class=CicroZW47X2_2990_1989_dj_25_Local_page>#channelNav()</TD>
+                                </TR></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD height=737 vAlign=top align=left>
+                  <TABLE id=组件外围表格 border=0 cellSpacing=0 cellPadding=0 
+                  width="100%" height=1>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                        height="100%">
+                          <TBODY>
+                          <TR>
+                            <TD vAlign=top>
+							 #foreach($doc in $cms.getAttachments($curArticle))
+                              <TABLE border=0 cellSpacing=0 cellPadding=0 
+                              width="100%" height="100%">
+                                <TBODY>
+                                <TR>
+                                <TD 
+                                class=CicroR5TU46_7935_3851_dj_25_info_content 
+                                vAlign=top>
+                                <TABLE border=0 cellSpacing=0 cellPadding=0 width="98%" align=center style="border:1px #999999 solid">
+                               <TR>  <TD width="51%" class="publishdate" style="text-align:left; height:30px; padding-top:5px; ">  文件名称:$curArticle.name</TD>
+                                 <TD width="49%" class="publishdate" style="text-align:left; height:30px; padding-top:5px; ">&nbsp;更新时间：$cms.format($curArticle.publishDate)</TD>
+                               </TR>
+                                <TR>  <TD colspan="2" class="publishdate" style="text-align:left; height:28px;"> 文件大小：$doc.filesize Byte &nbsp;&nbsp; 下载次数：
+                                  <script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script></TD></TR>
+								</TABLE>
+                                <TABLE class=content border=0 cellSpacing=0 
+                                cellPadding=0 width="100%">
+                                <TBODY>
+                                <TR>
+                                <TD class=content vAlign=top width="98%">
+                                <DIV id=content>
+								$doc.name<br/>								
+								 <a href="$cms.getUrl($doc)">$doc.srcFile</a><br/>
+								 </DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>#end</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+              <TR>
+                <TD>&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=769 align=center height=59>
+  <TBODY>
+  <TR>
+    <TD bgColor=#f5f5f5 height=59>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" height=1>
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+            height="100%">
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" 
+                  height="100%">
+                    <TBODY>
+                    <TR>
+                      <TD class=CicroX62A40_8802_3263_dj_25_img_content 
+                      vAlign=center width="10%" align=middle></TD>
+                      <TD 
+                        class=CicroX62A40_8802_3263_dj_25_poweredby_vertical><IMG 
+                        alt=列间距 src="images/spacer.gif" 
+                        width=1></TD>
+                      <TD class=CicroX62A40_8802_3263_dj_25_poweredby_textcontent vAlign=center width="70%" align=middle>
+                        #parse("footer.vm")</TD>
+                      <TD 
+                        class=CicroX62A40_8802_3263_dj_25_poweredby_vertical><IMG 
+                        alt=列间距 src="images/spacer.gif" 
+                        width=1></TD>
+                      <TD class=CicroX62A40_8802_3263_dj_25_img_content 
+                      vAlign=center 
+              align=middle></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+</body></html>

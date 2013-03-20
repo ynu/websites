@@ -1,0 +1,26 @@
+
+<div id="footer"><p>版权所有:云南大学社会科学处</p>
+<p>地址:云南省昆明市翠湖北路2号 邮编:650091</p>
+<p>制作维护:云南大学网络与信息中心</p>
+</div><!--footer END -->
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("hsd.社科处");
+
+} catch(err) {}</script>

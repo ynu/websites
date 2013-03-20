@@ -1,0 +1,21 @@
+
+<TABLE border=0 cellSpacing=2 cellPadding=0>        
+        <TR align=middle>
+          <TD width=20>
+            <DIV align=center><IMG align=absMiddle src="images/t_home.gif" width=16 height=16></DIV></TD>
+          <TD vAlign=center width=60>
+            <DIV align=left><A onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(document.URL);" href="http://www.chem.ynu.edu.cn/#">设为首页</A></DIV></TD>
+          <TD vAlign=center width=10>&nbsp;</TD></TR>
+        <TR align=middle>
+          <TD width=20>
+            <DIV align=center><IMG align=absMiddle src="images/t_bookmark.gif" width=15 height=13></DIV></TD>
+          <TD width=60>
+            <DIV align=left><A onclick=window.external.AddFavorite(document.URL,document.title); href="http://www.chem.ynu.edu.cn/#">加入收藏</A></DIV></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR align=middle>
+          <TD width=20>
+            <DIV align=center><IMG align=absMiddle src="images/t_book.gif" width=15 height=16></DIV></TD>
+          <TD width=60>
+            <DIV align=left><A href="/cms/modules/createOnlineLeaveMessage.jsp?typeID=5&siteID=$curChannel.site.ID" target="_blank">请您留言</A></DIV></TD>
+          <TD 
+width=10>&nbsp;</TD></TR></TABLE>

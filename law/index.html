@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问云南大学法学院</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">var def=1;</script>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+	#parse("head.vm")
+	    <div id="content">
+			<div id="left">
+				<div class="topbg"></div>
+				<div class="midbg">
+					<div class="picnews">
+						<div class="title">
+							<a href="$cms.getUrl("学院新闻")">更多>></a>
+						</div>
+						<div class="flashnews">
+							<SCRIPT type=text/javascript>
+									var imgUrl=new Array();
+									var imgLink=new Array();
+									var imgName=new Array();
+									var n=1;
+									#foreach($article in $cms.getContents("学院新闻", 20))
+                                    #if ($cms.hasPicture($article))
+                                    imgUrl[n] = "$cms.getPictureUrl($article)";
+                                    imgLink[n] = "$cms.getUrl($article)";
+                                    var vTitle='$article.name';
+                                    if (vTitle.length>18)
+                                    vTitle=vTitle.substring(0,18)+"...";
+                                    imgName[n] = vTitle;
+                                    n++;
+                                    #end
+                                    #end
+
+																		
+											var texts = "";
+											var links = "";
+											var pics = "";
+											var count=1;
+											for(var h=1; h<n; h++) {
+											if (count>6)
+											break;
+											if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+												if (imgName[h].length > 20)
+												imgName[h] = imgName[h].substring(0, 20) + "...";
+												texts += imgName[h] + "|";
+												links += imgLink[h] + "|";
+												pics += imgUrl[h] + "|";
+												count++;
+												}
+											}
+											texts = texts.substring(0, texts.length-1);
+											links = links.substring(0, links.length-1);
+											pics = pics.substring(0, pics.length-1);
+											var focus_width=206
+											var focus_height=151
+											var text_height=0
+											var swf_height = focus_height+text_height
+											document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+											
+							document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high">');				
+											document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+											
+											document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+											
+											document.write('<embed src="focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#000000" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+							</SCRIPT>						</div>
+					</div>
+					<div class="piclinks">
+
+						<div class="link01"><img src="images/piclink02.jpg" width="193" height="58" /></div>
+						<div class="btn"><a href="$cms.getUrl("研究生招生")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+						
+						<div class="link01"><img src="images/piclink03.jpg" width="193" height="58" /></div>
+						<div class="btn"><a href="$cms.getUrl("本科生招生")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+												
+						<div class="link01"><img src="images/piclink04.jpg" width="193" height="58" /></div>
+						<div class="btn"><a href="$cms.getUrl("图书情报")"><img  src="images/enterbtn.gif" width="66" height="21"/></a></div>
+						
+					</div>
+				</div>
+				<div class="botbg"></div>
+			</div>
+			<div id="mid">
+				<div class="tzgg">
+					<div class="title">
+						<a href="$cms.getUrl("学院新闻")">更多>></a>
+					</div>
+					<div class="con">
+						<div class="tab_list2">
+								  <dl>
+								  #foreach($article in $cms.getContents("学院新闻",6))
+									  <dd>
+											<span>[$cms.format($article.publishDate)]</span>
+										  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  #summary($article.name 25)</a>									  </dd>
+								  #end
+								  </dl>
+					  </div>
+					</div>
+				</div>
+				
+				<div class="xwzx">
+					<div class="title">
+						<a href="$cms.getUrl("通知公告")">更多>></a>
+					</div>
+					<div class="con">
+						<div class="tab_list3">
+								  <dl>
+									 #foreach($article in $cms.getContents("通知公告",9)) 
+									   <dd>
+											<span>[$cms.format($article.publishDate)]</span>
+										   <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  #summary($article.name 25)</a>									 
+									   </dd>
+								     #end
+								  </dl>
+						</div>
+					</div>
+				    <div class="bot"></div>
+				</div>
+				
+			</div>
+			<div id="right">
+				<div class="topbg"></div>
+				<div class="midbg">
+					<div class="mail">
+						<a href="mailto:ydfxy2006@126.com"><img src="images/index_10.jpg" width="193" height="60" /></a>
+						<a href="$cms.getUrl("联系我们")"><img  src="images/index_15.jpg" width="193" height="60"/></a>
+					</div>
+					<div class="xnlinks">
+						<div class="title"></div>
+						<div class="con">
+							<ul>
+							#foreach($article in $cms.getContents("友情链接",9))
+								<li><a href="$cms.getUrl($article)">$article.name</a></li>
+							#end
+							</ul>
+						</div>
+					</div>
+					<div class="count">
+						<h3><script src="/cms/modules/channelVisitLog.jsp?parentID=$curChannel.ID"></script></h3>
+					</div>
+				</div>
+				<div class="botbg"></div>				
+			</div>
+		</div>
+#parse("footer.vm")
+</div>
+
+</body></html>

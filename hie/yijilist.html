@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/style.css" type="text/css" rel="stylesheet"  />
+	<SCRIPT language=javascript src="js/time1.js"></SCRIPT>
+	<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+	<title>高等教育研究院</title>
+</head>
+<body>
+
+	<div class="whole">
+	#parse("head.vm")	
+		<div class="list_menu">
+                                          <h3>$curChannel.title</h3>
+			<ul>
+			#foreach($channel in $cms.getChildren($curChannel))
+#if($channel.title=="资料室"||$channel.title=="推荐资源")
+#foreach($channel1 in $cms.getChildren($channel,0,1))
+<li><a href="$cms.getUrl($channel1)">$channel.title</a></li>
+#end
+#else
+<li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+                     #end  #end
+			</ul>
+                                                
+			<div class="menubtm">
+				<img src="images/menubtm_1.jpg" width="195" height="180" />
+			</div>
+		<!--   左侧列表end  --></div>
+		<div class="list_content">
+		
+			<div class="listside_right">
+				<div class="subbar">
+					<span>您现在的位置：</span>
+					<a href="$cms.getUrl("首页")">首页</a>&gt;&gt;
+					#if($curChannel.parent.title=="首页")
+					<a href="$cms.getUrl($curChannel)">$curChannel.title</a>
+					#else
+					#foreach($channel in $cms.getChildren($curChannel.parent,0,1))
+					<a href="$cms.getUrl($channel)">$curChannel.parent.title</a>
+					#end
+					&gt;&gt;<a href="#">$curChannel.title</a>
+					#end
+				</div>
+				<ul>
+				#foreach($article in $cms.getPageContents($curChannel,$curPage))
+					<li>
+						<span>$cms.format($article.publishDate)</span>
+						<a href="$cms.getUrl($article)">$article.name</a>
+					</li>
+				#end
+					
+				</ul>
+				<div class="btmlink">
+					<a href="#">共$totalPage页</a>
+					<a class="btmlinkcurrent" href="#">第$curPage页</a>
+					<a href="$cms.getIndexFileName($curChannel, 1)">首 页</a>
+					<a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a>
+					<a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</a>
+					<a href="$cms.getIndexFileName($curChannel, $totalPage)">尾 页</a>
+				</div>									
+			<!--  右侧内容 end  --></div>
+		
+		
+		<!--  右侧列表内容end  --></div>
+                     #parse("footer.vm")
+	</div>
+
+</body></html>

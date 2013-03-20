@@ -1,0 +1,266 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>$curChannel.title</title>
+
+<style type="text/css">
+<!--
+body,td,th {
+ font-size: 12px;
+ color: #462800;
+}
+.line{line-height:150%;}
+a:link {
+ color: #462800;
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+ color: #462800;
+}
+a:hover {
+ text-decoration: none;
+ color: #FF3300;
+}
+a:active {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a01:link {
+ color: #ffffff;FILTER: dropshadow(color=#8E6C21 offx=1,offy=1,positive=1)
+ text-decoration: none;
+}
+.a01:visited {
+ text-decoration: none;
+ color: #ffffff;FILTER: dropshadow(color=#8E6C21 offx=1,offy=1,positive=1)
+}
+.a01:hover {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a01:active {
+ text-decoration: none;
+ color: #FF3300;
+}
+.bg {
+ background-repeat: no-repeat;
+ background-position: left top;
+}
+body {
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+}
+-->
+</style>
+
+</head>
+<body bgcolor="#ffffff" onLoad="toPage(1)" screen_capture_injected="true">
+
+
+<div style="DISPLAY: none"> 
+<div id="TRS" name="TRS">
+
+ #foreach($article in $cms.getPageContents($curChannel,$curPage))
+     <a href="$cms.getUrl($article)">$article.name </a>
+     <font color="#808080">$cms.format($article.publishDate, "yyyy-MM-dd")</font>
+     <br><br>
+ #end     
+                                                
+
+</div></div>
+<table id="Table_01" cellspacing="0" cellpadding="0" width="770" align="center" border="0">
+<tbody>
+<tr>                                                          
+<td width="7" background="/images/lm_01.gif"></td>
+<td width="756">                                                     
+#parse("header.vm")  
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>                                                                         
+<tr>                          
+<td width="3"></td>
+<td width="200">&nbsp;</td>                              
+<td width="19" background="/images/lm_07.gif">&nbsp;</td>
+<td width="534">
+#foreach($tmpChannel in $cms.getPathChannels($curChannel.parent))
+    <a href="$cms.getUrl($tmpChannel)">$tmpChannel.title</a>&raquo;
+#end             
+$curChannel.title
+</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>                           
+<tr>
+<td width="3"></td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle" width="186" background="/images/left-01.GIF" height="38">$curChannel.title</td>  
+<td class="bg" valign="top" width="14" background="/images/left-04.gif" rowspan="3">&nbsp;</td></tr>
+<tr>                                                                   
+<td background="/images/left-02.GIF" height="180">
+<table cellspacing="0" cellpadding="0" width="170" align="center" border="0">
+<tbody>
+<tr>
+<td align="middle">
+#foreach($channel in $cms.getChildren($curChannel))
+    <A href=$cms.getUrl($channel)>$channel.title</A><br><br>
+#end
+
+
+</td></tr></tbody></table></td></tr>
+<tr>
+<td height="11"><img height="11" src="/images/left-03.gif" width="186"></td></tr></tbody></table><br>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle" width="186" background="/images/left-01.GIF" height="6"></td>
+<td class="bg" valign="top" width="14" background="/images/left-04.gif" rowspan="3">&nbsp;</td></tr>
+<tr>
+<td align="middle" background="/images/left-02.GIF" height="180">
+<table height="150" cellspacing="0" cellpadding="0" width="150" border="0">
+<tbody>
+<tr>
+<td align="middle"></td></tr></tbody></table></td></tr>
+<tr>
+<td height="11"><img height="11" src="/images/left-03.gif" width="186"></td></tr></tbody></table></td>
+<td valign="top" background="/images/lm_07.gif">&nbsp;</td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td background="/images/ri-01.gif" height="20">&nbsp;</td></tr>
+<tr>
+<td background="/images/ri-bg.gif">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td width="9%">&nbsp;</td>
+<td class="line" width="87%">
+<div id="content"><table width="98%" border="0" cellspacing="0" cellpadding="0" class="black">
+<tbody><tr><td align="left" valign="MIDDLE"><br>ddddf</td></tr></tbody></table></div>
+<hr>
+
+ <div class="sort">
+                            <a href="$cms.getIndexFileName($curChannel, $prePage)"> <  上一页</a>  
+                            #foreach($currPage in [1..$totalPage])
+                            <a href="$cms.getIndexFileName($curChannel, $currPage)">$currPage</a> 
+                            #end
+                            <a href="$cms.getIndexFileName($curChannel, $nextPage)"> 下一页  > </a>
+                        </div>
+  
+
+<td width="4%">&nbsp;</td></tr></tbody></table></td></tr>
+<tr>
+<td background="/images/ri-02.gif" height="19">&nbsp;</td></tr></tbody></table></td></tr>
+<tr>
+<td width="3"></td>
+<td width="200">&nbsp;</td>
+<td width="19" background="/images/lm_07.gif">&nbsp;</td>
+<td width="534">&nbsp;</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td background="/images/lm_05.gif" height="8"></td></tr>
+<tr>
+<td align="middle" height="70"><table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle" height="70">
+<p>版权所有：云南大学工商管理与旅游管理学院</p>
+<p>&nbsp;地址：昆明市翠湖北路2号 邮编：650091&nbsp;&nbsp; Email：<a href="mailto:btms@ynu.edu.cn"><font color="#000033">btms@ynu.edu.cn</font></a></p></td></tr></tbody></table></td></tr></tbody></table></td>
+<td width="7" background="/images/lm_03.gif"></td></tr></tbody></table><input class="text" id="CP" type="hidden" size="2" value="1" name="CP">
+<script>
+<!--
+var pageNum=20; //每页条数
+var outlines=document.getElementsByName("TRS"); //概览记录对象
+var pageCount=0; //总页数
+if(outlines.length%pageNum>0){
+ pageCount = ((outlines.length - (outlines.length%pageNum))/pageNum +1);
+}
+else
+ pageCount = outlines.length/pageNum;
+var CP=document.getElementById("CP");
+//var CP1=document.getElementById("CP1");
+var FileBody=document.getElementById("content");
+/**
+ * getCurrPage(_currentPage)规范跳转页码函数
+ * _currentPage 跳转页码输入值
+*/
+function getCurrPage(_currentPage){
+ var cPage =1;
+ if( _currentPage<=0 || _currentPage=="")
+  cPage =1;
+ else if(_currentPage>pageCount)
+  cPage = pageCount;
+ else
+  cPage = _currentPage;
+ return cPage;
+}
+/**
+ * goto()直接跳转函数
+*/
+function goto(){
+  toPage(CP.value);
+}
+function toPage(_pageNo){
+ var pageHtml = "<TABLE WIDTH=\"98%\" BORDER=\"0\" CELLSPACING=\"0\" CELLPADDING=\"0\" class=black>\r\n";
+ var cP = getCurrPage(_pageNo);
+ var startPos = cP*pageNum-pageNum;
+ var endPos = 0;
+ if(cP*pageNum>outlines.length)
+  endPos=outlines.length;
+ else
+  endPos = cP*pageNum;
+ for(var i=startPos;i<endPos;i++){
+   if(i==0){
+    pageHtml+="<TR><TD WIDTH=\"87%\" HEIGHT=\"20\" ALIGN=\"CENTER\" VALIGN=\"MIDDLE\">";
+   }
+   pageHtml += outlines[i].innerHTML;
+ }
+ pageHtml +="</table>";
+ CP.value = cP;
+ //CP1.value = cP;
+ FileBody.innerHTML= pageHtml;
+ showPageLineNum();
+ return false;
+}
+/**
+ * showPageLineNum()页面显示状态条函数
+*/
+function showPageLineNum(){
+ var pL = "";
+ if(CP.value!=1){
+  pL+="<a href=# onclick=\"toPage(1)\" class=a6>第一页</a>&nbsp;";
+  pL+="<a href=# onclick=\"toPage("+(CP.value-1)+")\" class=a6>上一页</a>&nbsp;";
+ }
+ else{
+  pL+="第一页&nbsp;"
+  pL+="上一页&nbsp;"
+ }
+ for(var pageN=1;pageN<=pageCount;pageN++){
+  if(pageN==CP.value){
+  pL+="<font color=red><b>"+pageN+"</b></font>&nbsp;";
+  }
+  else
+  pL += "<a href=# onclick=\"toPage("+pageN+")\" class=a6>"+pageN+"</a>&nbsp;";
+ }
+ if(CP.value<pageCount){
+  pL+="<a href=# onclick=\"toPage("+((CP.value)*1+1)+")\" class=a6>下一页</a>&nbsp;";
+  pL+="<a href=# onclick=\"toPage("+pageCount+")\" class=a6>尾页</a>&nbsp;";
+ }
+ else{
+  pL+="下一页&nbsp;"
+  pL+="尾页&nbsp;"
+ }
+ pL += "共<font color=red><b> "+pageCount+" </b></font>页&nbsp;共<font color=red><b> "+outlines.length+" </b></font>条记录";
+ var showPageLine = document.getElementsByName("pl");
+ showPageLine[0].innerHTML = pL;
+}
+--></script>
+ 
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+
+</body></html>

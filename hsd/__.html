@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+    
+
+<title>首页</title><title>
+
+</title>
+</head>
+
+<body screen_capture_injected="true">
+
+
+    
+
+<div id="container">    
+
+#parse("header.vm")
+<div id="wrapper">
+    <div id="leftbar">
+
+        <div id="cmail">
+          <a href="mailto:skccz@ynu.edu.cn">处长信箱</a>
+       </div>
+       #parse("notice.vm")
+
+
+        <h3>联系方式</h3>
+        <div id="info">
+            <font color="white"><p>项目科：5033826</p>
+            <p>成果科：5036257</p>
+            <p>办公室：5032648</p>
+            <p>邮箱：shekechu@ynu.edu.cn</p></font>
+        </div>
+
+        <h3>学校科研帐号</h3>
+        <div id="info">
+            <font color="white"><p>户名：云南大学</p>
+            <p>帐号：134000413563</p>
+            <p>开户行：<br>中国银行云南省分行</p></font>
+        </div>
+
+        #parse("links.vm")        
+    </div><!--leftbar END -->
+
+    <div id="content">
+        <div id="news">
+            <div id="news_pic"><!-- flash begin -->
+             #parse("flash.vm")   
+
+            </div><!--news_pic END -->
+      
+            <div id="news_con"> 
+        <h2><a href="$cms.getUrl("社科动态")">more...</a></h2>
+        <ul>
+            #foreach($article in $cms.getContents("社科动态",10))
+                <LI>
+                    <font color="gray">[ $cms.format($article.publishDate, "yyyy-MM-dd") ]</font>
+
+#if("$!article.isTip" != "0") 
+
+<a href="$cms.getUrl($article)"><font color="#FF0000">[置顶]#summary($article.name 16)</font></a>
+
+#else
+
+<a href="$cms.getUrl($article)">#summary($article.name 20)</a>
+
+#end
+                    
+                </LI>
+            #end
+        </ul>                                                             
+      </div><!--news_con END -->
+        </div><!--news END -->
+
+        <div id="con">
+        <h5>学术交流<a href="$cms.getUrl("学术交流")">more...</a></h5>
+        <ul>
+            #foreach($article in $cms.getContents("学术交流",10))
+
+                <LI>
+                    <font color="gray">[ $cms.format($article.publishDate, "yyyy-MM-dd") ]</font>
+                    #if("$!article.isTip" != "0") 
+
+<a href="$cms.getUrl($article)"><font color="#FF0000">[置顶]#summary($article.name 14)</font></a>
+
+#else
+
+<a href="$cms.getUrl($article)">#summary($article.name 16)</a>
+
+#end
+                </LI>
+            #end
+        </ul>
+    </div><!--con END -->
+
+        <div id="con">
+    <h5>文科刊物<a href="$cms.getUrl("文科刊物")">more...</a></h5>
+      <div id="pub">
+  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    
+    <tbody><tr>
+        <td>
+            <a class="pimg" href="http://www.sxzx.ynu.edu.cn/">
+                <img border="0" alt="思想战线" src="images/1.png" width="70" height="100">
+            </a>
+            <span style="display:block;">
+                <a href="http://www.sxzx.ynu.edu.cn/">思想战线</a>
+            </span> 
+        </td>
+        
+      <td><a class="pimg" href="http://www.yndxxbskb.ynu.edu.cn/structure/index.xml"><img border="0" alt="云南大学学报（社科版）" src="images/2.png" width="70" height="100"></a> <span><br><a href="http://www.yndxxbskb.ynu.edu.cn/structure/index.xml">云南大学学报(社科版)</a></span> </td>
+      <td><a class="pimg" href="http://www.xbzx.ynu.edu.cn/"><img border="0" alt="西南边疆" src="images/3.png" width="70" height="100"></a> <span><br><a href="http://www.xbzx.ynu.edu.cn/">西南边疆民族研究</a></span> </td>
+    </tr>
+    <tr>
+      <td><a class="pimg" href="http://ynxf.qikan.com/"><img border="0" alt="云南大学学报（法学版）" src="images/4.png" width="70" height="100"></a> <span><br><a href="http://ynxf.qikan.com/">云南大学学报(法学版)</a></span> </td>
+      <td><a class="pimg" href="http://www.hie.ynu.edu.cn/structure/index.xml"><img border="0" alt="学园" src="images/5.png" width="70" height="100"></a> <span><br><a href="http://www.hie.ynu.edu.cn/structure/index.xml">学园</a></span> </td>
+    </tr>
+  </tbody></table>
+          </div>
+    </div><!--pub END -->
+
+        <div id="con2">
+ 
+  
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center"> 
+   <tbody> 
+    <tr> 
+     <td width="30"><img alt="科研查询" src="images/kycx.png" width="30" height="120"></td> 
+     <td height="90">
+<!--显示单位图片--> 
+      
+   <table border="0" cellspacing="0" cellpadding="0" width="98%" align="center"> 
+       <tbody> 
+        <tr> 
+         <td height="90">
+          <div align="center"> 
+           <title=cssci查询 target="_blank"><a href="http://www.cssci.com.cn/"><img style="FILTER: " border="0" hspace="0" alt="CSSCI查询" src="images/cssci.png" width="90" height="90"></a>
+          </title=cssci查询></div>
+         </td> 
+         <td height="90"> 
+          <div align="center"> 
+           <title=项目查询 target="_blank"><a href="$cms.getUrl("项目立项")"><img style="FILTER: " border="0" hspace="0" alt="项目查询" src="images/xmcx.png" width="90" height="90"></a>
+          </title=项目查询></div>
+         </td> 
+<td height="90"> 
+          <div align="center"> 
+           <title=成果查询 target="_blank"><a href="$cms.getUrl("获奖名单")"><img style="FILTER: " border="0" hspace="0" alt="成果查询" src="images/cgcx.png" width="90" height="90"></a>
+          </title=成果查询></div>
+         </td> 
+        </tr></tbody></table>
+    </td></tr></tbody></table> 
+   </div>
+   <!--科研查询框架结束-->
+
+        <div id="con2">
+ 
+  
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" align="center"> 
+   <tbody> 
+    <tr> 
+     <td width="30"><img alt="社科统计" src="images/sktj.png" width="30" height="120"></td> 
+     <td height="90">
+<!--显示单位图片--> 
+      <table border="0" cellspacing="0" cellpadding="0" width="98%" align="center"> 
+       <tbody> 
+        <tr> 
+         <td height="90">
+          <div align="center"> 
+           <title=cssci查询 target="_blank"><a href="http://www.hsd.ynu.edu.cn/p/hsd_sy_tj"><img style="FILTER: " border="0" hspace="0" alt="统计表格" src="images/tjbg.png" width="113" height="90"></a>
+          </title=cssci查询></div>
+         </td> 
+         <td height="90"> 
+          <div align="center">                     
+           <title=项目查询 target="_blank"><a href="http://202.203.208.106"><img style="FILTER: " border="0" hspace="0" alt="管理系统" src="images/glxt.png" width="113" height="90"></a>
+          </title=项目查询></div>
+         </td> 
+        </tr></tbody></table>
+    </td></tr></tbody></table> 
+   </div><!--社科统计框架结束-->
+
+
+
+    </div><!--content END -->
+</div><!--wrapper END -->
+
+<div id="outlink">
+<!--显示单位图片--> 
+      <table border="0" cellspacing="0" cellpadding="0" width="98%" align="center"> 
+       <tbody> 
+        <tr>
+         <td height="50"> 
+          <div align="center"> 
+           <title=云南大学 target="_blank"><a href="http://www.ynu.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="云南大学" src="images/ynu.png" width="120" height="39"></a>
+          </title=云南大学></div>
+         </td> 
+         <td height="50">
+          <div align="center"> 
+           <title=北京大学 target="_blank"><a href="http://www.pku.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="北京大学" src="images/pku.png" width="120" height="37"></a>
+          </title=北京大学></div>
+         </td>
+         <td height="50"> 
+          <div align="center"> 
+           <title=中国人民大学 target="_blank"><a href="http://www.ruc.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="中国人民大学" src="images/rmu.png" width="120" height="35"></a>
+          </title=中国人民大学></div>
+         </td> 
+         <td height="50"> 
+          <div align="center"> 
+           <title=复旦大学 target="_blank"><a href="http://www.fudan.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="复旦大学" src="images/fdu.png" width="93" height="38"></a>
+          </title=复旦大学></div>
+         </td> 
+         <td height="50"> 
+          <div align="center"> 
+           <title=武汉大学 target="_blank"><a href="http://www.whu.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="武汉大学" src="images/whu.png" width="120" height="35"></a>
+          </title=武汉大学></div>
+         </td> 
+         <td height="50">
+          <div align="center"> 
+           <title=南京大学 target="_blank"><a href="http://www.nju.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="南京大学" src="images/nju.png" width="91" height="38"></a>
+          </title=南京大学></div>
+         </td> 
+         <td height="50">
+          <div align="center"> 
+           <title=中山大学 target="_blank"><a href="http://www.zsu.edu.cn/" target="_blank"><img style="FILTER: " border="0" hspace="0" alt="中山大学" src="images/zsu.png" width="120" height="38"></a>
+          </title=中山大学></div>
+         </td> 
+
+        </tr></tbody></table>
+   </div><!--社科统计框架结束-->
+
+    
+#parse("footer.vm")
+</div><!--container END -->
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+
+</body></html>

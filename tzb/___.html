@@ -1,0 +1,239 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学党委统战部</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<link href="css/chromestyle.css" type="text/css" rel="stylesheet">
+<script src="js/chrome.js" type="text/javascript"></script>
+<meta content="MSHTML 6.00.2900.5764" name="GENERATOR">
+
+<meta name="keywords" content="">
+<meta name="publishDate" content="2009-07-02 09:40:17">
+<meta name="updateDate" content="2009-05-06 13:46:39">
+<meta name="generatDate" content="2009-05-06 13:46:39">
+<meta name="generator" content="CWS 3.0">
+<meta name="Author" content="Cicro Software Inc.">
+
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script><script language="javascript">
+
+//toHTML 将&lt;替换成<,&gt;替换成>
+//参数 objoct 
+
+function toHTML(objoct)
+{
+	xml = objoct.innerHTML;
+
+	a = xml.replace(/&lt;/ig, '\x3c');
+	b = a.replace(/&gt;/ig, "\x3e");
+	c = b.replace(/&amp;nbsp/ig,"&nbsp");
+    d = c.replace(/&amp;/ig,"");
+	return d;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/RU4G1A_2181_6733_tzb_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine_tz.css">
+
+
+</head>
+<body>
+
+<div id="container">
+#parse("header.vm")
+<div id="leftbar">
+<table width="180" height="140" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroAD88ZK_9537_0418_tzb_25_rollboard_title1">
+<tr>
+<td>滚动公告</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroAD88ZK_9537_0418_tzb_25_rollboard_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroAD88ZK_9537_0418_tzb_25_rollboard_content">
+<marquee id="RollBoard3_001F61F3V_2075_0981_tzb_18_scrollArea" direction="up" scrolldelay="1" scrollamount="1" border="0" align="center" valign="top" onMouseOver="RollBoard3_001F61F3V_2075_0981_tzb_18_scrollArea.stop()" onMouseOut="RollBoard3_001F61F3V_2075_0981_tzb_18_scrollArea.start()" width="180" height="140">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+#foreach($article in $cms.getContents("公告栏",10))
+<tr class="CicroAD88ZK_9537_0418_tzb_25_rollboard_listrow1">
+<td class="CicroAD88ZK_9537_0418_tzb_25_rollboard_listhead">&nbsp;$article.name</td>
+</tr>
+<tr class="horizontal">
+<td height="20">&nbsp;</td>
+</tr>
+#end
+</table>
+
+</marquee>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="180px" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroY7C47E_9390_3342_tzb_25_text_content">
+<div style="font-size:12px; padding-top:25px; ">部长信箱：
+tongzhanbu@ynu.edu.cn</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div id="content">
+<table>
+<tbody>
+<tr>
+<td width="540">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="25px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="content">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置:
+#foreach($tmpChannel in $cms.getPathChannels($curChannel.parent))
+ #set($count=$cms.getChannelCount(${channel.ID}))
+ #if($count==0)
+<a href="$cms.getUrl($tmpChannel)" style="color:#000000">$tmpChannel.title</a>
+#else
+ #foreach($chiChannel in $cms.getChildren($tmpChannel,0,1))
+<a href="$cms.getUrl($chiChannel)" style="color:#000000">$tmpChannel.title</a>
+#end
+#end
+&raquo;#end $curChannel.title</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="100%" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="title1">
+<TR></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroN03D5P_2367_5719_tzb_25_info_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" valign="top">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+<tr onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''" class="CicroN03D5P_2367_5719_tzb_25_info_listrow1">
+<td width="1" valign="top"><img src="images/ico2.gif"></td><td><a class="CicroN03D5P_2367_5719_tzb_25_info_listrow1_a" target="_blank" href="$cms.getUrl($article)" title="$article.name"><span id="CicroN03D5P_2367_5719_tzb_25__dTitle_1">$article.name</span></a></td><td width="1" height="0" class="vertical"><IMG src="images/space.gif" border="0" width="1"></td><td>$cms.format($article.publishDate)</td>
+</tr>
+<tr class="horizontal">
+<td colspan="30" width="1" height="0"><IMG src="images/space.gif" border="0" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="CicroN03D5P_2367_5719_tzb_25_info_listfoot">
+<td>
+
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="nov">
+<tr>
+<td class="page">共$totalPage页，当前第<font color=red>$curPage</font>页&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, 1)" style="color:#000000">最前页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)" style="color:#000000">上一页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $nextPage)" style="color:#000000">下一页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $totalPage)" style="color:#000000">最后页</a></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+#parse("footer.vm")
+</div>
+
+</body></html>

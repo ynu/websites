@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>基建处</title>
+<link rel="stylesheet" type="text/css" href="css/EMPTYSTYLE.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine_jjnews.css">
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+<body bgcolor="#FFFFFF">
+
+<table style="BACKGROUND-IMAGE: url(images/10.jpg); WIDTH: 695px; HEIGHT: 121px" cellspacing="1" cellpadding="1" width="692" align="center" border="0">
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table style="BACKGROUND-IMAGE: none; WIDTH: 692px; HEIGHT: 30px" cellspacing="0" cellpadding="1" width="692" align="center" border="0">
+<tbody>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroV2PG1J_8670_8696_ydjj_25_Local_maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroV2PG1J_8670_8696_ydjj_25_Local_content">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr class="page">
+<td valign="middle">当前位置：</td><td class="page" valign="middle">#channelNav()</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table style="BACKGROUND-IMAGE: none; WIDTH: 41px; HEIGHT: 32px" cellspacing="1" cellpadding="1" width="41" align="center" border="0">
+<tbody>
+<tr>
+<td>
+<table style="BACKGROUND-IMAGE: none; WIDTH: 688px; HEIGHT: 28px" cellspacing="0" cellpadding="0" width="688" align="center" border="0">
+<tbody>
+<tr>
+<td>
+<table width="695px" height="381px" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="CicroVMF7SR_1413_4857_ydjj_25_rollinfo_ftitle">
+<tr>
+<td>$curChannel.title</td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="maintable"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+      <tr>
+        <td valign="top" class="CicroVMF7SR_1413_4857_ydjj_25_rollinfo_content"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td valign="top"><img src="images/shim.gif" width="1" height="1" /><br />
+                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr class="listrow1">
+<td style="padding-left:5px;">文件名称：$curArticle.name</td>
+</tr>
+<tr>
+<td id="tr_id" class="CicroKSW2QH_5455_7443_ydzc_25_download_horizontal" colspan="3"><img src="images/spacer.gif" height="1" width="1"></td>
+</tr>
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr class="listrow2">
+<td width="60%" style="padding-left:5px;">文件大小：
+
+#set($i=0)
+ #foreach($doc in $cms.getAttachments($curArticle))
+ #set($i=$i+1)
+ #if($i==1)
+$doc.filesize byte
+#end
+#end
+
+<br>所属分类：常用表格下载<br>下载次数：<script src="/cms/web/count.jsp?articleID=$curArticle.ID"></script><br>更新时间：$cms.format($curArticle.publishDate,"yyyy-MM-dd hh:mm:ss")<br>
+</td><td class="vertical"><img src="images/spacer.gif" width="1" height="1"></td><td width="40%" align="center"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td>
+            </tr>
+          </tbody>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="BACKGROUND-IMAGE: none; WIDTH: 695px; HEIGHT: 28px" cellspacing="0" cellpadding="0" width="688" align="center" border="0">
+<tbody>
+<tr>
+<td>
+<p style="TEXT-ALIGN: center">
+<strong>Copyright&nbsp; <font size="2">2005 云南大学基建处 地址:云南大学映秋院&nbsp;&nbsp;
+电话:5031101</font></strong>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body></html>

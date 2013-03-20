@@ -1,0 +1,56 @@
+
+<div class="side">
+            <img src="images/m_01.jpg" width="33" height="800"  />
+        </div>                                                       
+        <div class="header">                                        
+            <img src="images/m_02.jpg" width="404" height="141" title="高等教育研究院" alt="高等教育研究院"  />
+            <div class="header_right">                              
+                <div class="toplinks">                               
+                    <a href="javascript:window.external.AddFavorite('', '高等教育研究院')">加入收藏</a>|
+                    <a href="" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('');return(false);" style="behavior: url(#default#homepage)">设为首页</a>
+|                                                                               
+                    <a href="#">English</a>
+                </div>
+                <div class="m_notice">                                                                                          
+                    <marquee direction="left" width="220" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="3">
+                        <span>诚:恪守真诚&nbsp;</span>
+                        <span>新:标新立异&nbsp;</span>                
+                        <span>效:求质重效&nbsp;</span>
+                        <span>容:兼容并包</span>
+                    </marquee>
+                </div>
+            </div>
+        <!--      页眉end     --></div>
+        <div class="nav">
+            <div class="header_nav">            
+                <ul>
+                    <li style="width:76px;"><a href="$cms.getUrl("首页")" class="nav_off" title="首页">首页</a></li>
+                    #set($i=0)
+                    #foreach($channel in $cms.getTopChildren($rootChannel))
+                    #set($i=$i+1)
+                        #if($channel.title!="下载中心")
+                            <li onMouseOver="onOver('cue_lable0$i')" onMouseOut="onOut('cue_lable0$i')" style="width:76px;">
+                            <a href="#" target="_self" class="nav_off" title="$channel.title">
+                          <span class="off_d" >$channel.title</span></a>
+                        <div class="cue_lable0$i" style="visibility:hidden;width:76px;left:0">
+                            <ul>
+                        #foreach($channel1 in $cms.getChildren($channel))
+                            #if($channel1.title=="云南省高等教育学会"||$channel1.title=="资料室"||$channel1.title=="推荐资源"||$channel1.title=="团队与导师")
+                                #foreach($channel2 in $cms.getChildren($channel1,0,1))
+                                    <li style="width:76px;"><a href="$cms.getUrl($channel2)" target="_self" title="$channel1.title">$channel1.title</a></li>
+                                #end
+                            #else
+                                <li style="width:76px;"><a href="$cms.getUrl($channel1)" target="_self" title="$channel1.title">$channel1.title</a></li>
+                            #end
+                        #end
+                            </ul>
+                        </div>
+                    </li>
+                        #else
+                    <li style="width:76px;"><a href="$cms.getUrl($channel)" class="nav_off" title="$channel.title">$channel.title</a></li>
+                        #end
+                    #end
+                </ul>
+            </div>
+            
+        <!--     导航end     --></div>

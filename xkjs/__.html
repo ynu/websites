@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	首页 - 云南大学学科建设网
+</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css"></head>
+
+<body screen_capture_injected="true">
+
+
+    
+
+<div id="container">
+    <div id="content">
+    #parse("top.vm")
+        	
+
+<script type="text/javascript">
+function goLink()
+{
+    var s = document.getElementById("moreLinks");
+    if(s.value != "") window.open(s.value);
+}
+</script>
+
+<div id="middle">
+    <div id="con1"> 
+        <div id="flashnews">
+  #parse("flash.vm")          
+            
+
+        </div>
+	<div id="news" style="left: 0px; top: 0px; bottom: 363px;">
+	    <h3>建设动态</h3>
+		<ul>
+		    #foreach($article in $cms.getContents("建设动态",7))
+	<li>
+		<a href="$cms.getUrl($article)" title="$article.name" target="_blank">
+			#summary($article.name 14)
+		</a>
+		<em>[$cms.format($article.publishDate,"MM-dd")]</em>
+	</li>
+#end       
+		</ul>
+	</div>
+        </div>
+        <div id="con1">
+	<div id="search">
+		<h3>站内搜索</h3>
+		<br>
+		
+
+<form action="http://www.google.cn/search" method="get">
+    <input name="sitesearch" value="www.xkjs.ynu.edu.cn" type="hidden">
+    <input name="hl" value="zh-CN" type="hidden">
+    <input onfocus="if( this.value==&#39;用 Google 搜索&#39;) {this.value=&#39;&#39; };" name="q" id="query" value="用 Google 搜索" type="text">
+    <input name="Search" value="搜索" attr="value" type="submit">
+</form>
+		
+        <div>总访问量：24394</div>
+                <div>最近一周：456</div>
+                <div>最近一月：1567</div>
+	</div>
+	<div id="notice">
+		<h3>通知公告</h3>
+		<ul>
+            
+                   #foreach($article in $cms.getContents("通知公告",7))
+	<li>
+		<a href="$cms.getUrl($article)" title="$article.name" target="_blank">
+			#summary($article.name 14)
+		</a>
+		<em>[$cms.format($article.publishDate,"MM-dd")]</em>
+	</li>
+#end                 		
+		</ul>
+	</div>
+       </div>
+</div>
+<div id="right">
+
+	<div id="xndh">
+		<h3><span>校内导航</span></h3>
+		<ul>
+			<li><a href="http://www.grs.ynu.edu.cn/">研究生部</a></li>
+			<li><a href="http://www.211.ynu.edu.cn/">重点项目办</a></li>
+			<li><a href="http://www.rsc.ynu.edu.cn/">人事处</a></li>
+			<li><a href="http://www.sto.ynu.edu.cn/">科研处</a></li>
+			<li><a href="http://www.hsd.ynu.edu.cn/">社科处</a></li>
+			<li><a href="http://www.news.ynu.edu.cn/">宣传部</a></li>
+		</ul>
+		<br>
+	</div>
+	<div id="link">
+		<h3>热点链接</h3>
+		<ul>
+
+			<li><a href="http://www.moe.edu.cn/" target="_blank">中华人民共和国教育部</a></li>
+			<li><a href="http://www.moe.edu.cn/" target="_blank">国务院学位办</a></li>
+			<li><a href="http://www.cdgdc.edu.cn/" target="_blank">教育部学位与研究生教育发展中心</a></li>
+			<li><a href="http://www.ynjy.cn/" target="_blank">云南省教育厅</a></li>
+			<li><a href="http://www.ynjy.cn/Article/List/List_115.shtml">云南省学位办</a></li>
+			<li><a href="http://www.hie.edu.cn/" target="_blank">高校改革发展网</a></li>
+			<li><a href="http://www.eol.cn/" target="_blank">中国教育在线</a></li>
+		</ul>
+
+友情链接:
+
+        <select id="moreLinks" onchange="goLink()">
+            <option value="" selected="">更多...</option>
+            <option value="http://www.pku.edu.cn">北大</option>
+            <option value="http://www.tsinghua.edu.cn">清华</option>
+            <option value="http://www.fudan.edu.cn">复旦</option>
+            <option value="http://www.ruc.edu.cn">人大</option>
+        </select>
+	</div>
+</div>
+
+    
+
+        <div id="footer">
+            <p>2011 ? 云南大学学科建设办  电话：0871-5033585</p>
+            <p>地址：昆明市翠湖北路2号 邮编：650091</p>
+            <p>技术支持：云南大学网络与信息中心</p>
+        </div>
+    </div>
+</div>
+
+</body></html>

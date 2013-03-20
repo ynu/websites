@@ -1,0 +1,24 @@
+
+Copyright &copy; 2010    云南大学云南省电子计算中心.  All Rights Reserved
+<br />地址：中国云南省昆明市学府路18号  邮编：650223  电话：+86-871-5133358
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("yncc.省电子计算中心");
+
+} catch(err) {}</script>

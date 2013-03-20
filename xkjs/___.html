@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body screen_capture_injected="true">
+<div id="container">
+    <div id="content">
+        #parse("top.vm")
+<div id="left">
+            <div id="search">
+                <h3>站内搜索</h3>
+            </div>
+
+            <div id="link">
+	        <h3>热点链接</h3>
+			<ul>
+				<li><a href="http://www.moe.edu.cn/" target="_blank">中华人民共和国教育部</a></li>
+				<li><a href="http://www.moe.edu.cn/" target="_blank">国务院学位办</a></li>
+				<li><a href="http://www.cdgdc.edu.cn/" target="_blank">教育部学位与研究生教育发展中心</a></li>
+				<li><a href="http://www.ynjy.cn/" target="_blank">云南省教育厅</a></li>
+				<li><a href="http://www.xkjs.ynu.edu.cn/Xkjs/ListPosts/0901f802-121e-4c14-996a-17f4e85f3f44#">云南省学位办</a></li>
+				<li><a href="http://www.hie.edu.cn/" target="_blank">高校改革发展网</a></li>
+				<li><a href="http://www.eol.cn/" target="_blank">中国教育在线</a></li>
+			</ul>
+            </div>
+	</div>
+
+	<div id="con2">
+
+#set( $hasChild = 0)    
+#foreach($channel in $cms.getChildren($curChannel)) 
+#set( $hasChild = 1)
+<div class="p2_post_list">
+<h3>
+        $channel.title<a href="$cms.getUrl($channel)">
+        <img alt="点击查看更多" border="0" src="images/more.jpg"></a>
+    </h3>
+	<ul>
+	    	#foreach($article in $cms.getContents($channel,5))
+		<li>
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+                                                <span>[$cms.format($article.publishDate)]</span>
+
+		</li>
+                                #end            
+	</ul>
+</div>
+
+    #end
+
+#if( $hasChild == 0 )
+<div class="p2_post_list">
+<h3>$curChannel.title</h3>
+	<ul>
+	    	#foreach($article in $cms.getPageContents($curChannel,$curPage))
+		<li>
+			<a href="$cms.getUrl($article)">#summary($article.name 30)</a>
+                                                <span>[$cms.format($article.publishDate)]</span>
+
+		</li>
+                                #end            
+	</ul>
+</div>
+
+<div>
+	<a href="$cms.getIndexFileName($curChannel, $prePage)"> <  上一页</a>  
+	#foreach($currPage in [1..$totalPage])
+		<a href="$cms.getIndexFileName($curChannel, $currPage)">$currPage</a> 
+	#end
+	<a href="$cms.getIndexFileName($curChannel, $nextPage)"> 下一页  > </a>
+
+</div>
+#end
+	</div>
+    
+
+
+    
+
+        <div id="footer">
+            <p>2009 ? 云南大学学科建设办  电话：0871-5033585</p>
+            <p>地址：昆明市翠湖北路2号 邮编：650091</p>
+            <p>技术支持：云南大学网络与信息中心</p>
+        </div>
+    </div>
+</div>
+
+
+</body></html>

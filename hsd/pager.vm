@@ -1,0 +1,8 @@
+
+<div class="Pager">
+    <a href="$cms.getIndexFileName($curChannel, $prePage)"> <  上一页</a>  
+    #foreach($currPage in [1..$totalPage])
+        <a href="$cms.getIndexFileName($curChannel, $currPage)">$currPage</a> 
+    #end
+    <a href="$cms.getIndexFileName($curChannel, $nextPage)"> 下一页  > </a>
+</div>

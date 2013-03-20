@@ -1,0 +1,28 @@
+
+<TABLE width=750 border=0>
+<TBODY style="COLOR: #000000">
+<TR>
+<TD vAlign=center align=middle><A style="COLOR: #000000" href="http://www.ynu.edu.cn/" target=_blank><font style="FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000">云南大学</FONT> </A><font style="FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000">版权所有 地址：昆明市翠湖北路2号邮编：650091</FONT><BR>&nbsp;</TD></TR>
+<TR>
+<TD align=middle><font style="FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000">|校内链接|校外链接|网络服务|站群简介|联系我们|</FONT></TD></TR></TBODY></TABLE>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("dj.党建");
+
+} catch(err) {}</script>

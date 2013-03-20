@@ -1,0 +1,31 @@
+
+
+<div id="header"></div>
+<div class="nav">
+<div class="nav_left"></div>
+<div class="nav_mid">
+<ul>
+<li style="background:none;width:80px;"><a href="$cms.getUrl("首页")">首 &nbsp;页</a></li>
+#foreach($channel in $cms.getTopChildren($rootChannel))
+#if($channel.title!="下载专区")
+#foreach($channel1 in $cms.getChildren($channel,0,1))
+<li style="width:80px;"><a href="$cms.getUrl($channel1)" >$channel.title</a></li>
+#end
+#else
+<li style="width:80px;"><a href="$cms.getUrl($channel)" >$channel.title</a></li>
+#end
+#end
+<li style="width:80px;"><a href="/cms/modules/onlineLeaveMessageList.jsp?typeID=70&siteID=15">在线咨询</a></li>
+<li class="ser">
+<form name="dataForm" class="search" action="/cms/search/searchResults.jsp" target="_blank" method="post"  onsubmit="doSearch();return false;">
+                    <input name="siteID" size="4" value="15" type = "hidden" />
+					<input type="text" class="notxt" value="输入关键字" id="query" name="query" 
+					onblur="if(this.value=='') {this.value='输入关键字';this.form.query.style.color='#666666'}" 
+					onclick="if(this.value=='输入关键字'){this.value='';this.form.query.style.color='#000'}" />
+					<button type="submit"></button>
+		</form>
+</li>
+</ul>
+</div>
+<div class="nav_right"></div>
+</div>

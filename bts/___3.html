@@ -1,0 +1,145 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>$curArticle.name</title>
+
+<style type="text/css">
+<!--
+body,td,th {
+ font-size: 12px;
+ color: #462800;
+}
+.line{line-height:150%;}
+a:link {
+ color: #462800;
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+ color: #462800;
+}
+a:hover {
+ text-decoration: none;
+ color: #FF3300;
+}
+a:active {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a01:link {
+ color: #ffffff;FILTER: dropshadow(color=#8E6C21 offx=1,offy=1,positive=1)
+ text-decoration: none;
+}
+.a01:visited {
+ text-decoration: none;
+ color: #ffffff;FILTER: dropshadow(color=#8E6C21 offx=1,offy=1,positive=1)
+}
+.a01:hover {
+ text-decoration: none;
+ color: #FF3300;
+}
+.a01:active {
+ text-decoration: none;
+ color: #FF3300;
+}
+.bg {
+ background-repeat: no-repeat;
+ background-position: left top;
+}
+body {
+ margin-left: 0px;
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+}
+-->
+</style>
+
+</head>
+<body bgcolor="#ffffff" screen_capture_injected="true">
+
+
+<table id="Table_01" cellspacing="0" cellpadding="0" width="900" align="center" border="0">
+<tbody>
+<tr>
+<td width="7" background="images/lm_01.gif"></td>
+<td width="886">
+#parse("header.vm")
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td width="3"></td>
+<td valign="top" align="middle">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td class="bg" align="middle" width="186" background="images/left-01.GIF" height="38">学院概况</td>
+<td class="bg" valign="top" width="14" background="images/left-04.gif" rowspan="3">&nbsp;</td></tr>
+<tr>                                                  
+<td valign="top" align="middle" background="images/left-02.GIF" height="180">
+<table cellspacing="0" cellpadding="0" width="170" align="center" border="0">
+<tbody> 
+    #foreach($channel in $cms.getChildren($curChannel))
+        <tr><TD><A href=$cms.getUrl($channel)>$channel.title</A><br><br></TD></tr>   
+    #end
+<!-- <tr><td valign="top" align="middle"><a href="http://222.19.236.2/xygk/xyjs/index.htm" target="_Self">学院介绍</a><br><br></td></tr> 
+<tr>
+<td valign="top" align="middle"><a href="http://222.19.236.2/xygk/xyld/index.htm" target="_Self">学院领导</a><br><br></td></tr> 
+<tr>
+<td valign="top" align="middle"><a href="images/文章页1.htm" target="_Self">历任领导致辞</a><br><br></td></tr> 
+<tr>
+<td valign="top" align="middle"><a href="http://222.19.236.2/xygk/zzjg/index.htm" target="_Self">组织结构</a><br><br></td></tr> 
+<tr>
+<td valign="top" align="middle"><a href="http://222.19.236.2/xygk/xkzyb/index.htm" target="_Self">学科、专业一览表</a><br><br></td></tr> -->
+</tbody>       
+</table>
+</td></tr>
+<tr>                                                                   
+<td height="11"><img height="11" src="images/left-03.gif" width="186"></td></tr></tbody></table><br>
+<table height="150" cellspacing="0" cellpadding="0" width="150" border="0">
+<tbody>
+<tr>
+<td align="middle"></td></tr></tbody></table><br></td>
+<td valign="top" background="images/lm_07.gif">　</td>
+<td valign="top">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td width="570" height="20" background="images/ri-01.gif" class="bg">　</td></tr>
+<tr>               
+<td width="570" background="images/ri-bg.gif" class="bg">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td width="9%">　</td>
+<td class="line" width="87%"> 
+<p align="center"><strong><font color="#804000" size="3">$curArticle.name</font></strong><br></p>
+<hr align="left" width="460">
+$curArticle.content 
+                            
+<br><br>
+</td>
+<td width="4%">　</td></tr></tbody></table></td></tr>
+<tr>
+<td width="570" height="19" background="images/ri-02.gif" class="bg">　</td></tr></tbody></table></td></tr>
+<tr>
+<td width="3"></td>
+<td width="200">　</td>
+<td width="19" background="images/lm_07.gif">　</td>
+<td width="534">　</td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>                                         
+<tr>
+<td background="images/lm_05.gif" height="8"></td></tr>
+<tr>
+<td align="middle" height="70"><table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td align="middle" height="70">
+<p>版权所有：云南大学工商管理与旅游管理学院</p>
+<p>&nbsp;地址：昆明市翠湖北路2号 邮编：650091&nbsp;&nbsp; Email：<a href="mailto:btms@ynu.edu.cn"><font color="#000033">btms@ynu.edu.cn</font></a></p></td></tr></tbody></table></td></tr></tbody></table></td>
+<td width="7" background="images/lm_03.gif"></td></tr></tbody></table>
+
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+
+
+</body></html>

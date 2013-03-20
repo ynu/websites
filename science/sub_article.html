@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问物理科学与技术学院 —— $curArticle.name</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("head.vm")
+<div class="content03">
+#parse("left.vm")
+<div class="con03_right">
+<div class="title07"><h1>学院概况</h1></div>
+<div id="main_b1" >
+		   <h3>我校顺利通过“全国模范职工之家”验收</h3>
+		<div id="author">作者：李晓航 | 发布日期：2010-04-23 11：32：45&nbsp; | &nbsp;浏览量：349989次&nbsp;&nbsp;【 <a href="#">大</a>&nbsp;&nbsp;<a href="#">中</a>&nbsp;&nbsp;<a href="#">小</a>  】<a href="#"> [关闭窗口]</a></div>
+		<div id="work">
+				 金秋送爽，收获的时节。9月14日，我校迎来了以北京市教育工会主席张青山同志为组长的全国模范职工之家验收组一行人，对我校申报“全国模范职工之家”工作进行验收。验收组成员有中国教科文卫体工会卫体工作部部长宋援鲜、北京市总工会宣传教育部长刘蓉、北京市总工会权益部长黄伟、北京市教育工会副主席郭峰、陈先豹，权益保障部长肖树生以及部分北京市教育工会常委。
+    学校党委书记钱军、校长郑文堂、党委副书记王伟、副校长宋国华、纪委书记、工会、教代会主席何志洪、副校长李维平以及教代会常设主席团成员、工会委员、部分职能部门负责人、教职工代表参加了验收汇报会。会议由北京市教育工会副主席郭峰主持。校党委书记钱军同志首先代表学校党委和行政发表了热情洋溢的讲话，对中国教科文卫体工会、北京市总工会、北京市教育工会及兄弟院校各位领导和专家莅临我校检查指导工作表示热烈欢迎，并借此机会，向长期关心和支持学校工会工作的各位领导、专家表示衷心地感谢。
+    钱书记向来宾们介绍了学校发展的历史沿革、近年来在人才培养、学科专业建设、服务社会等方面取得的成就以及未来新校区的发展规划。他指出，我校正站在新的历史起点上，处于提升办学水平的机遇期、办学结构的调整期、发展方式的转变期、深化改革的攻坚期和学校建设的高潮期，学校建设发展的任务繁重。
+    
+		</div>
+        <div id="beside">
+	#if ($cms.getRelatesByKeyword($curArticle,0,5).size()>0)
+<h1>相关文章</h1>
+#end
+#foreach($article in $cms.getRelatesByKeyword($curArticle,0,5))</p>
+<ul>
+<li><span>$cms.format($article.publishDate,"MM-dd")</span><a href="$cms.getUrl($article)" target="_blank" title="$article.name">#summary($article.name 22)</a></li>
+</ul>
+#end 
+
+    </div>
+           </div>
+</div>
+</div>
+#parse("footer.vm")		
+</div>
+
+</body></html>

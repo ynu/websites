@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学资源环境与地球科学学院</title>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("header.vm")
+	
+	<div id="con">
+		<div id="con_right" style="float:left; margin-right:0px; margin-left:8px; display:inline;">
+			<div id="con_right1">
+				<div id="tab04">
+					<div id="tab04_bt">
+						<h3>党团工作</h3>
+						<a href="$cms.getUrl("党团工作")"><img src="images/more.jpg" /></a>
+					</div>
+					<div id="tab04_zw">
+						<div class="tab_list4">
+							<dl>
+								#foreach($article in $cms.getContents("党团工作",5))
+								<dd>
+									<a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 8) </a>&nbsp;$cms.format($article.publishDate,"MM/dd")
+								</dd>
+								#end
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+				<div id="jiange"></div>
+				
+				<div id="tab04">
+					<div id="tab04_bt">
+						<h3>学生工作</h3>
+						<a href="$cms.getUrl("学生工作")"><img src="images/more.jpg" /></a>
+					</div>
+					<div id="tab04_zw">
+						<div class="tab_list4">
+							<dl>
+								#foreach($article in $cms.getContents("学生工作",5))
+								<dd>
+									<a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 8) </a>&nbsp;$cms.format($article.publishDate,"MM/dd")
+								</dd>
+								#end
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+				<div id="jiange"></div>
+				
+				<div id="tab04">
+					<div id="tab04_bt">
+						<h3>资料下载</h3>
+						<a href="$cms.getUrl("资料下载")"><img src="images/more.jpg" /></a>
+					</div>
+					<div id="tab04_zw">
+						<div class="tab_list4">
+							<dl>
+								#foreach($article in $cms.getContents("资料下载",5))
+								<dd>
+									<a href="$cms.getUrl($article)" title="$article.name" target="_blank">#summary($article.name 8) </a>&nbsp;$cms.format($article.publishDate,"MM/dd")
+								</dd>
+								#end
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="list_right" style="width:665px; ">
+			<div id="list_right_bt" style="width:665px; background:url(images/b99.jpg) no-repeat;">
+				<h3 >$curChannel.title </h3>
+				<div class="list_wz">您现在的位置:#parse("channelnav.vm")</div>
+			</div>
+			<div id="list_right_zw" style="width:651px; height:448px; ">
+				<div class="tab_list6">
+							<dl>
+							 #foreach($channel in $cms.getChildren($curChannel))
+								<dd>
+									<a href="$cms.getUrl($channel)" title="$channel.title" target="_blank">$channel.title</a>&nbsp;
+								</dd>
+								#end
+								
+							</dl>
+				  </div>
+				  <div class="fy">共$totalPage页 当前第$curPage页
+				  <a href="$cms.getIndexFileName($curChannel, 1)">首页</a><a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a><a href="$cms.getIndexFileName($curChannel, $nextPage)">下一页</a><a href="$cms.getIndexFileName($curChannel, $totalPage)">尾页</a>
+				  </div>
+			</div>
+		</div>
+	</div>
+	#parse("footer.vm")
+	
+</div>
+
+</body></html>

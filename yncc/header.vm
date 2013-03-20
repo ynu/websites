@@ -1,0 +1,63 @@
+
+ <div id="header"><img src="images/header.jpg" width="768" height="205" border="0" usemap="#Map" />
+<map name="Map" id="Map"><area shape="rect" coords="229,31,677,140" href="$cms.getUrl("首页")" /></map></div>
+<div class="nav">
+			<ul>
+				<li onMouseOver="onOver('space_lable')" onMouseOut="onOut('space_lable')">
+				  <a href="#" target="_self" class="nav_off" >
+					  <span class=" off_d" >单位概况</span></a>
+					<div class="space_lable" style="visibility:hidden;">
+						<ul> #foreach($channel in $cms.getChildren("单位概况"))
+							<li><a href="$cms.getUrl($channel)" target="_self" >$channel.title</a></li>
+							#end							
+						</ul>
+					</div>
+				</li>
+				<li onMouseOver="onOver('group_lable')" onMouseOut="onOut('group_lable')">
+				<a href="$cms.getUrl("公告通知")" target="_self" class="nav_off" id="group">
+				<span class=" off_d">公告通知</span></a>					
+				</li>
+				<li onMouseOver="onOver('down_lable')" onMouseOut="onOut('down_lable')">
+				<a href="$cms.getUrl("工作动态")" target="_self" class="nav_off">
+				 <span class=" off_d">工作动态</span></a>					
+				</li>
+				<li onMouseOver="onOver('cue_lable5')" onMouseOut="onOut('cue_lable5')">
+				<a href="#" target="_self" class="nav_off">
+				 <span class=" off_d">科研开发</span></a>
+					<div class="cue_lable5" style="visibility:hidden;">
+						<ul>
+						   #foreach($channel in $cms.getChildren("科研开发"))
+							<li><a href="$cms.getUrl($channel)" target="_self" >$channel.title</a></li>
+							#end		
+						
+						</ul>
+					</div>
+				</li>
+				<li onMouseOver="onOver('cue_lable4')" onMouseOut="onOut('cue_lable4')">
+				<a href="#" target="_self" class="nav_off">
+				 <span class=" off_d">教育培训</span></a>
+					<div class="cue_lable4" style="visibility:hidden;">
+						<ul>
+							#foreach($channel in $cms.getChildren("教育培训"))
+							<li><a href="$cms.getUrl($channel)" target="_self" >$channel.title</a></li>
+							#end		
+						</ul>
+					</div>
+				</li>
+				<li onMouseOver="onOver('cue_lable')" onMouseOut="onOut('cue_lable')">
+				<a href="$cms.getUrl("党建工作")" class="nav_off" id="product" >
+				 <span class=" off_c">党建工作</span></a>
+					
+				</li>
+				<li onMouseOver="onOver('cue_lable1')" onMouseOut="onOut('cue_lable1')">
+				<a href="$cms.getUrl("荣誉展示")" class="nav_off" id="product" >
+				 <span class=" off_c">荣誉展示</span></a>
+					
+				</li>
+				<li onMouseOver="onOver('cue_lable2')" onMouseOut="onOut('cue_lable2')">
+				<a href="http://www.ynu.edu.cn/" class="nav_off" id="product" target="_blank" >
+				 <span class=" off_c">云大主页</span></a>					
+				</li>
+				
+			</ul>
+		</div>

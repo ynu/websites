@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/style.css" type="text/css" rel="stylesheet"  />
+	<SCRIPT language=javascript src="js/time1.js"></SCRIPT>
+	<script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+<script src="js/hf.js" type="text/javascript"></script>
+	<title>高等教育研究院</title>
+</head>
+<body>
+<div class="whole">
+#parse("head.vm")        
+
+        <div class="first">
+            <div class="play">
+                <p>
+                    <script type="text/javascript">document.write(clock());</script>
+                </p>
+                
+                <div class="flash_news">
+                                <SCRIPT type=text/javascript>
+                                        var imgUrl=new Array();   
+                                        var imgLink=new Array();
+                                        var imgName=new Array();
+                                        var n=1;
+                                        #foreach($article in $cms.getContents("图片新闻", 200))
+                                        #if ($cms.hasPicture($article))
+                                        imgUrl[n] = "$cms.getPictureUrl($article)";
+                                        imgLink[n] = "$cms.getUrl($article)";
+                                        var vTitle='$article.name';
+                                        if (vTitle.length>12)                       
+                                        vTitle=vTitle.substring(0,12)+"...";
+                                        imgName[n] = vTitle;
+                                        n++;
+                                        #end
+                                        #end
+
+                                                var texts = "";
+                                                var links = "";
+                                                var pics = "";
+                                                var count=1;
+                                                for(var h=1; h<n; h++) {
+                                                if (count>6)
+                                                break;
+                                                if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+                                                    if (imgName[h].length > 12)
+                                                    imgName[h] = imgName[h].substring(0, 12) + "...";
+                                                    texts += imgName[h] + "|";
+                                                    links += imgLink[h] + "|";
+                                                    pics += imgUrl[h] + "|";
+                                                       count++;
+                                                    }
+                                                }
+                                                texts = texts.substring(0, texts.length-1);
+                                                links = links.substring(0, links.length-1);
+                                                pics = pics.substring(0, pics.length-1);
+                                                var focus_width=209
+                                                var focus_height=152
+                                                var text_height=25
+                                                var swf_height = focus_height+text_height
+                                                document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+                                                
+                                document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"> <param name="bgcolor" value= "#ebebeb">');                
+                                                document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+                                                
+                                                document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+                                                
+                                                document.write('<embed src="images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ebebeb" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+                                </SCRIPT>
+                <!--   新闻图片end   --></div>
+                
+            </div>
+            <div class="notice">
+                <h3>
+                    <a href="$cms.getUrl("公告通知")">
+                        <img src="images/more.gif" width="31" height="10" />
+                    </a>
+                </h3>
+                
+      <ul>
+        #foreach($article in $cms.getContents("公告通知",0,2)) 
+        <li> <span class="notice_tit">$cms.format($article.publishDate)</span><a href="$cms.getUrl($article)" class="notice_tit">#summary($article.name 24)</a> 
+        </li>
+        #end 
+        #foreach($article in $cms.getContents("公告通知",2,5)) 
+        <li> <span>$cms.format($article.publishDate)</span><a href="#">#summary($article.name 24)</a> </li>
+        #end
+      </ul>
+            <!--    公告通知end     --></div>
+        <!--    第一块end       --></div>
+        <div class="second">
+            <div class="science">
+                <h3>
+                    <a href="$cms.getUrl("科研项目")">
+                        <img src="images/more.gif" width="31" height="10" />
+                    </a>
+                </h3>
+                <ul>
+                #foreach($article in $cms.getContents("科研项目",4))
+                    <li>
+                        <a href="$cms.getUrl($article)">#summary($article.name 15)</a>
+                    </li>
+                #end
+                    
+                </ul>
+                <h3 class="teacher">
+                    <a href="$cms.getUrl("院校生活")">
+                        <img src="images/more.gif" width="31" height="10" />
+                    </a>
+                </h3>
+                <ul>
+                #foreach($article in $cms.getContents("院校生活",4))
+                    <li>                                              
+                        <a href="$cms.getUrl($article)">#summary($article.name 15)</a>
+                    </li>
+                #end
+                </ul>
+            <!--    科研成果end      --></div>
+            <div class="resource">
+                <h3>
+                    <a href="$cms.getUrl("学术资源链接")">
+                        <img src="images/more.gif" width="31" height="10" />
+                    </a>
+                </h3>
+                <ul>
+                #foreach($article in $cms.getContents("学术资源链接",6))
+                    <li>
+                        <a href="$cms.getUrl($article)">#summary($article.name 13)</a>
+                    </li>
+                #end
+                </ul>
+                <span>
+                                                                #foreach($channel in $cms.getChildren("相关机构"))
+                                                                #if($channel.title=="云南省高等教育学会")
+                                                                #foreach($channel1 in $cms.getChildren($channel,0,1))
+                    <a href="$cms.getUrl($channel1)">$channel.title</a>
+                                                                #end
+                                                                #else
+
+                    <a href="$cms.getUrl($channel)">$channel.title</a>
+                #end  #end
+                </span>
+                <div class="search">
+                    <form action="/cms/search/searchResults.jsp" method="post" name="dataForm" target="_blank">
+                    <input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+                        <input type="text" class="searchbox" onclick="if(this.value=='站内搜索'){this.value='';this.form.keywords.style.color='#9b864c'}" onblur="if(this.value=='') {this.value='站内搜索';this.form.keywords.style.color='#9b864c'}" name="query" value="站内搜索" gtbfieldid="7" />
+                        <input class="search_btn" type="submit" name="" value="搜索" />
+                    </form>
+                </div>
+            <!--    学术资源end     --></div>
+            <div class="trends">
+                <h3>
+                    <a href="$cms.getUrl("学术讲座")">
+                        <img src="images/more.gif" width="31" height="10" />
+                    </a>
+                </h3>
+                <ul>
+                #foreach($article in $cms.getContents("学术讲座",4))
+                    <li>
+                        <a href="$cms.getUrl($article)">#summary($article.name 15)</a>
+                    </li>
+                #end
+                </ul>
+                <h3 class="friendship">
+                    <a href="$cms.getUrl("友情链接")">
+                        <img src="images/more.gif" width="31" height="10" />
+                    </a>友情链接
+                </h3>
+                <ul class="friendship_links">
+                #foreach($article in $cms.getContents("友情链接",5))
+                    <li>
+                        <a href="$cms.getUrl($article)">#summary($article.name 13)</a>
+                    </li>
+                #end
+                </ul>
+            <!--    学术动态end     --></div>
+        <!--    第二块end       --></div>
+        <div class="copyright">
+            <p>云南大学高等教育研究院 版权所有<br />
+            云南大学文津楼501室  电话：0871-5033950  邮编：6050091
+            </p>
+            <a href="http://202.203.208.88:8080/cms/">[后台登录]</a>
+        <!--    版权end       --></div>
+    </div>
+
+</body></html>

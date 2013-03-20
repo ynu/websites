@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="css/style.css" rel="stylesheet" type="text/css"><title>
+
+</title></head>
+
+<body screen_capture_injected="true">
+<div id="container">
+
+	#parse("header.vm")	
+    
+
+<div id="wrapper2">
+	<div id="leftbar">
+        #parse("notice.vm")
+		<h3>联系方式</h3>
+		<div id="info">
+		<p>项目科：5033826</p>
+		<p>成果科：5036257</p>
+		<p>办公室：5032648</p>
+		<p>邮箱：shekechu@ynu.edu.cn</p>
+		</div>
+
+		#parse("links.vm")
+	</div><!--leftbar END -->
+	<div id="content2">
+          <div id="list">
+          <ul>
+            #foreach($article in $cms.getPageContents($curChannel,$curPage))
+                <LI>
+#if("$!article.isTip" != "0") 
+
+<a href="$cms.getUrl($article)"><font color="#FF0000">[置顶]#summary($article.name 31)</font></a>
+
+#else
+
+<a href="$cms.getUrl($article)">#summary($article.name 35)</a>
+
+#end
+                    [ $cms.format($article.publishDate, "yyyy-MM-dd") ]
+                </LI>
+            #end
+           </ul>
+          </div>
+    #parse("pager.vm")
+</div><!--wrapper END -->
+
+    
+#parse("footer.vm")	
+</div><!--container END -->
+
+
+
+</div>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

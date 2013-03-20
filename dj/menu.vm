@@ -1,0 +1,38 @@
+
+<TABLE cellSpacing=0 cellPadding=0 width=769 border=0>
+<TBODY>
+<TR>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center><STRONG><A href="http://www.ynu.edu.cn/" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff">云大首页</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center><STRONG><A href="$cms.getUrl("组织部")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">组织部</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center><STRONG><A href="$cms.getUrl("网上党校")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">网上党校</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center><STRONG><A href="$cms.getUrl("校党委")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">组织体系</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b height=29>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center><STRONG></STRONG><STRONG><A href="$cms.getUrl("基层党建")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">基层党建</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center><STRONG><A href="$cms.getUrl("交流园地")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">学习园地</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center><STRONG><A href="$cms.getUrl("统战工作")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">统战工作</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center><STRONG><A href="$cms.getUrl("文档下载")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">文档下载</FONT></A></STRONG></DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center>|</DIV></TD>
+<TD bgColor=#ffb04b>
+<DIV align=center><STRONG><A href="$cms.getUrl("首页")" target=_blank><FONT style="FONT-SIZE: 12px; COLOR: #ffffff" target="_blank">本站首页</FONT></A></STRONG></DIV></TD></TR></TBODY></TABLE>

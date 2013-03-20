@@ -1,0 +1,27 @@
+
+<div id="header">
+<ul>
+<li>
+<a href="http://www.ynu.edu.cn" target="_blank">云大首页</a>
+</li>
+<li>
+<a href="$cms.getUrl($rootChannel)">本站首页</a>
+</li>
+<li>
+<a href="http://202.203.208.26/xiaoyou">校友系统</a>
+</li>
+</ul>
+</div>
+<div id="banner"></div>
+<div id="chromemenu" class="chromestyle">
+<ul>
+#foreach($channel in $cms.getTopChildren($rootChannel))
+<li>
+<a href="$cms.getUrl($channel)">$channel.title</a>
+</li>#end
+
+<li>
+<a href="/cms/modules/createOnlineLeaveMessage.jsp?typeID=8&siteID=$curChannel.site.ID">留言板</a>
+</li>
+</ul>
+</div>

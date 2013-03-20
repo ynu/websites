@@ -1,0 +1,35 @@
+
+<tr>
+<td width="100%" colspan="3"><img src="images/b.jpg" width="766"><br>
+<img src="images/c.jpg" width="766"></td>
+</tr>
+<tr>
+<td bgcolor="#967613" colspan="3" height="20">
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="maintable">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="content">
+<div id="CicroL5104S_2936_9879_sxzx_25__content"><TABLE cellSpacing=0 cellPadding=0 width=700 background="" name="dotted">
+<TBODY>
+<TR>
+<TD><FONT style="FONT-SIZE: 14px; COLOR: #ffffff"> |</FONT>&nbsp;<A href="$cms.getUrl('首页')"><FONT style="FONT-SIZE: 14px; COLOR: #ffffff">首 页</FONT></A>
+#foreach($channel in $cms.getTopChildren($rootChannel))
+&nbsp;<FONT style="FONT-SIZE: 14px; COLOR: #ffffff"> |</FONT>&nbsp;<a href="$cms.getUrl($channel)" title="$channel.title"><FONT style="FONT-SIZE: 14px; COLOR: #ffffff">$channel.title</FONT></A>
+#end
+</TD></TR></TBODY></TABLE></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>

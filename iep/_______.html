@@ -1,0 +1,126 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+<head> 
+<title>云南大学 | 国际合作与交流处 港澳台办</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+ 
+<!-- Site Meta //--> 
+ 
+<!-- Metadata //--> 
+<meta name="copyright" content="Copyright (c) 2010 云南大学网络智能实验室 All Rights Reserved" />
+<meta name="description" content="云大外办,云南大学国际合作与交流处网站,云南大学港澳台事物办公室网站,Yunnan university office of international cooperation and exchange & office of HongKong Macao Taiwan affairs" />
+<meta name="keywords" content="云南大学外办,云南大学国际合作与交流处 港澳台办官方网站,云大外办,Yunnan university office of international cooperation and exchange & office of HongKong Macao Taiwan affairs，Yunnan university" /> 
+<meta name="Robots" contect="all"/>
+<meta name="author" content="jichengyang | tieli#ynu.edu.cn" />
+ 
+ 
+ 
+<!-- CSS //--> 
+<link rel="stylesheet" type="text/css" href="css/global.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" /> 
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> 
+ 
+ 
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-331733-1']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+  var worst_browser_ever = false;
+ 
+</script> 
+ 
+<!-- Additional CSS //--> 
+ 
+<link rel="stylesheet" type="text/css" href="css/news.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="css/sub.css" media="screen" /> 
+<link rel="stylesheet" type="text/css" href="css/jScrollPane.css" media="screen" /> 
+<style type="text/css"> 
+a.jScrollArrowUp {padding:0; height:15px; background-image: url(img/up.gif);}
+a.jScrollArrowDown {padding:0; height:15px; background-image: url(img/dn.gif);}
+.cal td {padding: 3px;}
+</style> 
+			
+ 
+ 
+<!-- IE Conditions //--> 
+ 
+<!--[if lt IE 7.]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" />
+<script defer type="text/javascript" src="js/pngfix.js"></script>
+<script type="text/javascript">
+worst_browser_ever = true;
+</script>
+<![endif]--> 
+ 
+<!-- Javascript //--> 
+<script type="text/javascript"> 
+var jQueryHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+document.write(unescape("%3Cscript src='" + jQueryHost + "ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript" src="js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="js/jScrollPane.js"></script> 
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="js/removeTime.js"></script> 
+<script type="text/javascript" src="js/puc-global.js"></script> 
+</head> 
+<body>
+ 
+
+<div id="top_bg"></div> 
+<div id="content_bg"> 
+  <div id="page-container"> 
+ 
+    #parse("header.vm") 
+    #parse("nav.vm")
+ 
+				<div id="section_title" style="border-top:1px solid #fff;"> 
+   <span style="font-size:24px;">关于我们</span> 
+</div> 
+		
+ 
+<div id="middleBody"> 	
+      <!--SUBS--> 
+      <div id="subnav"> 
+        <ul> 
+           <li id="l7643" class="normal_sub"> <a id="a7643">栏目列表</a></li> 
+          #foreach($channel in $cms.getChildren("栏目列表"))
+           <li><a href=$cms.getUrl($channel)>$channel.title</a> </li>
+           #end            
+        </ul> 
+      </div> 
+      <!--END SUBS--> 
+    
+				
+    
+    <div id="pagebody_holder">   
+     <div id="news_container"> 
+<h3 style="text-align:center; line-height:30px;">$curArticle.name</h3>
+<br /> 
+<div id="news_body">
+<div style="width:85%; margin:auto" >
+$curArticle.content<br>
+#if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end
+</div>
+</div>
+    </div> 
+<div class="clear"></div> 
+</div> 
+#parse("footer.vm") 
+  </div> 
+</div> 
+<div id="bottom_bg"></div> 
+#parse("copyright.vm") 
+
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+
+</body></html>

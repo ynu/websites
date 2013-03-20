@@ -1,0 +1,53 @@
+
+<DIV id=header>
+<div><a href="http://www.iep.ynu.edu.cn/lhlx/13198.htm"><img border=0 src="http://202.203.208.88:8080/cms/binary/images/16/20111202164154692372.png" /></a></div>
+      <DIV id=logo></DIV>
+      <!--  <div id="header-items"><a href="http://email.puc.edu">WEBMAIL</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="https://d2l.puc.edu">D2L</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="https://lantern.puc.edu">LANTERN</a> </div> -->
+      <DIV id=search>
+        <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+         <input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+          <INPUT class=sq-form-field name="query" onBlur="if (this.value == '') { this.value=''; }" 
+onfocus="if (this.value == '') { this.value = ''; }" size=11>
+          <INPUT type=image alt=Search src="/images/search.gif" name=sa>
+        </FORM>
+      </DIV>
+    </DIV>
+
+
+
+<script language="javascript">
+function closeBanner()
+{
+document.getElementById("AdLayer1").style.display="none";
+document.getElementById("AdLayer2").style.display="none";
+}
+function initEcAd() {
+document.all.AdLayer1.style.posTop = -200;
+document.all.AdLayer1.style.visibility = 'visible'
+document.all.AdLayer2.style.posTop = -200;
+document.all.AdLayer2.style.visibility = 'visible'
+MoveLeftLayer('AdLayer1');
+MoveRightLayer('AdLayer2');
+}
+function MoveLeftLayer(layerName) {
+var x = 5;
+var y = 5;
+var diff = (document.body.scrollTop + y - document.all.AdLayer1.style.posTop)*.40;
+var y = document.body.scrollTop + y - diff;
+eval("document.all." + layerName + ".style.posTop = y");
+eval("document.all." + layerName + ".style.posLeft = x");
+setTimeout("MoveLeftLayer('AdLayer1');", 20);
+}
+function MoveRightLayer(layerName) {
+var x = 5;
+var y = 5;
+var diff = (document.body.scrollTop + y - document.all.AdLayer2.style.posTop)*.40;
+var y = document.body.scrollTop + y - diff;
+eval("document.all." + layerName + ".style.posTop = y");
+eval("document.all." + layerName + ".style.posRight = x");
+setTimeout("MoveRightLayer('AdLayer2');", 20);
+}
+document.write("<div id=AdLayer1 style='position: absolute;visibility:hidden;z-index:1'><a onClick='closeBanner();' href='http://cis.chinese.cn' target='_blank'><img border=0 src='http://202.203.208.88:8080/cms/binary/images/16/20111202164223291787.gif' /></a><br><a onClick='closeBanner();' href='#'>关闭</a></div>"
++"<div id=AdLayer2 style='position: absolute;visibility:hidden;z-index:1'><a onClick='closeBanner();' href='http://www.iep.ynu.edu.cn/lhlx/13198.htm' target='_blank'><img border=0 src='http://202.203.208.88:8080/cms/binary/images/16/20111202164215434540.gif' /></a><br><a onClick='closeBanner();' href='#'>关闭</a></div>");
+initEcAd()
+</script>

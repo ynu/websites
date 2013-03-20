@@ -1,0 +1,16 @@
+
+<img src="images/menu.jpg" border="0" usemap="#Map" />
+<map name="Map">
+<area shape="rect" coords="23,2,86,37" href="$cms.getUrl("首页")">
+<area shape="rect" coords="100,2,178,38" href="$cms.getUrl("中心概况")">
+#foreach($article in $cms.getContents("研发项目",0,1))
+<area shape="rect" coords="193,3,265,37" href="$cms.getUrl($article)">
+#end
+#foreach($channel in $cms.getChildren("系统平台",0,1))
+<area shape="rect" coords="283,2,354,37" href="$cms.getUrl($channel)">
+#end
+<area shape="rect" coords="370,2,444,35" href="$cms.getUrl("新闻公告")">
+<area shape="rect" coords="460,2,537,34" href="$cms.getUrl("研发项目")">
+<area shape="rect" coords="552,2,625,36" href="$cms.getUrl("用户指南")">
+<area shape="rect" coords="640,4,723,34" href="$cms.getUrl("资料下载")">
+</map>

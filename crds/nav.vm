@@ -1,0 +1,15 @@
+
+<div id="CicroV3T77C_3031_3646_crds_25__content"><TABLE height=180 cellSpacing=0 cellPadding=0 width=181 border=0>
+<TBODY>
+<TR>
+<TD><A href="$cms.getUrl("中心简介")"><IMG src="images/zhongxin.gif" border=0></A></TD></TR>
+<TR>
+<TD><A href="$cms.getUrl("教师梯队")"><IMG src="images/jiaoshi.gif" border=0></A></TD></TR>
+<TR>
+<TD><A href="$cms.getUrl("学生培养")"><IMG src="images/xuesheng.gif" border=0></A></TD></TR>
+<TR>
+<TD><A href="$cms.getUrl("学术会议")"><IMG src="images/xueshu.gif" border=0></A></TD></TR>
+<TR>
+<TD><A href="$cms.getUrl("国内项目")"><IMG src="images/1_guonei.gif" border=0></A></TD></TR>
+<TR>
+<TD><A href="$cms.getUrl("国际合作项目")"><IMG src="images/1_guoji.gif" border=0></A></TD></TR></TBODY></TABLE></div>

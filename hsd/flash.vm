@@ -1,0 +1,52 @@
+
+<script type=text/javascript>
+
+                                    var imgUrl=new Array();
+                                    var imgLink=new Array();
+                                    var imgName=new Array();
+                                    var titleLength = 18;
+                                    var focus_width = 320;
+                                    var focus_height = 240;
+                                    var text_height = 20;
+                                    var n=1;
+                                            #foreach($article in $cms.getContents("社科动态", 200))
+                                                #if ($cms.hasPicture($article))
+                                                imgUrl[n] = "$cms.getPictureUrl($article)";
+                                                imgLink[n] = "$cms.getUrl($article)";
+                                                var vTitle='$article.name';
+                                                if (vTitle.length>18)
+                                                vTitle=vTitle.substring(0,18)+"...";
+                                                imgName[n] = vTitle;
+                                                n++;
+                                                #end
+                                            #end                                    
+                                                                        
+                                            var texts = "";
+                                            var links = "";                                              
+                                            var pics = "";
+                                            var count=1;
+                                            for(var h=1; h<n; h++) {
+                                            if (count>6)                                    
+                                            break;
+                                            if ((imgUrl[h] !="") && (imgLink[h] !="") && (imgUrl[h].indexOf(".jpg") > 0)){
+                                                if (imgName[h].length > 20)
+                                                imgName[h] = imgName[h].substring(0, 20) + "...";
+                                                texts += imgName[h] + "|";
+                                                links += imgLink[h] + "|";
+                                                pics += imgUrl[h] + "|";
+                                                count++;
+                                                }
+                                            }
+                                            texts = texts.substring(0, texts.length-1);
+                                            links = links.substring(0, links.length-1);
+                                            pics = pics.substring(0, pics.length-1);
+                                            var swf_height = focus_height+text_height        
+                                            document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+                                            
+                            document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="images/focus.swf"><param name="quality" value="high"><param name="bgcolor" value= "#E7F2F2">');                
+                                            document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+                                            
+                                            document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+                                            
+                                            document.write('<embed src="images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#E7F2F2" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+                            </script>

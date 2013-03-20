@@ -1,0 +1,341 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>云南大学工会委员会</title>
+<style type="text/css">
+BODY {        MARGIN: 0px}
+</style>
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+<script language="javascript">
+//toHTML 将&lt;替换成<,&gt;替换成>
+//参数 objoct 
+function toHTML(objoct)
+{
+	xml = objoct.innerHTML;
+
+	a = xml.replace(/&lt;/ig, '\x3c');
+	b = a.replace(/&gt;/ig, "\x3e");
+	c = b.replace(/&amp;nbsp/ig,"&nbsp");
+    d = c.replace(/&amp;/ig,"");
+	return d;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/G3703M_9048_9328_gongh_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/frame_sjkj_cicro_userdefine.css">
+<link rel="stylesheet" type="text/css" href="css/index_cicro_userdefine.css">
+</head>
+<body>
+
+<div align="center">
+<table height="100" cellspacing="0" cellpadding="0" width="1001" border="0">
+<tbody>
+<tr>
+<td valign="top" align="left" width="1">
+<table cellspacing="0" cellpadding="0" width="1001" border="0">
+<tbody>
+<tr>
+<td align="left"><img alt="" hspace="0" src="images/7-3.gif" border="0" usemap="#Map2"></td>
+</tr>
+<map name="Map2">
+<area shape="rect" coords="586,9,961,84" href="$cms.getUrl("首页")">
+</map>
+<tr>
+<td valign="top" align="left" height="205">
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+#parse("menu.vm")
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left">
+<table cellspacing="0" cellpadding="0" width="1001" border="0">
+<tbody>
+<tr>
+<td width="300"><img height="37" src="images/5_100.gif" width="300"></td>
+<td width="642" background="">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="CicroN2ZL8H_9450_2040_gongh_25_Local_content">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr class="CicroN2ZL8H_9450_2040_gongh_25_Local_page">
+<td width="75" valign="middle">当前位置：</td><td width="533" valign="middle" class="CicroN2ZL8H_9450_2040_gongh_25_Local_page">#channelNav()</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td width="59"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" width="1001" align="center" border="0">
+<tbody>
+<tr>
+<td valign="top" align="left" width="82"><img height="258" src="images/ydgh_09.gif" width="82"></td><td valign="top" width="2" background="images/9a_1.gif">
+<table cellspacing="0" cellpadding="0" width="2" border="0">
+<tbody>
+<tr>
+<td height="37"><img height="37" src="images/9a_5.gif" width="2"></td>
+</tr>
+</tbody>
+</table>
+</td><td valign="top" width="215" height="100">
+<table cellspacing="0" cellpadding="0" width="215" border="0">
+<tbody>
+<tr>
+<td valign="top" width="30" bgcolor="#F3F3F3" height="168"><img height="30" src="images/9a_600.gif" width="30"></td><td valign="top" bgcolor="#F3F3F3" height="200">
+<table width="180" height="190" border="0" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="CicroNX81KV_8463_0280_gongh_25_rollboard_content"><marquee id="RollBoard3_001RJ346Y_8981_7806_gongh_18_scrollArea" direction="up" scrolldelay="1" scrollamount="1" border="0" align="center" valign="top" onMouseOver="RollBoard3_001RJ346Y_8981_7806_gongh_18_scrollArea.stop()" onMouseOut="RollBoard3_001RJ346Y_8981_7806_gongh_18_scrollArea.start()" width="180" height="190">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        #foreach($article in $cms.getContents("滚动公告",20))
+        <tr class="CicroNX81KV_8463_0280_gongh_25_rollboard_listrow1">
+          <td class="CicroNX81KV_8463_0280_gongh_25_rollboard_listhead">&nbsp;<img src="images/ddd-1.gif">&nbsp;&nbsp;$article.name</td>
+        </tr>
+        #if($article.summary!="")
+        <tr class="CicroNX81KV_8463_0280_gongh_25_rollboard_listrow1">
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="word-wrap:break-word">&nbsp;
+                  <div id="detail3" style="display:none">$article.summary</div>
+                <SCRIPT LANGUAGE="JavaScript">var index =3; var v = eval("detail"+ index); //document.write(v.innerHTML);</SCRIPT>
+                <script language="JavaScript">document.write( toHTML(v));</script></td>
+            </tr>
+          </table></td>
+        </tr>
+        #end
+        <tr>
+          <td height="20"></td>
+        </tr>
+        #end
+      </table>
+      </marquee>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="215" border="0">
+<tbody>
+<tr>
+<td><img height="40" src="images/7a_1.gif" width="215"></td>
+</tr>
+<tr>
+<td valign="top" height="152">
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroE0025K_5447_5727_gongh_25_frlink_content">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+ #foreach($article in $cms.getContents("友情链接",5))
+<tr class="CicroYUJN1H_4889_6785_gongh_25_frlink_listrow1" align="center">
+<td width="100%"><a class="CicroYUJN1H_4889_6785_gongh_25_frlink_listrow1_a" href="$cms.getUrl($article)" target="_blank">&nbsp;<img border="0" src="images/ddd-1.gif">&nbsp;$article.name</a></td>
+</tr>
+<tr><td colspan="1"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td class="horizontal"><img src="feber_is_a_sexy_boy.gif" height="1" width="1"></td></tr>
+</table></td></tr>
+#end
+
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td><td valign="top" width="1" background="images/9a_2.gif"></td><td valign="top" width="640" height="200">
+<table cellspacing="0" cellpadding="0" width="640" border="0">
+<tbody>
+#if($curChannel.logo!="")
+<tr>
+<td>
+<table style="BACKGROUND-IMAGE: none" height="37" cellspacing="0" cellpadding="0" width="640" border="0">
+<tbody>
+<tr>
+<td valign="top" align="right" width="200" background=""><img height="31" alt="" hspace="0" src="images/$curChannel.logo" width="167" border="0"></td><td valign="top" width="388" background="jqxw.files/8_2.gif"></td><td valign="top" width="51" background=""></td><td valign="top" width="1" background="jqxw.files/9a_2.gif"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+#end
+<tr>
+<td valign="top" background="" height="300">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="620px" height="1px">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<TR></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="CicroVC502I_4751_0586_gongh_25_info_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" valign="top">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr class="horizontal">
+<td colspan="30" height="0"><IMG src="images\space.gif" border="0" height="1"></td>
+</tr>
+<tr class="CicroVC502I_4751_0586_gongh_25_info_listrow1" style="background-color:#E0E0E0">
+<td width="300">文件名称</td>
+<td width="116">更新时间</td>
+<td width="91">文件大小</td>
+<td width="93" height="21">下载次数</td>
+</tr>
+<tr class="horizontal">
+<td colspan="30" height="0"><IMG src="images\space.gif" border="0" height="1"></td>
+</tr>
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+<tr onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''" class="CicroVC502I_4751_0586_gongh_25_info_listrow1">
+<td width="330" valign="top">
+#set($art=$cmsService.getContent($article.ID)) 
+#foreach($tmp int $cms.getAttachments($art))
+<a class="CicroVC502I_4751_0586_gongh_25_info_listrow1_a" target="_blank" href="/cms/modules/downloadFiles.jsp?file=$cms.getPhyUrl($tmp)&articleID=$article.ID" title="$article.name">#summary($article.name 22)</a>
+#end</td>
+<td width="86"><span id="CicroVC502I_4751_0586_gongh_25__dTitle_1">$cms.format($article.publishDate)</span></td>
+<td width="91"><script src="/cms/modules/filesize.jsp?articleID=$article.ID"></script>kb</td>
+<td><script src="/cms/web/count.jsp?articleID=$article.ID"></script>次</td>
+</tr>
+<tr class="horizontal">
+<td colspan="30" height="0"><IMG src="images\space.gif" border="0" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="CicroVC502I_4751_0586_gongh_25_info_listfoot">
+<td>
+
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroVC502I_4751_0586_gongh_25_info_nov">
+<tr>
+<td class="page"><a href="$cms.getIndexFileName($curChannel, 1)">首页</a>&nbsp;&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)">上一页</a>&nbsp;&nbsp;<A class="CicroVC502I_4751_0586_gongh_25_turnpage" HREF="$cms.getIndexFileName($curChannel, $nextPage)">下一页</A>&nbsp;&nbsp;<A class="CicroVC502I_4751_0586_gongh_25_turnpage" HREF="$cms.getIndexFileName($curChannel, $totalPage)">末页
+                     </A></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+</td><td valign="top" width="1" background="images/9a_2.gif"></td><td valign="top" width="59"></td>
+</tr>
+<tr>
+<td valign="top" width="82" height="1"></td><td valign="top" background="images/9a_3.gif" colspan="5" height="1"></td><td valign="top" height="1"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" width="1001" border="0">
+<tbody>
+<tr>
+<td colspan="3" height="2"></td>
+</tr>
+<tr>
+<td width="150" bgcolor="#EFEFEF"></td><td valign="top" width="700" bgcolor="#EFEFEF" height="100">
+<table width="100%" height="1px" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="CicroQZ8I25_1745_1851_gongh_25_text_content">
+<div id="CicroQZ8I25_1745_1851_gongh_25__content"><DIV align=center>
+#parse("footer.vm")</DIV></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td><td width="151" bgcolor="#EFEFEF"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</body></html>

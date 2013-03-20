@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>$curArticle.name - 云大宾馆</title>
+<title>
+
+</title>
+
+<body screen_capture_injected="true">
+
+
+<div id="container">
+	<div id="banner"><div id="header"></div></div>
+
+<div id="menu">
+<div id="tabsH">
+  #parse("导航.vm")</div>
+</div><!--menu END -->
+
+    
+
+<div id="wrapper3">
+    <div id="content3">
+	   <div id="con_title">$curArticle.name</div>
+       <div id="con_date">发布时间： $cms.format($curArticle.publishDate)</div>
+       <div id="con_article">$curArticle.content</div>
+
+
+<br />	#if ($totalPage>1)
+		#foreach($index in [1..$totalPage]) 
+			#if ($index==$curPage)
+				<a href="$cms.getItemFileUrl($curArticle, $index)">
+					[<fon tcolor="red">$index</font>]
+				</a>
+			#else
+				<a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a>
+			#end
+		#end
+	#end
+
+
+
+    </div><!--content3 END -->
+</div><!--wrapper3 END -->
+
+    
+
+</div><!--container END -->
+
+<div id="footer"><p>版权所有:<a href="http://www.ydbg.ynu.edu.cn/">云大宾馆</a></p>
+<p>地址:云南省昆明市翠湖北路2号 邮编:650091</p>
+<p>电话: 0871 - 5034179, 5034189</p>
+<p>制作维护:云南大学网络与信息中心</p>
+</div><!--footer END -->
+
+#parse("ga.vm")
+</body></html>

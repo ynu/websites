@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学校医院 —— $curChannel.title</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<script language="javascript">
+<!--
+//图片滚动列表 mengjia 070927
+var Speed_1 = 10; //速度(毫秒)
+var Space_1 = 20; //每次移动(px)
+var PageWidth_1 = 138 * 5; //翻页宽度
+var interval_1 =10000; //翻页间隔
+var fill_1 = 0; //整体移位
+var MoveLock_1 = false;
+var MoveTimeObj_1;
+var MoveWay_1="right";
+var Comp_1 = 0;
+var AutoPlayObj_1=null;
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay_1(){clearInterval(AutoPlayObj_1);AutoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',interval_1)}
+function ISL_GoUp_1(){if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="left";MoveTimeObj_1=setInterval('ISL_ScrUp_1();',Speed_1);}
+function ISL_StopUp_1(){if(MoveWay_1 == "right"){return};clearInterval(MoveTimeObj_1);if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){Comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrUp_1(){if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+GetObj('ISL_Cont_1').scrollLeft-=Space_1}
+function ISL_GoDown_1(){clearInterval(MoveTimeObj_1);if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="right";ISL_ScrDown_1();MoveTimeObj_1=setInterval('ISL_ScrDown_1()',Speed_1)}
+function ISL_StopDown_1(){if(MoveWay_1 == "left"){return};clearInterval(MoveTimeObj_1);if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){Comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrDown_1(){if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+GetObj('ISL_Cont_1').scrollLeft+=Space_1}
+function CompScr_1(){if(Comp_1==0){MoveLock_1=false;return}
+var num,TempSpeed=Speed_1,TempSpace=Space_1;if(Math.abs(Comp_1)<PageWidth_1/2){TempSpace=Math.round(Math.abs(Comp_1/Space_1));if(TempSpace<1){TempSpace=1}}
+if(Comp_1<0){if(Comp_1<-TempSpace){Comp_1+=TempSpace;num=TempSpace}else{num=-Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft-=num;setTimeout('CompScr_1()',TempSpeed)}else{if(Comp_1>TempSpace){Comp_1-=TempSpace;num=TempSpace}else{num=Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft+=num;setTimeout('CompScr_1()',TempSpeed)}}
+function picrun_ini(){
+GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(AutoPlayObj_1)}
+GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+AutoPlay_1();
+}
+//示滚动图片结束
+//-->
+</script>
+
+</head>
+
+<body>
+
+<div id="wrap">
+#parse("head.vm")
+<div class="con01">
+  <div class="con05_all">
+    <div class="con05">
+      <div class="con05_left">
+      <div class="too"></div>
+        <div id="program">
+          <h3>$curChannel.parent.title</h3>
+        </div>
+        <div id="sub_nav">
+          <ul>
+		  #foreach($channel in $cms.getChildren($curChannel.parent))
+            <li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+          #end
+          </ul>
+        </div>
+        
+      </div>
+      <div class="con05_right">
+        <div class="right_title">
+#if($curChannel.parent.title!="专栏")
+          <h1 style="font-size:14px;">$curChannel.title</h1>
+#else
+           <h1 style="font-size:14px;background:url(images/zl_xxzx-bj.jpg) no-repeat;">$curChannel.title</h1>
+#end
+        </div>
+        <div class="right_list">
+          <div class="express01_list">
+<ul>
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+<li><span>$cms.format($article.publishDate)</span> <a title="$article.name" href="$cms.getUrl($article)" target="_blank">$article.name</a></li>
+#end
+							  </ul>
+#parse("div_page.vm")                              
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+#parse("footer.vm")
+</div>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

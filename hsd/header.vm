@@ -1,0 +1,71 @@
+
+<div id="banner"></div>
+
+<div id="nav">
+	<ul>
+	<li class="menu2" onmouseover="this.className=&#39;menu3&#39;" onmouseout="this.className=&#39;menu2&#39;"><a href="$cms.getUrl("首页")">首页</a>	
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">部门概览
+	<div class="list">
+	 	<a href="$cms.getUrl("机构设置")">机构设置</a><br>
+                <a href="$cms.getUrl("社科简报")">社科简报</a><br>
+  	</div>
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">科研机构	
+	    <div class="list">
+	 	    <a href="$cms.getUrl("文科学院")">文科学院</a><br>
+            <a href="$cms.getUrl("校级科研机构")">校级科研机构</a><br>
+            <a href="$cms.getUrl("文科基地")">文科基地</a><br>
+  	    </div>
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">科研项目
+	    <div class="list">
+	 	    <a href="$cms.getUrl("项目申报")">项目申报</a><br>
+            <a href="$cms.getUrl("项目立项")">项目立项</a><br>
+            <a href="$cms.getUrl("项目中检")">项目中检</a><br>
+            <a href="$cms.getUrl("项目结项")">项目结项</a><br>
+  	    </div>
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">科研成果
+	    <div class="list">
+		    <a href="$cms.getUrl("成果申报")">成果申报</a><br>
+            <a href="$cms.getUrl("获奖名单")">获奖名单</a><br>
+            <a href="$cms.getUrl("成果介绍")">成果介绍</a><br>
+            <a href="$cms.getUrl("成果应用")">成果应用</a><br>
+	    </div>
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">学术交流
+	    <div class="list">
+		    <a href="$cms.getUrl("会议讲座")">会议讲座</a><br>
+            <a href="$cms.getUrl("专家论坛")">专家论坛</a><br>
+	    </div>
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">管理文件
+	    <div class="list">
+	 	    <a href="$cms.getUrl("机构管理")">机构管理</a><br>
+            <a href="$cms.getUrl("项目管理")">项目管理</a><br>
+            <a href="$cms.getUrl("经费管理")">经费管理</a><br>
+            <a href="$cms.getUrl("成果管理")">成果管理</a><br>
+            <a href="$cms.getUrl("其他文件")">其他文件</a><br>
+  	    </div>
+	</li>
+	<li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;">人才队伍
+	    <div class="list">
+		    <a href="$cms.getUrl("学者简介")">学者简介</a><br>
+            <a href="$cms.getUrl("团队简介")">团队简介</a><br>
+	    </div>
+	</li>
+	<li class="menu4" onmouseover="this.className=&#39;menu5&#39;" onmouseout="this.className=&#39;menu4&#39;">资料下载
+	    <div class="list">
+		    <a href="$cms.getUrl("国家社科基金项目")">国家社科基金项目</a><br>
+            <a href="$cms.getUrl("教育部人文社科项目")">教育部人文社科项目</a><br>
+		    <a href="$cms.getUrl("云南省哲学社会科学规划办项目")">云南省哲学社会科学规划办项目</a><br>
+		    <a href="$cms.getUrl("云南省教育厅科学研究基金项目")">云南省教育厅科学研究基金项目</a><br>
+            <a href="$cms.getUrl("云南大学人文社科项目")">云南大学人文社科项目</a><br>
+		    <a href="$cms.getUrl("企事业单位合作项目")">企事业单位合作项目</a><br>
+		    <a href="$cms.getUrl("国际合作项目")">国际合作项目</a><br>
+            <a href="$cms.getUrl("人文社科成果奖评奖")">人文社科成果奖评奖</a><br>
+	    </div>
+	</li>
+	</ul>
+</div><!--nav END -->

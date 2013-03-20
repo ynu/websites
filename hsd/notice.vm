@@ -1,0 +1,19 @@
+
+<h3>通知公告<a href="$cms.getUrl("通知公告2")">more...</a></h3>
+        <div id="notice">
+            <ul>
+                #foreach($article in $cms.getContents("通知公告2",8))
+                    <LI>
+                        #if("$!article.isTip" != "0") 
+
+<a href="$cms.getUrl($article)"><font color="#FF0000">#summary($article.name 14)</font></a>
+
+#else
+
+<a href="$cms.getUrl($article)"><font color="white">#summary($article.name 14)</font></a>
+
+#end
+                    </LI>
+                #end
+            </ul>
+        </div><!--notice END -->

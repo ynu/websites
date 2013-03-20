@@ -1,0 +1,113 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$curArticle.name</title>
+<style type="text/css">
+body,td,th {  font-family: Arial, Helvetica, sans-serif;  font-size: 12px;}
+.STYLE1 {font-size: 11px}
+a:link {color: #0000FF;  text-decoration: none;}
+a:visited { text-decoration: none; color: #0000FF;}
+a:hover {text-decoration: none; color: #FF0000;}
+a:active {text-decoration: none;        color: #FF0000;}
+.STYLE2 {color: #FFFFFF}
+</style>
+<link rel="stylesheet" type="text/css" href="css/MI0M50_2653_5496_hpcc_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+<script src="/cms/web/writeLog.jsp?articleID=$curArticle.ID"></script>
+</head>
+<body topmargin="0">
+
+<table cellspacing="0" cellpadding="0" width="780" align="center" border="0">
+
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="760" align="center" border="0">
+
+<tr>
+  <td height="140" background="images/logo.jpg" colspan="2"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="760" height="140">
+    <param name="movie" value="images/logo2.swf">
+    <param name="quality" value="high">
+    <embed src="images/logo2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="760" height="140"></embed>
+  </object></td>
+</tr>
+<tr><td colspan="2">#parse("menu.vm")</td></tr>
+<tr>
+<td valign="top" width="225" background="images/lefttitle_bg2.jpg" height="510">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td width="32%" height="60">&nbsp;</td><td width="68%" height="60">&nbsp;</td>
+</tr>
+<td colspan="2" align="center"><table width="92%" cellpadding="0" cellspacing="0">
+#foreach($article in $cms.getContents($curChannel,10))
+<tr>
+<td width="18" align="center"><img height="16" src="images/icon2.jpg" width="14"></td>
+<td height="36">&nbsp;&nbsp;&nbsp;<a href="$cms.getUrl($article)">$article.name</a></td>
+</tr>
+#end</table></td>
+
+
+
+</table>
+</td><td valign="top" width="554" bgcolor="#EFF8FC">
+<table bordercolor="#FFFFFF" cellspacing="1" cellpadding="1" width="99%" background="images/bg.jpg" border="0">
+
+<tr>
+#if($curChannel.title=="中心简介"||$curChannel.parent.title=="中心简介")
+<td background="images/center_rightbg.jpg" colspan="2" height="42">&nbsp;
+#elseif($curChannel.title=="创新团队")
+<td background="images/righttitle_bg6.jpg" colspan="2" height="42">&nbsp;
+#elseif($curChannel.title=="系统平台")
+<td background="images/righttitle_bg4.jpg" colspan="2" height="42">&nbsp;
+#elseif($curChannel.title=="新闻公告")
+<td background="images/righttitle_bg2.jpg" colspan="2" height="42">&nbsp;
+#elseif($curChannel.title=="研发项目")
+<td background="images/righttitle_bg6.jpg" colspan="2" height="42">&nbsp;
+
+#elseif($curChannel.title=="用户指南")
+<td background="images/righttitle_bg7.jpg" colspan="2" height="42">&nbsp;
+
+#elseif($curChannel.title=="资料下载")
+<td background="images/righttitle_bg8.jpg" colspan="2" height="42">&nbsp;
+#else
+<td background="images/$curChannel.logo" colspan="2" height="42">&nbsp;
+#end
+</tr>
+<tr>
+<td>
+<p>&nbsp;</p>
+<p>
+<a href="$cms.getUrl($curArticle)"></a>
+</p>
+</td><td>
+<p align="left">&nbsp;</p>
+<p align="left">
+<span style="font-weight:bold; color:#000000">$curArticle.name</span><br/>
+$curArticle.content
+
+</td>
+</tr>
+<tr>
+<td width="95%" colspan="2" height="49">&nbsp;</td>
+</tr>
+
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor="#7291AE" colspan="2" height="60">
+<div class="STYLE1" align="center">
+<p class="STYLE2">Copyright ?2009-2011 云南大学高性能计算中心电话
+0871-5035451<br>
+High Performance Computing Center, Yunnan University</p>
+</div>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+</table>
+
+</body></html>

@@ -1,0 +1,21 @@
+
+<div id="banner">
+            <embed src="images/banner.swf" width="780" height="150" quality="high">
+        </div>
+
+        <div id="globallink" style="left: 0px; top: 0px">
+            <ul>
+	            <li><a href="$cms.getUrl("首页")">首  页</a></li>
+	            <li><a href="$cms.getUrl("组织机构")">组织机构</a></li>
+	            <li><a href="$cms.getUrl("通知公告")">通知公告</a></li>
+	            <li><a href="$cms.getUrl("建设动态")">建设动态</a></li>
+	            <li><a href="$cms.getUrl("重点学科")">重点学科</a></li>
+	            <li><a href="$cms.getUrl("学科规划")">学科规划</a></li>
+	            <li><a href="$cms.getUrl("规章制度")">规章制度</a></li>
+	            <li><a href="$cms.getUrl("下载专区")">下载专区</a></li>
+	            <li><a href="$cms.getUrl("他山之石")">他山之石</a></li>
+	            <li><a href="$cms.getUrl("建设通报")">建设通报</a></li>
+            </ul>
+            <br>
+        </div>
+

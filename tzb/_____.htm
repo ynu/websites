@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学党委统战部</title>
+<LINK rel=stylesheet type=text/css href="css/style_wz.css">
+<LINK rel=stylesheet type=text/css href="css/chromestyle.css">
+
+<LINK rel=stylesheet type=text/css href="css/RU4G1A_2181_6733_tzb_17.css">
+<LINK rel=stylesheet type=text/css href="css/cicro_userdefine_wz.css">
+<LINK rel=stylesheet type=text/css href="css/cicro_userdefine.css">
+<SCRIPT type=text/javascript src="js/chrome.js"></SCRIPT>
+</head>
+
+<BODY>
+
+<DIV id=container>
+#parse("header.vm")
+
+<DIV id=content3 style="width:743px; height:auto ">
+  <table id=组件外围表格 border=0 cellspacing=0 cellpadding=0  >
+    <tbody>
+      <tr>
+        <td><table border=0 cellspacing=0 cellpadding=0 width="100%">
+            <tbody>
+              <tr>
+                <td class=maintable valign=top>
+                            <table class=content border=0 cellspacing=0 cellpadding=0 
+                  width="100%">
+                              <tbody>
+                                <tr>
+                                  <td class=content valign=top>
+								  <div id=content style="width:740px; min-height:500px; height:auto; font-size:12px; line-height:24px; text-align:left" >
+                                      <div style="margin:auto; text-align:center; font-size:14px; font-weight:bold" >$curArticle.name</div> <br />
+									  $curArticle.content
+                                    #if ($totalPage>1) #foreach($index in [1..$totalPage]) #if ($index==$curPage) <a href="$cms.getItemFileUrl($curArticle, $index)">[<font color=red>$index</font>]</a> #else <a href="$cms.getItemFileUrl($curArticle, $index)">[$index]</a> #end #end #end </div></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                      </tr>
+                    </tbody>
+                </table></td>
+              </tr>
+            </tbody>
+        </table></td>
+      </tr>
+    </tbody>
+  </table>
+</DIV>
+#parse("footer.vm")
+
+</DIV>
+</body></html>

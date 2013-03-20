@@ -1,0 +1,18 @@
+
+<h4>相关链接</h4>
+        <div id="links">
+             <p>
+                <select name="select" onchange="javascript:window.open(this.options[this.selectedIndex].value)">
+                    <option value="" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;== 链接站点 ==</option>
+                    <option value="http://www.npopss-cn.gov.cn/" target="_blank">全国哲学社会科学规划办</option>
+                    <option value="http://www.sinoss.com/" target="_blank">中国高校人文社会科学信息</option>
+                    <option value="http://www.ynskl.org.cn/" target="_blank">云南省社科联</option>
+                    <option value="http://www.ynstc.gov.cn/" target="_blank">云南省科技信息网</option>
+                    <option value="http://www.ynpopss.gov.cn/" target="_blank">云南省哲学社会科学规划网</option>
+                    <option value="http://www.ynjy.cn/" target="_blank">云南省教育厅科技处</option>
+                    <option value="http://www.seac.gov.cn/" target="_blank">国家民委</option>
+                    <option value="http://www.lawstudy.gov.cn/" target="_blank">中国司法科研信息网</option>
+                    <option value="http://onsgep.moe.edu.cn/" target="_blank">全国教育科学规划领导小组</option>
+                </select>
+            </p>
+        </div>

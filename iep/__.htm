@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0035)http://www.iep.ynu.edu.cn/index.asp -->
+<HTML lang=en xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>云南大学 | 国际合作与交流处 港澳台办</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<!-- Site Meta //-->
+<META content="Copyright (c) 2010 云南大学网络智能实验室 All Rights Reserved" 
+name=copyright>
+<META 
+content="云大外办,云南大学国际合作与交流处网站,云南大学港澳台事物办公室网站,Yunnan university office of international cooperation and exchange &amp; office of HongKong Macao Taiwan affairs" 
+name=description>
+<META 
+content="云南大学外办,云南大学国际合作与交流处 港澳台办官方网站,云大外办,Yunnan university office of international cooperation and exchange &amp; office of HongKong Macao Taiwan affairs，Yunnan university" 
+name=keywords>
+<META name=Robots contect="all">
+<META content="jichengyang | tieli#ynu.edu.cn" name=author>
+<!-- CSS //-->
+<LINK 
+media=screen href="css/global.css" type=text/css rel=stylesheet>
+<LINK 
+media=print href="css/print.css" type=text/css rel=stylesheet>
+<LINK 
+href="/favicon.ico" type=image/x-icon rel="shortcut icon">
+<!-- Additional CSS //-->
+<LINK media=screen 
+href="css/home.css" type=text/css rel=stylesheet>
+<LINK media=screen 
+href="css/jScrollPane.css" type=text/css rel=stylesheet>
+<LINK media=screen 
+href="css/baner.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>
+#home_contentright A.jScrollArrowUp {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	BACKGROUND: url(images/up.gif) no-repeat 0px 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	HEIGHT: 15px
+}
+#home_contentright A.jScrollArrowDown {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	BACKGROUND: url(images/dn.gif) no-repeat 0px 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	HEIGHT: 15px
+}
+</STYLE>
+<!-- IE Conditions //-->
+<!--[if lt IE 7.]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" />
+<script defer type="text/javascript" src="js/pngfix.js"></script>
+<script type="text/javascript">
+worst_browser_ever = true;
+</script>
+<![endif]-->
+<!-- Javascript //-->
+<SCRIPT src="/js/jquery-1.3.2.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/jquery.cookie.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/jquery.cycle.all.pack.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/jquery.truncate.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/jScrollPane.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/jquery.dimensions.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/jquery.mousewheel.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/removeTime.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/js/puc-global.js" type=text/javascript></SCRIPT>
+<SCRIPT src="" type=text/javascript></SCRIPT>
+<SCRIPT type=text/javascript>
+    var t = n = 0, count;
+    $(document).ready(function(){   
+        count=$("#banner_list a").length;  
+        $("#banner_list a:not(:first-child)").hide();
+        $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+        $("#banner_info").click(function(){window.open($("#banner_list a:first-child").attr('href'), "_blank")});
+        $("#banner li").click(function() {
+            var i = $(this).text() - 1;//获取Li元素内的值，即1，2，3，4
+            n = i;
+            if (i >= count) return;
+            $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+            $("#banner_info").unbind().click(function(){window.open($("#banner_list a").eq(i).attr('href'), "_blank")});
+            $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+            $(this).css({"background":"#be2424",'color':'#000'}).siblings().css({"background":"#6f4f67",'color':'#fff'});
+        });
+        t = setInterval("showAuto()", 5000);
+        $("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 5000);});
+    })
+    
+    function showAuto()
+    {
+        n = n >=(count - 1) ? 0 : ++n;
+        $("#banner li").eq(n).trigger('click');
+    }
+</SCRIPT>
+<META content="MSHTML 6.00.6000.17095" name=GENERATOR>
+</HEAD>
+<BODY>
+
+<DIV id=top_bg></DIV>
+<DIV id=content_bg>
+  <DIV id=page-container>
+    #parse("header.vm")
+    #parse("nav.vm")
+    <DIV id=middleBody>
+      <DIV id=pagebody_holder>
+        <!--BODY AREA-->
+        <DIV id=homepage_image>
+          <DIV style="FLOAT: left; WIDTH: 211px; HEIGHT: 225px"> <IMG style="WIDTH: 209px; HEIGHT: 260px" src="images/yundazhonglou.jpg"> </IMG></DIV>
+          <!--首页大图 -->
+          <DIV id=banner>
+            <DIV id=banner_bg></DIV>
+            <!--标题背景-->
+            <DIV id=banner_info></DIV>
+            <!--标题-->
+            <UL style="DISPLAY: none">
+              <LI>1</LI>                                          
+              <LI>2</LI>
+              <LI>3</LI>
+              <LI>4</LI>
+              <LI>5</LI>
+              <LI>6 </LI>
+            </UL>
+            <DIV id=banner_list> 
+            #foreach($article in $cms.getContents("头部变化图片",6))
+            <A><IMG title=$article.name alt=$article.name src="$cms.getPictureUrl($article)"  width="605" height="225"> </A>
+            #end
+             </DIV>
+          </DIV>
+        </DIV>
+        <DIV id=homepage_title_center><IMG height=50  src="images/title_bg_home.gif" width=816> </DIV>
+        <DIV id=content_holder>
+          <DIV id=features_bar>
+            <DIV id=features_contentleft>
+              <!--Homepage News-->
+              <DIV id=s4>
+               #foreach($article in $cms.getContents("图片新闻",6))
+                <DIV class=homeNewsHold>
+                  <DIV class=imageleft><A 
+href="$cms.getUrl($article)">
+#if ($cms.getPictureUrl($article)!="")<img height=114 alt="News Thumb" src="$cms.getPictureUrl($article)" width=146>
+
+#else
+<IMG height=114 alt="News Thumb" src="images/2011010714130473473.jpg" width=146>
+#end
+</A></DIV>
+                  <DIV class=homenews_summery>
+                    <DIV class=homeNewsTitle> <A href="$cms.getUrl($article)">$article.name</A></DIV>
+                    <DIV class=homenewsText>
+                      <P>&nbsp;&nbsp;&nbsp;$!{article.summary}......&nbsp;</P>
+                    </DIV>
+                  </DIV>
+                  <DIV class=clear></DIV>
+                </DIV>
+                #end
+                
+              </DIV>
+            </DIV>
+            <DIV id=home_contentleft>
+              <H1>我们提供的服务</H1>
+              <UL id=navlist_who>
+              #foreach($channel in $cms.getChildren("提供的服务"))
+                  #if($channel.title=="常见问题")
+                  <li><a href="/cms/modules/createOnlineLeaveMessage.jsp?typeID=4&siteID=$curChannel.site.ID" target="_blank">
+$channel.title</a> </li>
+                  #else
+                    <li><a href=$cms.getUrl($channel)>$channel.title</a> </li>
+                    #end
+               #end
+              </UL>
+            </DIV>
+            <!--新闻快递开始--> 
+             <div id="home_contentcenter"> 
+  <h1>新闻快递&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="font-size:12px;color:#2c8d9e; font-weight:200;" href="$cms.getUrl("新闻快递")">查看更多 &raquo;</a></h1>
+  
+#foreach($article in $cms.getContents("新闻快递",5))
+  <div class="nowItem"><li><a href="$cms.getUrl($article)">#summary($article.name 20)<span>[$cms.format($article.publishDate)]</span></a></li></div>
+#end
+
+</div> 
+  </DIV>
+
+          <DIV id=home_contentright>
+            <H1>公告通知</H1>
+            <!-- DESCRIPTION POPUPS SUPPORT -->
+            <SCRIPT src="images/popup.js" type=text/javascript></SCRIPT>
+            <!-- /DESCRIPTION POPUPS SUPPORT -->
+            <H2 id=date>今天是:<script>
+function writeDateInfo()
+{
+        var day="";
+        var month="";
+        var ampm="";
+        var ampmhour="";
+        var myweekday="";
+        var year="";
+        mydate=new Date();
+        myweekday=mydate.getDay();
+        mymonth=mydate.getMonth()+1;
+        myday= mydate.getDate();
+        myyear= mydate.getYear();
+        year=(myyear > 200) ? myyear : 1900 + myyear;
+        if(myweekday == 0)
+        weekday=" 星期日";
+        else if(myweekday == 1)
+        weekday=" 星期一";
+        else if(myweekday == 2)
+        weekday=" 星期二";
+        else if(myweekday == 3)
+        weekday=" 星期三";
+        else if(myweekday == 4)
+        weekday=" 星期四";
+        else if(myweekday == 5)
+        weekday=" 星期五";
+        else if(myweekday == 6)
+        weekday=" 星期六";
+        document.write(year+"年"+mymonth+"月"+myday+"日"+weekday);
+} 
+
+</script>
+
+<script>writeDateInfo();</script></H2>
+            <DIV id=eventsBottom>
+              <!--<div id="eventsBottomLeft"><a href="#">查看更多 &raquo;</a></div> -->
+              <DIV id=eventsBottomRight><A 
+href="$cms.getUrl("公告通知")">查看更多 
+                &raquo;</A></DIV>
+            </DIV>
+            <DIV id=homeScroll>
+              <DIV class=scroll>
+                <!--公告通知 -->
+                <UL>
+                #set($j=0)
+                 #foreach($article in $cms.getContents("公告通知",4))
+                 #set($j=$j+1)
+                 #if($!{article.grade}==2)
+                  <LI class=calItem> <A   href="$cms.getUrl($article)"><SPAN class=calLeft 
+  style="COLOR: #c4582b">$j. </SPAN> <SPAN class=calRight   style="COLOR: #c4582b">$article.name &nbsp;&nbsp;&nbsp; <SPAN>[$cms.format($article.publishDate)]</SPAN></SPAN></A>
+                    <DIV class=clear></DIV></LI>
+                 #else
+                  <LI class=calItem> <A   href="$cms.getUrl($article)"><SPAN class=calLeft>$j. </SPAN> <SPAN class=calRight   >$article.name &nbsp;&nbsp;&nbsp; <SPAN>[$cms.format($article.publishDate)]</SPAN></SPAN></A>
+                    <DIV class=clear></DIV>
+                    </LI>
+                 #end
+                 #end
+                  
+                  
+                </UL>
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+        <!--END BODY AREA-->
+      </DIV>
+      <DIV class=clear></DIV>
+    </DIV>
+    #parse("footer.vm")
+  </DIV>
+</DIV>
+<DIV id=bottom_bg></DIV>
+#parse("copyright.vm")
+</SPAN> </SMALL> </SPAN>
+
+<script src="/cms/web/writeLog.jsp?channelID=$curChannel.ID"></script>
+</body></html>

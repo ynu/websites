@@ -1,0 +1,286 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>$curChannel.title</title>
+<meta content="name=description">
+<meta content="name=keywords">
+<style type="text/css">
+/**/
+A {
+        TEXT-DECORATION: none
+}
+A:hover {
+        COLOR: #ff00ff
+}
+A:link {
+        COLOR: #205064
+}
+A:visited {
+        COLOR: #205064
+}
+TD {
+        FONT-SIZE: 9pt; COLOR: #628296; LINE-HEIGHT: 150%; FONT-FAMILY: 宋体
+}
+BODY {
+        BACKGROUND-POSITION: center 50%; BACKGROUND-ATTACHMENT: fixed; BACKGROUND-IMAGE: url('images/bg.gif'); BACKGROUND-REPEAT: repeat
+}
+.style2 {
+        FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #ffffff; FONT-FAMILY: "楷体_GB2312"
+}
+.manu:hover {
+        FONT-SIZE: 12px; COLOR: #f8b03e; TEXT-DECORATION: underline
+}
+.manu:visited {
+        FONT-SIZE: 12px; COLOR: #666666
+}
+.manu:link {
+        FONT-SIZE: 12px; COLOR: #666666
+}
+.style4 {
+        COLOR: #0033cc; FONT-FAMILY: "宋体"
+}
+.style7 {
+        COLOR: #666666; FONT-FAMILY: "宋体"
+}
+.style10 {
+        FONT-SIZE: 12pt
+}
+.style12 {
+        FONT-SIZE: 10pt
+}
+/**/
+</style>
+<script language="JavaScript" type="text/JavaScript">
+//
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+//
+				</script>
+<script language="javascript">
+function SubString(s,maxnum,oDiv){
+	var ret=true;
+	var pos = s.length;
+	var len = 0;
+	var retStr;
+	for(var i=0;i<s.length;i++)
+	{
+		if(isNaN(s.charCodeAt(i)))
+		{
+			break;
+		}
+		ret = s.charCodeAt(i)>=10000;
+		if(ret == true)
+		{
+			len += 2;
+		}else
+		{
+			len += 1;
+		}
+		if(len > maxnum * 2)
+		{
+			pos =  i;			
+			break;
+		}
+	}
+	if(pos == s.length)
+	{
+		retStr = s;
+	}else
+	{
+		retStr = s.substring(0,pos) + "...";
+	}
+	oDiv.innerHTML = retStr;
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/O3DFUM_3797_7321_sds_17.css">
+<link rel="stylesheet" type="text/css" href="css/cicro_userdefine.css">
+</head>
+<body bgcolor="#DAE2E3" leftmargin="0" topmargin="0" onLoad="MM_preloadImages('images/xyjj1.gif','images/xybbs1.gif','images/xydt1.gif','images/kyqk1.gif','images/xshd1.gif','images/zlxz1.gif','images/zsxx1.gif')" marginheight="0" marginwidth="0">
+
+<div align="center">
+#parse("header.vm")
+</div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" width="760" border="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td valign="top" colspan="2" height="30">
+<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#EFF3F8" border="0">
+<tbody>
+<tr>
+<td valign="top" width="165" height="30">&nbsp;
+				</td><td valign="top" width="265">&nbsp;</td>
+													<td valign="top" width="330">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td valign="top" width="165" rowspan="2">
+<table height="39%" cellspacing="0" cellpadding="0" width="100%" bgcolor="#EFF3F8" border="0">
+<tbody>
+<tr>
+<td valign="top" width="165" height="158">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td class="manu" valign="center" align="middle" width="165" bgcolor="#6CAFD6" height="35"><span class="style2">站内检索</span></td>
+</tr>
+<tr>
+<td valign="top" height="123">
+<table width="156px" height="139px" border="0" align="center" cellpadding="0" cellspacing="0" id="组件外围表格">
+<tr>
+<td>
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post">
+<input name="siteID" size="4" value="$curChannel.site.ID" type = "hidden">
+<tr class="listrow1">
+<td align="center"><input name="query" type="text" maxlength="20" class="input"></td>
+</tr>
+<tr>
+<td colspan="3" class="" height="10"></td>
+</tr>
+
+<tr class="listrow1">
+<td align="center"><button type="submit" name="Submit" style="width:50" class="button">检索</button></td>
+</tr>
+</form>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<script>function checkform(theForm) { if(theForm.keyword.value.match(/^[\s]*$/) != null) { alert("请输入关键字"); return false; } return true; }</script></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height="404">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+#if($curChannel.logo!="")
+<td valign="top" width="595" height="35"><img src="images/$curChannel.logo"></td>
+#else
+<td valign="top" width="595" height="35" style="font-size:14px; color:#000000; font-weight:bold;"> &nbsp;&nbsp;$curChannel.title</td>#end
+</tr>
+<tr>
+<td valign="top" height="527">
+<table border="0" cellpadding="0" cellspacing="0" id="组件外围表格" width="588" height="543">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroNHVO47_7738_4427_sds_25_info_title1">
+<TR></TR>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="maintable">
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="1">
+<tr>
+<td valign="top" class="content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="100%" valign="top">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center">
+#foreach($article in $cms.getPageContents($curChannel,$curPage))
+<tr onMouseOver="this.style.backgroundColor=''" onMouseOut="this.style.backgroundColor=''" class="listrow1">
+<td width="1" valign="top"><img src="images/icon3.jpg"></td><td><a class="listrow1" target="_blank" href="$cms.getUrl($article)" title="$article.name"><span id="CicroNHVO47_7738_4427_sds_25__dTitle_1">#summary($article.name 28)</span></a></td>
+<td width="1" height="0" class="CicroNHVO47_7738_4427_sds_25_info_vertical"><IMG src="images\space.gif" border="0" width="1"></td>
+<td>$cms.format($article.publishDate)</td><td width="1" height="0" class="CicroNHVO47_7738_4427_sds_25_info_vertical"><IMG src="images\space.gif" border="0" width="1"></td><td>[<script src="/cms/web/count.jsp?articleID=$article.ID"></script>]</td>
+</tr>
+<tr class="CicroNHVO47_7738_4427_sds_25_info_horizontal">
+<td colspan="30" width="1" height="0"><IMG src="images\space.gif" border="0" height="1"></td>
+</tr>
+#end
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="CicroNHVO47_7738_4427_sds_25_info_listfoot">
+<td>
+<form name="form1">
+<table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="CicroNHVO47_7738_4427_sds_25_info_nov">
+<tr>
+#page()
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" width="760" border="0">
+<tbody>
+<tr>
+<td background="images/botton-a-bg.gif"><img height="18" src="images/botton-a-bg.gif" width="4"></td>
+</tr>
+</tbody>
+</table>
+<table cellspacing="0" cellpadding="0" width="760" border="0">
+<tbody>
+<tr>
+<td bgcolor="#73ABCB" height="60">
+<div align="center">
+<font style="COLOR: #ffffff" color="#FFFFFF">版权所有&nbsp; 云南大学发展研究院</font>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</body></html>
