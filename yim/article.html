@@ -1,0 +1,197 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript" type="text/javascript" src="./js/checkform.js"></script>
+
+
+
+
+
+
+<title>云南省微生物研究所</title>
+<link href="./css/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {color: #FFFFFF}
+.STYLE2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #0066CC;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+function addBookmark(title) 
+{
+  var url=parent.location.href;
+  
+   
+	window.external.AddFavorite( url, title);
+   
+}
+function setHomePage()
+{
+  document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage('http://www.klmr.ynu.edu.cn/structure/');
+  return false;
+}
+</script>
+<style type="text/css">
+<!--
+
+
+#nav {
+     line-height:38px;  list-style-type: none; background:#0066CC;
+}
+#nav a {
+    display: block; width: 110px; text-align:center;
+}
+#nav a:link  {
+    color:#fff; text-decoration:none; font-size:14px;
+}
+#nav a:visited  {
+    color:#fff;text-decoration:none; font-size:14px;
+}
+#nav a:hover  {
+    color:#FFF;text-decoration:none;font-size:14px;
+}
+#nav li {
+    float: left; width: 78px; 
+}
+#nav li a:hover{
+   
+}
+#nav li ul {
+    line-height: 25px;  list-style-type: none;text-align:left; float:left;
+    left: -666em; width: 97px; position: absolute;  margin-left:-5px;
+}
+#nav li ul li{
+    float: left; width: 97px;
+    background: #F6F6F6;
+	border:1px #E3E3E3 dotted ;
+}
+#nav li ul a{
+    display: block; width: 97px;text-align:left;padding-left:20px;
+}
+#nav li ul a:link  {
+    color:#0066CC; text-decoration:none; font-size:12px;width: 97px;
+}
+#nav li ul a:visited  {
+    color:#0066CC;text-decoration:none;font-size:12px;
+}
+#nav li ul a:hover  {
+    color:#F3F3F3;text-decoration:none;font-weight:normal; font-size:12px;
+    background:#0066CC;
+}
+#nav li:hover ul {
+    left: auto;
+}
+#nav li.sfhover ul {
+    left: auto;
+}
+#content {
+    clear: left;
+}
+-->
+</style>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function menuFix() {
+    var sfEls = document.getElementById("nav").getElementsByTagName("li");
+    for (var i=0; i<sfEls.length; i++) {
+        sfEls[i].onmouseover=function() {
+        this.className+=(this.className.length>0? " ": "") + "sfhover";
+        }
+        sfEls[i].onMouseDown=function() {
+        this.className+=(this.className.length>0? " ": "") + "sfhover";
+        }
+        sfEls[i].onMouseUp=function() {
+        this.className+=(this.className.length>0? " ": "") + "sfhover";
+        }
+        sfEls[i].onmouseout=function() {
+        this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"),
+"");
+        }
+    }
+}
+window.onload=menuFix;
+//--><!]]></script>
+</head>
+
+<body>
+#parse("header.vm")
+
+<table width="1003" height="521" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="264" height="521" align="center" valign="top"><table width="91%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px ;">
+        <tbody><tr>
+          <td><img src="./images/2lf-d1.jpg" width="242" height="41"></td>
+        </tr>
+        <tr>
+          <td height="185" valign="top" background="./images/lf-d2.jpg" style="padding:4px ;"><table width="94%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody><tr> 
+                <td width="100%" height="123"><div class="sas"> 
+                    <ul>
+                      
+                      #foreach($article in $cms.getContents("学术活动",5))
+                        <li><a href="$cms.getUrl($article)">$article.name </a></li>
+                      #end
+                      
+                    </ul>
+                  </div></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+        <tr>
+          <td><img src="./images/lf-d3.jpg" width="242" height="13"></td>
+        </tr>
+      </tbody></table>
+      <table width="91%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px ;">
+        <tbody><tr>
+          <td><img src="./images/lf-d1.jpg" width="242" height="41"></td>
+        </tr>
+        <tr>
+          <td background="./images/lf-d2.jpg" style="padding:6px ;"><div class="ls">
+            <ul>
+            #foreach($article in $cms.getContents("友情链接",5))
+					<li><a href="$cms.getUrl($article)" target="_blank">$article.name </a></li>
+				  #end
+           
+            </ul>
+          </div></td>
+        </tr>
+        <tr>
+          <td><img src="./images/lf-d3.jpg" width="242" height="13"></td>
+        </tr>
+      </tbody></table></td>
+    <td width="739" align="left" valign="top" style="padding-top:4px ;"><table width="99%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td width="100%" height="487" valign="top" class="div"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr><td height="26" background="./images/ziy.jpg">
+      
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td width="5%" align="center"><img src="./images/YYTT.jpg" width="17" height="15"></td>
+              <td width="95%" align="left"><span class="STYLE3">近期要闻</span><strong></strong></td>
+            </tr>
+          </tbody></table>
+          </td>
+      </tr>
+      <tr>
+        <td height="455" align="center" valign="top" style="padding:10px ; text-align:left ; line-height:20px ;"><h1 align="center" style="font-size:14px ; line-height:30px;">$curArticle.name</h1>
+          <div align="center" style="line-height:30px;">发布者： $curArticle.author 发布时间：$cms.format($curArticle.publishDate, "yyyy-MM-dd") </div>
+          <div>$curArticle.content</div>
+</td>
+      </tr>
+      
+      
+    </tbody></table>
+    
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    </table></td>
+      </tr>
+    </tbody></table>
+    <br></td>
+  </tr>
+</tbody></table>
+#parse("header.vm")
+
+</body></html>

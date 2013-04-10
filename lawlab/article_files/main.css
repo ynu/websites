@@ -1,0 +1,24 @@
+.tit {
+	font-size: 14px;
+}
+.black {
+	COLOR: #000000;
+	font-family: "Verdana", "宋体";
+	FONT-SIZE: 14px
+}
+A.black:link {
+	COLOR: #000066;
+	TEXT-DECORATION: none
+}
+A.black:visited {
+	COLOR: #330000;
+	TEXT-DECORATION: none
+}
+A.black:active {
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none
+}
+A.black:hover {
+	COLOR: #ff0000;
+	TEXT-DECORATION: none
+}

@@ -1,36 +1,36 @@
-<!--��ʼҳͷ����-->
+﻿<!--开始页头内容-->
 <div id="header" class="header">
     <div class="top">
         <div class="banner">
             <div class="tbnav">
             <ul>
-            <li><a href="http://www.ynu.edu.cn">�ƴ���ҳ</a></li>
-            <li><a href="www.yn.edu.cn">�������ڵ�</a></li>
-            <li class="nobd"><a href="#" >˶ʿ����</a></li>
+            <li><a href="http://www.ynu.edu.cn">云大首页</a></li>
+            <li><a href="www.yn.edu.cn">云南主节点</a></li>
+            <li class="nobd"><a href="#" >硕士教育</a></li>
 			
             </ul>
             </div>
         </div>
-        <div class="logo" title="��ӭ�������ϴ�ѧ�ۺ��Ż���վ"></div>
+        <div class="logo" title="欢迎光临云南大学网络与信息中心网站"></div>
         <div class="l_right">
         <div id="nav" class="nav">
         <ul>
-			<li><a href="http://www.news.ynu.edu.cn/">���Ľ���</a></li>
+			<li><a href="$cms.getUrl("中心介绍")">中心介绍</a></li>
 			<li>
-				<a href="#">У԰���ſ�</a>
+				<a href="$cms.getUrl("校园网概况")">校园网概况</a>
 			</li>
-			<li><a href="#">��ȫ����</a></li>
-			<li><a href="http://www.news.ynu.edu.cn/">��������</a></li>
-			<li><a href="http://www.news.ynu.edu.cn/">��Ϣ��Դ</a></li>
-			<li><a href="http://www.news.ynu.edu.cn/">�������</a></li>
+			<li><a href="$cms.getUrl("安全法规")">安全法规</a></li>
+			<li><a href="$cms.getUrl("常用下载")">常用下载</a></li>
+			<li><a href="$cms.getUrl("信息资源")">信息资源</a></li>
+			<li><a href="$cms.getUrl("网络服务")">网络服务</a></li>
 		</ul>
 		
         
         </div>
-        <div class="search_box"><input name="searchbox" type="text" class="searchbox" /><div class="info"><a href="#">ȷ��</a></div>
+        <div class="search_box"><input name="searchbox" type="text" class="searchbox" /><div class="info"><a href="#">确定</a></div>
       </div>
         </div>
     </div>
 </div>
-<!--����ҳͷ����-->
+<!--结束页头内容-->
 <div class="clear"></div>

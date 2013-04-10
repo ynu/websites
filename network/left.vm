@@ -1,9 +1,9 @@
-<ul class="accordion">
+﻿<ul class="accordion">
 	#if($cms.getChannelCount($curChannel.ID))
 		#foreach($channel in $cms.getChildren($curChannel.parent.ID))
 			<li class="files">
 				<a href="$cms.getUrl($channel)">$channel.name</a>
-				#(if($cms.getChannelCount($channel.ID))
+				#if($cms.getChannelCount($channel.ID))
 					<ul class="sub-menu">
 						#foreach($subChannel in $cms.getChildren($channel.ID))
 							<li><a href="$cms.getUrl($subChannel)">$subChannel.name</a></li>
@@ -16,7 +16,7 @@
 		#foreach($channel in $cms.getChildren($rootChannel))
 			<li class="files">
 				<a href="$cms.getUrl($channel)">$channel.name</a>
-				#(if($cms.getChannelCount($channel.ID))
+				#if($cms.getChannelCount($channel.ID))
 					<ul class="sub-menu">
 						#foreach($subChannel in $cms.getChildren($channel.ID))
 							<li><a href="$cms.getUrl($subChannel)">$subChannel.name</a></li>

@@ -1,0 +1,156 @@
+﻿<table width="1003" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="706" height="82" align="left"><img src="./images/logo.jpg" width="418" height="70"></td>
+    <td width="297" background="./images/top-01.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr> 
+          <td width="9%" height="28"><img src="./images/top-02.jpg" width="17" height="17"></td>
+          <td width="25%"><a href="http://www.yim.ynu.edu.cn/default.asp#" onClick="return setHomePage()" style="color:#0066CC ; font-weight: bolder">设为首页</a>          </td>
+          <td width="11%"><img src="./images/top-03.jpg" width="19" height="14"></td>
+          <td width="24%"><a href="http://www.yim.ynu.edu.cn/default.asp#" onClick="addBookmark(document.title)" style="color:#0066CC ; font-weight: bolder">收藏本站</a>          </td>
+          <td width="31%" rowspan="2" align="center"><img src="./images/eing.jpg" width="78" height="22"></td>
+        </tr>
+        <tr> 
+          <td height="28"><img src="./images/b1.jpg" width="17"></td>
+          <td><a href="mailto:xlcui@ynu.end.cn" style="color:#0066CC ; font-weight: bolder">所长信箱</a>          </td>
+          <td><img src="./images/b3.jpg" width="17"></td>
+          <td> 
+            
+            <a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=330" target="_blank" style="color:#0066CC ; font-weight: bolder">地理位置</a>          </td>
+        </tr>
+      </tbody></table>    </td>
+  </tr>
+  <tr>
+    <td height="38" colspan="2" bgcolor="#0066CC" style="border-top:3px #003399 solid ;">
+    <ul id="nav">
+<li class=""><a href="$cms.getUrl("首页")" class="bs"><img src="./images/1.jpg"></a></li>
+<li class=""><a href="$cms.getUrl("所况简介")" class="bs"><img src="./images/2.jpg"></a>
+          <ul>
+            
+            <li><a href="$cms.getUrl("所长致辞")">所长致辞</a></li>
+            
+            <li><a href="$cms.getUrl("概况")">概况</a></li>
+            
+            <li><a href="$cms.getUrl("现任领导")">现任领导</a></li>
+            
+            <li><a href="$cms.getUrl("历任领导")">历任领导</a></li>
+            
+            <li><a href="$cms.getUrl("云微图志")">云微图志</a></li>
+          </ul>
+</li>
+<li class=""><a href="$cms.getUrl("机构设置")" class="bs"><img src="./images/3.jpg"></a>
+          <ul>
+            <li><a href="$cms.getUrl("管理部门")">管理部门</a></li>
+            <li><a href="$cms.getUrl("资源实验室")">资源实验室</a></li>
+            <li><a href="$cms.getUrl("平台实验室")">平台实验室</a></li>
+            <li><a href="$cms.getUrl("技术转化实体")">技术转化实体</a></li>
+            <li><a href="$cms.getUrl("学术委员会")">学术委员会</a></li>
+            <li><a href="$cms.getUrl("顾问团")">顾问团</a></li>
+          </ul>
+</li>
+<li class=""><a href="$cms.getUrl("人才队伍")" class="bs"><img src="./images/4.jpg"></a>
+          <ul>
+            
+            <li><a href="$cms.getUrl("研究组组长")">研究组组长</a></li>
+            
+            <li><a href="$cms.getUrl("学术带头人")">学术带头人</a></li>
+            
+            <li><a href="$cms.getUrl("杰出人才")">杰出人才</a></li>
+            
+            <li><a href="$cms.getUrl("外聘研究人员")">外聘研究人员</a></li>
+          </ul>
+</li>
+<li class=""><a href="$cms.getUrl("研究成果")" class="bs"><img src="./images/5.jpg"></a>
+          <ul>
+            
+            <li><a href="$cms.getUrl("论文与专著")">论文与专著</a></li>
+            
+            <li><a href="$cms.getUrl("发明与专利")">发明与专利</a></li>
+            
+            <li><a href="$cms.getUrl("科技奖励")">科技奖励</a></li>
+            
+            <li><a href="$cms.getUrl("技术转让")">技术转让</a></li>
+            
+            <li><a href="$cms.getUrl("菌种服务")">菌种服务</a></li>
+          </ul>
+</li>
+<li class=""><a href="$cms.getUrl("合作交流")" class="bs"><img src="./images/6.jpg"></a>
+          <ul>
+            
+            <li><a href="$cms.getUrl("国内合作")">国内合作</a></li>
+            
+            <li><a href="$cms.getUrl("国际合作")">国际合作</a></li>
+            
+            <li><a href="$cms.getUrl("学术交流<")">学术交流</a></li>
+          </ul>
+</li>
+<li class=""><a href="$cms.getUrl("研究生培养")" class="bs"><img src="./images/7.jpg"></a>
+          <ul>
+            
+            <li><a href="$cms.getUrl("招生信息")">招生信息</a></li>
+            
+            <li><a href="$cms.getUrl("导师简介")">导师简介</a></li>
+            
+            <li><a href="$cms.getUrl("研究机构与研究领域")">研究机构与研究领域</a></li>
+            
+            <li><a href="$cms.getUrl("研究生培养")">研究生培养</a></li>
+            
+            <li><a href="$cms.getUrl("研究生就业")">研究生就业</a></li>
+            
+            <li><a href="$cms.getUrl("博士后流动站")">博士后流动站</a></li>
+          </ul>
+</li>
+
+<li class=""><a href="$cms.getUrl("党群之窗")" class="bs"><img src="./images/9.jpg"></a>
+          <ul>
+          </ul>
+</li>
+<li class="">
+  <a href="$cms.getUrl("联系我们")" class="bs"><img src="./images/8.jpg"></a>
+  <ul>
+          </ul>
+</li>
+</ul>    </td>
+  </tr>
+  <tr>
+    <td height="96" colspan="2">
+<table width="998" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-bottom:0px;">
+  <tbody><tr>
+    <td> 
+      
+      <script type="text/javascript">
+var swf_width=1003
+var swf_height=167
+var files='/images/tup.jpg|/uploadshop/Icp.Yn.Cn_20121213113550.jpg|/uploadshop/Icp.Yn.Cn_2012121311401.jpg|/uploadshop/Icp.Yn.Cn_20121213114148.jpg|/uploadshop/Icp.Yn.Cn_20121213114432.jpg'
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="bcastr31.swf"><param name="quality" value="high">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="bcastr_file='+files+'&IsShowBtn=1&AutoPlayTime=4">');
+document.write('<embed src="bcastr31.swf" wmode="opaque" FlashVars="bcastr_file='+files+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+</script>    </td>
+  </tr>
+</tbody></table></td>
+  </tr>
+</tbody></table>
+<table width="1003" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="293" height="28" align="center" bgcolor="#D6ECFF" style="font-size:12px  ; color:#0066CC ; font-weight:bolder ;">您好，欢迎来到云南省微生物研究所</td>
+    <td width="710" bgcolor="#D6ECFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <form id="form1" name="form1" method="post" action="http://www.yim.ynu.edu.cn/search.asp"></form>
+      <tbody><tr>
+        <td width="5%"><img src="./images/ssdd.jpg" width="36" height="25"></td>
+        <td width="14%" align="center"><span class="STYLE2">站内搜索:</span></td>
+       <td width="45%">
+        <input type="text" name="key" id="key" style="width:300px ;">
+       
+        </td>
+        <td width="20%">
+           
+       
+        </td>
+        
+        <td width="16%"><input name="Submit" type="image" src="./images/ss01.jpg" value=" "></td>
+      </tr>
+       
+    </tbody></table></td>
+  </tr>
+</tbody></table>

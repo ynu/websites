@@ -1,0 +1,449 @@
+﻿
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript" type="text/javascript" src="./js/checkform.js"></script>
+
+
+
+
+
+
+<title>云南省微生物研究所</title>
+<link href="./css/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.STYLE1 {color: #FFFFFF}
+.STYLE2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #0066CC;
+}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+function addBookmark(title) 
+{
+  var url=parent.location.href;
+  
+   
+	window.external.AddFavorite( url, title);
+   
+}
+function setHomePage()
+{
+  document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage('http://www.yim.ynu.edu.cn/');
+  return false;
+}
+</script>
+<style type="text/css">
+<!--
+
+
+#nav {
+     line-height:38px;  list-style-type: none; background:#0066CC;
+}
+#nav a {
+    display: block; width: 110px; text-align:center;
+}
+#nav a:link  {
+    color:#fff; text-decoration:none; font-size:14px;
+}
+#nav a:visited  {
+    color:#fff;text-decoration:none; font-size:14px;
+}
+#nav a:hover  {
+    color:#FFF;text-decoration:none;font-size:14px;
+}
+#nav li {
+    float: left; width: 78px; 
+}
+#nav li a:hover{
+   
+}
+#nav li ul {
+    line-height: 25px;  list-style-type: none;text-align:left; float:left;
+    left: -666em; width: 97px; position: absolute;  margin-left:-5px;
+}
+#nav li ul li{
+    float: left; width: 97px;
+    background: #F6F6F6;
+	border:1px #E3E3E3 dotted ;
+}
+#nav li ul a{
+    display: block; width: 97px;text-align:left;padding-left:20px;
+}
+#nav li ul a:link  {
+    color:#0066CC; text-decoration:none; font-size:12px;width: 97px;
+}
+#nav li ul a:visited  {
+    color:#0066CC;text-decoration:none;font-size:12px;
+}
+#nav li ul a:hover  {
+    color:#F3F3F3;text-decoration:none;font-weight:normal; font-size:12px;
+    background:#0066CC;
+}
+#nav li:hover ul {
+    left: auto;
+}
+#nav li.sfhover ul {
+    left: auto;
+}
+#content {
+    clear: left;
+}
+-->
+</style>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function menuFix() {
+    var sfEls = document.getElementById("nav").getElementsByTagName("li");
+    for (var i=0; i<sfEls.length; i++) {
+        sfEls[i].onmouseover=function() {
+        this.className+=(this.className.length>0? " ": "") + "sfhover";
+        }
+        sfEls[i].onMouseDown=function() {
+        this.className+=(this.className.length>0? " ": "") + "sfhover";
+        }
+        sfEls[i].onMouseUp=function() {
+        this.className+=(this.className.length>0? " ": "") + "sfhover";
+        }
+        sfEls[i].onmouseout=function() {
+        this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"),
+"");
+        }
+    }
+}
+window.onload=menuFix;
+//--><!]]></script>
+</head>
+
+<body>
+#parse("header.vm")
+
+<table width="1003" height="615" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="264" height="615" align="center" valign="top"><table width="81%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px ;">
+      <tbody><tr>
+        <td><img src="./images/xtm1.jpg" width="241" height="37"></td>
+      </tr>
+      <tr>
+          <td height="105" background="./images/xtm2.jpg" style="padding:4px ;">
+<div class="ts">
+          <ul>
+		  	#foreach($article in $cms.getContents("通知公告",3))
+				<li><a href="$cms.getUrl($article)" target="_blank" title="$article.name">#summary($article.name 14)</a></li>
+			#end
+                
+          </ul>
+        </div></td>
+      </tr>
+      <tr>
+        <td><img src="./images/xtm3.jpg" width="241" height="16"></td>
+      </tr>
+    </tbody></table>
+      <table width="91%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:4px ;">
+        <tbody><tr>
+          <td><img src="./images/dlu.jpg" width="241" height="37"></td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" background="./images/xtm2.jpg">
+          <form name="formlogin" method="post" action="http://webmail.ynu.edu.cn/cgi-bin/login" target="_blank">
+          <table width="90%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td width="31%" height="25">&nbsp;</td>
+              <td width="69%" align="left"><a href="http://ynumis.ynu.edu.cn/ynumis/" target="_blank"><img src="./images/lf-01.jpg" width="109" height="21" border="0"></a></td>
+            </tr>
+            <tr>
+              <td height="25" align="right">邮件帐号:</td>
+              <td align="left">
+                  <input type="text" name="LoginName" id="LoginName" style="width:100px ; height:20px ;">             </td>
+            </tr>
+            <tr>
+              <td height="25" align="right">身份选择:</td>
+              <td align="left">
+                
+                  <select name="domain" id="domain">
+                    <option value="ynu.edu.cn" selected="selected">教师</option>
+                    <option value="mail.ynu.edu.cn">学生</option>
+                     <option value="yn.edu.cn">校 友</option>
+                  </select>           </td>
+            </tr>
+            <tr>
+              <td height="25" align="right">密码:</td>
+              <td align="left">
+                 
+                  <input type="password" name="Password" id="Password" style="width:100px ; height:20px ;">              </td>
+            </tr>
+            <tr>
+              <td height="25" align="right">&nbsp;</td>
+              <td align="left">&nbsp;</td>
+            </tr>
+          </tbody></table>
+          </form>          </td>
+        </tr>
+        <tr>
+          <td><img src="./images/xtm3.jpg" width="241" height="16">
+            <input name="Submit" type="image" src="./images/lf-02.jpg" value=" "></td>
+        </tr>
+      </tbody></table>
+      <table width="91%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px ;">
+        <tbody><tr>
+          <td><a href="$cms.getUrl("学术活动")" target="_blank"><img src="./images/2lf-d1.jpg" width="242" height="41" border="0"></a></td>
+        </tr>
+        <tr>
+          <td height="135" valign="top" background="./images/lf-d2.jpg" style="padding:4px ;"> 
+            <table width="94%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody>
+              <tr> 
+                <td height="82"><div class="sas"> 
+                    <ul>
+                      #foreach($article in $cms.getContents("学术活动",6))
+					  	<li><a href="$cms.getUrl($article)" target="_blank">#summary($article.name 14)</a></li>
+						#end
+                    </ul>
+                  </div></td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="./images/lf-d3.jpg" width="242" height="13"></td>
+        </tr>
+      </tbody></table>
+      <table width="91%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:5px ;">
+        <tbody><tr>
+          <td><img src="./images/lf-d1.jpg" width="242" height="41"></td>
+        </tr>
+        <tr>
+          <td background="./images/lf-d2.jpg" style="padding:6px ;"><div class="ls">
+            <ul>
+            #foreach($article in $cms.getContents("友情链接",5))
+					<li><a href="$cms.getUrl($article)" target="_blank">$article.name </a></li>
+				  #end
+           
+            </ul>
+          </div></td>
+        </tr>
+        <tr>
+          <td><img src="./images/lf-d3.jpg" width="242" height="13"></td>
+        </tr>
+      </tbody></table></td>
+    <td width="739" align="left" valign="top" style="padding-top:4px ;">
+    
+      <table width="97%" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr> 
+          <td height="175" colspan="2" valign="top" class="right1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody><tr> 
+                <td height="32" colspan="2"><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=1&classid=67" target="_blank"><img src="./images/lf-11.jpg" width="169" height="19" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td width="34%" height="169" align="center" valign="top"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=331" target="_blank"><img src="./images/Icp.Yn.Cn_2012127193938.jpg" width="223" height="153" class="bkk" border="0"></a></td>
+                <td width="66%" valign="top" style="line-height:20px ;"><h1 style="color:#FF0000 ; margin-bottom:6px ; font-size:14px ; font-weight:bolder ;"> 
+                    研究所概况</h1>
+                  <a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=331" target="_blank"></a><p><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=331" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#bb4444"><font face="Verdana">云南省微生物研究所是1979年5月由云南省人民政府和国家科技部批准成立的专门科研机构，为云南省科技厅直属科研单位并由云南大学负责管理。三十多年来，经过三代人的艰苦奋斗，现已跻身世界微生物资源研究的先进行列。研究所以微生物资源（放线菌、真菌、细菌及其基因资</font></font></a></p></td>
+              </tr>
+            </tbody></table></td>
+        </tr>
+        <tr> 
+          <td height="5" colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td width="51%" height="190" valign="top"><div class="rt-div">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td><a href="$cms.getUrl("近期要闻")" target="_blank"><img src="./images/new2.jpg" width="348" height="34" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td><div class="ds">
+                      <ul>
+					  
+					  #foreach($article in $cms.getContents("近期要闻",8))
+						<li>
+							<div class="xkuan">
+								<a href="$cms.getUrl($article)" target="_blank">
+									#if($article.isTop)
+									<b><font color="ff0000">
+									#end
+										#summary($article.name 24)
+									#if($article.isTop)
+									</font></b>
+									#end
+								</a>
+								($cms.format($article.publishDate,"MM/dd"))
+							</div>
+                        </li>
+					#end
+                      </ul>
+                  </div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></td>
+          <td width="49%" align="center" valign="top">
+		  
+		  <div class="rt-div"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr> 
+                  <td><a href="$cms.getUrl("最新成果")" target="_blank"><img src="./images/rcg.jpg" width="345" height="34" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td><div class="ds"> 
+                      <ul>
+                        #foreach($article in $cms.getContents("最新成果",4))
+						<li>
+							<div class="xkuan">
+								<a href="$cms.getUrl($article)" target="_blank">
+									#if($article.isTop)
+									<b><font color="ff0000">
+									#end
+										#summary($article.name 24)
+									#if($article.isTop)
+									</font></b>
+									#end
+								</a>
+								($cms.format($article.publishDate,"MM/dd"))
+							</div>
+                        </li>
+					#end
+                      </ul>
+                    </div></td>
+                </tr>
+              </tbody></table>
+            </div>
+            <div class="rt-div"> 
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr> 
+                  <td><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26" target="_blank"><img src="./images/new3.jpg" width="345" height="34" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                  
+                        <td height="88"> 
+                          <ul id="DzPxUlli">
+                    
+                    <li><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26&classid=122">所　庆</a></li>
+                            
+                    <li><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26&classid=123">校　庆</a></li>
+                            
+                    <li><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26&classid=125">实验技术</a></li>
+                            
+                    <li><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26&classid=126">年　报</a></li>
+                            
+                    <li><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26&classid=127">发表论文</a></li>
+                            
+                    <li><a href="http://www.yim.ynu.edu.cn/news.asp?c_type=26&classid=128">研究生导师</a></li>
+                          </ul></td>
+                </tr>
+              </tbody></table></td>
+                </tr>
+              </tbody></table>
+            </div></td>
+        </tr>
+        <tr> 
+          <td height="106" colspan="2" align="center" valign="top"><div class="div"> 
+              <table width="99%" height="101" border="0" cellpadding="0" cellspacing="0">
+                <tbody><tr> 
+                  <td width="34%" height="24" bgcolor="#E9F0FA"><img src="./images/bto.jpg" width="198" height="24"></td>
+                  <td width="66%" background="./images/xttt.jpg" bgcolor="#E9F0FA">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td height="160" colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tbody><tr>
+                        <td> <table cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+                            <tbody>
+                              <tr> 
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <script>
+<!--
+var speed3=25//速度数值越大速度越慢
+demo2.innerHTML=demo1.innerHTML
+function Marquee(){
+if(demo2.offsetWidth-demo.scrollLeft<=0)
+demo.scrollLeft-=demo1.offsetWidth
+else{
+demo.scrollLeft++
+}
+}
+var MyMar=setInterval(Marquee,speed3)
+demo.onmouseover=function() {clearInterval(MyMar)}
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed3)}
+-->
+</script>
+                          <div id="demo" style="OVERFLOW: hidden; height:169px; WIDTH:700; COLOR: #ffffff; font-size:12px;">
+                            <table cellspacing="0" cellpadding="0" align="left" border="0" cellspace="0">
+                              <tbody>
+                                <tr>
+                                  <td id="demo1" valign="top"><table width="700" height="80" border="0" cellpadding="0" cellspacing="0">
+                                      <tbody>
+                                        <tr>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=485" target="_blank"><img src="./images/Icp.Yn.Cn_20121215143915.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=484" target="_blank"><img src="./images/Icp.Yn.Cn_20121215143835.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=483" target="_blank"><img src="./images/Icp.Yn.Cn_2012121514375.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=482" target="_blank"><img src="./images/Icp.Yn.Cn_20121215143250.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=469" target="_blank"><img src="./images/Icp.Yn.Cn_2012127203141.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=468" target="_blank"><img src="./images/Icp.Yn.Cn_2012127203057.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=467" target="_blank"><img src="./images/Icp.Yn.Cn_2012127202948.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=466" target="_blank"><img src="./images/Icp.Yn.Cn_2012127202630.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=465" target="_blank"><img src="./images/Icp.Yn.Cn_2012127202238.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                        </tr>
+                                        <tr>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=485" target="_blank">钟楼</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=484" target="_blank">鲜花烂漫</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=483" target="_blank">考棚</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=482" target="_blank">贡院</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=469" target="_blank">春满东陆</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=468" target="_blank">秋日银杏道</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=467" target="_blank">东陆雪景</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=466" target="_blank">会泽院</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=465" target="_blank">生物馆</a></td>
+                                        </tr>
+                                      </tbody>
+                                  </table></td>
+                                  <td id="demo2" valign="top"><table width="700" height="80" border="0" cellpadding="0" cellspacing="0">
+                                      <tbody>
+                                        <tr>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=485" target="_blank"><img src="./images/Icp.Yn.Cn_20121215143915.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=484" target="_blank"><img src="./images/Icp.Yn.Cn_20121215143835.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=483" target="_blank"><img src="./images/Icp.Yn.Cn_2012121514375.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=482" target="_blank"><img src="./images/Icp.Yn.Cn_20121215143250.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=469" target="_blank"><img src="./images/Icp.Yn.Cn_2012127203141.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=468" target="_blank"><img src="./images/Icp.Yn.Cn_2012127203057.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=467" target="_blank"><img src="./images/Icp.Yn.Cn_2012127202948.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=466" target="_blank"><img src="./images/Icp.Yn.Cn_2012127202630.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                          <td width="200" height="130" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=465" target="_blank"><img src="./images/Icp.Yn.Cn_2012127202238.jpg" width="131" height="92" class="bkk" border="0"></a></td>
+                                        </tr>
+                                        <tr>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=485" target="_blank">钟楼</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=484" target="_blank">鲜花烂漫</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=483" target="_blank">考棚</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=482" target="_blank">贡院</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=469" target="_blank">春满东陆</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=468" target="_blank">秋日银杏道</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=467" target="_blank">东陆雪景</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=466" target="_blank">会泽院</a></td>
+                                          <td width="200" height="39" align="center"><a href="http://www.yim.ynu.edu.cn/newsview.asp?cid=465" target="_blank">生物馆</a></td>
+                                        </tr>
+                                      </tbody>
+                                  </table></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div></td>
+                      </tr>
+                    </tbody></table></td>
+                </tr>
+              </tbody></table>
+            </div></td>
+        </tr>
+      </tbody></table></td>
+  </tr>
+</tbody></table>
+
+#parse("footer.vm")
+
+</body></html>
