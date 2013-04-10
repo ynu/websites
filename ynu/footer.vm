@@ -1,0 +1,28 @@
+
+<!--尾部 开始-->
+    <div class="footer mt10">
+    	<div class="contact">
+			#foreach($channel in $cms.getChildren("页尾链接"))
+        		<a href="$cms.getUrl($channel)" #if($channel.type == 5) target="_blank" #end>$channel.title</a>
+			#end
+        </div>
+        <div class="add">
+        	Copyright &copy; 2013 云南大学 地址：昆明市翠湖北路2号 邮编：650091  云南大学2012年网页设计大赛一等奖 <b>黄玮鹏</b> 作品  <a href="http://www.miibeian.gov.cn/" target="_blank">滇ICP备05004791</a> 
+        </div>
+<div>
+<a href="http://www.yn.cyberpolice.cn:81/RecValidate/RecView.aspx?RecordID=53010203302067"><img border="0" src="http://www.ynu.edu.cn/images/BA.jpg" /></a>
+	<a href="http://www.yn.cyberpolice.cn"><img border="0" src="http://www.ynu.edu.cn/images/g2.jpg" /></a>
+</div>
+    </div>
+    <!--尾部 结束-->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11348620-1");
+pageTracker._setDomainName(".ynu.edu.cn");
+pageTracker._trackPageview();
+} catch(err) {}</script>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>云南大学</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/other/ynujs/public.js"></script>
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/other/ynujs/fcous.js"></script>
+
+</head>
+<body>
+
+<!--主体 开始-->
+<div class="main">
+	#parse("header.vm")
+    <!--banner 开始-->
+    <div class="banner mt10">
+    	<div class="focus" id="focus"> <!--焦点图-->
+			<div class="imgwarpper">
+				<ul class="imgbox"> <!--图片-->
+					#set($count = 0)
+					#foreach($article in $cms.getContents("页头滚动图片",100))
+						#if($count == 0 && $cms.getPictureUrl($article))
+							<li style="z-index:1"><a href="$cms.getUrl($article)" #if($article.type == 0) target="_blank" #end><img src="$cms.getPictureUrl($article)" alt="" /></a></li>
+							#set($count = $count + 1)
+						#elseif($count < 3 && $cms.getPictureUrl($article))
+							<li><a href="$cms.getUrl($article)" #if($article.type == 0) target="_blank" #end><img src="$cms.getPictureUrl($article)" alt="" /></a></li>
+							#set($count = $count + 1)
+						#end
+					#end
+				</ul><!--图片end-->
+			</div>
+			<div class="numbox"><!--小图-->
+				<ul class="numboxcont">
+					#set($count = 0)
+					#foreach($article in $cms.getContents("页头滚动图片",100))
+						#if($count == 0 && $cms.getPictureUrl($article))
+							<li class="pptOn"><a href="#" ><img src="$cms.getPictureUrl($article)" alt="" /></a></li>
+							#set($count = $count + 1)
+						#elseif($count < 3 && $cms.getPictureUrl($article))
+							<li><a href="#"><img src="$cms.getPictureUrl($article)" alt=""  /></a></li>
+							#set($count = $count + 1)
+						#end
+					#end
+				</ul>
+			</div><!--小图end-->
+			</div><!--焦点图-->
+    </div>
+    <!--banner 结束-->   
+        <!--资讯 开始-->
+    <div class="contain clearfix">
+    	<!--新闻资讯 开始-->
+    	<dl class="left">
+        	<dt><a href="$cms.getUrl("校园快讯")" class="more">更多&gt;&gt;</a><h2><b></b>云大新闻</h2></dt>
+            <dd>
+            	<ul class="mt10">
+				#foreach($article in $cms.getContents("校园快讯",9))
+					<li>
+						<span class="time">$cms.format($article.publishDate,"yyyy-MM-dd")</span>
+						<a #if($article.type == 0) target="_blank" #end href="$cms.getUrl($article)">#summary($article.name 34)</a>
+					</li>
+				#end
+                </ul>
+            </dd>
+        </dl>
+        <div class="right">
+        	<!--通知公告 开始-->
+	        <dl>
+	        	<dt><a href="$cms.getUrl("通知公告")" class="more">更多&gt;&gt;</a><h2><b></b>通知公告</h2></dt>
+	            <dd>
+                	<div class="up"></div>
+	            	<div id="demo">
+                        <div id="demo1">
+                           <ul class="clearfix">
+							   #foreach($article in $cms.getContents("通知公告",6))
+									<li>
+										<span class="time">$cms.format($article.publishDate,"yyyy-MM-dd")</span>
+										<a href="$cms.getUrl($article)" #if($article.type == 0) target="_blank" #end>#summary($article.name 34)</a>
+									</li>
+								#end
+			                </ul>
+                        </div>
+                    	<div id="demo2"></div>
+                    </div>
+                    <div class="down"></div>
+	            </dd>
+	        </dl>
+            <!--图文专题 开始-->
+	        <dl>
+	        	<dt><a href="$cms.getUrl("图文专题")" class="more">更多&gt;&gt;</a><h2><b></b>图文专题</h2></dt>
+                <dd class="pt5">
+#foreach($article in $cms.getContents("图文专题",1))
+						#set ($fullArticle=$cmsService.getArticle($article.ID))
+						<a href="$cms.getUrl($fullArticle)" #if($article.type == 0) target="_blank" #end class="pic"><img src="$cms.getPictureUrl($fullArticle)" width="114" height="86" alt="" /></a>
+					<div class="cont">
+                    	<h2 class="title"><a href="$fullArticle.source" #if($article.type == 0) target="_blank" #end>$fullArticle.name</a></h2>
+                      <div class="detail">
+                        	<p>#summary($fullArticle.summary 80)【<a href="$fullArticle.source">详细</a>】</p>
+                        </div>
+                    </div>
+					#end                	
+                    
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--资讯 结束-->
+	#parse("footer.vm")
+</div>
+<!--主体结束-->
+</body></html>

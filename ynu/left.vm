@@ -1,0 +1,23 @@
+
+<dl class="left">
+	#set($count = $cms.getChannelCount($curChannel.ID))
+	#if($count == 0 && $curChannel.title != "教育教学" && $curChannel.title != "招生就业" && $curChannel.title != "校园文化")
+	 	<dt><h2><b></b>$curChannel.parent.title</h2></dt>
+		<dd>
+			<ul>
+				#foreach($channel in $cms.getChildren($curChannel.parent))
+					<li><a href="$cms.getUrl($channel)" #if($channel.type == 5) target="_blank" #end>$channel.title</a></li>
+				#end
+			</ul>
+		</dd> 
+	 #else
+	 	<dt><h2><b></b>$curChannel.title</h2></dt>
+		<dd>
+			<ul>
+				#foreach($channel in $cms.getChildren($curChannel))
+					<li><a href="$cms.getUrl($channel)" #if($channel.type == 5) target="_blank" #end>$channel.title</a></li>
+				#end
+			</ul>
+		</dd> 
+	 #end 
+</dl>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$curArticle.name - 云南大学</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/css-1.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/other/ynujs/public.js"></script>
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/other/ynujs/fcous.js"></script>
+
+</head>
+<body>
+
+<!--主体 开始-->
+<div class="main">
+	#parse("header.vm")
+        <!--资讯 开始-->
+    <div class="mt10 contain1 clearfix">
+    	<!--新闻资讯 开始-->	
+		#parse("left.vm")
+    	<dl class="right">
+        <dt><h2>$curChannel.name</h2></dt>
+        <dd>
+            <div style="padding:10px;">$curArticle.content</div>
+        </dd>
+        </dl>
+        
+        
+    </div>
+    <!--资讯 结束-->
+    #parse("footer.vm")
+</div>
+<!--主体结束-->
+
+</body></html>

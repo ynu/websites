@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>$curChannel.title - 云南大学</title>
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/css-2.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/other/ynujs/public.js"></script>
+<script type="text/javascript" src="http://cdn.ynu.edu.cn/other/ynujs/fcous.js"></script>
+
+</head>
+<body>
+<!--主体 开始-->
+<div class="main">
+	#parse("header.vm")
+    <!--资讯 开始-->
+    <div class="mt10 contain1 clearfix">
+        #parse("left.vm")
+    	<dl class="right">
+        	<dt><h2>$curChannel.name</h2></dt>
+            
+			#foreach($channel in $cms.getTopChildren($rootChannel))
+<dd><div>
+				<h2><a title="$channel.title" href="$cms.getUrl($channel)">$channel.title</a></h2> 
+					<ul>
+					#foreach($subChannel in $cms.getChildren($channel))
+						<li><a href="$cms.getUrl($subChannel)" #if($subChannel.type == 0) target="_blank" #end title="$subChannel.title" >$subChannel.title</a></li>
+					#end
+				</ul>
+            </div></dd>
+			#end	
+
+        </dl>
+    </div>
+    <!--资讯 结束-->
+    #parse("footer.vm")
+</div>
+<!--主体结束-->
+</body></html>
