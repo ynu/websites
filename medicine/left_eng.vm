@@ -1,0 +1,35 @@
+
+
+<div class="list01">
+					<div class="title"><a href="$cms.getUrl("Annoucements")">more>></a><h3>Annoucements</h3></div>
+					<div class="con">
+						<div class="tab_list4">
+								  <dl>
+								  #foreach($article in $cms.getContents("Annoucements",6))
+									  <dd>
+										  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  #summary($article.name 13)</a>						  
+									  </dd>
+								  #end  
+								  </dl>
+						</div>
+					</div>
+				</div>
+				
+				<div class="list01" style="margin-top:5px;">
+					<div class="title"><a href="$cms.getUrl("News")">more>></a><h3>News</h3></div>
+					<div class="con">
+						<div class="tab_list4">
+								  <dl>
+								  #foreach($article in $cms.getContents("News",6))
+									  <dd>
+										  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  #summary($article.name 13)</a>						  
+									  </dd>
+								  #end  
+								  </dl>
+						</div>
+					</div>
+				</div>
+				
+				

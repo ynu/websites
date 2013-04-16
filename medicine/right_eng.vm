@@ -1,0 +1,21 @@
+
+
+<div id="list_right">				
+				<div class="title"><h3>$curChannel.title</h3></div>
+				<div class="con">
+						<div class="tab_list3">
+								  <dl>
+								  #foreach($article in $cms.getPageContents($curChannel,$curPage))
+									  <dd>
+									        <span>[$cms.format($article.publishDate)]</span>
+										  <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+										  $article.name</a>									  </dd>
+								  #end  
+								  </dl>
+				  </div>
+					<div class="list_sort">
+						 Totle Pages: $totalPage&nbsp;&nbsp;Current: $curPage&nbsp;|&nbsp;$totalPage &nbsp; <a href="$cms.getIndexFileName($curChannel, 1)">First</a>&nbsp;|&nbsp;<a href="$cms.getIndexFileName($curChannel, $prePage)">Prev</a>
+						&nbsp;|&nbsp;<a href="$cms.getIndexFileName($curChannel, $nextPage)">Next</a>&nbsp;|&nbsp;<a href="$cms.getIndexFileName($curChannel, $totalPage)">Last</a> 
+					</div>									
+				</div>
+			</div>

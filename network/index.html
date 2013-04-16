@@ -129,27 +129,7 @@ div.mainServiceOverlay div.more a{width:auto}
         <div id="wrapper">
         <div id="slider-wrapper">
             <div id="slider" class="nivoSlider">
-                <!-- a href="#more"><img src="images/jf/jf1.jpg" alt="" title="#htmlcaption1" /></a>
-                <a href="#more"><img src="images/jf/jf2.jpg" alt="" title="#htmlcaption2" /></a>
-                <a href="#more"><img src="images/jf/jf3.jpg" alt="" title="#htmlcaption3" /></a>
-                <a href="#more"><img src="images/jf/jf4.jpg" alt="" title="#htmlcaption4" /></a -->
             </div>
-            <!-- div id="htmlcaption1" class="nivo-html-caption">
-                文渊楼<br />数据中心机房
-                <span class="more"><a href="#more">详情...</a></span>
-            </div>
-            <div id="htmlcaption2" class="nivo-html-caption">
-                科学馆<br />核心机房
-                <span class="more"><a href="#more">详情...</a></span>
-            </div>
-            <div id="htmlcaption3" class="nivo-html-caption">
-                呈贡机房展示1
-                <span class="more"><a href="#more">详情...</a></span>
-            </div>
-            <div id="htmlcaption4" class="nivo-html-caption">
-                呈贡机房展示2
-                <span class="more"><a href="#more">详情...</a></span>
-            </div -->
 </div>
     </div>
 </div>
@@ -194,7 +174,7 @@ div.mainServiceOverlay div.more a{width:auto}
 		<marquee direction="up" height="110px"  scrolldelay="600">
 			#foreach($article in $cms.getContents("通知公告",10))
 				<li>
-					$cms.format($article.publishDate,"[MM/dd]"
+					[$cms.format($article.publishDate,"MM/dd")]
 					<a href="$cms.getUrl($article)" title="$article.name"><span>#summary($article.name 24)</span></a>
 				</li>
 			#end

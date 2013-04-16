@@ -35,13 +35,12 @@ h6{ font-size:12px;}
 #header{margin-top: 0;}
 /*顶部banner*/
 .top{
-background:url(../images/top_bg.jpg);
-width:100%;
-height:45px;
-}
-.banner{
-background:url(../images/top_banner.jpg) center no-repeat;
+background:url(../images/topbanner_bg.jpg);
 width:990px;
+height:45px;}
+.banner{
+background:url(../images/top_banner.jpg);
+width:100%;
 height:100%;
 }
 .tbnav{
@@ -52,38 +51,37 @@ padding:10px 10px 0 0;
 color:#CCC;
 overflow:hidden;
 }
-.tbnav li{display:inline;/*横向右对齐*/border-right:1px dashed #999;padding:0 5px 0 1px;}
+.tbnav li{display:inline;/*横向右对齐*/border-right:1px dashed #999;}
 .tbnav li.nobd{border:none;}
-.tbnav a {color:#D4DCE5 !important;}
-.tbnav a:hover {text-decoration:none;color:#fff !important;}
-.topbar{width:990px;}
+.tbnav a{padding:0 5px 0 1px;+padding:0 2px 0 5px;color:#D4DCE5;}
+.tbnav a:hover{text-decoration:none;color:#fff;}
 /*logo*/
-.logo{width:330px;height:110px;
-background:url(../images/ynulogo_2.jpg) no-repeat;
-margin-top:0;
+.logo{width:660px;height:110px;
+background:url(../images/networklogo.jpg) no-repeat;
+margin-top:10px;
 margin-left:20px;
 display:inline; /*ie6忽略浮动*/
 position: absolute;
 }
 /*导航栏*/
-#nav{z-index:98;padding-left:405px;font-size:14px;margin-top:10px;height: 63px;position:relative;}
+#nav{z-index:98;padding-left:660px;font-size:14px;margin-top:10px;height: 63px;position:relative;}
 #nav ul{padding:5px;width: 100%;}
-#nav ul li{float:left;width:19%;position:relative;height:30px;margin-left: 0px;}
-#nav ul li ul{z-index:999;display:none;position:absolute;left:0px;margin-top:0;padding-bottom:8px;color:#000000;background:#fff;width:320px;height:auto;border:#ccc 1px solid;border-top:#FF9900 2px solid;}
+#nav ul li{float:left;width:110px;position:relative;height:30px;margin-left: 0px;}
+#nav ul li ul{z-index:999;display:none;position:absolute;left:0px;top:21px;color:#000000;background:#fff;width:320px;height:auto;border:#ccc 1px solid;border-top:#FF9900 2px solid;+border-top:#013567 35px;+border:#013567;}
 #nav ul li ul li{display:block;float:left;width:50%;line-height:28px;position:relative;}
 #nav ul li ul.subline{left:0px;width: 125px;}
 #nav ul li ul.subline li{float:left;width:100%;}
 #nav ul li ul.college{width:660px;left:-536px;}
 #nav ul li ul.college li{width:25%;}
-#nav ul li ul.college li.yxitem {color:#262626;display:block; width:98%;padding-left:5px;margin-bottom:3px;border-left:5px solid #ff9900;font-weight: 600;}
-#nav a{color:#262626;display:inline-block;padding:3px 5px;}
-#nav a:hover{background:#262626;color:#FFF; text-decoration:none;}
-.search_box{padding-left:412px;padding-top:5px;}
-input.searchbox{float:left;border:1px solid #CCCCCC;width:390px;height:20px;line-height:20px;padding-left:38px;background:url(../images/searchboxbg.jpg) no-repeat 1px 1px;color:#666;display:inline; /*ie6忽略浮动*/}
+#nav ul li ul.college li.yxitem {color:#013567;display:block; width:99%;padding-left:5px;margin-bottom:3px;border-left:5px solid #ff9900;font-weight: 600;}
+#nav a{color:#013567;display:inline-block;padding:0 5px 3px 5px;}
+#nav a:hover{background:#013567;color:#FFF; text-decoration:none;}
+.search_box{padding-left:660px;padding-top:5px;}
+input.searchbox{float:left;border:1px solid #CCCCCC;width:200px;height:20px;line-height:20px;padding-left:38px;background:url(../images/searchboxbg.jpg) no-repeat 1px 1px;color:#666;display:inline; /*ie6忽略浮动*/}
 .info {padding-top:3px;}
-.info a{color:#666 !important;padding-left:10px;}
-.info a:hover{text-decoration:underline;}
-.info a.engver{color:#262626 !important;}
+.info a{color:#666;padding-left:10px;}
+.info a.engver{color:#013567;}
+
 
 
 /*网页主体内容*/

@@ -13,36 +13,7 @@
 <!--[if IE 6]><link rel="stylesheet" href="css/public.plus.ie6.css" type="text/css" /><![endif]-->
 <script type="text/javascript" src="js/jquery.min.js?v=1.7.1"></script>
 <script type="text/javascript" src="js/jquery.sidebar.follow.js"></script>
-<script type="text/javascript">
-var mouseover_tid = [];
-var mouseout_tid = [];
-jQuery(document).ready(function(){
-	jQuery("#nav ul li").each(function(index){
-		jQuery(this).hover(
-			function(){
-				var _self = this;
-				clearTimeout(mouseout_tid[index]);
-				mouseover_tid[index] = setTimeout(function() {
-					jQuery(_self).find('ul:eq(0)').fadeIn(150);
-				}, 400);
-			},
-
-			function(){
-				var _self = this;
-				clearTimeout(mouseover_tid[index]);
-				mouseout_tid[index] = setTimeout(function() {
-					jQuery(_self).find('ul:eq(0)').fadeOut(200);
-				}, 400);
-			});
-	});
-
-});
-/*
-Author: mg12
-Tutorial URL: neoease.com/wordpress-menubar-6/
-Modified:nanokeke
-*/
-</script>
+<script type="text/javascript" src="js/jquery.sidebar.follow.class.js"></script>
 </head>
 
 <body>
@@ -51,7 +22,7 @@ Modified:nanokeke
     <div id="content" class="content">
         <div id="sections">
         <div id="sidebar-follow">
-        <script type="text/javascript" src="js/jquery.sidebar.follow.class.js"></script>
+        
         <div id="wrapper-250">
 	#parse("left.vm")
 </div></div>

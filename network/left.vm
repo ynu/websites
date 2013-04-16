@@ -1,29 +1,41 @@
 ﻿<ul class="accordion">
-	#if($cms.getChannelCount($curChannel.ID))
-		#foreach($channel in $cms.getChildren($curChannel.parent.ID))
-			<li class="files">
-				<a href="$cms.getUrl($channel)">$channel.name</a>
-				#if($cms.getChannelCount($channel.ID))
-					<ul class="sub-menu">
-						#foreach($subChannel in $cms.getChildren($channel.ID))
-							<li><a href="$cms.getUrl($subChannel)">$subChannel.name</a></li>
-						#end
-					</ul>
+#if($curChannel.parent.title == "用户指南" || $curChannel.parent.title == "教工服务")
+	#foreach($channel in $cms.getChildren("用户指南"))
+		<li class="files">
+			<a href="$cms.getUrl($channel)" id="channel_$channel.ID">$channel.name</a>
+				<ul class="sub-menu">
+				#if($cms.getChannelCount($channel.ID) > 0)
+					#foreach($subChannel in $cms.getChildren($channel.ID))
+						<li><a href="$cms.getUrl($subChannel)">$subChannel.name</a></li>
+					#end
+				#else
+					<li><a href="$cms.getUrl($channel)">$channel.name</a></li>
 				#end
-			</li>
-		#end
-	#else
-		#foreach($channel in $cms.getChildren($rootChannel))
-			<li class="files">
-				<a href="$cms.getUrl($channel)">$channel.name</a>
-				#if($cms.getChannelCount($channel.ID))
-					<ul class="sub-menu">
-						#foreach($subChannel in $cms.getChildren($channel.ID))
-							<li><a href="$cms.getUrl($subChannel)">$subChannel.name</a></li>
-						#end
-					</ul>
-				#end
-			</li>
-		#end
+				</ul>
+		</li>
 	#end
+#else
+	#foreach($channel in $cms.getTopChildren($rootChannel))
+		<li class="files">
+			<a href="$cms.getUrl($channel)" id="channel_$channel.ID">$channel.name</a>
+				<ul class="sub-menu">
+				#if($cms.getChannelCount($channel.ID) > 0)
+					#foreach($subChannel in $cms.getChildren($channel.ID))
+						<li><a href="$cms.getUrl($subChannel)">$subChannel.name</a></li>
+					#end
+				#else
+					<li><a href="$cms.getUrl($channel)">$channel.name</a></li>
+				#end
+				</ul>
+		</li>
+	#end
+#end
 </ul>
+
+<script>
+$(document).ready(function() {
+	var curChannel = jQuery('#channel_$curChannel.ID');
+	if(curChannel.length == 0) curChannel = jQuery('#channel_$curChannel.parent.ID');
+	curChannel.click();
+});
+</script>

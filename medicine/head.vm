@@ -1,0 +1,40 @@
+
+
+<div id="header">
+<div style="margin-top:5px;text-align:right">
+<a href="$cms.getUrl("首页")">中文版</a> | 
+<a href="$cms.getUrl("ENGLISH")">ENGLISH</a></div>
+		<div id="banner"><img src="images/a01.jpg" width="910" height="139"  />
+</div>
+		
+		<div id="menu">
+			  <div id="menu-bg">
+			  <div id="menu-parent">
+<a href="$cms.getUrl("首页")" id="par0">本站首页</a>
+                          #set($i=0)
+			  #foreach($channel in $cms.getTopChildren($rootChannel))
+			  #set($i = $i+1)
+			  <a href="$cms.getUrl($channel)" id="par$i">$channel.title</a>
+			  #end
+
+			  </div>  
+			  <div id="menu-son">
+#set($i=0)
+<div id="son$i"></div>
+			  #foreach($channel in $cms.getTopChildren($rootChannel))
+			  #set($i = $i+1)
+#if($i == 1)
+				<div id="son$i" style="display:block;">
+#else
+<div id="son$i">
+#end
+				   #foreach($channel1 in $cms.getChildren($channel))
+					<a href="$cms.getUrl($channel1)">$channel1.title</a>|
+					#end
+				</div>
+			  #end
+			  </div>
+			  </div>
+			</div>
+			<script type="text/javascript" src="js/m.js"></script>
+		</div>

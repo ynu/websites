@@ -4,6 +4,7 @@
         <div class="banner">
             <div class="tbnav">
             <ul>
+			<li><a href="$cms.getUrl("首页")">本站首页</a></li>
             <li><a href="http://www.ynu.edu.cn">云大首页</a></li>
             <li><a href="www.yn.edu.cn">云南主节点</a></li>
             <li class="nobd"><a href="#" >硕士教育</a></li>
@@ -15,14 +16,33 @@
         <div class="l_right">
         <div id="nav" class="nav">
         <ul>
-			<li><a href="$cms.getUrl("中心介绍")">中心介绍</a></li>
+			<li>
+				<a href="$cms.getUrl("中心介绍")">中心介绍</a>
+				<ul>
+				#foreach($subChannel in $cms.getChildren("中心介绍"))
+					<li><a href="$cms.getUrl($subChannel)">$subChannel.title</a></li>
+				#end
+				</ul>
+			</li>
 			<li>
 				<a href="$cms.getUrl("校园网概况")">校园网概况</a>
+				<ul>
+				#foreach($subChannel in $cms.getChildren("校园网概况"))
+					<li><a href="$cms.getUrl($subChannel)">$subChannel.title</a></li>
+				#end
+				</ul>
 			</li>
 			<li><a href="$cms.getUrl("安全法规")">安全法规</a></li>
 			<li><a href="$cms.getUrl("常用下载")">常用下载</a></li>
 			<li><a href="$cms.getUrl("信息资源")">信息资源</a></li>
-			<li><a href="$cms.getUrl("网络服务")">网络服务</a></li>
+			<li>
+				<a href="$cms.getUrl("网络服务")">网络服务</a>
+				<ul>
+				#foreach($subChannel in $cms.getChildren("网络服务"))
+					<li><a href="$cms.getUrl($subChannel)">$subChannel.title</a></li>
+				#end
+				</ul>
+			</li>
 		</ul>
 		
         

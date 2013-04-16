@@ -1,0 +1,52 @@
+
+
+<div class="sublist">
+                    <div class="title">
+                      <h3>$curChannel.parent.title</h3>
+                    </div>
+                    <div class="con">
+                        <ul>
+                        #foreach($channel in $cms.getChildren($curChannel.parent))
+#if($channel.title=="机构设置"||$channel.title=="本科生教学"||$channel.title=="实习基地")
+#foreach($channel1 in $cms.getChildren($channel,0,1))
+            <li><a href="$cms.getUrl($channel1)">$channel.title</a></li>
+#end                                                                            
+#else
+                                                <li><a href="$cms.getUrl($channel)">$channel.title</a></li>
+
+                         #end #end
+                        </ul>
+                    </div>
+                </div>
+                
+                  <div class="list01" style="margin-top:5px;">
+                    <div class="title"><a href="$cms.getUrl("通知公告")">更多>></a><h3>通知公告</h3></div>
+                    <div class="con">
+                        <div class="tab_list4">
+                                  <dl>
+                                  #foreach($article in $cms.getContents("通知公告",6))
+                                      <dd>
+                                          <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+                                          #summary($article.name 13)</a>                          
+                                      </dd>
+                                  #end  
+                                  </dl>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list01" style="margin-top:5px;">
+                    <div class="title"><a href="$cms.getUrl("学院新闻")">更多>></a><h3>学院新闻</h3></div>
+                    <div class="con">
+                        <div class="tab_list4">
+                                  <dl>
+                                  #foreach($article in $cms.getContents("学院新闻",6))
+                                      <dd>
+                                          <a title="$article.name" href="$cms.getUrl($article)" target="_blank">
+                                          #summary($article.name 13)</a>                          
+                                      </dd>
+                                  #end  
+                                  </dl>
+                        </div>
+                    </div>
+                </div>

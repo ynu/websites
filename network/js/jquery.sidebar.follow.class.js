@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var accordion_head = $('.accordion > li > a'),
 		accordion_body = $('.accordion li > .sub-menu');
 	// Open the first tab on load
-	accordion_head.first().addClass('active').next().slideDown('normal');
+	//accordion_head.first().addClass('active').next().slideDown('normal');
 	// Click function
 	accordion_head.on('click', function(event) {
 		// Disable header links

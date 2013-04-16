@@ -1,0 +1,35 @@
+
+
+<div id="footer">
+			<div class="footer_01"></div>
+			<div class="footer_02">
+				<p>
+					Yunnan University, 2 North Cuihu Rd. Kunming, Yunnan 650091
+
+					<br /> 
+					Phone：087-165-034-358 E-mail: medschool@ynu.edu.cn   &copy; 2012 
+				</p>
+			</div>
+			<div class="footer_03"></div>
+		</div>
+<script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-11348620-1");
+
+pageTracker._setDomainName(".ynu.edu.cn");
+
+pageTracker._trackPageview();
+
+pageTracker._setVar("medschool.医学院");
+
+} catch(err) {}</script>

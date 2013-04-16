@@ -1,0 +1,66 @@
+
+
+<div id="header">
+<div style="margin-top:5px;text-align:right">
+<a href="$cms.getUrl("首页")">中文版</a> | 
+<a href="$cms.getUrl("ENGLISH")">ENGLISH</a></div>
+		<div id="banner"><img src="images/a01.jpg" width="910" height="139"  />
+</div>
+		
+		<div id="menu">
+			  <div id="menu-bg">
+			  <div id="menu-parent">
+<a href="$cms.getUrl("ENGLISH")" style="width:60px">Home</a>
+<a href="$cms.getUrl("About")" id="par1"  style="width:60px">About</a>
+<a href="$cms.getUrl("Faculty and Staff")" id="par2" style="width:130px">Faculty and Staff</a>
+<a href="$cms.getUrl("Education")" id="par3" style="width:70px">Education</a>
+<a href="$cms.getUrl("Reasearch")" id="par4"  style="width:70px">Reasearch</a>
+<a href="$cms.getUrl("Seminar")" id="par5"  style="width:70px">Seminar</a>
+<a href="$cms.getUrl("Career Development")" id="par6" style="width:135px">Career Development</a>
+<a href="$cms.getUrl("Job Seekers")" id="par7"  style="width:60px">Jobs</a>
+<a href="$cms.getUrl("Alumni & Friends")" id="par8"  style="width:135px">Alumni & Friends</a>
+
+</div>  
+			  <div id="menu-son">
+<div id="son1" >
+<a href="$cms.getUrl("About the School of Medicine")">About the School of Medicine</a>|
+<a href="$cms.getUrl("Message from the Dean")">Message from the Dean</a>|
+<a href="$cms.getUrl("Mission and Vision Statements")">Mession and Vision Statements</a>|
+<a href="$cms.getUrl("Departments and Programs")">Departments and Programs</a>|
+<a href="$cms.getUrl("Facilities and Campus Services")">Facilities and Campus Services</a>|
+<a href="$cms.getUrl("Facts")">Facts</a>|
+</div>
+
+<div id="son2">
+</div>
+
+
+<div id="son3">
+<a href="$cms.getUrl("Undergraduate Program")">Undergraduate Program</a>|
+<a href="$cms.getUrl("Graduate Program")">Graduate Program</a>|
+</div>
+
+
+<div id="son4">
+<a href="$cms.getUrl("Research Area")">Research Area</a>|
+<a href="$cms.getUrl("Medical School Faculty Pages")">Medical School Faculty Pages</a>|
+<a href="$cms.getUrl("Awards")">Awards</a>|
+<a href="$cms.getUrl("Scientific Communication")">Scientific Communication</a>|
+</div>
+
+
+<div id="son5">
+</div>
+
+<div id="son6">
+</div>
+
+<div id="son7">
+</div>
+
+<div id="son8">
+</div>			  </div>
+			  </div>
+			</div>
+			<script type="text/javascript" src="js/m.js"></script>
+		</div>
